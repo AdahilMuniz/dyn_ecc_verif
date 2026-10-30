@@ -1,0 +1,3 @@
+[submodule "FPGA_design"]
+	path = FPGA_design
+	url = https://github.com/Nascerr/FPGA_design.git
