@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>stm32</design>
+	<target_verilog>C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32.vm</target_verilog>
+</SynplifyOutput>

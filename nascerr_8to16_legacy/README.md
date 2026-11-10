@@ -11,33 +11,36 @@ Everything here is kept **unmodified** as a historical record, recovered on 2026
 
 | Folder | Date | What it is | Source |
 |---|---|---|---|
-| `2024-07_tbec8_prototype/` | 2024-07-02 | Early 8→16 TBEC prototype (EDA Playground), one SRAM. **Superseded**: its encoder swaps codeword bits 13/14 compared with the firmware, and its decoder fails to correct most single-bit errors | `archives/drive-download…zip` → `TBEC_RSC 8bits/` (`a.out` dropped) |
-| `2024-07_fpga_1memory_8to16_early/` | 2024-07-11 | First Libero version of the 8→16 FPGA. Same codecs and select map as 2024-08; only `fpga_top_design.sv` / `hamming_top_design.sv` differ (13/17 lines). `synthesis/synwork/modulechange.db` was the one file that failed to extract and was dropped | `archives/Documents of project…zip` → `FPGA 1 MEMORY/stm32_test_memory - Copy.rar` |
-| `2024-08_fpga_1memory_8to16/` | 2024-08-01 | **The baseline of the ASIC RTL.** Libero v2024.1 project `stm32` (SmartFusion2), one SRAM, `ecc_sel[1:0]` = 00 bypass / 01 Hamming / 10 TBEC / 11 EDAC, `erro` output (Hamming error, also on an LED). Its encoders match the 8-bit firmware's C encoders bit for bit. Top: `component/work/stm32/stm32.v` → `hdl/fpga_top_design.sv` → `hdl/hamming_top_design.sv` | `archives/Documents of project…zip` → `FPGA 1 MEMORY/stm32_test_memory - Copy (2).zip` |
-| `2024-10_fpga_1memory_saboteur/` | 2024-10-18 | The saboteur build (see below). **Not carried into the ASIC** (decision D7) | `archives/Documents of project…zip` → `stm32_test_memory - Copy (versão com sabotador).rar` |
+| `2024-07_tbec8_prototype/` | 2024-07-02 | Early 8→16 TBEC prototype (EDA Playground), one SRAM. **Superseded**: its encoder swaps codeword bits 13/14 compared with the firmware, and its decoder fails to correct most single-bit errors | Drive download `drive-download…zip` → `TBEC_RSC 8bits/` (`a.out` dropped) |
+| `2024-07_fpga_1memory_8to16_early/` | 2024-07-11 | First Libero version of the 8→16 FPGA. Same codecs and select map as 2024-08; only `fpga_top_design.sv` / `hamming_top_design.sv` differ (13/17 lines). `synthesis/synwork/modulechange.db` was the one file that failed to extract and was dropped | Drive download `Documents of project…zip` → `FPGA 1 MEMORY/stm32_test_memory - Copy.rar` |
+| `2024-08_fpga_1memory_8to16/` | 2024-08-01 | **The baseline of the ASIC RTL.** Libero v2024.1 project `stm32` (SmartFusion2), one SRAM, `ecc_sel[1:0]` = 00 bypass / 01 Hamming / 10 TBEC / 11 EDAC, `erro` output (Hamming error, also on an LED). Its encoders match the 8-bit firmware's C encoders bit for bit. Top: `component/work/stm32/stm32.v` → `hdl/fpga_top_design.sv` → `hdl/hamming_top_design.sv` | Drive download `Documents of project…zip` → `FPGA 1 MEMORY/stm32_test_memory - Copy (2).zip` |
+| `2024-10_fpga_1memory_saboteur/` | 2024-10-18 | The saboteur build (see below). **Not carried into the ASIC** (decision D7) | Drive download `Documents of project…zip` → `stm32_test_memory - Copy (versão com sabotador).rar` |
 
 ## `firmware/`: STM32 firmware for the 8→16 FPGA
 
 | Folder | Date | What it is |
 |---|---|---|
-| `2024-07_stm_test_mem_fw/`, `2024-08_stm_test_mem_fw/` | 2024-07-25, 2024-08-21 | Standalone STM32L4R5 test firmware (`Core/Src/main.c`). `bypass()/Hamming()/TBEC()/EDAC()` drive PC0/PC1 = 00/10/01/11 (PC0 listed first), which pins **PC0 = `ecc_sel0`**. The August version adds `burstErrorRSC/Hamming/EDAC`: write in ECC mode, flip *n* adjacent bits at a random position via a bypass write, read back, count correct words. Sources: the two `stm_test_mem.rar` copies in the archives |
+| `2024-07_stm_test_mem_fw/`, `2024-08_stm_test_mem_fw/` | 2024-07-25, 2024-08-21 | Standalone STM32L4R5 test firmware (`Core/Src/main.c`). `bypass()/Hamming()/TBEC()/EDAC()` drive PC0/PC1 = 00/10/01/11 (PC0 listed first), which pins **PC0 = `ecc_sel0`**. The August version adds `burstErrorRSC/Hamming/EDAC`: write in ECC mode, flip *n* adjacent bits at a random position via a bypass write, read back, count correct words. Sources: the two `stm_test_mem.rar` copies in the Drive downloads |
 | `2024-09_NASCERR_slave_early/` | 2024-08-28 – 09-03 | Earliest `NASCERR_slave` (I2C slave for the satellite's on-board computer). No software encoders, so its ECC-mode error counts compare data against raw codewords and are wrong. Source: `NASCERR_slave-master.zip` (not stored) |
-| `Projeto_NASCERR_UFC-image_processing/` | 2024-09 → | The later 8-bit `NASCERR_slave` (`Firmware_CubeSat/NASCERR_slave`), with the C reference encoders `Core/Src/NASCERR_ECCs.c`. **The testbench compiles that file unmodified as its golden model.** Also the image-processing experiment and on-board-computer emulators. Source: `archives/Projeto_NASCERR_UFC-image_processing.zip` |
+| `Projeto_NASCERR_UFC-image_processing/` | 2024-09 → | The later 8-bit `NASCERR_slave` (`Firmware_CubeSat/NASCERR_slave`), with the C reference encoders `Core/Src/NASCERR_ECCs.c`. **The testbench compiles that file unmodified as its golden model.** Also the image-processing experiment and on-board-computer emulators. Source: `Projeto_NASCERR_UFC-image_processing.zip` |
 
 `Debug/` build output is gitignored throughout.
 
-## `archives/`: original downloads (Git LFS, verbatim)
+## Original downloads (not in git)
 
+The archives everything here was extracted from aren't stored in the repository: their
+contents are extracted above, so they'd only double the size. On the machine that did
+the import they're kept, gitignored, in `archives/`:
 - `drive-download-20261110T130620Z-1-001.zip` and `Documents of project Libero and
-  STMCubeIDE-20261110T131809Z-1-001.zip`: the recovered Google Drive folders. They also hold
-  16→32 items, extracted to `../nascerr_16to32/history/`, and `test_mem_controller/`
-  (2024-07-01), a Libero project with its sources missing. Its `.prjx` still lists
-  `hamming_*`, `MRSC_*`, `TBEC_RSC_*`, `control_flow.sv`, `mux_io.sv`,
-  `reg_16bits_parallel_parallel.sv` and a `CoreMemCtrl` block.
+  STMCubeIDE-20261110T131809Z-1-001.zip`: the recovered Google Drive folders. They also held
+  16→32 items (extracted to `../nascerr_16to32/history/`) and `test_mem_controller/`
+  (2024-07-01), a Libero project with its sources missing. Its `.prjx` lists `hamming_*`,
+  `MRSC_*`, `TBEC_RSC_*`, `control_flow.sv`, `mux_io.sv`, `reg_16bits_parallel_parallel.sv`
+  and a `CoreMemCtrl` block; it was not extracted.
 - `Projeto_NASCERR_UFC-image_processing.zip`: the 8-bit firmware repository snapshot.
 
-The RAR files are RAR5. The system 7-Zip has no RAR codec, and `unrar-free` 0.1.1 writes
-zero-filled or garbage files for RAR5. Extract them with
+The RAR files inside are RAR5. The system 7-Zip has no RAR codec, and `unrar-free` 0.1.1
+writes zero-filled or garbage files for RAR5. Extract them with
 `python3 -I scripts/rar_extract.py ARCHIVE OUTDIR` (system libarchive through ctypes).
 
 ## The saboteur (`fpga/2024-10_fpga_1memory_saboteur`)

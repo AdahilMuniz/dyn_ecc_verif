@@ -1,0 +1,10 @@
+DESIGN=stm32
+DESDIR=C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\designer\stm32
+TARGET_DIR=C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\designer\stm32
+FAM=SmartFusion2
+DIE=PA4M500
+PACKAGE=tq144
+PINRPT_BY_NAME=1
+PINRPT_BY_NUMBER=1
+BANK_REPORT=1
+IOREG_REPORT=1

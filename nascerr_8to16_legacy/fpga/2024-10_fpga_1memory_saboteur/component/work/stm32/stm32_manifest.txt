@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2024.1 (Version 2024.1.0.3)
+
+Date      :  Thu Oct 17 16:28:42 2024
+Project   :  C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy
+Component :  stm32
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lucas/OneDrive/Documentos/Projeto Nascerr/FPGA_project-main/stm32_test_memory - Copy/component/work/stm32/stm32.v
+

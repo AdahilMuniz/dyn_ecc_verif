@@ -1,0 +1,16 @@
+Project Name: stm32_test_memory
+Location: C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S005-1TQ144
+Family         : SmartFusion2
+Die            : M2S005
+Package        : 144 TQ
+Speed          : -1
+Core Voltage   : 1.2
+Range          : COM

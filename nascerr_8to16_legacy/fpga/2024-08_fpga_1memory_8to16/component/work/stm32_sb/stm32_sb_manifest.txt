@@ -1,0 +1,37 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Wed Jul  3 16:33:21 2024
+Project   :  C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory
+Component :  stm32_sb
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb/CCC_0/stm32_sb_CCC_0_FCCC.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/Actel/DirectCore/CoreResetP/7.1.100/rtl/vlog/core/coreresetp.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/Actel/DirectCore/CoreResetP/7.1.100/rtl/vlog/core/coreresetp_pcie_hotreset.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb/FABOSC_0/stm32_sb_FABOSC_0_OSC.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb/stm32_sb.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/stm32_sb_MSS.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/Actel/SgCore/OSC/2.0.101/osc_comps.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/stm32_sb_MSS_syn.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/Actel/SgCore/OSC/2.0.101/osc_comps_pre.v
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/stm32_sb_MSS_pre.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb/subsystem.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/CM3_compile_bfm.tcl
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/user.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/test.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/Actel/SmartFusion2MSS/MSS/1.1.500/peripheral_init.bfm
+
+Firmware files for all Software IDE tools:
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb_MSS/sys_config_mss_clocks.h
+
+Constraint files:
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb\CCC_0\stm32_sb_CCC_0_FCCC.sdc
+    C:/Users/Lesc/Documents/LiberoProjects/stm32_test_memory/component/work/stm32_sb\FABOSC_0\stm32_sb_FABOSC_0_OSC.sdc

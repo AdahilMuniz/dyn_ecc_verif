@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>stm32</header>
+  <drc>
+    <status>C:\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin stm32:clk</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/stm32/pins/stm32:clk</crossprobe>
+  </drc>
+</drcreport>

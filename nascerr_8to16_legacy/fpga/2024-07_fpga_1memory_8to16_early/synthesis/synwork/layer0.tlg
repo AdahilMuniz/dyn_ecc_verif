@@ -1,0 +1,63 @@
+Selecting top level module stm32
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv":1:7:1:21|Synthesizing module hamming_encoder in library work.
+@W: CG133 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv":7:16:7:21|Object parity is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on hamming_encoder .......
+Finished optimization stage 1 on hamming_encoder (CPU Time 0h:00m:00s, Memory Used current: 90MB peak: 90MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":1:7:1:21|Synthesizing module hamming_decoder in library work.
+@N: CG793 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":20:10:20:17|Ignoring system task $display
+@W: CG1340 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":21:55:21:67|Index into variable received_data could be out of range ; a simulation mismatch is possible.
+@N: CG793 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":22:10:22:17|Ignoring system task $display
+Running optimization stage 1 on hamming_decoder .......
+Finished optimization stage 1 on hamming_decoder (CPU Time 0h:00m:00s, Memory Used current: 91MB peak: 91MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:8:3:20|Synthesizing module Encoder16bits in library work.
+@W: CG133 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv":14:10:14:10|Object b is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on Encoder16bits .......
+Finished optimization stage 1 on Encoder16bits (CPU Time 0h:00m:00s, Memory Used current: 91MB peak: 91MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:7:4:19|Synthesizing module Decoder16bits in library work.
+Running optimization stage 1 on Decoder16bits .......
+Finished optimization stage 1 on Decoder16bits (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:7:1:17|Synthesizing module EDACencoder in library work.
+Running optimization stage 1 on EDACencoder .......
+Finished optimization stage 1 on EDACencoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv":1:7:1:17|Synthesizing module EDACdecoder in library work.
+Running optimization stage 1 on EDACdecoder .......
+Finished optimization stage 1 on EDACdecoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv":8:7:8:24|Synthesizing module hamming_top_design in library work.
+Running optimization stage 1 on hamming_top_design .......
+Finished optimization stage 1 on hamming_top_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv":3:7:3:21|Synthesizing module fpga_top_design in library work.
+Running optimization stage 1 on fpga_top_design .......
+Finished optimization stage 1 on fpga_top_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v":9:7:9:11|Synthesizing module stm32 in library work.
+Running optimization stage 1 on stm32 .......
+Finished optimization stage 1 on stm32 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on stm32 .......
+Finished optimization stage 2 on stm32 (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 94MB)
+Running optimization stage 2 on fpga_top_design .......
+Finished optimization stage 2 on fpga_top_design (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 94MB)
+Running optimization stage 2 on hamming_top_design .......
+Finished optimization stage 2 on hamming_top_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on EDACdecoder .......
+Finished optimization stage 2 on EDACdecoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on EDACencoder .......
+@W: CL246 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:39:1:45|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on EDACencoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on Decoder16bits .......
+@W: CL247 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:39:4:45|Input port bit 0 of data_in[15:0] is unused
+
+Finished optimization stage 2 on Decoder16bits (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+Running optimization stage 2 on Encoder16bits .......
+@W: CL246 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:42:3:48|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on Encoder16bits (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+Running optimization stage 2 on hamming_decoder .......
+@W: CL246 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":2:21:2:32|Input port bits 15 to 12 of encoded_data[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on hamming_decoder (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+Running optimization stage 2 on hamming_encoder .......
+@W: CL246 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv":2:21:2:27|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on hamming_encoder (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synwork\layer0.duruntime
+
+

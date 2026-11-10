@@ -1,0 +1,4 @@
+@E: CG389 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v":185:16:185:32|Reference to undefined module fpga_top_design
+@E: Could not find specified top level stm32 (library: work, cell: stm32)
+@E::Error while linking, aborting.
+

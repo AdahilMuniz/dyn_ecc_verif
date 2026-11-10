@@ -1,0 +1,159 @@
+Resource Report
+Microchip Technology Inc. - Microchip Libero Software Release v2024.1 (Version 2024.1.0.3)
+Date: Thu Aug  1 17:08:18 2024
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | SmartFusion2   |
+| Device                         | M2S005         |
+| Package                        | 144 TQ         |
+| Speed Grade                    | -1             |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 2.5V           |
+| Default I/O technology         | LVCMOS 2.5V    |
+| Restrict Probe Pins            | No             |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+----------------------------------------------------------------------------+
+| Topcell | stm32                                                                      |
+| Format  | Verilog                                                                    |
+| Source  | C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\stm32.vm |
++---------+----------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 223  | 6060  | 3.68       |
+| DFF                       | 1    | 6060  | 0.02       |
+| I/O Register              | 0    | 252   | 0.00       |
+| User I/O                  | 68   | 84    | 80.95      |
+| -- Single-ended I/O       | 68   | 84    | 80.95      |
+| -- Differential I/O Pairs | 0    | 38    | 0.00       |
+| RAM64x18                  | 0    | 11    | 0.00       |
+| RAM1K18                   | 0    | 10    | 0.00       |
+| MACC                      | 0    | 11    | 0.00       |
+| Chip Globals              | 1    | 8     | 12.50      |
+| CCC                       | 0    | 2     | 0.00       |
+| RCOSC_25_50MHZ            | 1    | 1     | 100.00     |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| MSS                       | 0    | 1     | 0.00       |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+-----+
+| Type                     | 4LUT | DFF |
++--------------------------+------+-----+
+| Fabric Logic             | 223  | 1   |
+| RAM64x18 Interface Logic | 0    | 0   |
+| RAM1K18 Interface Logic  | 0    | 0   |
+| MACC Interface Logic     | 0    | 0   |
+| Total Used               | 223  | 1   |
++--------------------------+------+-----+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 3    |
+| Total  | 3    |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 18           | 0           | 0               |
+| Output I/O                    | 18           | 0           | 0               |
+| Bidirectional I/O             | 32           | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVCMOS25     |  2.50v |  N/A |  18   |  18    |  32           |
++--------------+--------+------+-------+--------+---------------+
+
+Nets assigned to chip global resources
++--------+---------+---------------------------------------------------------------+
+| Fanout | Type    | Name                                                          |
++--------+---------+---------------------------------------------------------------+
+| 1      | INT_NET | Net   : OSC_C0_0_RCOSC_25_50MHZ_O2F                           |
+|        |         | Driver: OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ_FAB_CLKINT/U0_RGB1 |
+|        |         | Source: NETLIST                                               |
++--------+---------+---------------------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                         |
++--------+---------+------------------------------------------------------------------------------+
+| 51     | INT_NET | Net   : ecc_sel0_c                                                           |
+|        |         | Driver: ecc_sel0_ibuf                                                        |
+| 49     | INT_NET | Net   : ecc_sel1_c                                                           |
+|        |         | Driver: ecc_sel1_ibuf                                                        |
+| 47     | INT_NET | Net   : mcu_fpga_io_1                                                        |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1                                      |
+| 19     | INT_NET | Net   : fpga_top_design_0/decoder_input[2]                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNI03VJ4                             |
+| 16     | INT_NET | Net   : mcu_fpga_io_1_i_0                                                    |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNIF86G                              |
+| 16     | INT_NET | Net   : fpga_top_design_0/modulo_hamming/decodificador/final_verify_bit_Z[1] |
+|        |         | Driver: fpga_top_design_0/modulo_hamming/decodificador/verify_bit_3_0_a4[1]  |
+| 15     | INT_NET | Net   : fpga_top_design_0/decoder_input[10]                                  |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNIF6NC8                             |
+| 14     | INT_NET | Net   : fpga_top_design_0/decoder_input[3]                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNI14VJ4                             |
+| 13     | INT_NET | Net   : fpga_top_design_0/decoder_input[12]                                  |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNIH8NC8                             |
+| 13     | INT_NET | Net   : fpga_top_design_0/decoder_input[6]                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNI47VJ4                             |
++--------+---------+------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                         |
++--------+---------+------------------------------------------------------------------------------+
+| 51     | INT_NET | Net   : ecc_sel0_c                                                           |
+|        |         | Driver: ecc_sel0_ibuf                                                        |
+| 49     | INT_NET | Net   : ecc_sel1_c                                                           |
+|        |         | Driver: ecc_sel1_ibuf                                                        |
+| 47     | INT_NET | Net   : mcu_fpga_io_1                                                        |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1                                      |
+| 19     | INT_NET | Net   : fpga_top_design_0/decoder_input[2]                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNI03VJ4                             |
+| 16     | INT_NET | Net   : mcu_fpga_io_1_i_0                                                    |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNIF86G                              |
+| 16     | INT_NET | Net   : fpga_top_design_0/modulo_hamming/decodificador/final_verify_bit_Z[1] |
+|        |         | Driver: fpga_top_design_0/modulo_hamming/decodificador/verify_bit_3_0_a4[1]  |
+| 15     | INT_NET | Net   : fpga_top_design_0/decoder_input[10]                                  |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNIF6NC8                             |
+| 14     | INT_NET | Net   : fpga_top_design_0/decoder_input[3]                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNI14VJ4                             |
+| 13     | INT_NET | Net   : fpga_top_design_0/decoder_input[12]                                  |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNIH8NC8                             |
+| 13     | INT_NET | Net   : fpga_top_design_0/decoder_input[6]                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_RNI47VJ4                             |
++--------+---------+------------------------------------------------------------------------------+
+

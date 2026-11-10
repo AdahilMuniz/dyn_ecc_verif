@@ -1,0 +1,20 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2024.1 (Version 2024.1.0.3)
+
+Date      :  Thu Oct 17 16:25:39 2024
+Project   :  C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy
+Component :  OSC_C0
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lucas/OneDrive/Documentos/Projeto Nascerr/FPGA_project-main/stm32_test_memory - Copy/component/work/OSC_C0/OSC_C0_0/OSC_C0_OSC_C0_0_OSC.v
+    C:/Users/Lucas/OneDrive/Documentos/Projeto Nascerr/FPGA_project-main/stm32_test_memory - Copy/component/work/OSC_C0/OSC_C0.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/Lucas/OneDrive/Documentos/Projeto Nascerr/FPGA_project-main/stm32_test_memory - Copy/component/Actel/SgCore/OSC/2.0.101/osc_comps.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/Lucas/OneDrive/Documentos/Projeto Nascerr/FPGA_project-main/stm32_test_memory - Copy/component/Actel/SgCore/OSC/2.0.101/osc_comps_pre.v
+
+Constraint files:
+    C:/Users/Lucas/OneDrive/Documentos/Projeto Nascerr/FPGA_project-main/stm32_test_memory - Copy/component/work/OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.sdc

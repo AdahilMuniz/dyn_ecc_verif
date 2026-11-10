@@ -1,0 +1,75 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\synthesis\\synwork\\stm32_comp.srs|-top|stm32|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl|-I|C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\synthesis\\|-I|D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib|-sysv|-devicelib|D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib\\generic\\smartfusion2.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work"
+#CUR:"D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\bin64\\c_ver.exe":1704385142
+#CUR:"D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib\\generic\\smartfusion2.v":1704384662
+#CUR:"D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib\\vlog\\hypermods.v":1704384280
+#CUR:"D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib\\vlog\\umr_capim.v":1704384514
+#CUR:"D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1704384280
+#CUR:"D:\\Microchip\\Libero_SoC_v2024.1\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1704384280
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\component\\Actel\\SgCore\\OSC\\2.0.101\\osc_comps.v":1718199721
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\component\\work\\OSC_C0\\OSC_C0_0\\OSC_C0_OSC_C0_0_OSC.v":1729193139
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\component\\work\\OSC_C0\\OSC_C0.v":1729193139
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\fpga_top_design.sv":1729192101
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\hamming_top_design.sv":1729192487
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\Encoder16bits.sv":1729193650
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\Encoder16bits_random.sv":1729192302
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\Decoder16bits.sv":1724879324
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\EDACencoder.sv":1724879243
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\EDACdecoder.sv":1720729949
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\hdl\\lfsr_random_generator.sv":1729193521
+#CUR:"C:\\Users\\Lucas\\OneDrive\\Documentos\\Projeto Nascerr\\FPGA_project-main\\stm32_test_memory - Copy\\component\\work\\stm32\\stm32.v":1729193321
+0			"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v" verilog
+1			"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v" verilog
+2			"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0.v" verilog
+3			"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\fpga_top_design.sv" verilog
+4		*	"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\hamming_top_design.sv" verilog
+5		*	"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\Encoder16bits.sv" verilog
+6		*	"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\Encoder16bits_random.sv" verilog
+7		*	"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\Decoder16bits.sv" verilog
+8		*	"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\EDACencoder.sv" verilog
+9		*	"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\EDACdecoder.sv" verilog
+10			"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\lfsr_random_generator.sv" verilog
+11			"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\stm32\stm32.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 0
+2 1
+3 9 8 7 6 5 4
+4 9 8 7 6 5 3
+5 9 8 7 6 4 3
+6 9 8 7 5 4 3
+7 9 8 6 5 4 3
+8 9 7 6 5 4 3
+9 8 7 6 5 4 3
+10 -1
+11 2 10 9 8 7 6 5 4 3
+#Dependency Lists(Users Of)
+0 1
+1 2
+2 11
+3 11 9 8 7 6 5 4
+4 11 9 8 7 6 5 3
+5 11 9 8 7 6 4 3
+6 11 9 8 7 5 4 3
+7 11 9 8 6 5 4 3
+8 11 9 7 6 5 4 3
+9 11 8 7 6 5 4 3
+10 11
+11 -1
+#Design Unit to File Association
+module work stm32 11
+module work lfsr_random_generator 10
+module work fpga_top_design 3
+module work hamming_top_design 4
+module work EDACdecoder 9
+module work EDACencoder 8
+module work Decoder16bits 7
+module work Encoder16bits_random 6
+module work Encoder16bits 5
+module work OSC_C0 2
+module work OSC_C0_OSC_C0_0_OSC 1
+module work XTLOSC_FAB 0
+module work RCOSC_25_50MHZ_FAB 0
+module work RCOSC_1MHZ_FAB 0
+module work XTLOSC 0
+module work RCOSC_25_50MHZ 0
+module work RCOSC_1MHZ 0

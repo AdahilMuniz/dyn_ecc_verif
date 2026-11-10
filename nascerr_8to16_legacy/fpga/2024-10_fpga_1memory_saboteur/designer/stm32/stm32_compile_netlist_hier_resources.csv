@@ -1,0 +1,9 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Single-Ended I/O,Chip Globals,RCOSC_50MHZ
+OSC_C0_0/OSC_C0_0/Primitives,0,0,0,1,1
+Primitives/Primitives,0,0,67,0,0
+fpga_top_design_0/Primitives,18,0,0,0,0
+fpga_top_design_0/modulo_hamming/Primitives,68,0,0,0,0
+fpga_top_design_0/modulo_hamming/decodificador2/Primitives,29,0,0,0,0
+fpga_top_design_0/modulo_hamming/decodificador3/Primitives,59,0,0,0,0
+lfsr_random_generator_0/Primitives,0,2,0,0,0
