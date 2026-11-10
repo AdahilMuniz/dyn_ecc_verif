@@ -1,15 +1,17 @@
 // =============================================================================
-// design_filelist.f - DUT source list (FPGA_design submodule)
+// design_filelist.f - DUT source list: the dyn_ecc 8->16 ASIC RTL (dyn_ecc_8to16/rtl)
 //
-// The HDL files no longer use `include or `timescale; every module is listed
-// here explicitly. Paths are relative to the repo root (the directory from
-// which vcs is invoked). Leaf modules are listed before the modules that
-// instantiate them.
+// One module per file, no `include; package first, leaves before their users.
+// Paths are relative to the repo root (where vcs / verilator are invoked).
+// Used by `make compile` (via verif_filelist.f) and `make lint`.
 // =============================================================================
 
-FPGA_design/FPGA2memory/hdl/TBEC_RSC_encoder.sv
-FPGA_design/FPGA2memory/hdl/TBEC_RSC_decoder.sv
-FPGA_design/FPGA2memory/hdl/MRSC_encoder.sv
-FPGA_design/FPGA2memory/hdl/MRSC_decoder.sv
-FPGA_design/FPGA2memory/hdl/ecc_design.sv
-FPGA_design/FPGA2memory/hdl/design.sv
+dyn_ecc_8to16/rtl/dyn_ecc_pkg.sv
+dyn_ecc_8to16/rtl/dyn_ecc_hamming_enc.sv
+dyn_ecc_8to16/rtl/dyn_ecc_hamming_dec.sv
+dyn_ecc_8to16/rtl/dyn_ecc_tbec_enc.sv
+dyn_ecc_8to16/rtl/dyn_ecc_tbec_dec.sv
+dyn_ecc_8to16/rtl/dyn_ecc_edac_enc.sv
+dyn_ecc_8to16/rtl/dyn_ecc_edac_dec.sv
+dyn_ecc_8to16/rtl/dyn_ecc_ctrl.sv
+dyn_ecc_8to16/rtl/dyn_ecc_top.sv

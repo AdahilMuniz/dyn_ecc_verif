@@ -1,4 +1,4 @@
 [submodule "FPGA_design"]
-	path = FPGA_design
+	path = nascerr_16to32/fpga/FPGA_design
 	url = https://github.com/AdahilMuniz/FPGA_design.git
 	branch = refactor
