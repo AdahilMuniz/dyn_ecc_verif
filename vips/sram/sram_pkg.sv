@@ -10,9 +10,10 @@ package sram_pkg;
   import uvm_pkg::*;
   `include "uvm_macros.svh"
 
-  // Data/address widths of the SRAM transactions (match sram_if defaults).
+  // Data/address widths of the SRAM transactions (match sram_if defaults:
+  // 16-bit data, 21-bit word address = 2M x 16 SRAM).
   parameter int SRAM_DATA_WIDTH = 16;
-  parameter int SRAM_ADDR_WIDTH = 16;
+  parameter int SRAM_ADDR_WIDTH = 21;
 
   typedef enum bit { SRAM_READ = 1'b0, SRAM_WRITE = 1'b1 } sram_op_e;
 

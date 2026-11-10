@@ -1,5 +1,18 @@
 `include "uvm_macros.svh"
 
+// Testbench top for the dyn_ecc 8->16 ASIC RTL (dyn_ecc_8to16/rtl, dyn_ecc_top).
+//
+// Wired like the board-level top of the 8->16 FPGA it derives from
+// (nascerr_8to16_legacy/fpga/2024-08_fpga_1memory_8to16/component/work/stm32/stm32.v),
+// plus NOE into the DUT, which now drives the MCU bus only during reads:
+//
+//   MCU agent (FMC model) --D[15:0]--> dyn_ecc_top --D[15:0]--> SRAM (IS61WV2M16AL)
+//        |  A[20:0], NE, NWE, NOE  ------------------------------->  (straight to SRAM)
+//        |  NE -> cs_n, NWE -> we_n, NOE -> oe_n                    LB/UB tied active
+//   sideband: wsig -> ecc_sel[1:0], erro -> rsig[0]
+//
+// The agents use logical active-high cs/we; this module converts them to the
+// active-low pins of the DUT and the SRAM.
 module dyn_ecc_tb;
 
   import uvm_pkg::*;
@@ -7,75 +20,67 @@ module dyn_ecc_tb;
 
   // Clock and active-low reset: declared (as variables) before the interfaces
   // that reference them, otherwise clk/rst_n get inferred as implicit nets and
-  // cannot be driven procedurally.
+  // cannot be driven procedurally. The DUT itself has no reset; rst_n only gates
+  // the agents.
   logic clk = 1'b0;
   logic rst_n;
-  always #5 clk = ~clk;
+  always #5 clk = ~clk; // 100 MHz; stands in for the FPGA's on-chip oscillator
 
   // ---- Interface instances --------------------------------------------------
-  sram_if #(.DATA_WIDTH(16), .ADDR_WIDTH(16)) mcu_if0 (.clk(clk), .rstn(rst_n));
-  sram_if #(.DATA_WIDTH(16), .ADDR_WIDTH(16)) sram_if0 (.clk(clk), .rstn(rst_n));
-  sram_if #(.DATA_WIDTH(16), .ADDR_WIDTH(16)) sram_if1 (.clk(clk), .rstn(rst_n));
-  sideband_if #(.WWIDTH(3), .RWIDTH(3)) mux_if0 (.clk(clk), .rstn(rst_n));
+  sram_if                               mcu_if0  (.clk(clk), .rstn(rst_n)); // MCU (FMC) bus, active agent
+  sram_if                               sram_if0 (.clk(clk), .rstn(rst_n)); // FPGA<->SRAM bus, passive agent
+  sideband_if #(.WWIDTH(2), .RWIDTH(1)) mux_if0  (.clk(clk), .rstn(rst_n)); // ecc_sel / erro
+  sram_backdoor_if                      sram_bd0 ();
 
-  // ---- DUT buses / controls -------------------------------------------------
-  wire [15:0] mcu_fpga_io;
-  wire [15:0] fpga_mem_io_up;
-  wire [15:0] fpga_mem_io_down;
+  // ---- Board nets -------------------------------------------------------------
+  wire  [15:0] mcu_fpga_io;   // MCU <-> FPGA data
+  wire  [15:0] fpga_mem_io;   // FPGA <-> SRAM data
+  logic        ne_n;          // FMC NE1  -> DUT chip_sel, SRAM CE_n
+  logic        nwe_n;         // FMC NWE  -> DUT write_en, SRAM WE_n
+  logic        noe_n;         // FMC NOE  -> DUT oe_n, SRAM OE_n
+  logic        erro;
 
-  logic       write_en;
-  logic       chip_sel;
-  logic [1:0] chip_sel_out;
-  logic [2:0] ecc_sel;
-  logic [0:2] flag_out;
-  logic       output_en;
+  assign ne_n  = ~mcu_if0.cs;
+  assign nwe_n = ~(mcu_if0.cs &  mcu_if0.we);
+  assign noe_n = ~(mcu_if0.cs & ~mcu_if0.we);
 
-  // ---- DUT instance ---------------------------------------------------------
-  fpga_top_design dut (
-    .mcu_fpga_io      (mcu_fpga_io),
-    .fpga_mem_io_up   (fpga_mem_io_up),
-    .fpga_mem_io_down (fpga_mem_io_down),
-    .write_en         (write_en),
-    .chip_sel         (chip_sel),
-    .chip_sel_out     (chip_sel_out),
-    .ecc_sel          (ecc_sel),
-    .flag_out         (flag_out),
-    .clk              (clk),
-    .rst_n            (rst_n),
-    .output_en        (output_en)
+  // ---- DUT ----------------------------------------------------------------------
+  dyn_ecc_top dut (
+    .mcu_data (mcu_fpga_io),
+    .mem_data (fpga_mem_io),
+    .cs_n     (ne_n),
+    .we_n     (nwe_n),
+    .oe_n     (noe_n),
+    .ecc_sel  (mux_if0.wsig),
+    .clk      (clk),
+    .erro     (erro)
   );
 
-  // ---- Interface <-> DUT pin bridging --------------------------------------
-  // NOTE: write_en is ACTIVE LOW in the DUT (write when write_en==0). All the
-  // polarities below follow that. A write is therefore issued by driving
-  // mcu_if0.we = 0, a read by mcu_if0.we = 1.
-  assign write_en = mcu_if0.we;
-  assign chip_sel = mcu_if0.cs;
-  assign ecc_sel  = mux_if0.wsig;
+  // ---- SRAM (address and controls straight from the MCU, as on the board) ---------
+  IS61WV2M16AL u_sram (
+    .Address (mcu_if0.addr),
+    .dataIO  (fpga_mem_io),
+    .OE_bar  (noe_n),
+    .CE_bar  (ne_n),
+    .WE_bar  (nwe_n),
+    .LB_bar  (1'b0),
+    .UB_bar  (1'b0)
+  );
 
-  // MCU side: on a write (write_en==0) the MCU agent drives the input word onto
-  // the bus; on a read (write_en==1) it captures the decoded word the DUT drives.
-  assign mcu_fpga_io   = (~write_en) ? mcu_if0.wdata : 'bz;
-  assign mcu_if0.rdata = ( write_en) ? mcu_fpga_io   : 'bz;
+  // ---- MCU bus: drive data on a write, observe the FPGA's output otherwise ---------
+  assign mcu_fpga_io   = (~nwe_n) ? mcu_if0.wdata : 'z;
+  assign mcu_if0.rdata = mcu_fpga_io;
 
-  // SRAM side (up = sram_if0, down = sram_if1): on a write (write_en==0) the
-  // agent captures the codeword the DUT drives toward memory; on a read
-  // (write_en==1) it drives the stored codeword back onto the bus.
-  assign sram_if0.wdata   = (~write_en) ? fpga_mem_io_up : 'bz;
-  assign fpga_mem_io_up   = ( write_en) ? sram_if0.rdata : 'bz;
-  assign sram_if0.we      = write_en;
-  assign sram_if0.cs      = chip_sel_out[0];
+  // ---- Memory-side observation (passive) ------------------------------------------
+  assign sram_if0.addr  = mcu_if0.addr;
+  assign sram_if0.cs    = ~ne_n;
+  assign sram_if0.we    = ~nwe_n;
+  assign sram_if0.wdata = fpga_mem_io; // codeword driven by the FPGA on a write
+  assign sram_if0.rdata = fpga_mem_io; // stored word driven by the SRAM on a read
 
-  assign sram_if1.wdata   = (~write_en) ? fpga_mem_io_down : 'bz;
-  assign fpga_mem_io_down = ( write_en) ? sram_if1.rdata   : 'bz;
-  assign sram_if1.we      = write_en;
-  assign sram_if1.cs      = chip_sel_out[1];
-
-  // Sideband: ecc mode select in (wsig -> ecc_sel), ECC flag out (flag_out -> rsig).
-  assign mux_if0.rsig = flag_out;
-
-  // output_en is not yet owned by any agent; tie it idle (not reading) for now.
-  assign output_en = 1'b1;
+  // ---- Sideband ---------------------------------------------------------------------
+  assign mux_if0.rsig = erro;
+  initial mux_if0.wsig = ECC_BYPASS; // sequences change it through the virtual interface
 
   // ---- Reset generation -----------------------------------------------------
   initial begin
@@ -86,10 +91,10 @@ module dyn_ecc_tb;
 
   // ---- Publish interfaces to the UVM config_db and launch the test ----------
   initial begin
-    uvm_config_db#(virtual sram_if)::set    (null, "*", "mcu_if",   mcu_if0);
-    uvm_config_db#(virtual sram_if)::set    (null, "*", "sram0_if", sram_if0);
-    uvm_config_db#(virtual sram_if)::set    (null, "*", "sram1_if", sram_if1);
-    uvm_config_db#(virtual sideband_if)::set(null, "*", "mux_if",   mux_if0);
+    uvm_config_db#(virtual sram_if)::set(null, "*", "mcu_if",   mcu_if0);
+    uvm_config_db#(virtual sram_if)::set(null, "*", "sram0_if", sram_if0);
+    uvm_config_db#(mux_vif_t)      ::set(null, "*", "mux_if",   mux_if0);
+    uvm_config_db#(sram_bd_vif_t)  ::set(null, "*", "sram_bd",  sram_bd0);
     run_test();
   end
 

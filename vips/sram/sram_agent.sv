@@ -33,6 +33,7 @@ class sram_agent extends uvm_agent;
     if (get_is_active() == UVM_ACTIVE) begin
       uvm_config_db#(virtual sram_if)::set(this, "drv", "vif", cfg.vif);
       drv  = sram_driver   ::type_id::create("drv",  this);
+      drv.access_cycles = cfg.access_cycles;
       seqr = sram_sequencer::type_id::create("seqr", this);
     end
   endfunction
