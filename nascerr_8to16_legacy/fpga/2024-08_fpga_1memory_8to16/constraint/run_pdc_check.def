@@ -1,0 +1,8 @@
+DESIGN=stm32
+DESDIR=C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\designer\stm32
+TARGET_DIR=C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\designer\stm32
+FAM=SmartFusion2
+DIE=PA4M500
+PACKAGE=tq144
+SPEED=-1
+PDC_FILE=C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\constraint\io\constrains_pdc.pdc,,

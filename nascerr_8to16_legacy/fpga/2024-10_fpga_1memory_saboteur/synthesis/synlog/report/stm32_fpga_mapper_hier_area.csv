@@ -1,0 +1,10 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1K18, RAM64X18, GLOBAL, IO
+. stm32, 2, 175, 0, 0, 0, 0, 0, 1, 67
+.	. OSC_C0, 0, 0, 0, 0, 0, 0, 0, 1, 0
+.	.	. OSC_C0_OSC_C0_0_OSC, 0, 0, 0, 0, 0, 0, 0, 1, 0
+.	. fpga_top_design, 0, 174, 0, 0, 0, 0, 0, 0, 0
+.	.	. hamming_top_design, 0, 156, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Decoder16bits, 0, 29, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. EDACdecoder, 0, 59, 0, 0, 0, 0, 0, 0, 0
+.	. lfsr_random_generator, 2, 0, 0, 0, 0, 0, 0, 0, 0

@@ -1,0 +1,11 @@
+/Firmware_CubeSat/.metadata
+.metadata/
+/.claude
+/.codex
+Firmware_CubeSat/dev_nascerr_firmware/.codex
+__pycache__/
+*.py[cod]
+Firmware_CubeSat/dev_nascerr_firmware/Debug/**/*.o
+Firmware_CubeSat/dev_nascerr_firmware/Debug/**/*.d
+Firmware_CubeSat/dev_nascerr_firmware/Debug/**/*.su
+Firmware_CubeSat/dev_nascerr_firmware/Debug/**/*.cyclo

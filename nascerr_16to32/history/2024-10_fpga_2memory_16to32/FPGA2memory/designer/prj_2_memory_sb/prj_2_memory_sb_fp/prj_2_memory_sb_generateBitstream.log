@@ -1,0 +1,13 @@
+Software Version: 2024.1.0.3
+Opened 'C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sb_fp\prj_2_memory_sb.pro'
+PDB file 'C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sb.pdb' has been loaded successfully.
+DESIGN : prj_2_memory_sb;  CHECKSUM : 91E6;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+File/Folder 'C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sb.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sb.ppd'; file programs Fabric.
+Fabric component bitstream digest: ef3bc773b03a7eba023b243eee5d766ae2e4d960ca3867af99b646989607455a
+Entire bitstream digest: bb900cf3d2ac469b36961d8322fd5b1190c7e897f3bdd245bf56971c04edebc9
+Finished: Tue Oct 15 17:25:13 2024 (Elapsed time 00:00:15)
+
+Project saved.
+Project closed.

@@ -1,0 +1,9 @@
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_decoder.sv":8:12:8:15|Object flag is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":13:14:13:18|Object sumSP is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":13:20:13:25|Object sumSDi is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":4:12:4:14|Object red is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL118 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|Latch generated from always block for signal data_out_right_up[0:15]; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|Latch generated from always block for signal data_out_right_down[0:15]; possible missing assignment in an if or case statement.
+@W: CL217 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|always_comb does not infer combinatorial logic
+@W: CL217 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|always_comb does not infer combinatorial logic
+

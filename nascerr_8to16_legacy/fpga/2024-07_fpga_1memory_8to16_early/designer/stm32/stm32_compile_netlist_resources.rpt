@@ -1,0 +1,156 @@
+Resource Report
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+Date: Thu Jul 11 17:43:00 2024
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | SmartFusion2   |
+| Device                         | M2S005         |
+| Package                        | 144 TQ         |
+| Speed Grade                    | -1             |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 2.5V           |
+| Default I/O technology         | LVCMOS 2.5V    |
+| Restrict Probe Pins            | No             |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+------------------------------------------------------------------------------+
+| Topcell | stm32                                                                        |
+| Format  | Verilog                                                                      |
+| Source  | C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32.vm |
++---------+------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 202  | 6060  | 3.33       |
+| DFF                       | 0    | 6060  | 0.00       |
+| I/O Register              | 0    | 252   | 0.00       |
+| User I/O                  | 67   | 84    | 79.76      |
+| -- Single-ended I/O       | 67   | 84    | 79.76      |
+| -- Differential I/O Pairs | 0    | 38    | 0.00       |
+| RAM64x18                  | 0    | 11    | 0.00       |
+| RAM1K18                   | 0    | 10    | 0.00       |
+| MACC                      | 0    | 11    | 0.00       |
+| Chip Globals              | 0    | 8     | 0.00       |
+| CCC                       | 0    | 2     | 0.00       |
+| RCOSC_25_50MHZ            | 0    | 1     | 0.00       |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| MSS                       | 0    | 1     | 0.00       |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+-----+
+| Type                     | 4LUT | DFF |
++--------------------------+------+-----+
+| Fabric Logic             | 202  | 0   |
+| RAM64x18 Interface Logic | 0    | 0   |
+| RAM1K18 Interface Logic  | 0    | 0   |
+| MACC Interface Logic     | 0    | 0   |
+| Total Used               | 202  | 0   |
++--------------------------+------+-----+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 7    |
+| Total  | 7    |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 18           | 0           | 0               |
+| Output I/O                    | 17           | 0           | 0               |
+| Bidirectional I/O             | 32           | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVCMOS25     |  2.50v |  N/A |  18   |  17    |  32           |
++--------------+--------+------+-------+--------+---------------+
+
+Nets assigned to chip global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+-----------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                        |
++--------+---------+-----------------------------------------------------------------------------+
+| 52     | INT_NET | Net   : ecc_sel0_c                                                          |
+|        |         | Driver: ecc_sel0_ibuf                                                       |
+| 46     | INT_NET | Net   : ecc_sel1_c                                                          |
+|        |         | Driver: ecc_sel1_ibuf                                                       |
+| 17     | INT_NET | Net   : fpga_mem_io_in[4]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[4]                                                |
+| 16     | INT_NET | Net   : fpga_mem_io_in[6]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[6]                                                |
+| 16     | INT_NET | Net   : fpga_mem_io_in[2]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[2]                                                |
+| 16     | INT_NET | Net   : mcu_fpga_io_1_i_0                                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1                                     |
+| 16     | INT_NET | Net   : mcu_fpga_io_1_i_i                                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_i_0                                 |
+| 16     | INT_NET | Net   : fpga_top_design_0/modulo_hamming/final_verify_bit[1]                |
+|        |         | Driver: fpga_top_design_0/modulo_hamming/decodificador/verify_bit_3_0_a4[1] |
+| 15     | INT_NET | Net   : fpga_mem_io_in[10]                                                  |
+|        |         | Driver: fpga_mem_io_iobuf[10]                                               |
+| 15     | INT_NET | Net   : fpga_mem_io_in[1]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[1]                                                |
++--------+---------+-----------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+-----------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                        |
++--------+---------+-----------------------------------------------------------------------------+
+| 52     | INT_NET | Net   : ecc_sel0_c                                                          |
+|        |         | Driver: ecc_sel0_ibuf                                                       |
+| 46     | INT_NET | Net   : ecc_sel1_c                                                          |
+|        |         | Driver: ecc_sel1_ibuf                                                       |
+| 17     | INT_NET | Net   : fpga_mem_io_in[4]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[4]                                                |
+| 16     | INT_NET | Net   : fpga_mem_io_in[6]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[6]                                                |
+| 16     | INT_NET | Net   : fpga_mem_io_in[2]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[2]                                                |
+| 16     | INT_NET | Net   : mcu_fpga_io_1_i_0                                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1                                     |
+| 16     | INT_NET | Net   : mcu_fpga_io_1_i_i                                                   |
+|        |         | Driver: fpga_top_design_0/mcu_fpga_io_1_i_0                                 |
+| 16     | INT_NET | Net   : fpga_top_design_0/modulo_hamming/final_verify_bit[1]                |
+|        |         | Driver: fpga_top_design_0/modulo_hamming/decodificador/verify_bit_3_0_a4[1] |
+| 15     | INT_NET | Net   : fpga_mem_io_in[10]                                                  |
+|        |         | Driver: fpga_mem_io_iobuf[10]                                               |
+| 15     | INT_NET | Net   : fpga_mem_io_in[1]                                                   |
+|        |         | Driver: fpga_mem_io_iobuf[1]                                                |
++--------+---------+-----------------------------------------------------------------------------+
+

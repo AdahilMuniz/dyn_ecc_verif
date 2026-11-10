@@ -1,0 +1,2 @@
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\design.sv":32:12:32:17|Reference to undefined module Ecc_design
+

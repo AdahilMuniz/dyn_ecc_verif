@@ -1,0 +1,125 @@
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2-1
+Install: C:\Microchip\Libero_SoC_v2023.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+Synopsys HDL compiler and linker, Version comp202209synp2, Build 179R, Built Jun 27 2023 09:29:56, @
+
+Modified Files: 9
+FID:  path (prevtimestamp, timestamp)
+14       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30)
+15       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48)
+21       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29)
+22       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25)
+16       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56)
+17       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32)
+18       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32)
+19       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32)
+20       C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 9
+MID:  lib.cell.view
+2        work.Decoder16bits.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+8        work.EDACdecoder.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+9        work.EDACencoder.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+3        work.Encoder16bits.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+4        work.fpga_top_design.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+5        work.hamming_decoder.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+6        work.hamming_encoder.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (module definition)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (may instantiate this module)
+7        work.hamming_top_design.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv (N/A, 2024-07-11 16:44:48) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv (N/A, 2024-07-11 17:32:29) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv (N/A, 2024-07-11 17:36:25) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv (N/A, 2024-07-11 16:45:56) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv (N/A, 2024-07-11 17:20:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv (N/A, 2024-07-08 14:30:32) <-- (may instantiate this module)
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv (N/A, 2024-07-11 17:39:57) <-- (module definition)
+0        work.stm32.verilog may have changed because the following files changed:
+                        C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v (2024-07-11 17:25:58, 2024-07-11 17:42:30) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 5
+FID:  path (timestamp)
+0        C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\generic\smartfusion2.v (2023-08-08 07:25:45)
+1        C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\hypermods.v (2023-08-08 07:25:46)
+2        C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\scemi_objects.v (2023-08-08 07:25:46)
+3        C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\scemi_pipes.svh (2023-08-08 07:25:46)
+4        C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\umr_capim.v (2023-08-08 07:25:46)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

@@ -1,13 +1,18 @@
 // =============================================================================
-// filelist.f - top VCS compile file list for the dyn_ecc UVM environment
-//   Usage (from repo root):
-//     vcs -full64 -sverilog -ntb_opts uvm-1.2 -f filelist.f -o simv
+// verif_filelist.f - top VCS compile file list for the dyn_ecc UVM environment
+//   Usage (from repo root): make compile   (see Makefile; the DPI-C golden
+//   model, the firmware's NASCERR_ECCs.c, is added on the vcs command line)
 // =============================================================================
 
 // -----------------------------------------------------------------------------
-// DUT source list (FPGA_design submodule).
+// DUT source list.
 // -----------------------------------------------------------------------------
 -f script/design_filelist.f
+
+// -----------------------------------------------------------------------------
+// Board models: IS61WV2M16AL 2M x 16 async SRAM (own `timescale 1ns/100ps).
+// -----------------------------------------------------------------------------
+tb/models/IS61WV2M16AL.v
 
 // -----------------------------------------------------------------------------
 // Interfaces (compiled before the packages/top that reference them).
@@ -15,6 +20,7 @@
 +incdir+vips/sram
 vips/sram/sram_if.sv
 tb/sideband_if.sv
+tb/sram_backdoor_if.sv
 
 // -----------------------------------------------------------------------------
 // Verification IP packages.

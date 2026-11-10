@@ -1,0 +1,52 @@
+********************************************************************
+I/O Bank Report - Date: Fri Oct 18 12:14:38 2024
+Product: Designer
+Release: v2024.1
+Version: 2024.1.0.3
+Design Name: stm32
+Family: SmartFusion2
+Die: M2S005
+Package: 144 TQ
+********************************************************************
+
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 19            | 0            | 0
+    Output I/O                            | 16            | 0            | 0
+    Bidirectional I/O                     | 32            | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os              
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vddi  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVCMOS25                        | 2.50v | N/A   | 19    | 16     | 32           
+
+I/O Bank Resource Usage:
+
+          |   Voltages    | Single I/Os  | Diff I/O Pairs |        Vref I/Os        |  Type   
+          |-------|-------|------|-------|-------|--------|------|-------|----------|---------
+          | Vddi  | Vref  | Used | Total | Used  | Total  | Used | Total | Vref Pins|         
+    ------|-------|-------|------|-------|-------|--------|------|-------|----------|---------
+    Bank0 | 2.50v | N/A   | 23   | 23    | 0     | 10     | N/A  | N/A   | N/A      | DDRIO   
+    Bank1 | N/A   | N/A   | 0    | 0     | 0     | 0      | N/A  | N/A   | N/A      | MSIO    
+    Bank2 | 2.50v | N/A   | 16   | 16    | 0     | 7      | N/A  | N/A   | N/A      | MSIO    
+    Bank3 | N/A   | N/A   | 0    | 0     | 0     | 0      | N/A  | N/A   | N/A      | JTAG    
+    Bank4 | 2.50v | N/A   | 7    | 20    | 0     | 10     | N/A  | N/A   | N/A      | MSIO    
+    Bank5 | 2.50v | N/A   | 9    | 9     | 0     | 3      | N/A  | N/A   | N/A      | MSIOD   
+    Bank6 | 2.50v | N/A   | 12   | 16    | 0     | 8      | N/A  | N/A   | N/A      | MSIO    
+
+I/O Voltage Usage:
+
+       Voltages    |     I/Os     
+    -------|-------|------|-------
+     Vddi  | Vref  | Used | Total 
+    -------|-------|------|-------
+     2.50v | N/A   | 67   | 84    
+

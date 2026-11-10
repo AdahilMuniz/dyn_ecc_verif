@@ -1,0 +1,244 @@
+# Tue Oct 15 17:23:38 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\Microchip\Libero_SoC_v2024.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309act, Build 044R, Built Jan  4 2024 08:30:58, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 184MB peak: 184MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 186MB peak: 199MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 186MB peak: 199MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 199MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 199MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 246MB peak: 246MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 251MB peak: 251MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 252MB peak: 252MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 264MB peak: 264MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 268MB peak: 268MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 269MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 273MB peak: 273MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 273MB peak: 274MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:04s; Memory used current: 273MB peak: 274MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 290MB peak: 290MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:05s		   -16.99ns		 316 /         0
+   2		0h:00m:05s		   -16.96ns		 299 /         0
+   3		0h:00m:05s		   -15.44ns		 299 /         0
+   4		0h:00m:05s		   -14.75ns		 299 /         0
+   5		0h:00m:06s		   -14.50ns		 300 /         0
+   6		0h:00m:06s		   -14.50ns		 301 /         0
+
+   7		0h:00m:08s		   -14.04ns		 302 /         0
+   8		0h:00m:08s		   -13.66ns		 306 /         0
+   9		0h:00m:08s		   -13.68ns		 308 /         0
+  10		0h:00m:09s		   -13.49ns		 310 /         0
+  11		0h:00m:09s		   -13.37ns		 319 /         0
+  12		0h:00m:09s		   -13.27ns		 321 /         0
+
+
+  13		0h:00m:09s		   -13.36ns		 325 /         0
+  14		0h:00m:10s		   -13.22ns		 326 /         0
+@N: FP130 |Promoting Net fpga_top_design_0.modulo.data_out_right_up7_i_0 on CLKINT  I_84 
+@N: FP130 |Promoting Net fpga_top_design_0.modulo.data_out_right_up8_i_0 on CLKINT  I_85 
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 298MB peak: 299MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 298MB peak: 299MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 299MB peak: 299MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 299MB peak: 299MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 251MB peak: 299MB)
+
+Writing Analyst data base C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\synwork\prj_2_memory_sb_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 297MB peak: 299MB)
+
+Writing Verilog Simulation files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 298MB peak: 299MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 298MB peak: 299MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 295MB peak: 299MB)
+
+@W: MT420 |Found inferred clock ecc_design|data_out_right_up7_inferred_clock with period 10.00ns. Please declare a user-defined clock on net fpga_top_design_0.modulo.data_out_right_up7.
+@W: MT420 |Found inferred clock ecc_design|data_out_right_up8_inferred_clock with period 10.00ns. Please declare a user-defined clock on net fpga_top_design_0.modulo.data_out_right_up8.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Tue Oct 15 17:23:51 2024
+#
+
+
+Top view:               prj_2_memory_sb
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: NA
+
+                                                 Requested     Estimated     Requested     Estimated               Clock        Clock     
+Starting Clock                                   Frequency     Frequency     Period        Period        Slack     Type         Group     
+------------------------------------------------------------------------------------------------------------------------------------------
+ecc_design|data_out_right_up7_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)
+ecc_design|data_out_right_up8_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)
+==========================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 296MB peak: 299MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 296MB peak: 299MB)
+
+---------------------------------------
+Resource Usage Report for prj_2_memory_sb 
+
+Mapping to part: m2s025tvf400std
+Cell usage:
+CLKINT          2 uses
+CFG1           3 uses
+CFG2           34 uses
+CFG3           87 uses
+CFG4           200 uses
+
+
+Sequential Cells: 
+SLE            32 uses
+
+DSP Blocks:    0 of 34 (0%)
+
+I/O ports: 105
+I/O primitives: 105
+BIBUF          48 uses
+INBUF          28 uses
+OUTBUF         29 uses
+
+
+Global Clock Buffers: 2
+
+Total LUTs:    324
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K18  Interface Logic : SLEs = 0; LUTs = 0;
+MACC     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  32 + 0 + 0 + 0 = 32;
+Total number of LUTs after P&R:  324 + 0 + 0 + 0 = 324;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 130MB peak: 299MB)
+
+Process took 0h:00m:12s realtime, 0h:00m:12s cputime
+# Tue Oct 15 17:23:51 2024
+
+###########################################################]

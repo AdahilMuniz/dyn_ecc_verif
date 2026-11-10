@@ -1,0 +1,202 @@
+/**
+ * ******************************************************************************
+ *  @file    : i2c_slave.c
+ *  @brief   : Source file for I2C Slave Mode.
+ *  @author  : Marcus Anderson
+ * ******************************************************************************
+ */
+
+/*
+ * ******************************************************************************
+ *  Includes   <System Includes> , "Project Includes"
+ * ******************************************************************************
+ */
+
+#include "i2c_slave.h"
+#include "NASCERR_Protocol.h"
+
+/*
+ * ******************************************************************************
+ *  Variables
+ * ******************************************************************************
+ */
+
+extern ProtocolTypeDef g_comm_config;
+extern I2C_HandleTypeDef hi2c2;
+
+PARAM_STANDARD transmitted, received = Action_Succeeded;
+
+/*
+ * ******************************************************************************
+ *  Local Functions
+ * ******************************************************************************
+ */
+
+/*
+ * ******************************************************************************
+ *  Function Name: i2c_slave_init
+ *  @brief     : I2C Salve Initialization Function
+ *  @param     : None
+ *  @retval    : SYSTEM_STATUS - Status system
+ * ******************************************************************************
+ */
+
+SYSTEM_STATUS i2c_slave_init(void)
+{
+	g_comm_config.addr = (uint8_t)((hi2c2.Init.OwnAddress1) >> 1);
+	nascerr_protocol_init(&g_comm_config);
+
+	if (HAL_I2C_EnableListen_IT(&hi2c2) != HAL_OK)
+	{
+	  return ERR_INIT;
+	}
+
+	return STATUS_OK;
+}
+
+void i2c_slave_reset(void)
+{
+	HAL_I2C_DisableListen_IT(&hi2c2);
+	HAL_I2C_DeInit(&hi2c2);
+	HAL_I2C_Init(&hi2c2);
+	HAL_I2C_EnableListen_IT(&hi2c2);
+}
+
+/*
+ * ******************************************************************************
+ *  Function Name: i2c_slave_receive
+ *  @brief     : I2C Salve receive data
+ *  @param     :
+ *  @retval    : SYSTEM_STATUS - Status system
+ * ******************************************************************************
+ */
+
+SYSTEM_STATUS i2c_slave_receive(uint8_t *pData, uint16_t Size)
+{
+	uint8_t error_com = false;
+	uint32_t XferOptions;
+	StatusCommTypeDef comm_status = g_comm_config.status_comm;
+
+	switch(comm_status) {
+		case COMMUNICATION_INIT:
+			XferOptions = I2C_FIRST_FRAME;
+			break;
+		case COMMUNICATION_INPROCESS:
+			XferOptions = I2C_NEXT_FRAME;
+			break;
+		case PROCESSING_DATA:
+			XferOptions = I2C_LAST_FRAME;
+			break;
+		default:
+			XferOptions = I2C_LAST_FRAME;
+			error_com = true;
+			break;
+	}
+
+	if ((HAL_I2C_Slave_Seq_Receive_IT(&hi2c2, pData, Size, XferOptions) != HAL_OK) || error_com == true)
+	{
+		__HAL_I2C_GENERATE_NACK(&hi2c2);
+		return ERR_COMM;
+	}
+
+	received = Action_Failed;
+
+	return STATUS_OK;
+}
+
+/*
+ * ******************************************************************************
+ *  Function Name: i2c_slave_receive
+ *  @brief     : I2C Salve send data
+ *  @param     :
+ *  @retval    : SYSTEM_STATUS - Status system
+ * ******************************************************************************
+ */
+
+SYSTEM_STATUS i2c_slave_send(uint8_t *pData, uint16_t Size)
+{
+	if (HAL_I2C_Slave_Seq_Transmit_IT(&hi2c2, pData, Size, I2C_LAST_FRAME) != HAL_OK)
+	{
+		return ERR_COMM;
+	}
+
+	transmitted = Action_Failed;
+
+	return STATUS_OK;
+}
+
+/*
+ * ******************************************************************************
+ ** HAL STm32 Functions
+ * ******************************************************************************
+ */
+
+void HAL_I2C_ListenCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+	HAL_I2C_EnableListen_IT(hi2c);
+}
+
+void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode)
+{
+
+	StatusCommTypeDef comm_status;
+
+	comm_status = nascerr_protocol_poll(&g_comm_config, (BusTypeDef) TransferDirection);
+
+	if (comm_status == COMMUNICATION_FAILURE)
+	{
+		nascerr_protocol_commInit(&g_comm_config);
+		HAL_I2C_DisableListen_IT(hi2c);
+		HAL_I2C_DeInit(hi2c);
+		HAL_I2C_Init(hi2c);
+	}
+
+}
+
+void HAL_I2C_SlaveTxCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+	transmitted = Action_Succeeded;
+	nascerr_protocol_commInit(&g_comm_config);
+	HAL_I2C_EnableListen_IT(hi2c);
+}
+
+void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+	StatusCommTypeDef comm_status;
+
+	received = Action_Succeeded;
+	comm_status = nascerr_protocol_poll(&g_comm_config, RECEIVING_DATA);
+
+	if (comm_status == PROCESSING_DATA)
+	{
+		nascerr_protocol_poll(&g_comm_config, LISTENING_MODE);
+		nascerr_protocol_commInit(&g_comm_config);
+		HAL_I2C_EnableListen_IT(hi2c);
+	}
+
+	if (comm_status == COMMUNICATION_FAILURE)
+	{
+		nascerr_protocol_commInit(&g_comm_config);
+		HAL_I2C_DisableListen_IT(hi2c);
+		HAL_I2C_DeInit(hi2c);
+		HAL_I2C_Init(hi2c);
+		HAL_I2C_EnableListen_IT(hi2c);
+	}
+
+}
+
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+{
+	//HAL_I2C_ERROR_NONE       0x00000000U    /*!< No error           */
+	//HAL_I2C_ERROR_BERR       0x00000001U    /*!< BERR error         */
+	//HAL_I2C_ERROR_ARLO       0x00000002U    /*!< ARLO error         */
+	//HAL_I2C_ERROR_AF         0x00000004U    /*!< Ack Failure error  */
+	//HAL_I2C_ERROR_OVR        0x00000008U    /*!< OVR error          */
+	//HAL_I2C_ERROR_DMA        0x00000010U    /*!< DMA transfer error */
+	//HAL_I2C_ERROR_TIMEOUT    0x00000020U    /*!< Timeout Error      */
+	uint32_t error_code = HAL_I2C_GetError(hi2c);
+	if (error_code != HAL_I2C_ERROR_AF){}
+	HAL_I2C_EnableListen_IT(hi2c);
+
+}
+

@@ -1,0 +1,9 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Single-Ended I/O,Chip Globals
+Primitives/Primitives,0,0,105,0
+fpga_top_design_0/Primitives,8,0,0,0
+fpga_top_design_0/modulo/Primitives,148,32,0,2
+fpga_top_design_0/modulo/codificador1/Primitives,5,0,0,0
+fpga_top_design_0/modulo/codificador2/Primitives,3,0,0,0
+fpga_top_design_0/modulo/decodificador1/Primitives,116,0,0,0
+fpga_top_design_0/modulo/decodificador2/Primitives,44,0,0,0

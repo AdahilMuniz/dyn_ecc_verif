@@ -1,0 +1,42 @@
+Software Version: 2024.1.0.3
+Programmer 'S2011JOGRF' : JTAG TCK / SPI SCK frequency = 1 MHz
+programmer 'S2011JOGRF' : FlashPro5
+Opened 'C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sb_fp\prj_2_memory_sb.pro'
+The 'open_project' command succeeded.
+Info: Programming is already enabled for device 'M2S025T'.
+The 'enable_device' command succeeded.
+PPD file 'C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/designer/prj_2_memory_sb/prj_2_memory_sb.ppd' has been loaded successfully.
+DESIGN : prj_2_memory_sb;  CHECKSUM : 91E6;  PDB_VERSION : 1.0
+The 'set_programming_file' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer 'S2011JOGRF' : Scan Chain...
+Programmer 'S2011JOGRF' : JTAG TCK / SPI SCK frequency = 1 MHz
+programmer 'S2011JOGRF' : Check Chain...
+programmer 'S2011JOGRF' : Scan and Check Chain PASSED.
+programmer 'S2011JOGRF' : device 'M2S025T' : Executing action PROGRAM
+Programmer 'S2011JOGRF' : JTAG TCK / SPI SCK frequency = 4 MHz
+programmer 'S2011JOGRF' : device 'M2S025T' : Family: SmartFusion2
+programmer 'S2011JOGRF' : device 'M2S025T' : Product:      M2S025
+programmer 'S2011JOGRF' : device 'M2S025T' : Cortex-M3 Enabled (M3_ALLOWED = 1)
+programmer 'S2011JOGRF' : device 'M2S025T' : Programming Interface Protocol: JTAG
+programmer 'S2011JOGRF' : device 'M2S025T' : EXPORT ISC_ENABLE_RESULT[32] = 005a6524
+programmer 'S2011JOGRF' : device 'M2S025T' : EXPORT CRCERR[1] = 0
+programmer 'S2011JOGRF' : device 'M2S025T' : EXPORT EDCERR[1] = 0
+programmer 'S2011JOGRF' : device 'M2S025T' : Programming FPGA Array...
+programmer 'S2011JOGRF' : device 'M2S025T' : EXPORT Fabric component digest[256] = ef3bc773b03a7eba023b243eee5d766ae2e4d960ca3867af99b646989607455a
+programmer 'S2011JOGRF' : device 'M2S025T' : ===================================================================================
+programmer 'S2011JOGRF' : device 'M2S025T' : EXPORT DSN[128] = baffe3097e862f2fab4eb719a03eb31f
+programmer 'S2011JOGRF' : device 'M2S025T' : ===================================================================================
+programmer 'S2011JOGRF' : device 'M2S025T' : Finished: Tue Oct 15 17:26:05 2024 (Elapsed time 00:00:39)
+programmer 'S2011JOGRF' : device 'M2S025T' : Executing action PROGRAM PASSED.
+programmer 'S2011JOGRF' : Chain programming PASSED.
+Chain Programming Finished: Tue Oct 15 17:26:05 2024 (Elapsed time 00:00:39)
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.
+The 'close_project' command succeeded.
+The Execute Script command succeeded.

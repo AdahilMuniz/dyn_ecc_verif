@@ -1,0 +1,5366 @@
+//
+// Written by Synplify Pro 
+// Product Version "V-2023.09M"
+// Program "Synplify Pro", Mapper "map202309act, Build 044R"
+// Tue Oct 15 17:23:50 2024
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\generic\smartfusion2.v "
+// file 1 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\hypermods.v "
+// file 2 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\umr_capim.v "
+// file 3 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\scemi_objects.v "
+// file 4 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\vlog\scemi_pipes.svh "
+// file 5 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\design.sv "
+// file 6 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\ecc_design.sv "
+// file 7 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\tbec_rsc_encoder.sv "
+// file 8 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\tbec_rsc_decoder.sv "
+// file 9 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\mrsc_encoder.sv "
+// file 10 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\mrsc_decoder.sv "
+// file 11 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\component\work\prj_2_memory_sb\prj_2_memory_sb.v "
+// file 12 "\c:\microchip\libero_soc_v2024.1\synplifypro\lib\nlconst.dat "
+// file 13 "\c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\designer\prj_2_memory_sb\synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module TBEC_RSC_encoder (
+  encoder_output1,
+  mcu_fpga_io_in_2,
+  mcu_fpga_io_in_7,
+  mcu_fpga_io_in_11,
+  mcu_fpga_io_in_6,
+  mcu_fpga_io_in_3,
+  mcu_fpga_io_in_5,
+  mcu_fpga_io_in_4,
+  mcu_fpga_io_in_1,
+  mcu_fpga_io_in_0,
+  mcu_fpga_io_in_15,
+  mcu_fpga_io_in_14,
+  Di_1__1_1z,
+  Di_0__0_1z
+)
+;
+output [22:20] encoder_output1 ;
+input mcu_fpga_io_in_2 ;
+input mcu_fpga_io_in_7 ;
+input mcu_fpga_io_in_11 ;
+input mcu_fpga_io_in_6 ;
+input mcu_fpga_io_in_3 ;
+input mcu_fpga_io_in_5 ;
+input mcu_fpga_io_in_4 ;
+input mcu_fpga_io_in_1 ;
+input mcu_fpga_io_in_0 ;
+input mcu_fpga_io_in_15 ;
+input mcu_fpga_io_in_14 ;
+output Di_1__1_1z ;
+output Di_0__0_1z ;
+wire mcu_fpga_io_in_2 ;
+wire mcu_fpga_io_in_7 ;
+wire mcu_fpga_io_in_11 ;
+wire mcu_fpga_io_in_6 ;
+wire mcu_fpga_io_in_3 ;
+wire mcu_fpga_io_in_5 ;
+wire mcu_fpga_io_in_4 ;
+wire mcu_fpga_io_in_1 ;
+wire mcu_fpga_io_in_0 ;
+wire mcu_fpga_io_in_15 ;
+wire mcu_fpga_io_in_14 ;
+wire Di_1__1_1z ;
+wire Di_0__0_1z ;
+wire GND ;
+wire VCC ;
+// @7:29
+  CFG2 \Di[0]_0  (
+	.A(mcu_fpga_io_in_2),
+	.B(mcu_fpga_io_in_7),
+	.Y(Di_0__0_1z)
+);
+defparam \Di[0]_0 .INIT=4'h6;
+// @7:30
+  CFG3 \Di[1]_1  (
+	.A(mcu_fpga_io_in_11),
+	.B(mcu_fpga_io_in_6),
+	.C(mcu_fpga_io_in_3),
+	.Y(Di_1__1_1z)
+);
+defparam \Di[1]_1 .INIT=8'h96;
+// @7:27
+  CFG4 \P[3]  (
+	.A(mcu_fpga_io_in_5),
+	.B(mcu_fpga_io_in_4),
+	.C(mcu_fpga_io_in_1),
+	.D(mcu_fpga_io_in_0),
+	.Y(encoder_output1[21])
+);
+defparam \P[3] .INIT=16'h6996;
+// @7:25
+  CFG4 \P[1]  (
+	.A(mcu_fpga_io_in_7),
+	.B(mcu_fpga_io_in_6),
+	.C(mcu_fpga_io_in_3),
+	.D(mcu_fpga_io_in_2),
+	.Y(encoder_output1[22])
+);
+defparam \P[1] .INIT=16'h6996;
+// @7:24
+  CFG3 \P[0]  (
+	.A(mcu_fpga_io_in_15),
+	.B(mcu_fpga_io_in_14),
+	.C(mcu_fpga_io_in_11),
+	.Y(encoder_output1[20])
+);
+defparam \P[0] .INIT=8'h96;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* TBEC_RSC_encoder */
+
+module TBEC_RSC_decoder (
+  decoder_output1_m_a0_0_0,
+  decoder_output1_8,
+  decoder_output1_0,
+  decoder_input_up_0,
+  decoder_input_up_11,
+  decoder_input_up_10,
+  decoder_input_up_13,
+  linsin_0_,
+  SUM_0_a4_1_0_0,
+  signal_1__3_0,
+  mcu_mem_io_down_in,
+  signal_3__3_0,
+  signal_2__3_0,
+  signal_0__3_0,
+  signal_3__6,
+  SDi_0_a4_1_0,
+  data_out_left_iv_a1_1_0,
+  mcu_mem_io_up_in,
+  data_out_left_iv_1_a1_0_0,
+  signal_2__0_iv_0_tz_0,
+  SUM_3_a2_0_0,
+  SUM_3_a2_1_0,
+  SDi_0,
+  SDi_3_0,
+  SDi_4_0,
+  SUM_0_a4_0_0,
+  SUM_0_a4_1_0_x_0,
+  SDi_2_0,
+  CO0_3,
+  quad117_1_RNI0G6UV9_1z,
+  b32,
+  data_N_9_0_i,
+  data_N_9_0_i_1,
+  ecc_sel1_c,
+  data_m8_2_3_1,
+  b33_0,
+  signal_0__2_sqmuxa_0,
+  N_142,
+  data_N_7_mux_i_1_1,
+  data_N_7_mux_i_1_0,
+  data_m2_e_0,
+  N_99,
+  data_N_11_mux_0_i_1_0,
+  data_N_11_mux_0_i_1_0_1,
+  data_out_right_up9,
+  b33,
+  un1_SDi_3_i,
+  g2,
+  N_71_2,
+  data_N_5_0_0,
+  data_N_5_2_0_1,
+  CO0_2,
+  CO2_1_0,
+  N_109_2,
+  un1_quad1_NE_i,
+  un1_quad1_0,
+  N_134,
+  un1_SDi_2_1z,
+  N_135,
+  quad117_0,
+  quad117,
+  ecc_sel0_c,
+  g0_1_1z,
+  N_133,
+  mcu_fpga_io_1
+)
+;
+input decoder_output1_m_a0_0_0 ;
+output decoder_output1_8 ;
+output decoder_output1_0 ;
+input decoder_input_up_0 ;
+input decoder_input_up_11 ;
+input decoder_input_up_10 ;
+input decoder_input_up_13 ;
+output [1:0] linsin_0_ ;
+output SUM_0_a4_1_0_0 ;
+output signal_1__3_0 ;
+input [15:0] mcu_mem_io_down_in ;
+output signal_3__3_0 ;
+output signal_2__3_0 ;
+output signal_0__3_0 ;
+output [3:2] signal_3__6 ;
+output SDi_0_a4_1_0 ;
+output data_out_left_iv_a1_1_0 ;
+input [15:0] mcu_mem_io_up_in ;
+input data_out_left_iv_1_a1_0_0 ;
+output signal_2__0_iv_0_tz_0 ;
+output SUM_3_a2_0_0 ;
+output SUM_3_a2_1_0 ;
+output SDi_0 ;
+output SDi_3_0 ;
+output SDi_4_0 ;
+output SUM_0_a4_0_0 ;
+output SUM_0_a4_1_0_x_0 ;
+output SDi_2_0 ;
+output CO0_3 ;
+output quad117_1_RNI0G6UV9_1z ;
+output b32 ;
+output data_N_9_0_i ;
+input data_N_9_0_i_1 ;
+input ecc_sel1_c ;
+output data_m8_2_3_1 ;
+input b33_0 ;
+input signal_0__2_sqmuxa_0 ;
+output N_142 ;
+output data_N_7_mux_i_1_1 ;
+input data_N_7_mux_i_1_0 ;
+input data_m2_e_0 ;
+output N_99 ;
+output data_N_11_mux_0_i_1_0 ;
+input data_N_11_mux_0_i_1_0_1 ;
+input data_out_right_up9 ;
+output b33 ;
+output un1_SDi_3_i ;
+input g2 ;
+output N_71_2 ;
+output data_N_5_0_0 ;
+output data_N_5_2_0_1 ;
+output CO0_2 ;
+output CO2_1_0 ;
+output N_109_2 ;
+output un1_quad1_NE_i ;
+output un1_quad1_0 ;
+input N_134 ;
+output un1_SDi_2_1z ;
+input N_135 ;
+output quad117_0 ;
+input quad117 ;
+input ecc_sel0_c ;
+input g0_1_1z ;
+input N_133 ;
+input mcu_fpga_io_1 ;
+wire decoder_output1_m_a0_0_0 ;
+wire decoder_output1_8 ;
+wire decoder_output1_0 ;
+wire decoder_input_up_0 ;
+wire decoder_input_up_11 ;
+wire decoder_input_up_10 ;
+wire decoder_input_up_13 ;
+wire SUM_0_a4_1_0_0 ;
+wire signal_1__3_0 ;
+wire signal_3__3_0 ;
+wire signal_2__3_0 ;
+wire signal_0__3_0 ;
+wire SDi_0_a4_1_0 ;
+wire data_out_left_iv_a1_1_0 ;
+wire data_out_left_iv_1_a1_0_0 ;
+wire signal_2__0_iv_0_tz_0 ;
+wire SUM_3_a2_0_0 ;
+wire SUM_3_a2_1_0 ;
+wire SDi_0 ;
+wire SDi_3_0 ;
+wire SDi_4_0 ;
+wire SUM_0_a4_0_0 ;
+wire SUM_0_a4_1_0_x_0 ;
+wire SDi_2_0 ;
+wire CO0_3 ;
+wire quad117_1_RNI0G6UV9_1z ;
+wire b32 ;
+wire data_N_9_0_i ;
+wire data_N_9_0_i_1 ;
+wire ecc_sel1_c ;
+wire data_m8_2_3_1 ;
+wire b33_0 ;
+wire signal_0__2_sqmuxa_0 ;
+wire N_142 ;
+wire data_N_7_mux_i_1_1 ;
+wire data_N_7_mux_i_1_0 ;
+wire data_m2_e_0 ;
+wire N_99 ;
+wire data_N_11_mux_0_i_1_0 ;
+wire data_N_11_mux_0_i_1_0_1 ;
+wire data_out_right_up9 ;
+wire b33 ;
+wire un1_SDi_3_i ;
+wire g2 ;
+wire N_71_2 ;
+wire data_N_5_0_0 ;
+wire data_N_5_2_0_1 ;
+wire CO0_2 ;
+wire CO2_1_0 ;
+wire N_109_2 ;
+wire un1_quad1_NE_i ;
+wire un1_quad1_0 ;
+wire N_134 ;
+wire un1_SDi_2_1z ;
+wire N_135 ;
+wire quad117_0 ;
+wire quad117 ;
+wire ecc_sel0_c ;
+wire g0_1_1z ;
+wire N_133 ;
+wire mcu_fpga_io_1 ;
+wire [0:0] SDi_2_0_a4_1_Z;
+wire [0:0] SUM_0_a4_1;
+wire [0:0] SUM_0_a4_1_0_0_Z;
+wire [3:2] signal_1__6;
+wire [0:0] SDi_2_0_a4_1_0_Z;
+wire [1:1] SP_3;
+wire [0:0] SP_2;
+wire [3:3] SP;
+wire [2:2] SDi_4_0_a4_1_0;
+wire [2:2] SDi_4_0_a4_0_Z;
+wire [0:0] SDi_2_0_a4_RNI1FL8A1_Z;
+wire [0:0] SDi_2_0_a4_RNIJ49N75_Z;
+wire [0:0] SUM_0_a2_1;
+wire [3:3] SDi_0_a4_1_0_Z;
+wire [3:3] SDi_0_a4_0_Z;
+wire [1:0] linsin_3_;
+wire [1:0] linsin_2_;
+wire [0:0] linsin_1_;
+wire [0:0] SUM_0_0_a2_1_Z;
+wire [0:0] b33_4;
+wire [3:3] signal_0__6;
+wire [3:3] signal_2__6_0;
+wire [1:1] signal_3__0_iv_0_tz;
+wire [2:2] decoder_output1_m_a0_c;
+wire [0:0] sumSP;
+wire [1:1] SDi_3_0_a4_1_0_Z;
+wire [0:0] SUM_0_a4_0_0_Z;
+wire CO0_1 ;
+wire N_144 ;
+wire CO2_N_6_i_i ;
+wire quad117_1_RNINN2GQ6_Z ;
+wire data_N_5_1 ;
+wire N_136 ;
+wire CO2_m2_0 ;
+wire CO2_m2_1 ;
+wire N_138 ;
+wire N_137 ;
+wire un1_SDi_6_2_1_N_2L1_sx_Z ;
+wire un1_SDi_6_2_1_N_2L1_Z ;
+wire un1_SP_3_1_0_Z ;
+wire un1_SP_3_Z ;
+wire N_141 ;
+wire g1_0_Z ;
+wire g0_1_0 ;
+wire N_72 ;
+wire g0_N_2L1_Z ;
+wire N_69 ;
+wire CO0_0_Z ;
+wire CO0 ;
+wire data_m7_i_m3_0_1 ;
+wire un1_SDi_6_2_1_Z ;
+wire g0_2_N_2L1_Z ;
+wire CO2_1_0_1 ;
+wire CO2_1 ;
+wire CO2_1_N_2L1 ;
+wire CO2_1_N_3L3 ;
+wire ANB0_1 ;
+wire quad117_1_RNI4LSUTM_Z ;
+wire CO2_1_1 ;
+wire CO2 ;
+wire un1_SDi_6_0_tz_Z ;
+wire un1_SDi_6_2_Z ;
+wire data_m8_2_3_1_1 ;
+wire linsin_2__i_out ;
+wire sumSP_2_0_a4_0 ;
+wire CO3_0 ;
+wire CO1_0_tz ;
+wire CO1_0_tz_0 ;
+wire CO2_1_tz_0 ;
+wire CO2_1_tz_0_0 ;
+wire GND ;
+wire VCC ;
+// @8:38
+  CFG4 \SDi_2_0_a4[0]  (
+	.A(mcu_mem_io_up_in[10]),
+	.B(mcu_mem_io_down_in[15]),
+	.C(SDi_2_0_a4_1_Z[0]),
+	.D(mcu_fpga_io_1),
+	.Y(SDi_2_0)
+);
+defparam \SDi_2_0_a4[0] .INIT=16'h0069;
+// @8:38
+  CFG3 \SDi_2_0_a4_1[0]  (
+	.A(mcu_mem_io_up_in[15]),
+	.B(mcu_mem_io_up_in[13]),
+	.C(mcu_mem_io_up_in[8]),
+	.Y(SDi_2_0_a4_1_Z[0])
+);
+defparam \SDi_2_0_a4_1[0] .INIT=8'h69;
+// @6:28
+  CFG4 \N_1_1.CO0_1  (
+	.A(mcu_mem_io_up_in[1]),
+	.B(mcu_mem_io_up_in[0]),
+	.C(mcu_mem_io_down_in[10]),
+	.D(mcu_fpga_io_1),
+	.Y(CO0_1)
+);
+defparam \N_1_1.CO0_1 .INIT=16'hFF69;
+// @8:47
+  CFG4 \un2_6_2.CO2_m5_i_x2  (
+	.A(signal_3__6[2]),
+	.B(SUM_0_a4_1[0]),
+	.C(N_144),
+	.D(N_133),
+	.Y(CO2_N_6_i_i)
+);
+defparam \un2_6_2.CO2_m5_i_x2 .INIT=16'h9669;
+// @8:47
+  CFG3 \un2_6_1.SUM_0_a4_1_0_x[0]  (
+	.A(SUM_0_a4_1_0_0_Z[0]),
+	.B(mcu_fpga_io_1),
+	.C(decoder_input_up_0),
+	.Y(SUM_0_a4_1_0_x_0)
+);
+defparam \un2_6_1.SUM_0_a4_1_0_x[0] .INIT=8'hE1;
+// @6:35
+  CFG4 \_l1.signal[1]_6_i_o4_RNIDM5P6N[3]  (
+	.A(g0_1_1z),
+	.B(signal_1__6[3]),
+	.C(decoder_input_up_0),
+	.D(quad117_1_RNINN2GQ6_Z),
+	.Y(data_N_5_1)
+);
+defparam \_l1.signal[1]_6_i_o4_RNIDM5P6N[3] .INIT=16'hF0E4;
+// @6:35
+  CFG3 quad117_1_RNINN2GQ6 (
+	.A(ecc_sel0_c),
+	.B(quad117),
+	.C(quad117_0),
+	.Y(quad117_1_RNINN2GQ6_Z)
+);
+defparam quad117_1_RNINN2GQ6.INIT=8'h27;
+// @8:36
+  CFG3 \SP_0_a2[3]  (
+	.A(mcu_mem_io_up_in[1]),
+	.B(mcu_mem_io_up_in[0]),
+	.C(mcu_fpga_io_1),
+	.Y(N_136)
+);
+defparam \SP_0_a2[3] .INIT=8'h06;
+// @8:47
+  CFG4 \un2_6_2.CO2_m2_1  (
+	.A(mcu_mem_io_down_in[3]),
+	.B(CO2_m2_0),
+	.C(mcu_fpga_io_1),
+	.D(decoder_input_up_0),
+	.Y(CO2_m2_1)
+);
+defparam \un2_6_2.CO2_m2_1 .INIT=16'h39C6;
+// @8:47
+  CFG4 \un2_6_2.SUM_0_a4_0[0]  (
+	.A(N_138),
+	.B(N_137),
+	.C(N_136),
+	.D(N_135),
+	.Y(SUM_0_a4_0_0)
+);
+defparam \un2_6_2.SUM_0_a4_0[0] .INIT=16'h6996;
+// @8:47
+  CFG4 un1_SDi_6_2_1_N_2L1 (
+	.A(un1_SDi_6_2_1_N_2L1_sx_Z),
+	.B(SDi_4_0),
+	.C(SDi_3_0),
+	.D(SDi_0),
+	.Y(un1_SDi_6_2_1_N_2L1_Z)
+);
+defparam un1_SDi_6_2_1_N_2L1.INIT=16'h0001;
+// @8:47
+  CFG4 un1_SDi_6_2_1_N_2L1_sx (
+	.A(mcu_mem_io_up_in[10]),
+	.B(mcu_mem_io_up_in[8]),
+	.C(SDi_2_0_a4_1_0_Z[0]),
+	.D(mcu_fpga_io_1),
+	.Y(un1_SDi_6_2_1_N_2L1_sx_Z)
+);
+defparam un1_SDi_6_2_1_N_2L1_sx.INIT=16'h0069;
+// @8:38
+  CFG3 \SDi_2_0_a4_1_0[0]  (
+	.A(mcu_mem_io_up_in[15]),
+	.B(mcu_mem_io_up_in[13]),
+	.C(mcu_mem_io_down_in[15]),
+	.Y(SDi_2_0_a4_1_0_Z[0])
+);
+defparam \SDi_2_0_a4_1_0[0] .INIT=8'h69;
+// @8:47
+  CFG4 un1_SP_3 (
+	.A(un1_SP_3_1_0_Z),
+	.B(un1_SDi_2_1z),
+	.C(SP_3[1]),
+	.D(SP_2[0]),
+	.Y(un1_SP_3_Z)
+);
+defparam un1_SP_3.INIT=16'h3331;
+// @8:47
+  CFG4 un1_SP_3_1_0 (
+	.A(mcu_mem_io_down_in[8]),
+	.B(SP[3]),
+	.C(mcu_fpga_io_1),
+	.D(N_141),
+	.Y(un1_SP_3_1_0_Z)
+);
+defparam un1_SP_3_1_0.INIT=16'h0231;
+// @8:40
+  CFG4 \SDi_4_0_a4[2]  (
+	.A(mcu_mem_io_down_in[12]),
+	.B(SDi_4_0_a4_1_0[2]),
+	.C(SDi_4_0_a4_0_Z[2]),
+	.D(mcu_fpga_io_1),
+	.Y(SDi_4_0)
+);
+defparam \SDi_4_0_a4[2] .INIT=16'hF096;
+// @8:40
+  CFG2 \SDi_4_0_a4_1[2]  (
+	.A(mcu_mem_io_up_in[5]),
+	.B(mcu_mem_io_up_in[7]),
+	.Y(SDi_4_0_a4_1_0[2])
+);
+defparam \SDi_4_0_a4_1[2] .INIT=4'h6;
+// @6:28
+  CFG4 \N_8_1.g0  (
+	.A(g1_0_Z),
+	.B(SDi_3_0),
+	.C(SDi_2_0),
+	.D(g0_1_0),
+	.Y(N_72)
+);
+defparam \N_8_1.g0 .INIT=16'hE8D4;
+// @6:28
+  CFG3 \N_8_1.g0_1  (
+	.A(decoder_input_up_11),
+	.B(decoder_input_up_10),
+	.C(N_134),
+	.Y(g0_1_0)
+);
+defparam \N_8_1.g0_1 .INIT=8'h69;
+// @8:47
+  CFG4 g0_N_2L1 (
+	.A(g1_0_Z),
+	.B(decoder_input_up_11),
+	.C(decoder_input_up_10),
+	.D(N_134),
+	.Y(g0_N_2L1_Z)
+);
+defparam g0_N_2L1.INIT=16'h6996;
+// @8:47
+  CFG3 \SDi_2_0_a4_RNI1FL8A1[0]  (
+	.A(g0_N_2L1_Z),
+	.B(SDi_3_0),
+	.C(SDi_2_0),
+	.Y(SDi_2_0_a4_RNI1FL8A1_Z[0])
+);
+defparam \SDi_2_0_a4_RNI1FL8A1[0] .INIT=8'h17;
+// @8:47
+  CFG4 \SDi_2_0_a4_RNIJ49N75[0]  (
+	.A(SDi_2_0_a4_RNI1FL8A1_Z[0]),
+	.B(N_69),
+	.C(CO0_0_Z),
+	.D(CO0),
+	.Y(SDi_2_0_a4_RNIJ49N75_Z[0])
+);
+defparam \SDi_2_0_a4_RNIJ49N75[0] .INIT=16'h6816;
+// @8:47
+  CFG2 \SDi_2_0_a4_RNIENN206[0]  (
+	.A(SDi_2_0_a4_RNIJ49N75_Z[0]),
+	.B(un1_quad1_0),
+	.Y(un1_quad1_NE_i)
+);
+defparam \SDi_2_0_a4_RNIENN206[0] .INIT=4'h2;
+// @8:47
+  CFG4 \un2_6_1.SUM_0_a4_2[0]  (
+	.A(signal_1__6[2]),
+	.B(data_m7_i_m3_0_1),
+	.C(mcu_fpga_io_1),
+	.D(N_144),
+	.Y(N_109_2)
+);
+defparam \un2_6_1.SUM_0_a4_2[0] .INIT=16'h59A6;
+// @8:47
+  CFG2 \un2_6_1.SUM_0_a4_2_1[0]  (
+	.A(mcu_mem_io_down_in[4]),
+	.B(mcu_mem_io_up_in[10]),
+	.Y(data_m7_i_m3_0_1)
+);
+defparam \un2_6_1.SUM_0_a4_2_1[0] .INIT=4'h6;
+// @6:28
+  CFG4 \N_1_1.SUM_0_a2[0]  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_up_in[3]),
+	.C(SUM_0_a2_1[0]),
+	.D(mcu_fpga_io_1),
+	.Y(N_141)
+);
+defparam \N_1_1.SUM_0_a2[0] .INIT=16'h0096;
+// @6:28
+  CFG2 \N_1_1.SUM_0_a2_1[0]  (
+	.A(mcu_mem_io_up_in[2]),
+	.B(mcu_mem_io_up_in[7]),
+	.Y(SUM_0_a2_1[0])
+);
+defparam \N_1_1.SUM_0_a2_1[0] .INIT=4'h6;
+// @8:47
+  CFG4 un1_SDi_6_2_1 (
+	.A(mcu_mem_io_down_in[8]),
+	.B(un1_SDi_6_2_1_N_2L1_Z),
+	.C(SP[3]),
+	.D(N_141),
+	.Y(un1_SDi_6_2_1_Z)
+);
+defparam un1_SDi_6_2_1.INIT=16'h73B3;
+// @8:41
+  CFG4 \SDi_0_a4[3]  (
+	.A(mcu_mem_io_down_in[14]),
+	.B(SDi_0_a4_1_0_Z[3]),
+	.C(SDi_0_a4_0_Z[3]),
+	.D(mcu_fpga_io_1),
+	.Y(SDi_0)
+);
+defparam \SDi_0_a4[3] .INIT=16'hF096;
+// @8:41
+  CFG2 \SDi_0_a4_1_0[3]  (
+	.A(mcu_mem_io_up_in[4]),
+	.B(mcu_mem_io_up_in[6]),
+	.Y(SDi_0_a4_1_0_Z[3])
+);
+defparam \SDi_0_a4_1_0[3] .INIT=4'h6;
+// @8:34
+  CFG2 g0_2_N_2L1 (
+	.A(mcu_mem_io_up_in[8]),
+	.B(mcu_mem_io_up_in[13]),
+	.Y(g0_2_N_2L1_Z)
+);
+defparam g0_2_N_2L1.INIT=4'h6;
+// @8:34
+  CFG4 g0_2 (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_up_in[9]),
+	.C(g0_2_N_2L1_Z),
+	.D(mcu_fpga_io_1),
+	.Y(N_137)
+);
+defparam g0_2.INIT=16'h0096;
+// @6:28
+  CFG4 \N_1_1.CO0  (
+	.A(SDi_4_0),
+	.B(SDi_0),
+	.C(CO0_1),
+	.D(N_135),
+	.Y(N_69)
+);
+defparam \N_1_1.CO0 .INIT=16'hE88E;
+// @8:47
+  CFG4 \un2_6_2.CO2_1_0  (
+	.A(CO2_m2_1),
+	.B(CO2_N_6_i_i),
+	.C(CO2_1_0_1),
+	.D(CO2_1),
+	.Y(CO2_1_0)
+);
+defparam \un2_6_2.CO2_1_0 .INIT=16'h12FF;
+// @8:47
+  CFG2 \un2_6_2.CO2_1_0_1  (
+	.A(signal_1__6[2]),
+	.B(signal_1__6[3]),
+	.Y(CO2_1_0_1)
+);
+defparam \un2_6_2.CO2_1_0_1 .INIT=4'h6;
+// @8:47
+  CFG3 \un2_6_2.CO2_1_N_2L1  (
+	.A(linsin_3_[1]),
+	.B(linsin_3_[0]),
+	.C(linsin_2_[1]),
+	.Y(CO2_1_N_2L1)
+);
+defparam \un2_6_2.CO2_1_N_2L1 .INIT=8'h17;
+// @8:47
+  CFG4 \un2_6_2.CO2_1_N_3L3  (
+	.A(mcu_mem_io_up_in[10]),
+	.B(mcu_mem_io_down_in[4]),
+	.C(mcu_fpga_io_1),
+	.D(decoder_input_up_0),
+	.Y(CO2_1_N_3L3)
+);
+defparam \un2_6_2.CO2_1_N_3L3 .INIT=16'h06F9;
+// @8:47
+  CFG4 \un2_6_2.CO2_1  (
+	.A(CO2_1_N_3L3),
+	.B(CO2_1_N_2L1),
+	.C(linsin_2_[0]),
+	.D(linsin_1_[0]),
+	.Y(CO2_1)
+);
+defparam \un2_6_2.CO2_1 .INIT=16'h088C;
+// @8:51
+  CFG4 \b33_1.ANB0_N_2L1  (
+	.A(mcu_mem_io_down_in[14]),
+	.B(mcu_mem_io_down_in[12]),
+	.C(mcu_mem_io_down_in[10]),
+	.D(mcu_mem_io_down_in[8]),
+	.Y(ANB0_1)
+);
+defparam \b33_1.ANB0_N_2L1 .INIT=16'h6996;
+// @8:51
+  CFG4 \b33_1.ANB0  (
+	.A(ANB0_1),
+	.B(SUM_3_a2_1_0),
+	.C(SUM_3_a2_0_0),
+	.D(mcu_fpga_io_1),
+	.Y(CO0_2)
+);
+defparam \b33_1.ANB0 .INIT=16'h0082;
+// @6:28
+  CFG4 \SUM_0_0_a2[0]  (
+	.A(mcu_mem_io_down_in[10]),
+	.B(mcu_mem_io_down_in[8]),
+	.C(SUM_0_0_a2_1_Z[0]),
+	.D(mcu_fpga_io_1),
+	.Y(b33_4[0])
+);
+defparam \SUM_0_0_a2[0] .INIT=16'h0096;
+// @6:28
+  CFG2 \SUM_0_0_a2_1[0]  (
+	.A(mcu_mem_io_down_in[12]),
+	.B(mcu_mem_io_down_in[14]),
+	.Y(SUM_0_0_a2_1_Z[0])
+);
+defparam \SUM_0_0_a2_1[0] .INIT=4'h6;
+// @6:35
+  CFG4 quad117_1_RNIUQ22MN (
+	.A(mcu_mem_io_up_in[3]),
+	.B(signal_0__6[3]),
+	.C(quad117_1_RNI4LSUTM_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_N_5_2_0_1)
+);
+defparam quad117_1_RNIUQ22MN.INIT=16'h0CAC;
+// @8:67
+  CFG3 g0_7 (
+	.A(mcu_mem_io_up_in[11]),
+	.B(mcu_mem_io_down_in[6]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_0__6[3])
+);
+defparam g0_7.INIT=8'h06;
+// @6:35
+  CFG4 quad117_1_RNI4LSUTM (
+	.A(ecc_sel0_c),
+	.B(g0_1_1z),
+	.C(quad117),
+	.D(quad117_0),
+	.Y(quad117_1_RNI4LSUTM_Z)
+);
+defparam quad117_1_RNI4LSUTM.INIT=16'hCEDF;
+// @6:35
+  CFG4 quad117_1_RNIFCA8MN (
+	.A(mcu_mem_io_up_in[1]),
+	.B(signal_2__6_0[3]),
+	.C(quad117_1_RNI4LSUTM_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_N_5_0_0)
+);
+defparam quad117_1_RNIFCA8MN.INIT=16'h0CAC;
+// @8:67
+  CFG3 g0_8 (
+	.A(mcu_mem_io_up_in[9]),
+	.B(mcu_mem_io_down_in[2]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_2__6_0[3])
+);
+defparam g0_8.INIT=8'h06;
+// @8:34
+  CFG2 g1_0 (
+	.A(mcu_fpga_io_1),
+	.B(mcu_mem_io_down_in[9]),
+	.Y(g1_0_Z)
+);
+defparam g1_0.INIT=4'h4;
+// @6:28
+  CFG3 \N_8_1.g0_0  (
+	.A(mcu_mem_io_up_in[11]),
+	.B(mcu_mem_io_up_in[10]),
+	.C(mcu_fpga_io_1),
+	.Y(N_71_2)
+);
+defparam \N_8_1.g0_0 .INIT=8'h06;
+// @6:28
+  CFG3 g0_6 (
+	.A(mcu_mem_io_down_in[15]),
+	.B(mcu_mem_io_down_in[13]),
+	.C(mcu_fpga_io_1),
+	.Y(SUM_3_a2_0_0)
+);
+defparam g0_6.INIT=8'h06;
+// @6:28
+  CFG3 g0_3 (
+	.A(b33_4[0]),
+	.B(SUM_3_a2_1_0),
+	.C(SUM_3_a2_0_0),
+	.Y(un1_quad1_0)
+);
+defparam g0_3.INIT=8'h96;
+// @8:34
+  CFG4 g0_1 (
+	.A(g1_0_Z),
+	.B(decoder_input_up_11),
+	.C(decoder_input_up_10),
+	.D(N_134),
+	.Y(SP_3[1])
+);
+defparam g0_1.INIT=16'h6996;
+// @8:33
+  CFG4 g0_5 (
+	.A(mcu_mem_io_down_in[11]),
+	.B(g2),
+	.C(N_71_2),
+	.D(mcu_fpga_io_1),
+	.Y(SP_2[0])
+);
+defparam g0_5.INIT=16'hF096;
+// @6:28
+  CFG3 g0_4 (
+	.A(SUM_3_a2_1_0),
+	.B(SUM_3_a2_0_0),
+	.C(SP_2[0]),
+	.Y(CO0)
+);
+defparam g0_4.INIT=8'h90;
+  CFG4 un1_SDi_3_RNIUJ25DF (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117_0),
+	.D(b33),
+	.Y(signal_2__0_iv_0_tz_0)
+);
+defparam un1_SDi_3_RNIUJ25DF.INIT=16'hF020;
+  CFG4 \signal[3]_0_iv_0_tz_0_RNIF9PDVI[1]  (
+	.A(mcu_mem_io_up_in[8]),
+	.B(signal_3__0_iv_0_tz[1]),
+	.C(data_out_right_up9),
+	.D(data_N_11_mux_0_i_1_0_1),
+	.Y(data_N_11_mux_0_i_1_0)
+);
+defparam \signal[3]_0_iv_0_tz_0_RNIF9PDVI[1] .INIT=16'hFF80;
+  CFG4 \signal[0]_RNI9F16PH[2]  (
+	.A(N_99),
+	.B(decoder_output1_m_a0_c[2]),
+	.C(data_m2_e_0),
+	.D(data_N_7_mux_i_1_0),
+	.Y(data_N_7_mux_i_1_1)
+);
+defparam \signal[0]_RNI9F16PH[2] .INIT=16'h1300;
+// @8:47
+  CFG4 \un2_6_2.CO2  (
+	.A(CO2_1_1),
+	.B(CO2_1_0),
+	.C(linsin_0_[1]),
+	.D(N_109_2),
+	.Y(CO2)
+);
+defparam \un2_6_2.CO2 .INIT=16'hDCEC;
+// @8:47
+  CFG4 \un2_6_1.SUM_0_a4_1_0[0]  (
+	.A(SUM_0_a4_1_0_0_Z[0]),
+	.B(mcu_fpga_io_1),
+	.C(decoder_input_up_0),
+	.D(N_142),
+	.Y(CO2_1_1)
+);
+defparam \un2_6_1.SUM_0_a4_1_0[0] .INIT=16'h1EE1;
+// @8:47
+  CFG3 \un2_6_1.SUM_0_a4_1_0_1[0]  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_down_in[3]),
+	.C(mcu_mem_io_down_in[1]),
+	.Y(SUM_0_a4_1_0_0_Z[0])
+);
+defparam \un2_6_1.SUM_0_a4_1_0_1[0] .INIT=8'h69;
+// @8:47
+  CFG4 un1_SDi_6_2 (
+	.A(un1_SDi_6_2_1_Z),
+	.B(un1_SDi_6_0_tz_Z),
+	.C(sumSP[0]),
+	.D(SP_3[1]),
+	.Y(un1_SDi_6_2_Z)
+);
+defparam un1_SDi_6_2.INIT=16'h4050;
+// @6:35
+  CFG4 \_l0.signal[0]_6_i_RNI0BDH77[2]  (
+	.A(signal_0__2_sqmuxa_0),
+	.B(b33_0),
+	.C(data_out_left_iv_1_a1_0_0),
+	.D(data_m8_2_3_1_1),
+	.Y(data_m8_2_3_1)
+);
+defparam \_l0.signal[0]_6_i_RNI0BDH77[2] .INIT=16'h1FFF;
+  CFG4 \_l1.signal[1]_6_i_o4_RNI4SM2SN[3]  (
+	.A(ecc_sel1_c),
+	.B(data_N_9_0_i_1),
+	.C(data_N_5_1),
+	.D(mcu_fpga_io_1),
+	.Y(data_N_9_0_i)
+);
+defparam \_l1.signal[1]_6_i_o4_RNI4SM2SN[3] .INIT=16'hA0B3;
+// @8:39
+  CFG4 \SDi_3_0_a4[1]  (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_down_in[13]),
+	.C(SDi_3_0_a4_1_0_Z[1]),
+	.D(mcu_fpga_io_1),
+	.Y(SDi_3_0)
+);
+defparam \SDi_3_0_a4[1] .INIT=16'h0069;
+// @8:39
+  CFG3 \SDi_3_0_a4_1_0[1]  (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_up_in[11]),
+	.C(mcu_mem_io_up_in[9]),
+	.Y(SDi_3_0_a4_1_0_Z[1])
+);
+defparam \SDi_3_0_a4_1_0[1] .INIT=8'h69;
+// @6:28
+  CFG3 CO0_0 (
+	.A(mcu_mem_io_down_in[8]),
+	.B(SUM_0_a4_0_0_Z[0]),
+	.C(N_141),
+	.Y(CO0_0_Z)
+);
+defparam CO0_0.INIT=8'h18;
+// @8:51
+  CFG2 b34 (
+	.A(un1_SDi_3_i),
+	.B(un1_quad1_NE_i),
+	.Y(data_out_left_iv_a1_1_0)
+);
+defparam b34.INIT=4'h4;
+// @8:40
+  CFG3 \SDi_4_0_a4_0[2]  (
+	.A(mcu_mem_io_up_in[2]),
+	.B(mcu_mem_io_up_in[0]),
+	.C(mcu_fpga_io_1),
+	.Y(SDi_4_0_a4_0_Z[2])
+);
+defparam \SDi_4_0_a4_0[2] .INIT=8'h06;
+// @8:41
+  CFG3 \SDi_0_a4_0[3]  (
+	.A(mcu_mem_io_up_in[3]),
+	.B(mcu_mem_io_up_in[1]),
+	.C(mcu_fpga_io_1),
+	.Y(SDi_0_a4_0_Z[3])
+);
+defparam \SDi_0_a4_0[3] .INIT=8'h06;
+// @6:28
+  CFG3 \SUM_3_a2_1[0]  (
+	.A(mcu_mem_io_down_in[11]),
+	.B(mcu_mem_io_down_in[9]),
+	.C(mcu_fpga_io_1),
+	.Y(SUM_3_a2_1_0)
+);
+defparam \SUM_3_a2_1[0] .INIT=8'h06;
+// @8:41
+  CFG3 \SDi_0_a4_1[3]  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_up_in[4]),
+	.C(mcu_fpga_io_1),
+	.Y(SDi_0_a4_1_0)
+);
+defparam \SDi_0_a4_1[3] .INIT=8'h06;
+// @8:27
+  CFG3 \linsin[2]_i_s[0]  (
+	.A(mcu_mem_io_up_in[13]),
+	.B(mcu_mem_io_up_in[5]),
+	.C(mcu_fpga_io_1),
+	.Y(linsin_2__i_out)
+);
+defparam \linsin[2]_i_s[0] .INIT=8'h06;
+// @8:67
+  CFG3 \_l1.signal[1]_6_i_o4[3]  (
+	.A(mcu_mem_io_up_in[10]),
+	.B(mcu_mem_io_down_in[4]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_1__6[3])
+);
+defparam \_l1.signal[1]_6_i_o4[3] .INIT=8'h06;
+// @6:28
+  CFG3 \N_21_1.SUM_0_a2[0]  (
+	.A(mcu_mem_io_down_in[2]),
+	.B(mcu_mem_io_down_in[0]),
+	.C(mcu_fpga_io_1),
+	.Y(N_144)
+);
+defparam \N_21_1.SUM_0_a2[0] .INIT=8'h06;
+// @8:67
+  CFG3 \_l3.signal[3]_6_i[3]  (
+	.A(mcu_mem_io_up_in[8]),
+	.B(mcu_mem_io_down_in[0]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_3__6[3])
+);
+defparam \_l3.signal[3]_6_i[3] .INIT=8'h06;
+// @8:67
+  CFG3 \_l3.signal[3]_6_i_o4[2]  (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_down_in[1]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_3__6[2])
+);
+defparam \_l3.signal[3]_6_i_o4[2] .INIT=8'h06;
+// @8:67
+  CFG3 \_l0.signal[0]_6_i[2]  (
+	.A(mcu_mem_io_up_in[15]),
+	.B(mcu_mem_io_down_in[7]),
+	.C(mcu_fpga_io_1),
+	.Y(data_m8_2_3_1_1)
+);
+defparam \_l0.signal[0]_6_i[2] .INIT=8'h06;
+// @8:57
+  CFG3 \_l0.signal[0]_3_i[0]  (
+	.A(mcu_mem_io_up_in[7]),
+	.B(mcu_mem_io_down_in[7]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_0__3_0)
+);
+defparam \_l0.signal[0]_3_i[0] .INIT=8'h06;
+// @6:28
+  CFG3 \N_23_1.SUM_1_i[0]  (
+	.A(mcu_mem_io_up_in[5]),
+	.B(mcu_mem_io_down_in[3]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_2__3_0)
+);
+defparam \N_23_1.SUM_1_i[0] .INIT=8'h06;
+// @6:28
+  CFG3 \N_21_1.SUM_1_i[0]  (
+	.A(mcu_mem_io_up_in[4]),
+	.B(mcu_mem_io_down_in[1]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_3__3_0)
+);
+defparam \N_21_1.SUM_1_i[0] .INIT=8'h06;
+// @8:67
+  CFG3 \_l1.signal[1]_6_i_o4[2]  (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_down_in[5]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_1__6[2])
+);
+defparam \_l1.signal[1]_6_i_o4[2] .INIT=8'h06;
+// @6:28
+  CFG3 \N_23_1.SUM_4_i[0]  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_down_in[5]),
+	.C(mcu_fpga_io_1),
+	.Y(signal_1__3_0)
+);
+defparam \N_23_1.SUM_4_i[0] .INIT=8'h06;
+// @8:47
+  CFG4 \un2_6_2.SUM_0_a4_1[0]  (
+	.A(mcu_mem_io_down_in[3]),
+	.B(mcu_mem_io_down_in[1]),
+	.C(signal_0__6[3]),
+	.D(mcu_fpga_io_1),
+	.Y(SUM_0_a4_1_0_0)
+);
+defparam \un2_6_2.SUM_0_a4_1[0] .INIT=16'hF096;
+// @6:28
+  CFG4 un1_SDi_6_2_RNO_0 (
+	.A(mcu_mem_io_down_in[10]),
+	.B(mcu_mem_io_down_in[9]),
+	.C(mcu_mem_io_down_in[8]),
+	.D(mcu_fpga_io_1),
+	.Y(sumSP_2_0_a4_0)
+);
+defparam un1_SDi_6_2_RNO_0.INIT=16'h0096;
+// @8:47
+  CFG3 \un2_6_2.CO2_m2_0  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(linsin_2__i_out),
+	.C(mcu_fpga_io_1),
+	.Y(CO2_m2_0)
+);
+defparam \un2_6_2.CO2_m2_0 .INIT=8'hC6;
+// @6:28
+  CFG4 \N_1_1.SUM_0_a4_0[0]  (
+	.A(mcu_mem_io_down_in[14]),
+	.B(mcu_mem_io_down_in[12]),
+	.C(mcu_mem_io_down_in[10]),
+	.D(mcu_fpga_io_1),
+	.Y(SUM_0_a4_0_0_Z[0])
+);
+defparam \N_1_1.SUM_0_a4_0[0] .INIT=16'h0096;
+// @8:29
+  CFG4 \linsin[3]_i[0]  (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_up_in[4]),
+	.C(mcu_mem_io_down_in[1]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_3_[0])
+);
+defparam \linsin[3]_i[0] .INIT=16'h0096;
+// @8:47
+  CFG4 \signal[0][2]  (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117_0),
+	.D(b32),
+	.Y(N_99)
+);
+defparam \signal[0][2] .INIT=16'hFF8F;
+// @8:30
+  CFG4 \linsin[3]_i[1]  (
+	.A(mcu_mem_io_up_in[8]),
+	.B(mcu_mem_io_up_in[0]),
+	.C(mcu_mem_io_down_in[0]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_3_[1])
+);
+defparam \linsin[3]_i[1] .INIT=16'h0096;
+// @8:25
+  CFG4 \linsin[1]_i[0]  (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_up_in[6]),
+	.C(mcu_mem_io_down_in[5]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_1_[0])
+);
+defparam \linsin[1]_i[0] .INIT=16'h0096;
+// @8:47
+  CFG4 \signal[3]_0_iv_0_tz_0[1]  (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117_0),
+	.D(b33),
+	.Y(signal_3__0_iv_0_tz[1])
+);
+defparam \signal[3]_0_iv_0_tz_0[1] .INIT=16'hFF8F;
+// @8:47
+  CFG4 \un2_6_2.SUM_0_a2[0]  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_up_in[3]),
+	.C(mcu_mem_io_up_in[2]),
+	.D(mcu_fpga_io_1),
+	.Y(N_138)
+);
+defparam \un2_6_2.SUM_0_a2[0] .INIT=16'h0096;
+// @8:23
+  CFG4 \linsin[0]_i[0]  (
+	.A(mcu_mem_io_up_in[15]),
+	.B(mcu_mem_io_up_in[7]),
+	.C(mcu_mem_io_down_in[7]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_0_[0])
+);
+defparam \linsin[0]_i[0] .INIT=16'h0096;
+// @8:27
+  CFG4 \linsin[2]_i[0]  (
+	.A(mcu_mem_io_up_in[13]),
+	.B(mcu_mem_io_up_in[5]),
+	.C(mcu_mem_io_down_in[3]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_2_[0])
+);
+defparam \linsin[2]_i[0] .INIT=16'h0096;
+// @8:24
+  CFG4 \linsin[0]_i[1]  (
+	.A(mcu_mem_io_up_in[11]),
+	.B(mcu_mem_io_up_in[3]),
+	.C(mcu_mem_io_down_in[6]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_0_[1])
+);
+defparam \linsin[0]_i[1] .INIT=16'h0096;
+// @8:28
+  CFG4 \linsin[2]_i[1]  (
+	.A(mcu_mem_io_up_in[9]),
+	.B(mcu_mem_io_up_in[1]),
+	.C(mcu_mem_io_down_in[2]),
+	.D(mcu_fpga_io_1),
+	.Y(linsin_2_[1])
+);
+defparam \linsin[2]_i[1] .INIT=16'h0096;
+// @8:51
+  CFG4 quad117_1_RNI6SAJ9A (
+	.A(quad117_0),
+	.B(b32),
+	.C(signal_2__3_0),
+	.D(decoder_input_up_11),
+	.Y(decoder_output1_8)
+);
+defparam quad117_1_RNI6SAJ9A.INIT=16'hF780;
+// @8:51
+  CFG4 \_l0.signal[0]_3_i_RNIUG3TU9[0]  (
+	.A(quad117_0),
+	.B(b32),
+	.C(signal_0__3_0),
+	.D(decoder_input_up_13),
+	.Y(decoder_output1_0)
+);
+defparam \_l0.signal[0]_3_i_RNIUG3TU9[0] .INIT=16'hF780;
+// @6:28
+  CFG3 \N_21_1.SUM_0_a4_1[0]  (
+	.A(mcu_mem_io_up_in[4]),
+	.B(mcu_fpga_io_1),
+	.C(N_134),
+	.Y(SUM_0_a4_1[0])
+);
+defparam \N_21_1.SUM_0_a4_1[0] .INIT=8'hD2;
+// @6:35
+  CFG3 quad117_1_RNI0G6UV9 (
+	.A(quad117_0),
+	.B(b33),
+	.C(decoder_output1_m_a0_0_0),
+	.Y(quad117_1_RNI0G6UV9_1z)
+);
+defparam quad117_1_RNI0G6UV9.INIT=8'h80;
+// @8:36
+  CFG4 \SP_0_a4[3]  (
+	.A(mcu_mem_io_down_in[10]),
+	.B(mcu_fpga_io_1),
+	.C(N_135),
+	.D(N_133),
+	.Y(SP[3])
+);
+defparam \SP_0_a4[3] .INIT=16'h2DD2;
+// @6:28
+  CFG3 \N_15_1.SUM_0_a2_0[0]  (
+	.A(N_137),
+	.B(N_135),
+	.C(N_133),
+	.Y(N_142)
+);
+defparam \N_15_1.SUM_0_a2_0[0] .INIT=8'h96;
+// @8:51
+  CFG3 \b32_1.ANB0  (
+	.A(b33_4[0]),
+	.B(SUM_3_a2_1_0),
+	.C(SUM_3_a2_0_0),
+	.Y(CO0_3)
+);
+defparam \b32_1.ANB0 .INIT=8'h14;
+// @6:28
+  CFG4 un1_SDi_6_2_RNO (
+	.A(sumSP_2_0_a4_0),
+	.B(SP_2[0]),
+	.C(N_142),
+	.D(N_141),
+	.Y(sumSP[0])
+);
+defparam un1_SDi_6_2_RNO.INIT=16'h6996;
+// @8:47
+  CFG4 un1_SDi_2 (
+	.A(SDi_4_0),
+	.B(SDi_3_0),
+	.C(SDi_2_0),
+	.D(SDi_0),
+	.Y(un1_SDi_2_1z)
+);
+defparam un1_SDi_2.INIT=16'h0001;
+// @6:35
+  CFG4 un1_SDi_3_RNI50U1P6 (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117_0),
+	.D(decoder_output1_m_a0_0_0),
+	.Y(decoder_output1_m_a0_c[2])
+);
+defparam un1_SDi_3_RNI50U1P6.INIT=16'h2000;
+// @8:71
+  CFG4 un1_SDi_3 (
+	.A(SP_3[1]),
+	.B(SP_2[0]),
+	.C(SDi_3_0),
+	.D(SDi_2_0),
+	.Y(un1_SDi_3_i)
+);
+defparam un1_SDi_3.INIT=16'h0001;
+// @8:47
+  CFG4 un1_SDi_6_0_tz (
+	.A(mcu_mem_io_down_in[8]),
+	.B(SP[3]),
+	.C(mcu_fpga_io_1),
+	.D(N_141),
+	.Y(un1_SDi_6_0_tz_Z)
+);
+defparam un1_SDi_6_0_tz.INIT=16'h0231;
+// @8:47
+  CFG4 \un2_1.CO3_0  (
+	.A(SUM_0_a4_1_0_0),
+	.B(SUM_0_a4_0_0),
+	.C(linsin_0_[0]),
+	.D(N_109_2),
+	.Y(CO3_0)
+);
+defparam \un2_1.CO3_0 .INIT=16'h9060;
+// @8:51
+  CFG3 \b32_1.CO1_0_tz  (
+	.A(CO0_3),
+	.B(N_72),
+	.C(CO0),
+	.Y(CO1_0_tz)
+);
+defparam \b32_1.CO1_0_tz .INIT=8'hBE;
+// @8:51
+  CFG3 \b33_1.CO1_0_tz  (
+	.A(CO0_2),
+	.B(N_69),
+	.C(CO0_0_Z),
+	.Y(CO1_0_tz_0)
+);
+defparam \b33_1.CO1_0_tz .INIT=8'hBE;
+// @8:51
+  CFG3 \b33_1.CO2_1_tz_0  (
+	.A(CO0_2),
+	.B(N_69),
+	.C(CO0_0_Z),
+	.Y(CO2_1_tz_0)
+);
+defparam \b33_1.CO2_1_tz_0 .INIT=8'hE8;
+// @8:51
+  CFG3 \b32_1.CO2_1_tz_0  (
+	.A(CO0_3),
+	.B(N_72),
+	.C(CO0),
+	.Y(CO2_1_tz_0_0)
+);
+defparam \b32_1.CO2_1_tz_0 .INIT=8'hE8;
+// @8:51
+  CFG4 \b32_1.CO2_1  (
+	.A(CO2_1_tz_0_0),
+	.B(CO1_0_tz),
+	.C(N_69),
+	.D(CO0_0_Z),
+	.Y(b32)
+);
+defparam \b32_1.CO2_1 .INIT=16'h0AAE;
+// @8:51
+  CFG4 \b33_1.CO2_1  (
+	.A(CO2_1_tz_0),
+	.B(CO1_0_tz_0),
+	.C(N_72),
+	.D(CO0),
+	.Y(b33)
+);
+defparam \b33_1.CO2_1 .INIT=16'h0AAE;
+// @8:47
+  CFG4 quad117_1 (
+	.A(CO2),
+	.B(CO3_0),
+	.C(un1_SP_3_Z),
+	.D(un1_SDi_6_2_Z),
+	.Y(quad117_0)
+);
+defparam quad117_1.INIT=16'h10FE;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* TBEC_RSC_decoder */
+
+module MRSC_encoder (
+  encoder_output2,
+  mcu_fpga_io_in
+)
+;
+output [23:21] encoder_output2 ;
+input [14:0] mcu_fpga_io_in ;
+wire GND ;
+wire VCC ;
+// @9:24
+  CFG4 \P[3]  (
+	.A(mcu_fpga_io_in[12]),
+	.B(mcu_fpga_io_in[8]),
+	.C(mcu_fpga_io_in[4]),
+	.D(mcu_fpga_io_in[0]),
+	.Y(encoder_output2[21])
+);
+defparam \P[3] .INIT=16'h6996;
+// @9:23
+  CFG4 \P[2]  (
+	.A(mcu_fpga_io_in[13]),
+	.B(mcu_fpga_io_in[9]),
+	.C(mcu_fpga_io_in[5]),
+	.D(mcu_fpga_io_in[1]),
+	.Y(encoder_output2[23])
+);
+defparam \P[2] .INIT=16'h6996;
+// @9:22
+  CFG4 \P[1]  (
+	.A(mcu_fpga_io_in[14]),
+	.B(mcu_fpga_io_in[10]),
+	.C(mcu_fpga_io_in[6]),
+	.D(mcu_fpga_io_in[2]),
+	.Y(encoder_output2[22])
+);
+defparam \P[1] .INIT=16'h6996;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* MRSC_encoder */
+
+module MRSC_decoder (
+  SDi_2_0,
+  SDi_3_0,
+  SUM_3_a2_0_0,
+  SUM_3_a2_1_0,
+  mcu_mem_io_down_in,
+  data_out_left_iv_1_a1_0_0,
+  SDi_0_a4_1_0,
+  decoder_output2_8,
+  decoder_output2_0,
+  decoder_output2_15,
+  decoder_input_up_2,
+  decoder_input_up_15,
+  decoder_input_up_14,
+  decoder_input_up_13,
+  decoder_input_up_0,
+  signal_3__6_0,
+  signal_0__3_0,
+  signal_2__3_0,
+  signal_0__0_iv_0_tz_0,
+  mcu_mem_io_up_in,
+  linsin_0_,
+  SDi_0,
+  SDi_4_0,
+  SUM_0_a4_0_0,
+  SUM_0_a4_1_0,
+  SUM_0_a4_1_0_x_0,
+  CO0_2,
+  CO0_1,
+  N_71_2,
+  N_84,
+  data_m6_1_1_1,
+  b33,
+  N_134,
+  N_135,
+  signal_0__2_sqmuxa_0_1z,
+  un1_quad1_0,
+  data_N_7_mux_i,
+  data_N_7_mux_i_1_1,
+  data_m8_2_3_1,
+  g2_1z,
+  quad117,
+  CO2_1_0,
+  N_133,
+  un1_SDi_2,
+  un1_SDi_3_RNIKLUSCH_1z,
+  data_m2_e_0_sx,
+  b32,
+  un1_SDi_3_i,
+  un1_quad1_NE_i,
+  N_142,
+  N_109_2,
+  mcu_fpga_io_1
+)
+;
+input SDi_2_0 ;
+input SDi_3_0 ;
+input SUM_3_a2_0_0 ;
+input SUM_3_a2_1_0 ;
+input [14:8] mcu_mem_io_down_in ;
+input data_out_left_iv_1_a1_0_0 ;
+input SDi_0_a4_1_0 ;
+output decoder_output2_8 ;
+output decoder_output2_0 ;
+output decoder_output2_15 ;
+input decoder_input_up_2 ;
+input decoder_input_up_15 ;
+input decoder_input_up_14 ;
+input decoder_input_up_13 ;
+input decoder_input_up_0 ;
+input signal_3__6_0 ;
+input signal_0__3_0 ;
+input signal_2__3_0 ;
+output signal_0__0_iv_0_tz_0 ;
+input [15:0] mcu_mem_io_up_in ;
+input [1:0] linsin_0_ ;
+input SDi_0 ;
+input SDi_4_0 ;
+input SUM_0_a4_0_0 ;
+input SUM_0_a4_1_0 ;
+input SUM_0_a4_1_0_x_0 ;
+input CO0_2 ;
+input CO0_1 ;
+input N_71_2 ;
+output N_84 ;
+output data_m6_1_1_1 ;
+output b33 ;
+output N_134 ;
+output N_135 ;
+output signal_0__2_sqmuxa_0_1z ;
+input un1_quad1_0 ;
+output data_N_7_mux_i ;
+input data_N_7_mux_i_1_1 ;
+input data_m8_2_3_1 ;
+output g2_1z ;
+output quad117 ;
+input CO2_1_0 ;
+output N_133 ;
+input un1_SDi_2 ;
+output un1_SDi_3_RNIKLUSCH_1z ;
+input data_m2_e_0_sx ;
+output b32 ;
+output un1_SDi_3_i ;
+output un1_quad1_NE_i ;
+input N_142 ;
+input N_109_2 ;
+input mcu_fpga_io_1 ;
+wire SDi_2_0 ;
+wire SDi_3_0 ;
+wire SUM_3_a2_0_0 ;
+wire SUM_3_a2_1_0 ;
+wire data_out_left_iv_1_a1_0_0 ;
+wire SDi_0_a4_1_0 ;
+wire decoder_output2_8 ;
+wire decoder_output2_0 ;
+wire decoder_output2_15 ;
+wire decoder_input_up_2 ;
+wire decoder_input_up_15 ;
+wire decoder_input_up_14 ;
+wire decoder_input_up_13 ;
+wire decoder_input_up_0 ;
+wire signal_3__6_0 ;
+wire signal_0__3_0 ;
+wire signal_2__3_0 ;
+wire signal_0__0_iv_0_tz_0 ;
+wire SDi_0 ;
+wire SDi_4_0 ;
+wire SUM_0_a4_0_0 ;
+wire SUM_0_a4_1_0 ;
+wire SUM_0_a4_1_0_x_0 ;
+wire CO0_2 ;
+wire CO0_1 ;
+wire N_71_2 ;
+wire N_84 ;
+wire data_m6_1_1_1 ;
+wire b33 ;
+wire N_134 ;
+wire N_135 ;
+wire signal_0__2_sqmuxa_0_1z ;
+wire un1_quad1_0 ;
+wire data_N_7_mux_i ;
+wire data_N_7_mux_i_1_1 ;
+wire data_m8_2_3_1 ;
+wire g2_1z ;
+wire quad117 ;
+wire CO2_1_0 ;
+wire N_133 ;
+wire un1_SDi_2 ;
+wire un1_SDi_3_RNIKLUSCH_1z ;
+wire data_m2_e_0_sx ;
+wire b32 ;
+wire un1_SDi_3_i ;
+wire un1_quad1_NE_i ;
+wire N_142 ;
+wire N_109_2 ;
+wire mcu_fpga_io_1 ;
+wire [2:2] SP_4_0_a4_1_0_Z;
+wire [2:2] SP_4_0_a4_1_Z;
+wire [2:2] SP_4;
+wire [0:0] SP_2_0_a4_1_Z;
+wire [3:3] SP_0_a4_1_0_Z;
+wire [3:3] SP;
+wire [0:0] SP_2;
+wire [1:1] SP_3;
+wire [2:2] SDi_4_0_a4_1;
+wire [0:0] SUM_3;
+wire CO0_N_2L1 ;
+wire quad117_N_3_mux_i_1_Z ;
+wire quad117_m1_e_0_1_0_Z ;
+wire quad117_m1_e_0_1_Z ;
+wire quad117_m1_e_0_Z ;
+wire N_57 ;
+wire data_N_7_mux_i_1 ;
+wire un1_quad1_NE_i_1 ;
+wire N_60 ;
+wire CO0_0 ;
+wire CO0 ;
+wire N_145 ;
+wire CO1_0_tz ;
+wire CO1_0_tz_0 ;
+wire CO2_1_tz_0 ;
+wire CO2_tz_0 ;
+wire GND ;
+wire VCC ;
+// @6:31
+  CFG4 \N_1_1.CO0_N_2L1  (
+	.A(mcu_mem_io_up_in[2]),
+	.B(mcu_fpga_io_1),
+	.C(mcu_mem_io_down_in[10]),
+	.D(mcu_mem_io_up_in[3]),
+	.Y(CO0_N_2L1)
+);
+defparam \N_1_1.CO0_N_2L1 .INIT=16'hDEED;
+// @10:44
+  CFG3 quad117_N_3_mux_i_1 (
+	.A(N_109_2),
+	.B(SUM_0_a4_1_0_x_0),
+	.C(N_142),
+	.Y(quad117_N_3_mux_i_1_Z)
+);
+defparam quad117_N_3_mux_i_1.INIT=8'h96;
+// @6:35
+  CFG4 un1_SDi_3_RNIKLUSCH (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(b32),
+	.D(data_m2_e_0_sx),
+	.Y(un1_SDi_3_RNIKLUSCH_1z)
+);
+defparam un1_SDi_3_RNIKLUSCH.INIT=16'h00F2;
+// @10:34
+  CFG4 \SP_4_0_a4[2]  (
+	.A(mcu_mem_io_down_in[8]),
+	.B(SP_4_0_a4_1_0_Z[2]),
+	.C(SP_4_0_a4_1_Z[2]),
+	.D(mcu_fpga_io_1),
+	.Y(SP_4[2])
+);
+defparam \SP_4_0_a4[2] .INIT=16'h0096;
+// @10:34
+  CFG2 \SP_4_0_a4_1[2]  (
+	.A(mcu_mem_io_up_in[4]),
+	.B(mcu_mem_io_up_in[5]),
+	.Y(SP_4_0_a4_1_0_Z[2])
+);
+defparam \SP_4_0_a4_1[2] .INIT=4'h6;
+// @10:44
+  CFG4 quad117_m1_e_0 (
+	.A(quad117_m1_e_0_1_0_Z),
+	.B(quad117_m1_e_0_1_Z),
+	.C(SP_4[2]),
+	.D(un1_SDi_2),
+	.Y(quad117_m1_e_0_Z)
+);
+defparam quad117_m1_e_0.INIT=16'hAA08;
+// @10:44
+  CFG4 quad117_m1_e_0_1_0 (
+	.A(SUM_0_a4_1_0),
+	.B(SUM_0_a4_0_0),
+	.C(linsin_0_[0]),
+	.D(N_109_2),
+	.Y(quad117_m1_e_0_1_0_Z)
+);
+defparam quad117_m1_e_0_1_0.INIT=16'h6F9F;
+// @6:31
+  CFG4 \N_1_1.CO0  (
+	.A(CO0_N_2L1),
+	.B(SDi_4_0),
+	.C(SDi_0),
+	.D(N_133),
+	.Y(N_57)
+);
+defparam \N_1_1.CO0 .INIT=16'hE8D4;
+// @10:44
+  CFG4 quad117_m1_e_0_RNITRKNK6 (
+	.A(quad117_m1_e_0_Z),
+	.B(quad117_N_3_mux_i_1_Z),
+	.C(CO2_1_0),
+	.D(linsin_0_[1]),
+	.Y(quad117)
+);
+defparam quad117_m1_e_0_RNITRKNK6.INIT=16'hFDF5;
+// @10:32
+  CFG3 \SP_2_0_a4_1[0]  (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_down_in[11]),
+	.C(mcu_fpga_io_1),
+	.Y(SP_2_0_a4_1_Z[0])
+);
+defparam \SP_2_0_a4_1[0] .INIT=8'hF9;
+// @10:32
+  CFG2 g2 (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_up_in[15]),
+	.Y(g2_1z)
+);
+defparam g2.INIT=4'h6;
+// @10:35
+  CFG4 \SP_0_a4[3]  (
+	.A(SP_0_a4_1_0_Z[3]),
+	.B(mcu_fpga_io_1),
+	.C(decoder_input_up_2),
+	.D(N_133),
+	.Y(SP[3])
+);
+defparam \SP_0_a4[3] .INIT=16'h2DD2;
+// @10:35
+  CFG2 \SP_0_a4_1_0[3]  (
+	.A(mcu_mem_io_down_in[10]),
+	.B(mcu_mem_io_up_in[3]),
+	.Y(SP_0_a4_1_0_Z[3])
+);
+defparam \SP_0_a4_1_0[3] .INIT=4'h6;
+// @10:34
+  CFG2 \SP_4_0_a4_1_0[2]  (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_up_in[7]),
+	.Y(SP_4_0_a4_1_Z[2])
+);
+defparam \SP_4_0_a4_1_0[2] .INIT=4'h6;
+  CFG4 \signal[0]_0_RNIVV70701[2]  (
+	.A(quad117),
+	.B(data_m8_2_3_1),
+	.C(data_N_7_mux_i_1_1),
+	.D(data_N_7_mux_i_1),
+	.Y(data_N_7_mux_i)
+);
+defparam \signal[0]_0_RNIVV70701[2] .INIT=16'hFF2F;
+// @10:32
+  CFG4 \SP_2_0_a4[0]  (
+	.A(SP_2_0_a4_1_Z[0]),
+	.B(decoder_input_up_15),
+	.C(decoder_input_up_14),
+	.D(decoder_input_up_13),
+	.Y(SP_2[0])
+);
+defparam \SP_2_0_a4[0] .INIT=16'h9669;
+// @10:44
+  CFG2 \SP_4_0_a4_RNISPRDU3[2]  (
+	.A(un1_quad1_0),
+	.B(un1_quad1_NE_i_1),
+	.Y(un1_quad1_NE_i)
+);
+defparam \SP_4_0_a4_RNISPRDU3[2] .INIT=4'h1;
+// @10:44
+  CFG4 \SP_4_0_a4_RNI17D263[2]  (
+	.A(N_60),
+	.B(N_57),
+	.C(CO0_0),
+	.D(CO0),
+	.Y(un1_quad1_NE_i_1)
+);
+defparam \SP_4_0_a4_RNI17D263[2] .INIT=16'h6BD6;
+// @10:44
+  CFG3 quad117_m1_e_0_1 (
+	.A(SP_3[1]),
+	.B(SP_2[0]),
+	.C(SP[3]),
+	.Y(quad117_m1_e_0_1_Z)
+);
+defparam quad117_m1_e_0_1.INIT=8'h01;
+// @10:48
+  CFG2 \signal[0]_2_sqmuxa_0  (
+	.A(un1_SDi_3_i),
+	.B(un1_quad1_NE_i),
+	.Y(signal_0__2_sqmuxa_0_1z)
+);
+defparam \signal[0]_2_sqmuxa_0 .INIT=4'h4;
+// @6:31
+  CFG3 \N_1_1.SUM_2[0]  (
+	.A(mcu_mem_io_down_in[14]),
+	.B(mcu_mem_io_down_in[12]),
+	.C(mcu_fpga_io_1),
+	.Y(N_145)
+);
+defparam \N_1_1.SUM_2[0] .INIT=8'h06;
+// @6:31
+  CFG3 \N_1_1.SUM_0[0]  (
+	.A(mcu_mem_io_up_in[7]),
+	.B(mcu_mem_io_up_in[5]),
+	.C(mcu_fpga_io_1),
+	.Y(SDi_4_0_a4_1[2])
+);
+defparam \N_1_1.SUM_0[0] .INIT=8'h06;
+// @10:34
+  CFG3 \SP_4_0_a2[2]  (
+	.A(mcu_mem_io_up_in[5]),
+	.B(mcu_mem_io_up_in[4]),
+	.C(mcu_fpga_io_1),
+	.Y(N_135)
+);
+defparam \SP_4_0_a2[2] .INIT=8'h06;
+// @10:35
+  CFG3 \SP_0_a2[3]  (
+	.A(mcu_mem_io_up_in[1]),
+	.B(mcu_mem_io_up_in[0]),
+	.C(mcu_fpga_io_1),
+	.Y(N_133)
+);
+defparam \SP_0_a2[3] .INIT=8'h06;
+// @10:33
+  CFG3 \SP_3_0_a2[1]  (
+	.A(mcu_mem_io_up_in[9]),
+	.B(mcu_mem_io_up_in[8]),
+	.C(mcu_fpga_io_1),
+	.Y(N_134)
+);
+defparam \SP_3_0_a2[1] .INIT=8'h06;
+// @6:35
+  CFG4 un1_SDi_3_RNIROCKHH (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117),
+	.D(b33),
+	.Y(data_m6_1_1_1)
+);
+defparam un1_SDi_3_RNIROCKHH.INIT=16'h0070;
+// @10:44
+  CFG4 \signal[0]_0[2]  (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117),
+	.D(b32),
+	.Y(N_84)
+);
+defparam \signal[0]_0[2] .INIT=16'hFF8F;
+// @10:44
+  CFG4 \signal[0]_0_iv_0_tz[1]  (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117),
+	.D(b33),
+	.Y(signal_0__0_iv_0_tz_0)
+);
+defparam \signal[0]_0_iv_0_tz[1] .INIT=16'hFF8F;
+// @10:48
+  CFG4 quad117_m1_e_0_RNIE52T9D (
+	.A(quad117),
+	.B(b32),
+	.C(signal_2__3_0),
+	.D(decoder_input_up_13),
+	.Y(decoder_output2_8)
+);
+defparam quad117_m1_e_0_RNIE52T9D.INIT=16'hF780;
+// @10:48
+  CFG4 quad117_m1_e_0_RNI6QQ6VC (
+	.A(quad117),
+	.B(b32),
+	.C(signal_0__3_0),
+	.D(decoder_input_up_15),
+	.Y(decoder_output2_0)
+);
+defparam quad117_m1_e_0_RNI6QQ6VC.INIT=16'hF780;
+// @10:48
+  CFG4 quad117_m1_e_0_RNIVS2CKD (
+	.A(quad117),
+	.B(b33),
+	.C(signal_3__6_0),
+	.D(decoder_input_up_0),
+	.Y(decoder_output2_15)
+);
+defparam quad117_m1_e_0_RNIVS2CKD.INIT=16'hF780;
+// @6:31
+  CFG4 \N_1_1.SUM_3[0]  (
+	.A(mcu_mem_io_down_in[10]),
+	.B(SDi_4_0_a4_1[2]),
+	.C(SDi_0_a4_1_0),
+	.D(mcu_fpga_io_1),
+	.Y(SUM_3[0])
+);
+defparam \N_1_1.SUM_3[0] .INIT=16'h3C96;
+// @6:35
+  CFG4 \signal[0]_0_RNIP94HH[2]  (
+	.A(mcu_mem_io_up_in[7]),
+	.B(N_84),
+	.C(data_out_left_iv_1_a1_0_0),
+	.D(mcu_fpga_io_1),
+	.Y(data_N_7_mux_i_1)
+);
+defparam \signal[0]_0_RNIP94HH[2] .INIT=16'h0080;
+// @10:33
+  CFG4 \SP_3_0_a4[1]  (
+	.A(mcu_mem_io_down_in[9]),
+	.B(N_71_2),
+	.C(mcu_fpga_io_1),
+	.D(N_134),
+	.Y(SP_3[1])
+);
+defparam \SP_3_0_a4[1] .INIT=16'h39C6;
+// @6:31
+  CFG3 \SP_2_0_a4_RNIQ36BK[0]  (
+	.A(SP_2[0]),
+	.B(SUM_3_a2_1_0),
+	.C(SUM_3_a2_0_0),
+	.Y(CO0)
+);
+defparam \SP_2_0_a4_RNIQ36BK[0] .INIT=8'h82;
+// @10:66
+  CFG4 un1_SDi_3 (
+	.A(SP_3[1]),
+	.B(SP_2[0]),
+	.C(SDi_3_0),
+	.D(SDi_2_0),
+	.Y(un1_SDi_3_i)
+);
+defparam un1_SDi_3.INIT=16'h0001;
+// @6:31
+  CFG3 \SP_4_0_a4_RNILUPS01[2]  (
+	.A(SP_4[2]),
+	.B(SUM_3[0]),
+	.C(N_145),
+	.Y(CO0_0)
+);
+defparam \SP_4_0_a4_RNILUPS01[2] .INIT=8'h28;
+// @6:31
+  CFG3 \N_8_1.CO0  (
+	.A(SP_3[1]),
+	.B(SDi_3_0),
+	.C(SDi_2_0),
+	.Y(N_60)
+);
+defparam \N_8_1.CO0 .INIT=8'hE8;
+// @10:48
+  CFG3 \b33_1.CO1_0_tz  (
+	.A(N_57),
+	.B(CO0_0),
+	.C(CO0_1),
+	.Y(CO1_0_tz)
+);
+defparam \b33_1.CO1_0_tz .INIT=8'hF6;
+// @10:48
+  CFG3 \b32_1.CO1_0_tz  (
+	.A(N_60),
+	.B(CO0),
+	.C(CO0_2),
+	.Y(CO1_0_tz_0)
+);
+defparam \b32_1.CO1_0_tz .INIT=8'hF6;
+// @10:48
+  CFG3 \b33_1.CO2_1_tz_0  (
+	.A(N_57),
+	.B(CO0_0),
+	.C(CO0_1),
+	.Y(CO2_1_tz_0)
+);
+defparam \b33_1.CO2_1_tz_0 .INIT=8'hE8;
+// @10:48
+  CFG3 \b32_1.CO2_tz_0  (
+	.A(N_60),
+	.B(CO0),
+	.C(CO0_2),
+	.Y(CO2_tz_0)
+);
+defparam \b32_1.CO2_tz_0 .INIT=8'hE8;
+// @10:48
+  CFG4 \b32_1.CO2  (
+	.A(CO2_tz_0),
+	.B(CO1_0_tz_0),
+	.C(N_57),
+	.D(CO0_0),
+	.Y(b32)
+);
+defparam \b32_1.CO2 .INIT=16'h0AAE;
+// @10:48
+  CFG4 \b33_1.CO2_1  (
+	.A(CO2_1_tz_0),
+	.B(CO1_0_tz),
+	.C(N_60),
+	.D(CO0),
+	.Y(b33)
+);
+defparam \b33_1.CO2_1 .INIT=16'h0AAE;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* MRSC_decoder */
+
+module ecc_design (
+  decoder_input_up_15,
+  decoder_input_up_14,
+  decoder_input_up_12,
+  decoder_input_up_13,
+  decoder_input_up_0,
+  decoder_input_up_2,
+  mcu_mem_io_up_in,
+  mcu_mem_io_down_in,
+  mcu_fpga_io_in,
+  data_N_7_mux_i,
+  data_N_9_0_i,
+  decoder_output0,
+  decoder_output14,
+  data_N_11_mux_0_i,
+  decoder_output9,
+  decoder_output5,
+  decoder_output3,
+  decoder_output7,
+  decoder_output11,
+  data_N_9_i,
+  data_N_9_1_i,
+  decoder_output6,
+  decoder_output1,
+  decoder_output15,
+  decoder_output10,
+  mcu_fpga_io_1,
+  ecc_sel1_c,
+  ecc_sel0_c,
+  encoder_output_up7,
+  encoder_output_up8,
+  encoder_output_up9,
+  encoder_output_up10,
+  encoder_output_up11,
+  encoder_output_up12,
+  encoder_output_up13,
+  encoder_output_up14,
+  encoder_output_up15,
+  encoder_output_down9,
+  encoder_output_down10,
+  encoder_output_down11,
+  encoder_output_down12,
+  encoder_output_down13,
+  encoder_output_down14,
+  encoder_output_down15,
+  encoder_output_up0,
+  encoder_output_up1,
+  encoder_output_up2,
+  encoder_output_up3,
+  encoder_output_up4,
+  encoder_output_up5,
+  encoder_output_up6,
+  encoder_output_down0,
+  encoder_output_down1,
+  encoder_output_down2,
+  encoder_output_down3,
+  encoder_output_down4,
+  encoder_output_down5,
+  encoder_output_down6,
+  encoder_output_down7,
+  encoder_output_down8
+)
+;
+input decoder_input_up_15 ;
+input decoder_input_up_14 ;
+input decoder_input_up_12 ;
+input decoder_input_up_13 ;
+input decoder_input_up_0 ;
+input decoder_input_up_2 ;
+input [15:0] mcu_mem_io_up_in ;
+input [15:0] mcu_mem_io_down_in ;
+input [15:0] mcu_fpga_io_in ;
+output data_N_7_mux_i ;
+output data_N_9_0_i ;
+output decoder_output0 ;
+output decoder_output14 ;
+output data_N_11_mux_0_i ;
+output decoder_output9 ;
+output decoder_output5 ;
+output decoder_output3 ;
+output decoder_output7 ;
+output decoder_output11 ;
+output data_N_9_i ;
+output data_N_9_1_i ;
+output decoder_output6 ;
+output decoder_output1 ;
+output decoder_output15 ;
+output decoder_output10 ;
+input mcu_fpga_io_1 ;
+input ecc_sel1_c ;
+input ecc_sel0_c ;
+output encoder_output_up7 ;
+output encoder_output_up8 ;
+output encoder_output_up9 ;
+output encoder_output_up10 ;
+output encoder_output_up11 ;
+output encoder_output_up12 ;
+output encoder_output_up13 ;
+output encoder_output_up14 ;
+output encoder_output_up15 ;
+output encoder_output_down9 ;
+output encoder_output_down10 ;
+output encoder_output_down11 ;
+output encoder_output_down12 ;
+output encoder_output_down13 ;
+output encoder_output_down14 ;
+output encoder_output_down15 ;
+output encoder_output_up0 ;
+output encoder_output_up1 ;
+output encoder_output_up2 ;
+output encoder_output_up3 ;
+output encoder_output_up4 ;
+output encoder_output_up5 ;
+output encoder_output_up6 ;
+output encoder_output_down0 ;
+output encoder_output_down1 ;
+output encoder_output_down2 ;
+output encoder_output_down3 ;
+output encoder_output_down4 ;
+output encoder_output_down5 ;
+output encoder_output_down6 ;
+output encoder_output_down7 ;
+output encoder_output_down8 ;
+wire decoder_input_up_15 ;
+wire decoder_input_up_14 ;
+wire decoder_input_up_12 ;
+wire decoder_input_up_13 ;
+wire decoder_input_up_0 ;
+wire decoder_input_up_2 ;
+wire data_N_7_mux_i ;
+wire data_N_9_0_i ;
+wire decoder_output0 ;
+wire decoder_output14 ;
+wire data_N_11_mux_0_i ;
+wire decoder_output9 ;
+wire decoder_output5 ;
+wire decoder_output3 ;
+wire decoder_output7 ;
+wire decoder_output11 ;
+wire data_N_9_i ;
+wire data_N_9_1_i ;
+wire decoder_output6 ;
+wire decoder_output1 ;
+wire decoder_output15 ;
+wire decoder_output10 ;
+wire mcu_fpga_io_1 ;
+wire ecc_sel1_c ;
+wire ecc_sel0_c ;
+wire encoder_output_up7 ;
+wire encoder_output_up8 ;
+wire encoder_output_up9 ;
+wire encoder_output_up10 ;
+wire encoder_output_up11 ;
+wire encoder_output_up12 ;
+wire encoder_output_up13 ;
+wire encoder_output_up14 ;
+wire encoder_output_up15 ;
+wire encoder_output_down9 ;
+wire encoder_output_down10 ;
+wire encoder_output_down11 ;
+wire encoder_output_down12 ;
+wire encoder_output_down13 ;
+wire encoder_output_down14 ;
+wire encoder_output_down15 ;
+wire encoder_output_up0 ;
+wire encoder_output_up1 ;
+wire encoder_output_up2 ;
+wire encoder_output_up3 ;
+wire encoder_output_up4 ;
+wire encoder_output_up5 ;
+wire encoder_output_up6 ;
+wire encoder_output_down0 ;
+wire encoder_output_down1 ;
+wire encoder_output_down2 ;
+wire encoder_output_down3 ;
+wire encoder_output_down4 ;
+wire encoder_output_down5 ;
+wire encoder_output_down6 ;
+wire encoder_output_down7 ;
+wire encoder_output_down8 ;
+wire [7:4] data_out_right_down_1_Z;
+wire [15:0] data_out_right_down_1;
+wire [14:1] data_out_right_up_1;
+wire [10:10] data_out_left_iv_1_a0_0_Z;
+wire [6:6] data_out_left_iv_1_1_0;
+wire [14:1] data_out_left_iv_a1_0_Z;
+wire [14:5] data_out_left_iv_a0_0_Z;
+wire [6:1] data_out_left_iv_0_1;
+wire [4:4] data_out_right_down_1_1_1_Z;
+wire [6:5] decoder_output2_m_c_0;
+wire [10:10] data_out_left_iv_1_a1_0_0_Z;
+wire [6:6] data_out_left_iv_1_1_Z;
+wire [14:14] data_out_left_iv_1_s_a2_0_Z;
+wire [3:2] signal_3__6;
+wire [14:14] data_out_left_iv_1_s_a1_0_Z;
+wire [23:21] encoder_output2;
+wire [6:4] data_out_right_down_1_1_Z;
+wire [22:20] encoder_output1;
+wire [5:1] data_out_left_iv_0_2_1_Z;
+wire [13:13] data_out_left_iv_a1_1;
+wire [9:9] data_out_left_iv_0_1_0;
+wire [9:1] decoder_output2_m_d_0;
+wire [9:9] data_out_left_iv_0_3_1_sx_Z;
+wire [9:9] data_out_left_iv_0_3_1_Z;
+wire [5:5] decoder_output2_m_d_sx;
+wire [5:5] decoder_output2_m_d;
+wire [5:5] data_out_left_iv_0_sx_Z;
+wire [1:1] signal_0__0_iv_0_tz;
+wire [13:1] data_out_left_iv_a1_Z;
+wire [10:10] data_out_left_iv_1_a1_0_Z;
+wire [8:0] data_out_left_iv_1_0_Z;
+wire [10:0] data_out_left_iv_0_Z;
+wire [6:6] data_out_left_iv_1_1_1;
+wire [15:6] data_out_left_iv_1_Z;
+wire [2:2] signal_2__0_iv_0_tz;
+wire [14:9] data_out_left_iv_0_1_Z;
+wire [7:1] data_out_right_down_1_1;
+wire [0:0] signal_1__3;
+wire [0:0] signal_3__3;
+wire [5:5] data_in_right_down_m;
+wire [10:10] data_out_left_iv_1_a2_0_Z;
+wire [6:6] decoder_output2_m_c;
+wire [15:6] data_in_right_up_m;
+wire [14:14] data_out_left_iv_0_1_1_Z;
+wire [15:15] decoder_output1_m;
+wire [2:2] decoder_output1_m_a0_0;
+wire [15:0] decoder_output2;
+wire [8:0] decoder_output1_Z;
+wire [1:0] linsin_0_;
+wire [0:0] SUM_0_a4_1;
+wire [0:0] signal_2__3;
+wire [0:0] signal_0__3;
+wire [3:3] SDi_0_a4_1;
+wire [0:0] SUM_3_a2_0;
+wire [0:0] SUM_3_a2_1;
+wire [3:3] SDi;
+wire [1:1] SDi_3;
+wire [2:2] SDi_4;
+wire [0:0] SUM_0_a4_0;
+wire [0:0] SUM_0_a4_1_0_x;
+wire [0:0] SDi_2;
+wire data_out_right_up8_i_0 ;
+wire data_out_right_up8_inferred_clock_RNI7SRM3_Z ;
+wire data_out_right_up7_i_0 ;
+wire data_out_right_up7_inferred_clock_RNI6DIC_Z ;
+wire data_out_right_up8_Z ;
+wire data_out_right_up7_Z ;
+wire VCC ;
+wire GND ;
+wire data_N_5_i ;
+wire data_m2_e_0 ;
+wire d_N_3_mux ;
+wire data_out_left_iv_0_N_5L9_N_3L3_Z ;
+wire data_out_left_iv_1_N_3L3_Z ;
+wire data_out_left_iv_0_N_3L3_Z ;
+wire quad117 ;
+wire un1_SDi_3_i ;
+wire b33 ;
+wire quad117_0 ;
+wire un1_quad1_NE_i ;
+wire b32 ;
+wire data_out_left_iv_1_N_2L1_Z ;
+wire b32_0 ;
+wire un1_quad1_NE_i_0 ;
+wire un1_SDi_3_i_0 ;
+wire data_m2_e_0_0_Z ;
+wire data_m2_e_0_sx ;
+wire data_out_left_iv_0_N_3L4_Z ;
+wire data_out_left_iv_0_N_5L9_N_5L9_Z ;
+wire data_out_left_iv_0_N_5L9_N_6L11_Z ;
+wire data_out_left_iv_0_N_5L9_N_7L13_Z ;
+wire signal_0__2_sqmuxa_0 ;
+wire data_out_left_iv_0_N_5L9_Z ;
+wire N_84 ;
+wire data_out_left_iv_0_N_2L1_Z ;
+wire data_out_left_iv_0_N_4L6_1_Z ;
+wire data_out_left_iv_0_N_5L8_Z ;
+wire b33_0 ;
+wire data_out_left_iv_0_N_6L10_Z ;
+wire N_99 ;
+wire data_out_left_iv_1_N_4L5_Z ;
+wire data_out_left_iv_0_N_4L6_0_Z ;
+wire data_out_left_iv_0_N_5L9_0_Z ;
+wire data_m6_1_1_1 ;
+wire g0_1 ;
+wire data_N_9_1_i_1_0 ;
+wire data_N_5_2_0_1 ;
+wire data_N_9_i_1_0 ;
+wire data_N_5_0_0 ;
+wire data_N_11_mux_0_i_1 ;
+wire data_N_11_mux_0_i_1_0_1 ;
+wire data_out_left_iv_1_N_3L4_0_Z ;
+wire data_out_left_iv_N_4L7_0_Z ;
+wire data_out_left_iv_N_5L9_0_Z ;
+wire data_out_left_iv_N_6L11_0_Z ;
+wire data_out_right_up9 ;
+wire data_out_left_iv_1_N_5L8_0_Z ;
+wire data_out_left_iv_1_N_3L4_Z ;
+wire data_out_left_iv_N_4L7_Z ;
+wire data_out_left_iv_N_5L9_Z ;
+wire data_out_left_iv_N_6L11_Z ;
+wire data_out_left_iv_1_N_5L8_Z ;
+wire data_out_left_iv_0_N_6L11_Z ;
+wire data_N_11_mux_0_i_1_0 ;
+wire un1_SDi_3_RNIKLUSCH ;
+wire data_out_right_up8_inferred_clock_RNINJND5_Z ;
+wire quad117_1_RNI0G6UV9 ;
+wire data_N_7_mux_i_1_0 ;
+wire data_N_9_0_i_1 ;
+wire decoder_N_7_mux ;
+wire data_m3_1 ;
+wire Di_0__0 ;
+wire Di_1__1 ;
+wire CO0 ;
+wire data_m8_2_3_1 ;
+wire N_142 ;
+wire data_N_7_mux_i_1_1 ;
+wire g2 ;
+wire N_71_2 ;
+wire CO0_0 ;
+wire CO2_1_0 ;
+wire N_109_2 ;
+wire un1_quad1_0 ;
+wire N_134 ;
+wire un1_SDi_2 ;
+wire N_135 ;
+wire N_133 ;
+wire N_1350 ;
+wire N_1351 ;
+wire N_1352 ;
+wire N_1353 ;
+wire N_1354 ;
+wire N_1355 ;
+wire N_1356 ;
+  CLKINT data_out_right_up8_inferred_clock_RNI7SRM3_0 (
+	.Y(data_out_right_up8_i_0),
+	.A(data_out_right_up8_inferred_clock_RNI7SRM3_Z)
+);
+  CLKINT data_out_right_up7_inferred_clock_RNI6DIC_0 (
+	.Y(data_out_right_up7_i_0),
+	.A(data_out_right_up7_inferred_clock_RNI6DIC_Z)
+);
+  CFG1 data_out_right_up8_inferred_clock_RNI7SRM3 (
+	.A(data_out_right_up8_Z),
+	.Y(data_out_right_up8_inferred_clock_RNI7SRM3_Z)
+);
+defparam data_out_right_up8_inferred_clock_RNI7SRM3.INIT=2'h1;
+  CFG1 data_out_right_up7_inferred_clock_RNI6DIC (
+	.A(data_out_right_up7_Z),
+	.Y(data_out_right_up7_inferred_clock_RNI6DIC_Z)
+);
+defparam data_out_right_up7_inferred_clock_RNI6DIC.INIT=2'h1;
+// @6:35
+  SLE \data_out_right_down[7]  (
+	.Q(encoder_output_down8),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1_Z[7]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[8]  (
+	.Q(encoder_output_down7),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[8]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[9]  (
+	.Q(encoder_output_down6),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[9]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[10]  (
+	.Q(encoder_output_down5),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[10]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[11]  (
+	.Q(encoder_output_down4),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[11]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[12]  (
+	.Q(encoder_output_down3),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[12]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[13]  (
+	.Q(encoder_output_down2),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[13]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[14]  (
+	.Q(encoder_output_down1),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[14]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[15]  (
+	.Q(encoder_output_down0),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[15]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[9]  (
+	.Q(encoder_output_up6),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[9]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[10]  (
+	.Q(encoder_output_up5),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(mcu_fpga_io_in[5]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[11]  (
+	.Q(encoder_output_up4),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[11]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[12]  (
+	.Q(encoder_output_up3),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[12]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[13]  (
+	.Q(encoder_output_up2),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[13]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[14]  (
+	.Q(encoder_output_up1),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[14]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[15]  (
+	.Q(encoder_output_up0),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(mcu_fpga_io_in[0]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[0]  (
+	.Q(encoder_output_down15),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[0]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[1]  (
+	.Q(encoder_output_down14),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[1]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[2]  (
+	.Q(encoder_output_down13),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1[2]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[3]  (
+	.Q(encoder_output_down12),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_N_5_i),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[4]  (
+	.Q(encoder_output_down11),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1_Z[4]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[5]  (
+	.Q(encoder_output_down10),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1_Z[5]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_down[6]  (
+	.Q(encoder_output_down9),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up7_i_0),
+	.D(data_out_right_down_1_Z[6]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[0]  (
+	.Q(encoder_output_up15),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(mcu_fpga_io_in[15]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[1]  (
+	.Q(encoder_output_up14),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[1]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[2]  (
+	.Q(encoder_output_up13),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[2]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[3]  (
+	.Q(encoder_output_up12),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[3]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[4]  (
+	.Q(encoder_output_up11),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[4]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[5]  (
+	.Q(encoder_output_up10),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(mcu_fpga_io_in[10]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[6]  (
+	.Q(encoder_output_up9),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[6]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[7]  (
+	.Q(encoder_output_up8),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[7]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  SLE \data_out_right_up[8]  (
+	.Q(encoder_output_up7),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(data_out_right_up8_i_0),
+	.D(data_out_right_up_1[8]),
+	.EN(VCC),
+	.LAT(VCC),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @6:35
+  CFG4 \data_out_left_iv_1_a0_0_0[10]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[5]),
+	.Y(data_out_left_iv_1_a0_0_Z[10])
+);
+defparam \data_out_left_iv_1_a0_0_0[10] .INIT=16'h0400;
+// @6:35
+  CFG4 data_m2_e_0_0 (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[7]),
+	.Y(data_m2_e_0)
+);
+defparam data_m2_e_0_0.INIT=16'h0400;
+// @6:35
+  CFG4 \data_out_left_iv_1_RNO[6]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[6]),
+	.Y(data_out_left_iv_1_1_0[6])
+);
+defparam \data_out_left_iv_1_RNO[6] .INIT=16'h0400;
+// @6:35
+  CFG4 \data_out_left_iv_a1_0[14]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[4]),
+	.Y(data_out_left_iv_a1_0_Z[14])
+);
+defparam \data_out_left_iv_a1_0[14] .INIT=16'h0400;
+// @6:35
+  CFG4 \data_out_left_iv_a0_0[5]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[10]),
+	.Y(data_out_left_iv_a0_0_Z[5])
+);
+defparam \data_out_left_iv_a0_0[5] .INIT=16'h0400;
+// @6:35
+  CFG4 \data_out_left_iv_a0_0[9]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[9]),
+	.Y(data_out_left_iv_a0_0_Z[9])
+);
+defparam \data_out_left_iv_a0_0[9] .INIT=16'h0400;
+// @6:35
+  CFG4 \data_out_left_iv_a0_0[1]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[11]),
+	.Y(data_out_left_iv_0_1[1])
+);
+defparam \data_out_left_iv_a0_0[1] .INIT=16'h0400;
+// @6:35
+  CFG4 \data_out_left_iv_1_RNO_2[15]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[0]),
+	.Y(d_N_3_mux)
+);
+defparam \data_out_left_iv_1_RNO_2[15] .INIT=16'h0400;
+// @6:35
+  CFG3 data_out_left_iv_0_N_5L9_N_3L3 (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_mem_io_up_in[11]),
+	.Y(data_out_left_iv_0_N_5L9_N_3L3_Z)
+);
+defparam data_out_left_iv_0_N_5L9_N_3L3.INIT=8'h7F;
+// @6:35
+  CFG4 \data_out_right_down_1_1_1[4]  (
+	.A(ecc_sel1_c),
+	.B(ecc_sel0_c),
+	.C(mcu_fpga_io_in[3]),
+	.D(mcu_fpga_io_in[11]),
+	.Y(data_out_right_down_1_1_1_Z[4])
+);
+defparam \data_out_right_down_1_1_1[4] .INIT=16'h3BF7;
+// @6:35
+  CFG4 data_out_left_iv_1_N_3L3 (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_mem_io_down_in[3]),
+	.D(mcu_mem_io_up_in[13]),
+	.Y(data_out_left_iv_1_N_3L3_Z)
+);
+defparam data_out_left_iv_1_N_3L3.INIT=16'h0880;
+// @6:35
+  CFG3 data_out_left_iv_0_N_3L3 (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_mem_io_up_in[9]),
+	.Y(data_out_left_iv_0_N_3L3_Z)
+);
+defparam data_out_left_iv_0_N_3L3.INIT=8'h7F;
+// @6:35
+  CFG4 \data_out_left_iv_0_sx_RNO[5]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[10]),
+	.Y(decoder_output2_m_c_0[5])
+);
+defparam \data_out_left_iv_0_sx_RNO[5] .INIT=16'h0800;
+// @6:35
+  CFG4 \data_out_left_iv_1_a1_0_0[10]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[5]),
+	.Y(data_out_left_iv_1_a1_0_0_Z[10])
+);
+defparam \data_out_left_iv_1_a1_0_0[10] .INIT=16'h0800;
+// @6:35
+  CFG4 \data_out_left_iv_1_RNO_0[6]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[6]),
+	.Y(data_out_left_iv_1_1_Z[6])
+);
+defparam \data_out_left_iv_1_RNO_0[6] .INIT=16'h0800;
+// @6:35
+  CFG4 \data_out_left_iv_1_s_a2_0[14]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(mcu_fpga_io_1),
+	.D(mcu_mem_io_up_in[4]),
+	.Y(data_out_left_iv_1_s_a2_0_Z[14])
+);
+defparam \data_out_left_iv_1_s_a2_0[14] .INIT=16'h0800;
+// @6:35
+  CFG4 \data_out_left_iv_1_s_a1_0[14]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(signal_3__6[2]),
+	.D(quad117),
+	.Y(data_out_left_iv_1_s_a1_0_Z[14])
+);
+defparam \data_out_left_iv_1_s_a1_0[14] .INIT=16'h8000;
+// @6:35
+  CFG4 \data_out_right_down_1_1[5]  (
+	.A(ecc_sel1_c),
+	.B(encoder_output2[21]),
+	.C(ecc_sel0_c),
+	.D(mcu_fpga_io_in[10]),
+	.Y(data_out_right_down_1_1_Z[5])
+);
+defparam \data_out_right_down_1_1[5] .INIT=16'hD080;
+// @6:35
+  CFG4 \data_out_right_down_1_1[6]  (
+	.A(ecc_sel1_c),
+	.B(encoder_output1[22]),
+	.C(ecc_sel0_c),
+	.D(mcu_fpga_io_in[9]),
+	.Y(data_out_right_down_1_1_Z[6])
+);
+defparam \data_out_right_down_1_1[6] .INIT=16'h5C0C;
+// @6:35
+  CFG4 \data_out_right_down_1[6]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.C(data_out_right_down_1_1_Z[6]),
+	.D(encoder_output2[22]),
+	.Y(data_out_right_down_1_Z[6])
+);
+defparam \data_out_right_down_1[6] .INIT=16'hF8F0;
+// @6:35
+  CFG4 \data_out_left_iv_0_2_1[1]  (
+	.A(un1_SDi_3_i),
+	.B(b33),
+	.C(quad117_0),
+	.D(un1_quad1_NE_i),
+	.Y(data_out_left_iv_0_2_1_Z[1])
+);
+defparam \data_out_left_iv_0_2_1[1] .INIT=16'h1030;
+// @6:35
+  CFG4 \data_out_left_iv_0_1[9]  (
+	.A(quad117_0),
+	.B(b32),
+	.C(data_out_left_iv_a1_1[13]),
+	.D(data_out_left_iv_a1_0_Z[9]),
+	.Y(data_out_left_iv_0_1_0[9])
+);
+defparam \data_out_left_iv_0_1[9] .INIT=16'hA800;
+// @6:35
+  CFG4 data_out_left_iv_1_N_2L1 (
+	.A(mcu_mem_io_up_in[5]),
+	.B(mcu_mem_io_down_in[5]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_out_left_iv_1_N_2L1_Z)
+);
+defparam data_out_left_iv_1_N_2L1.INIT=16'h153F;
+// @6:35
+  CFG4 \data_out_left_iv_0_3_1[9]  (
+	.A(quad117),
+	.B(b32_0),
+	.C(decoder_output2_m_d_0[9]),
+	.D(data_out_left_iv_0_3_1_sx_Z[9]),
+	.Y(data_out_left_iv_0_3_1_Z[9])
+);
+defparam \data_out_left_iv_0_3_1[9] .INIT=16'h007F;
+// @6:35
+  CFG4 \data_out_left_iv_0_3_1_sx[9]  (
+	.A(un1_quad1_NE_i_0),
+	.B(un1_SDi_3_i_0),
+	.C(quad117),
+	.D(decoder_output2_m_d_0[9]),
+	.Y(data_out_left_iv_0_3_1_sx_Z[9])
+);
+defparam \data_out_left_iv_0_3_1_sx[9] .INIT=16'h2000;
+// @6:35
+  CFG2 \data_out_left_iv_1_a1_0_RNIPJQG97[10]  (
+	.A(data_m2_e_0_0_Z),
+	.B(quad117),
+	.Y(data_m2_e_0_sx)
+);
+defparam \data_out_left_iv_1_a1_0_RNIPJQG97[10] .INIT=4'h7;
+// @6:35
+  CFG4 \data_out_right_down_1[4]  (
+	.A(mcu_fpga_io_in[10]),
+	.B(ecc_sel0_c),
+	.C(encoder_output1[20]),
+	.D(data_out_right_down_1_1_Z[4]),
+	.Y(data_out_right_down_1_Z[4])
+);
+defparam \data_out_right_down_1[4] .INIT=16'hFF12;
+// @6:35
+  CFG4 \data_out_left_iv_0_RNO[5]  (
+	.A(un1_quad1_NE_i_0),
+	.B(un1_SDi_3_i_0),
+	.C(b32_0),
+	.D(decoder_output2_m_d_sx[5]),
+	.Y(decoder_output2_m_d[5])
+);
+defparam \data_out_left_iv_0_RNO[5] .INIT=16'h00F2;
+// @6:35
+  CFG2 \data_out_left_iv_0_RNO_0[5]  (
+	.A(decoder_output2_m_d_0[5]),
+	.B(quad117),
+	.Y(decoder_output2_m_d_sx[5])
+);
+defparam \data_out_left_iv_0_RNO_0[5] .INIT=4'h7;
+// @6:35
+  CFG4 \data_out_left_iv_0[5]  (
+	.A(decoder_output2_m_d[5]),
+	.B(data_out_left_iv_a0_0_Z[5]),
+	.C(data_out_left_iv_0_sx_Z[5]),
+	.D(data_out_left_iv_0_2_1_Z[5]),
+	.Y(decoder_output10)
+);
+defparam \data_out_left_iv_0[5] .INIT=16'hFAFE;
+// @6:35
+  CFG4 \data_out_left_iv_0_sx[5]  (
+	.A(signal_0__0_iv_0_tz[1]),
+	.B(decoder_output2_m_c_0[5]),
+	.C(data_out_left_iv_0_N_3L4_Z),
+	.D(data_out_left_iv_a1_Z[5]),
+	.Y(data_out_left_iv_0_sx_Z[5])
+);
+defparam \data_out_left_iv_0_sx[5] .INIT=16'hFF8F;
+// @6:35
+  CFG4 data_out_left_iv_0_N_5L9_N_5L9 (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_down_in[14]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_out_left_iv_0_N_5L9_N_5L9_Z)
+);
+defparam data_out_left_iv_0_N_5L9_N_5L9.INIT=16'hEAC0;
+// @6:35
+  CFG2 data_out_left_iv_0_N_5L9_N_6L11 (
+	.A(decoder_output2_m_d_0[1]),
+	.B(quad117),
+	.Y(data_out_left_iv_0_N_5L9_N_6L11_Z)
+);
+defparam data_out_left_iv_0_N_5L9_N_6L11.INIT=4'h7;
+// @6:35
+  CFG4 data_out_left_iv_0_N_5L9_N_7L13 (
+	.A(signal_0__0_iv_0_tz[1]),
+	.B(data_out_left_iv_0_N_5L9_N_5L9_Z),
+	.C(data_out_left_iv_0_N_5L9_N_3L3_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_0_N_5L9_N_7L13_Z)
+);
+defparam data_out_left_iv_0_N_5L9_N_7L13.INIT=16'h00CE;
+// @6:35
+  CFG4 data_out_left_iv_0_N_5L9 (
+	.A(signal_0__2_sqmuxa_0),
+	.B(b32_0),
+	.C(data_out_left_iv_0_N_5L9_N_7L13_Z),
+	.D(data_out_left_iv_0_N_5L9_N_6L11_Z),
+	.Y(data_out_left_iv_0_N_5L9_Z)
+);
+defparam data_out_left_iv_0_N_5L9.INIT=16'h0F01;
+// @6:35
+  CFG4 \data_out_right_down_1_1[4]  (
+	.A(mcu_fpga_io_in[15]),
+	.B(mcu_fpga_io_in[7]),
+	.C(data_out_right_down_1_1_1_Z[4]),
+	.D(data_out_left_iv_1_a1_0_Z[10]),
+	.Y(data_out_right_down_1_1_Z[4])
+);
+defparam \data_out_right_down_1_1[4] .INIT=16'h960F;
+// @6:35
+  CFG4 \data_out_left_iv[0]  (
+	.A(data_out_right_up7_Z),
+	.B(data_out_left_iv_1_0_Z[0]),
+	.C(data_out_left_iv_0_Z[0]),
+	.D(decoder_input_up_15),
+	.Y(decoder_output15)
+);
+defparam \data_out_left_iv[0] .INIT=16'hFEFC;
+// @6:35
+  CFG3 \data_out_left_iv_1_0[0]  (
+	.A(mcu_mem_io_down_in[15]),
+	.B(data_out_right_up8_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_out_left_iv_1_0_Z[0])
+);
+defparam \data_out_left_iv_1_0[0] .INIT=8'h08;
+// @6:35
+  CFG4 \data_out_left_iv_1[6]  (
+	.A(N_84),
+	.B(data_out_left_iv_1_1_1[6]),
+	.C(data_out_left_iv_1_1_0[6]),
+	.D(data_out_left_iv_1_1_Z[6]),
+	.Y(data_out_left_iv_1_Z[6])
+);
+defparam \data_out_left_iv_1[6] .INIT=16'hBA30;
+// @6:35
+  CFG4 \data_out_left_iv_1_1[6]  (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(quad117_0),
+	.D(b32),
+	.Y(data_out_left_iv_1_1_1[6])
+);
+defparam \data_out_left_iv_1_1[6] .INIT=16'h0070;
+// @6:35
+  CFG2 data_out_left_iv_0_N_2L1 (
+	.A(data_out_right_up8_Z),
+	.B(mcu_mem_io_down_in[1]),
+	.Y(data_out_left_iv_0_N_2L1_Z)
+);
+defparam data_out_left_iv_0_N_2L1.INIT=4'h7;
+// @6:35
+  CFG4 data_out_left_iv_0_N_4L6_1 (
+	.A(mcu_mem_io_up_in[1]),
+	.B(data_out_right_up7_Z),
+	.C(data_out_left_iv_0_N_2L1_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_0_N_4L6_1_Z)
+);
+defparam data_out_left_iv_0_N_4L6_1.INIT=16'h008F;
+// @6:35
+  CFG4 data_out_left_iv_0_N_5L8 (
+	.A(signal_2__0_iv_0_tz[2]),
+	.B(data_out_left_iv_a0_0_Z[14]),
+	.C(data_out_left_iv_0_N_4L6_1_Z),
+	.D(data_out_left_iv_0_1_Z[14]),
+	.Y(data_out_left_iv_0_N_5L8_Z)
+);
+defparam data_out_left_iv_0_N_5L8.INIT=16'h0007;
+// @6:35
+  CFG4 data_out_left_iv_0_N_6L10 (
+	.A(b33_0),
+	.B(b32_0),
+	.C(data_out_left_iv_1_s_a2_0_Z[14]),
+	.D(data_out_left_iv_1_s_a1_0_Z[14]),
+	.Y(data_out_left_iv_0_N_6L10_Z)
+);
+defparam data_out_left_iv_0_N_6L10.INIT=16'h153F;
+// @6:35
+  CFG4 \data_out_left_iv_0[14]  (
+	.A(N_99),
+	.B(data_out_left_iv_a1_0_Z[14]),
+	.C(data_out_left_iv_0_N_6L10_Z),
+	.D(data_out_left_iv_0_N_5L8_Z),
+	.Y(decoder_output1)
+);
+defparam \data_out_left_iv_0[14] .INIT=16'h8FFF;
+// @6:35
+  CFG4 data_out_left_iv_1_N_4L5 (
+	.A(quad117),
+	.B(data_out_left_iv_1_N_3L3_Z),
+	.C(data_out_left_iv_1_N_2L1_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_1_N_4L5_Z)
+);
+defparam data_out_left_iv_1_N_4L5.INIT=16'h008F;
+// @6:35
+  CFG4 \data_out_left_iv_1[10]  (
+	.A(signal_0__2_sqmuxa_0),
+	.B(b33_0),
+	.C(data_out_left_iv_1_N_4L5_Z),
+	.D(data_out_left_iv_1_N_2L1_Z),
+	.Y(data_out_left_iv_1_Z[10])
+);
+defparam \data_out_left_iv_1[10] .INIT=16'hE0F0;
+// @6:35
+  CFG4 \data_out_left_iv_0[9]  (
+	.A(data_out_left_iv_0_N_4L6_0_Z),
+	.B(data_out_left_iv_0_3_1_Z[9]),
+	.C(data_out_left_iv_0_1_0[9]),
+	.D(data_out_left_iv_0_1_Z[9]),
+	.Y(decoder_output6)
+);
+defparam \data_out_left_iv_0[9] .INIT=16'hFFFB;
+// @6:35
+  CFG4 data_out_left_iv_0_N_7L13 (
+	.A(data_out_left_iv_0_N_5L9_0_Z),
+	.B(data_out_left_iv_0_N_3L3_Z),
+	.C(data_m6_1_1_1),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_0_1_Z[9])
+);
+defparam data_out_left_iv_0_N_7L13.INIT=16'h00AB;
+// @6:35
+  CFG3 g0_4 (
+	.A(ecc_sel0_c),
+	.B(b33_0),
+	.C(b33),
+	.Y(g0_1)
+);
+defparam g0_4.INIT=8'h27;
+  CFG4 data_out_right_up8_inferred_clock_RNIQ2MRC (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_down_in[12]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_N_9_1_i_1_0)
+);
+defparam data_out_right_up8_inferred_clock_RNIQ2MRC.INIT=16'h153F;
+  CFG4 data_out_right_up8_inferred_clock_RNIB8KI4O (
+	.A(ecc_sel1_c),
+	.B(data_N_9_1_i_1_0),
+	.C(data_N_5_2_0_1),
+	.D(mcu_fpga_io_1),
+	.Y(data_N_9_1_i)
+);
+defparam data_out_right_up8_inferred_clock_RNIB8KI4O.INIT=16'hA0B3;
+  CFG4 data_out_right_up8_inferred_clock_RNISILKJ (
+	.A(mcu_mem_io_up_in[4]),
+	.B(mcu_mem_io_down_in[4]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_N_9_i_1_0)
+);
+defparam data_out_right_up8_inferred_clock_RNISILKJ.INIT=16'h153F;
+  CFG4 data_out_right_up8_inferred_clock_RNIU9RHBO (
+	.A(ecc_sel1_c),
+	.B(data_N_9_i_1_0),
+	.C(data_N_5_0_0),
+	.D(mcu_fpga_io_1),
+	.Y(data_N_9_i)
+);
+defparam data_out_right_up8_inferred_clock_RNIU9RHBO.INIT=16'hA0B3;
+// @6:14
+  CFG4 \data_out_right_down_RNO[1]  (
+	.A(mcu_fpga_io_in[12]),
+	.B(mcu_fpga_io_in[4]),
+	.C(ecc_sel1_c),
+	.D(data_out_right_down_1_1[1]),
+	.Y(data_out_right_down_1[1])
+);
+defparam \data_out_right_down_RNO[1] .INIT=16'h906F;
+// @6:14
+  CFG4 \data_out_right_down_RNO_0[1]  (
+	.A(mcu_fpga_io_in[14]),
+	.B(mcu_fpga_io_in[9]),
+	.C(mcu_fpga_io_in[1]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1_1[1])
+);
+defparam \data_out_right_down_RNO_0[1] .INIT=16'h3C55;
+  CFG4 \data_out_left_iv_1_a1_0_RNIRMKOHI[10]  (
+	.A(mcu_mem_io_up_in[8]),
+	.B(data_out_left_iv_1_a1_0_Z[10]),
+	.C(data_m6_1_1_1),
+	.D(data_N_11_mux_0_i_1),
+	.Y(data_N_11_mux_0_i_1_0_1)
+);
+defparam \data_out_left_iv_1_a1_0_RNIRMKOHI[10] .INIT=16'h08FF;
+// @6:35
+  CFG4 data_out_left_iv_N_4L7_0 (
+	.A(mcu_mem_io_down_in[11]),
+	.B(data_out_right_up8_Z),
+	.C(data_out_left_iv_1_N_3L4_0_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_N_4L7_0_Z)
+);
+defparam data_out_left_iv_N_4L7_0.INIT=16'h0F8F;
+// @6:35
+  CFG2 data_out_left_iv_N_5L9_0 (
+	.A(b32_0),
+	.B(quad117),
+	.Y(data_out_left_iv_N_5L9_0_Z)
+);
+defparam data_out_left_iv_N_5L9_0.INIT=4'h7;
+// @6:35
+  CFG4 data_out_left_iv_N_6L11_0 (
+	.A(signal_1__3[0]),
+	.B(data_out_left_iv_N_5L9_0_Z),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(decoder_input_up_14),
+	.Y(data_out_left_iv_N_6L11_0_Z)
+);
+defparam data_out_left_iv_N_6L11_0.INIT=16'h1FDF;
+// @6:35
+  CFG4 \data_out_left_iv[4]  (
+	.A(data_out_right_up9),
+	.B(data_out_left_iv_N_6L11_0_Z),
+	.C(data_out_left_iv_N_4L7_0_Z),
+	.D(data_out_left_iv_1_N_5L8_0_Z),
+	.Y(decoder_output11)
+);
+defparam \data_out_left_iv[4] .INIT=16'hF3FB;
+// @6:35
+  CFG3 data_out_left_iv_1_N_3L4_0 (
+	.A(mcu_mem_io_up_in[11]),
+	.B(data_out_right_up7_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_out_left_iv_1_N_3L4_0_Z)
+);
+defparam data_out_left_iv_1_N_3L4_0.INIT=8'hF7;
+// @6:35
+  CFG4 data_out_left_iv_1_N_5L8_0 (
+	.A(quad117_0),
+	.B(b32),
+	.C(signal_1__3[0]),
+	.D(decoder_input_up_14),
+	.Y(data_out_left_iv_1_N_5L8_0_Z)
+);
+defparam data_out_left_iv_1_N_5L8_0.INIT=16'h087F;
+// @6:35
+  CFG3 \data_out_left_iv[8]  (
+	.A(data_out_left_iv_1_0_Z[8]),
+	.B(data_out_left_iv_0_Z[8]),
+	.C(mcu_fpga_io_1),
+	.Y(decoder_output7)
+);
+defparam \data_out_left_iv[8] .INIT=8'hCD;
+// @6:35
+  CFG4 \data_out_left_iv_1_0[8]  (
+	.A(mcu_mem_io_up_in[7]),
+	.B(mcu_mem_io_down_in[7]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_out_left_iv_1_0_Z[8])
+);
+defparam \data_out_left_iv_1_0[8] .INIT=16'h153F;
+// @6:35
+  CFG4 data_out_left_iv_N_4L7 (
+	.A(mcu_mem_io_down_in[3]),
+	.B(data_out_right_up8_Z),
+	.C(data_out_left_iv_1_N_3L4_Z),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_N_4L7_Z)
+);
+defparam data_out_left_iv_N_4L7.INIT=16'h0F8F;
+// @6:35
+  CFG2 data_out_left_iv_N_5L9 (
+	.A(b32_0),
+	.B(quad117),
+	.Y(data_out_left_iv_N_5L9_Z)
+);
+defparam data_out_left_iv_N_5L9.INIT=4'h7;
+// @6:35
+  CFG4 data_out_left_iv_N_6L11 (
+	.A(signal_3__3[0]),
+	.B(data_out_left_iv_N_5L9_Z),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(decoder_input_up_12),
+	.Y(data_out_left_iv_N_6L11_Z)
+);
+defparam data_out_left_iv_N_6L11.INIT=16'h1FDF;
+// @6:35
+  CFG4 \data_out_left_iv[12]  (
+	.A(data_out_right_up9),
+	.B(data_out_left_iv_N_6L11_Z),
+	.C(data_out_left_iv_N_4L7_Z),
+	.D(data_out_left_iv_1_N_5L8_Z),
+	.Y(decoder_output3)
+);
+defparam \data_out_left_iv[12] .INIT=16'hF3FB;
+// @6:35
+  CFG3 data_out_left_iv_1_N_3L4 (
+	.A(mcu_mem_io_up_in[3]),
+	.B(data_out_right_up7_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_out_left_iv_1_N_3L4_Z)
+);
+defparam data_out_left_iv_1_N_3L4.INIT=8'hF7;
+// @6:35
+  CFG4 data_out_left_iv_1_N_5L8 (
+	.A(quad117_0),
+	.B(b32),
+	.C(signal_3__3[0]),
+	.D(decoder_input_up_12),
+	.Y(data_out_left_iv_1_N_5L8_Z)
+);
+defparam data_out_left_iv_1_N_5L8.INIT=16'h087F;
+// @6:35
+  CFG4 data_out_right_down_1_N_2L1 (
+	.A(mcu_fpga_io_in[13]),
+	.B(mcu_fpga_io_in[12]),
+	.C(mcu_fpga_io_in[9]),
+	.D(ecc_sel0_c),
+	.Y(data_out_right_down_1_1[7])
+);
+defparam data_out_right_down_1_N_2L1.INIT=16'h0096;
+// @6:35
+  CFG4 \data_out_right_down_1[7]  (
+	.A(mcu_fpga_io_in[8]),
+	.B(encoder_output2[23]),
+	.C(data_out_right_down_1_1[7]),
+	.D(data_out_left_iv_1_a1_0_Z[10]),
+	.Y(data_out_right_down_1_Z[7])
+);
+defparam \data_out_right_down_1[7] .INIT=16'hCC5A;
+// @6:35
+  CFG4 data_out_left_iv_0_N_4L6_0 (
+	.A(un1_quad1_NE_i),
+	.B(un1_SDi_3_i),
+	.C(data_out_left_iv_a0_0_Z[9]),
+	.D(data_out_left_iv_0_N_6L11_Z),
+	.Y(data_out_left_iv_0_N_4L6_0_Z)
+);
+defparam data_out_left_iv_0_N_4L6_0.INIT=16'h80FF;
+// @6:35
+  CFG4 data_out_left_iv_0_N_3L4 (
+	.A(mcu_mem_io_up_in[10]),
+	.B(data_out_right_up7_Z),
+	.C(data_in_right_down_m[5]),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_0_N_3L4_Z)
+);
+defparam data_out_left_iv_0_N_3L4.INIT=16'h0F07;
+// @6:35
+  CFG4 \data_out_left_iv[10]  (
+	.A(signal_2__0_iv_0_tz[2]),
+	.B(data_out_left_iv_1_a2_0_Z[10]),
+	.C(data_out_left_iv_1_Z[10]),
+	.D(data_out_left_iv_0_Z[10]),
+	.Y(decoder_output5)
+);
+defparam \data_out_left_iv[10] .INIT=16'hFFF8;
+// @6:35
+  CFG4 \data_out_left_iv[6]  (
+	.A(decoder_output2_m_c[6]),
+	.B(data_out_left_iv_1_0_Z[6]),
+	.C(data_out_left_iv_1_Z[6]),
+	.D(data_out_left_iv_0_Z[6]),
+	.Y(decoder_output9)
+);
+defparam \data_out_left_iv[6] .INIT=16'hFFFB;
+// @6:35
+  CFG4 \data_out_left_iv_1_0[6]  (
+	.A(mcu_mem_io_down_in[9]),
+	.B(data_out_right_up8_Z),
+	.C(data_in_right_up_m[6]),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_1_0_Z[6])
+);
+defparam \data_out_left_iv_1_0[6] .INIT=16'h0F07;
+  CFG4 \data_out_left_iv_a1_RNISFP4I41[13]  (
+	.A(data_N_11_mux_0_i_1_0),
+	.B(un1_SDi_3_RNIKLUSCH),
+	.C(mcu_fpga_io_1),
+	.D(data_out_left_iv_a1_Z[13]),
+	.Y(data_N_11_mux_0_i)
+);
+defparam \data_out_left_iv_a1_RNISFP4I41[13] .INIT=16'hFFCE;
+// @6:35
+  CFG4 data_out_left_iv_0_N_5L9_0 (
+	.A(mcu_mem_io_up_in[6]),
+	.B(mcu_mem_io_down_in[6]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_out_left_iv_0_N_5L9_0_Z)
+);
+defparam data_out_left_iv_0_N_5L9_0.INIT=16'hEAC0;
+// @6:35
+  CFG3 data_out_left_iv_0_N_6L11 (
+	.A(quad117_0),
+	.B(b33),
+	.C(data_out_left_iv_a0_0_Z[9]),
+	.Y(data_out_left_iv_0_N_6L11_Z)
+);
+defparam data_out_left_iv_0_N_6L11.INIT=8'h2F;
+// @6:35
+  CFG4 \data_out_left_iv_0[1]  (
+	.A(data_out_left_iv_0_N_5L9_Z),
+	.B(data_out_left_iv_0_2_1_Z[1]),
+	.C(data_out_left_iv_0_1[1]),
+	.D(data_out_left_iv_a1_Z[1]),
+	.Y(decoder_output14)
+);
+defparam \data_out_left_iv_0[1] .INIT=16'hFF75;
+  CFG3 data_out_right_up8_inferred_clock_RNINJND5 (
+	.A(mcu_mem_io_down_in[13]),
+	.B(data_out_right_up8_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_out_right_up8_inferred_clock_RNINJND5_Z)
+);
+defparam data_out_right_up8_inferred_clock_RNINJND5.INIT=8'hF7;
+  CFG4 data_out_right_up7_inferred_clock_RNIQ59QDA (
+	.A(data_out_right_up7_Z),
+	.B(quad117_1_RNI0G6UV9),
+	.C(data_out_right_up8_inferred_clock_RNINJND5_Z),
+	.D(decoder_input_up_13),
+	.Y(data_N_7_mux_i_1_0)
+);
+defparam data_out_right_up7_inferred_clock_RNIQ59QDA.INIT=16'h1030;
+  CFG4 data_out_right_up8_inferred_clock_RNIOELKJ (
+	.A(mcu_mem_io_up_in[2]),
+	.B(mcu_mem_io_down_in[2]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_N_11_mux_0_i_1)
+);
+defparam data_out_right_up8_inferred_clock_RNIOELKJ.INIT=16'h153F;
+  CFG4 data_out_right_up8_inferred_clock_RNI4RLKJ (
+	.A(mcu_mem_io_up_in[8]),
+	.B(mcu_mem_io_down_in[8]),
+	.C(data_out_right_up8_Z),
+	.D(data_out_right_up7_Z),
+	.Y(data_N_9_0_i_1)
+);
+defparam data_out_right_up8_inferred_clock_RNI4RLKJ.INIT=16'h153F;
+// @6:35
+  CFG4 \data_out_left_iv_0_1[14]  (
+	.A(un1_quad1_NE_i_0),
+	.B(quad117),
+	.C(data_out_left_iv_1_s_a2_0_Z[14]),
+	.D(data_out_left_iv_0_1_1_Z[14]),
+	.Y(data_out_left_iv_0_1_Z[14])
+);
+defparam \data_out_left_iv_0_1[14] .INIT=16'h38B0;
+// @6:35
+  CFG4 \data_out_left_iv_0_1_1[14]  (
+	.A(un1_SDi_3_i_0),
+	.B(signal_3__6[2]),
+	.C(data_out_left_iv_1_s_a2_0_Z[14]),
+	.D(data_out_left_iv_1_a1_0_Z[10]),
+	.Y(data_out_left_iv_0_1_1_Z[14])
+);
+defparam \data_out_left_iv_0_1_1[14] .INIT=16'h1450;
+// @6:35
+  CFG4 \data_out_left_iv_0_2_1[5]  (
+	.A(un1_quad1_NE_i),
+	.B(quad117_0),
+	.C(b33),
+	.D(data_out_left_iv_a1_1[13]),
+	.Y(data_out_left_iv_0_2_1_Z[5])
+);
+defparam \data_out_left_iv_0_2_1[5] .INIT=16'h0C04;
+// @6:35
+  CFG3 \data_out_right_down_1[5]  (
+	.A(ecc_sel0_c),
+	.B(encoder_output1[21]),
+	.C(data_out_right_down_1_1_Z[5]),
+	.Y(data_out_right_down_1_Z[5])
+);
+defparam \data_out_right_down_1[5] .INIT=8'hF4;
+// @6:35
+  CFG3 \data_out_left_iv_1_RNO[15]  (
+	.A(quad117_0),
+	.B(decoder_N_7_mux),
+	.C(d_N_3_mux),
+	.Y(decoder_output1_m[15])
+);
+defparam \data_out_left_iv_1_RNO[15] .INIT=8'h78;
+// @6:35
+  CFG2 \data_out_left_iv_1_a0_0[10]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.Y(data_out_right_up9)
+);
+defparam \data_out_left_iv_1_a0_0[10] .INIT=4'h4;
+// @6:35
+  CFG2 \data_out_left_iv_1_a1_0[10]  (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.Y(data_out_left_iv_1_a1_0_Z[10])
+);
+defparam \data_out_left_iv_1_a1_0[10] .INIT=4'h8;
+// @6:36
+  CFG2 data_out_right_up7 (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.Y(data_out_right_up7_Z)
+);
+defparam data_out_right_up7.INIT=4'h1;
+// @6:40
+  CFG2 data_out_right_up8 (
+	.A(ecc_sel0_c),
+	.B(ecc_sel1_c),
+	.Y(data_out_right_up8_Z)
+);
+defparam data_out_right_up8.INIT=4'h2;
+// @5:32
+  CFG3 \data_out_right_up_RNO[1]  (
+	.A(mcu_fpga_io_in[14]),
+	.B(mcu_fpga_io_in[11]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[1])
+);
+defparam \data_out_right_up_RNO[1] .INIT=8'hAC;
+// @5:32
+  CFG3 \data_out_right_up_RNO[2]  (
+	.A(mcu_fpga_io_in[13]),
+	.B(mcu_fpga_io_in[7]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[2])
+);
+defparam \data_out_right_up_RNO[2] .INIT=8'hAC;
+// @5:32
+  CFG3 \data_out_right_up_RNO[3]  (
+	.A(mcu_fpga_io_in[12]),
+	.B(mcu_fpga_io_in[3]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[3])
+);
+defparam \data_out_right_up_RNO[3] .INIT=8'hAC;
+// @5:32
+  CFG3 \data_out_right_up_RNO[4]  (
+	.A(mcu_fpga_io_in[14]),
+	.B(mcu_fpga_io_in[11]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[4])
+);
+defparam \data_out_right_up_RNO[4] .INIT=8'hCA;
+// @5:32
+  CFG3 \data_out_right_up_RNO[6]  (
+	.A(mcu_fpga_io_in[9]),
+	.B(mcu_fpga_io_in[6]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[6])
+);
+defparam \data_out_right_up_RNO[6] .INIT=8'hAC;
+// @5:32
+  CFG3 \data_out_right_up_RNO[7]  (
+	.A(mcu_fpga_io_in[8]),
+	.B(mcu_fpga_io_in[2]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[7])
+);
+defparam \data_out_right_up_RNO[7] .INIT=8'hAC;
+// @5:32
+  CFG3 \data_out_right_up_RNO[8]  (
+	.A(mcu_fpga_io_in[13]),
+	.B(mcu_fpga_io_in[7]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[8])
+);
+defparam \data_out_right_up_RNO[8] .INIT=8'hCA;
+// @5:32
+  CFG3 \data_out_right_up_RNO[9]  (
+	.A(mcu_fpga_io_in[9]),
+	.B(mcu_fpga_io_in[6]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[9])
+);
+defparam \data_out_right_up_RNO[9] .INIT=8'hCA;
+// @5:32
+  CFG3 \data_out_right_up_RNO[11]  (
+	.A(mcu_fpga_io_in[4]),
+	.B(mcu_fpga_io_in[1]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[11])
+);
+defparam \data_out_right_up_RNO[11] .INIT=8'hAC;
+// @5:32
+  CFG3 \data_out_right_up_RNO[12]  (
+	.A(mcu_fpga_io_in[12]),
+	.B(mcu_fpga_io_in[3]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[12])
+);
+defparam \data_out_right_up_RNO[12] .INIT=8'hCA;
+// @5:32
+  CFG3 \data_out_right_up_RNO[13]  (
+	.A(mcu_fpga_io_in[8]),
+	.B(mcu_fpga_io_in[2]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[13])
+);
+defparam \data_out_right_up_RNO[13] .INIT=8'hCA;
+// @5:32
+  CFG3 \data_out_right_up_RNO[14]  (
+	.A(mcu_fpga_io_in[4]),
+	.B(mcu_fpga_io_in[1]),
+	.C(data_out_right_up7_Z),
+	.Y(data_out_right_up_1[14])
+);
+defparam \data_out_right_up_RNO[14] .INIT=8'hCA;
+// @6:14
+  CFG3 \data_out_right_down_RNO_0[3]  (
+	.A(mcu_fpga_io_in[13]),
+	.B(mcu_fpga_io_in[8]),
+	.C(mcu_fpga_io_in[5]),
+	.Y(data_m3_1)
+);
+defparam \data_out_right_down_RNO_0[3] .INIT=8'h96;
+// @6:35
+  CFG3 data_out_left_iv_0_N_3L4_RNO (
+	.A(mcu_mem_io_down_in[10]),
+	.B(data_out_right_up8_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_in_right_down_m[5])
+);
+defparam data_out_left_iv_0_N_3L4_RNO.INIT=8'h08;
+// @6:35
+  CFG3 \data_out_left_iv_1_RNO_0[15]  (
+	.A(mcu_mem_io_up_in[0]),
+	.B(data_out_right_up7_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_in_right_up_m[15])
+);
+defparam \data_out_left_iv_1_RNO_0[15] .INIT=8'h08;
+// @6:35
+  CFG3 \data_out_left_iv_1_0_RNO[6]  (
+	.A(mcu_mem_io_up_in[9]),
+	.B(data_out_right_up7_Z),
+	.C(mcu_fpga_io_1),
+	.Y(data_in_right_up_m[6])
+);
+defparam \data_out_left_iv_1_0_RNO[6] .INIT=8'h08;
+// @6:14
+  CFG4 \data_out_right_down_RNO[8]  (
+	.A(mcu_fpga_io_in[15]),
+	.B(mcu_fpga_io_in[13]),
+	.C(mcu_fpga_io_in[7]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1[8])
+);
+defparam \data_out_right_down_RNO[8] .INIT=16'h66F0;
+// @6:14
+  CFG4 \data_out_right_down_RNO[9]  (
+	.A(mcu_fpga_io_in[14]),
+	.B(mcu_fpga_io_in[12]),
+	.C(mcu_fpga_io_in[6]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1[9])
+);
+defparam \data_out_right_down_RNO[9] .INIT=16'h66F0;
+// @6:14
+  CFG4 \data_out_right_down_RNO[10]  (
+	.A(mcu_fpga_io_in[11]),
+	.B(mcu_fpga_io_in[9]),
+	.C(mcu_fpga_io_in[5]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1[10])
+);
+defparam \data_out_right_down_RNO[10] .INIT=16'h66F0;
+// @6:14
+  CFG4 \data_out_right_down_RNO[11]  (
+	.A(mcu_fpga_io_in[10]),
+	.B(mcu_fpga_io_in[8]),
+	.C(mcu_fpga_io_in[4]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1[11])
+);
+defparam \data_out_right_down_RNO[11] .INIT=16'h66F0;
+// @6:14
+  CFG4 \data_out_right_down_RNO[12]  (
+	.A(mcu_fpga_io_in[7]),
+	.B(mcu_fpga_io_in[5]),
+	.C(mcu_fpga_io_in[3]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1[12])
+);
+defparam \data_out_right_down_RNO[12] .INIT=16'h66F0;
+// @6:14
+  CFG4 \data_out_right_down_RNO[13]  (
+	.A(mcu_fpga_io_in[6]),
+	.B(mcu_fpga_io_in[4]),
+	.C(mcu_fpga_io_in[2]),
+	.D(ecc_sel1_c),
+	.Y(data_out_right_down_1[13])
+);
+defparam \data_out_right_down_RNO[13] .INIT=16'h66F0;
+// @6:14
+  CFG3 \data_out_right_down_RNO[14]  (
+	.A(mcu_fpga_io_in[3]),
+	.B(mcu_fpga_io_in[1]),
+	.C(ecc_sel1_c),
+	.Y(data_out_right_down_1[14])
+);
+defparam \data_out_right_down_RNO[14] .INIT=8'h6C;
+// @6:14
+  CFG3 \data_out_right_down_RNO[15]  (
+	.A(mcu_fpga_io_in[2]),
+	.B(mcu_fpga_io_in[0]),
+	.C(ecc_sel1_c),
+	.Y(data_out_right_down_1[15])
+);
+defparam \data_out_right_down_RNO[15] .INIT=8'h6C;
+// @6:35
+  CFG4 \data_out_left_iv_1_a2_0[10]  (
+	.A(mcu_mem_io_up_in[13]),
+	.B(mcu_mem_io_down_in[3]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_1_a2_0_Z[10])
+);
+defparam \data_out_left_iv_1_a2_0[10] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_a0_0[14]  (
+	.A(mcu_mem_io_up_in[12]),
+	.B(mcu_mem_io_down_in[1]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_a0_0_Z[14])
+);
+defparam \data_out_left_iv_a0_0[14] .INIT=16'h0060;
+// @6:35
+  CFG4 data_out_left_iv_0_N_5L9_N_6L11_RNO (
+	.A(mcu_mem_io_up_in[3]),
+	.B(mcu_mem_io_down_in[6]),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(mcu_fpga_io_1),
+	.Y(decoder_output2_m_d_0[1])
+);
+defparam data_out_left_iv_0_N_5L9_N_6L11_RNO.INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_1_a1_0_RNISN5PK[10]  (
+	.A(mcu_mem_io_up_in[0]),
+	.B(mcu_mem_io_down_in[0]),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(mcu_fpga_io_1),
+	.Y(data_m2_e_0_0_Z)
+);
+defparam \data_out_left_iv_1_a1_0_RNISN5PK[10] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_0_RNO_1[5]  (
+	.A(mcu_mem_io_up_in[2]),
+	.B(mcu_mem_io_down_in[4]),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(mcu_fpga_io_1),
+	.Y(decoder_output2_m_d_0[5])
+);
+defparam \data_out_left_iv_0_RNO_1[5] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_RNO_0[6]  (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_down_in[5]),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(mcu_fpga_io_1),
+	.Y(decoder_output2_m_c_0[6])
+);
+defparam \data_out_left_iv_RNO_0[6] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_a1_0[1]  (
+	.A(mcu_mem_io_up_in[3]),
+	.B(mcu_mem_io_down_in[6]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_a1_0_Z[1])
+);
+defparam \data_out_left_iv_a1_0[1] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_a1_0[5]  (
+	.A(mcu_mem_io_up_in[2]),
+	.B(mcu_mem_io_down_in[4]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_a1_0_Z[5])
+);
+defparam \data_out_left_iv_a1_0[5] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_a1_0[9]  (
+	.A(mcu_mem_io_up_in[1]),
+	.B(mcu_mem_io_down_in[2]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_a1_0_Z[9])
+);
+defparam \data_out_left_iv_a1_0[9] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_a1_0[13]  (
+	.A(mcu_mem_io_up_in[0]),
+	.B(mcu_mem_io_down_in[0]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_a1_0_Z[13])
+);
+defparam \data_out_left_iv_a1_0[13] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_1_a1_0_RNIVQ5PK[10]  (
+	.A(mcu_mem_io_up_in[1]),
+	.B(mcu_mem_io_down_in[2]),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(mcu_fpga_io_1),
+	.Y(decoder_output2_m_d_0[9])
+);
+defparam \data_out_left_iv_1_a1_0_RNIVQ5PK[10] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_0_RNO[6]  (
+	.A(mcu_mem_io_up_in[14]),
+	.B(mcu_mem_io_down_in[5]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(data_out_left_iv_0_1[6])
+);
+defparam \data_out_left_iv_0_RNO[6] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_1_a0_0_RNIOEFUK[10]  (
+	.A(mcu_mem_io_up_in[15]),
+	.B(mcu_mem_io_down_in[7]),
+	.C(data_out_right_up9),
+	.D(mcu_fpga_io_1),
+	.Y(decoder_output1_m_a0_0[2])
+);
+defparam \data_out_left_iv_1_a0_0_RNIOEFUK[10] .INIT=16'h0060;
+// @6:35
+  CFG4 \data_out_left_iv_RNO[6]  (
+	.A(signal_0__2_sqmuxa_0),
+	.B(quad117),
+	.C(b33_0),
+	.D(decoder_output2_m_c_0[6]),
+	.Y(decoder_output2_m_c[6])
+);
+defparam \data_out_left_iv_RNO[6] .INIT=16'hC800;
+// @6:35
+  CFG4 \data_out_left_iv_a1[1]  (
+	.A(quad117_0),
+	.B(b32),
+	.C(data_out_left_iv_a1_1[13]),
+	.D(data_out_left_iv_a1_0_Z[1]),
+	.Y(data_out_left_iv_a1_Z[1])
+);
+defparam \data_out_left_iv_a1[1] .INIT=16'hA800;
+// @6:35
+  CFG4 \data_out_left_iv_a1[5]  (
+	.A(quad117_0),
+	.B(b32),
+	.C(data_out_left_iv_a1_1[13]),
+	.D(data_out_left_iv_a1_0_Z[5]),
+	.Y(data_out_left_iv_a1_Z[5])
+);
+defparam \data_out_left_iv_a1[5] .INIT=16'hA800;
+// @6:14
+  CFG4 \data_out_right_down_RNO[0]  (
+	.A(mcu_fpga_io_in[15]),
+	.B(mcu_fpga_io_in[10]),
+	.C(ecc_sel1_c),
+	.D(Di_0__0),
+	.Y(data_out_right_down_1[0])
+);
+defparam \data_out_right_down_RNO[0] .INIT=16'h9A6A;
+// @6:14
+  CFG4 \data_out_right_down_RNO[2]  (
+	.A(mcu_fpga_io_in[14]),
+	.B(mcu_fpga_io_in[13]),
+	.C(ecc_sel1_c),
+	.D(Di_1__1),
+	.Y(data_out_right_down_1[2])
+);
+defparam \data_out_right_down_RNO[2] .INIT=16'h5CAC;
+// @6:35
+  CFG4 \data_out_left_iv_0[10]  (
+	.A(N_84),
+	.B(N_99),
+	.C(data_out_left_iv_1_a1_0_0_Z[10]),
+	.D(data_out_left_iv_1_a0_0_Z[10]),
+	.Y(data_out_left_iv_0_Z[10])
+);
+defparam \data_out_left_iv_0[10] .INIT=16'hECA0;
+// @6:35
+  CFG4 \data_out_left_iv_1_RNO_1[15]  (
+	.A(b33),
+	.B(signal_3__6[3]),
+	.C(data_out_right_up9),
+	.D(decoder_input_up_0),
+	.Y(decoder_N_7_mux)
+);
+defparam \data_out_left_iv_1_RNO_1[15] .INIT=16'h2080;
+// @6:35
+  CFG4 \data_out_left_iv_a1[13]  (
+	.A(quad117_0),
+	.B(b32),
+	.C(data_out_left_iv_a1_1[13]),
+	.D(data_out_left_iv_a1_0_Z[13]),
+	.Y(data_out_left_iv_a1_Z[13])
+);
+defparam \data_out_left_iv_a1[13] .INIT=16'hA800;
+// @6:35
+  CFG4 \data_out_left_iv_0[0]  (
+	.A(decoder_output2[0]),
+	.B(decoder_output1_Z[0]),
+	.C(data_out_right_up9),
+	.D(data_out_left_iv_1_a1_0_Z[10]),
+	.Y(data_out_left_iv_0_Z[0])
+);
+defparam \data_out_left_iv_0[0] .INIT=16'hEAC0;
+// @6:35
+  CFG4 \data_out_left_iv_0[8]  (
+	.A(decoder_output2[8]),
+	.B(decoder_output1_Z[8]),
+	.C(data_out_right_up9),
+	.D(data_out_left_iv_1_a1_0_Z[10]),
+	.Y(data_out_left_iv_0_Z[8])
+);
+defparam \data_out_left_iv_0[8] .INIT=16'hEAC0;
+// @6:35
+  CFG4 \data_out_right_down_RNO[3]  (
+	.A(mcu_fpga_io_in[12]),
+	.B(mcu_fpga_io_in[0]),
+	.C(ecc_sel1_c),
+	.D(data_m3_1),
+	.Y(data_N_5_i)
+);
+defparam \data_out_right_down_RNO[3] .INIT=16'h3ACA;
+// @6:35
+  CFG4 \data_out_left_iv_0[6]  (
+	.A(quad117_0),
+	.B(b33),
+	.C(data_out_left_iv_a1_1[13]),
+	.D(data_out_left_iv_0_1[6]),
+	.Y(data_out_left_iv_0_Z[6])
+);
+defparam \data_out_left_iv_0[6] .INIT=16'hA800;
+// @6:35
+  CFG4 \data_out_left_iv_1[15]  (
+	.A(decoder_output2[15]),
+	.B(decoder_output1_m[15]),
+	.C(data_out_left_iv_1_a1_0_Z[10]),
+	.D(data_in_right_up_m[15]),
+	.Y(data_out_left_iv_1_Z[15])
+);
+defparam \data_out_left_iv_1[15] .INIT=16'hFFEC;
+// @6:35
+  CFG4 \data_out_left_iv[15]  (
+	.A(mcu_mem_io_down_in[0]),
+	.B(data_out_right_up8_Z),
+	.C(data_out_left_iv_1_Z[15]),
+	.D(mcu_fpga_io_1),
+	.Y(decoder_output0)
+);
+defparam \data_out_left_iv[15] .INIT=16'hF0F8;
+//@5:32
+//@5:32
+// @6:27
+  TBEC_RSC_encoder codificador1 (
+	.encoder_output1(encoder_output1[22:20]),
+	.mcu_fpga_io_in_2(mcu_fpga_io_in[2]),
+	.mcu_fpga_io_in_7(mcu_fpga_io_in[7]),
+	.mcu_fpga_io_in_11(mcu_fpga_io_in[11]),
+	.mcu_fpga_io_in_6(mcu_fpga_io_in[6]),
+	.mcu_fpga_io_in_3(mcu_fpga_io_in[3]),
+	.mcu_fpga_io_in_5(mcu_fpga_io_in[5]),
+	.mcu_fpga_io_in_4(mcu_fpga_io_in[4]),
+	.mcu_fpga_io_in_1(mcu_fpga_io_in[1]),
+	.mcu_fpga_io_in_0(mcu_fpga_io_in[0]),
+	.mcu_fpga_io_in_15(mcu_fpga_io_in[15]),
+	.mcu_fpga_io_in_14(mcu_fpga_io_in[14]),
+	.Di_1__1_1z(Di_1__1),
+	.Di_0__0_1z(Di_0__0)
+);
+// @6:28
+  TBEC_RSC_decoder decodificador1 (
+	.decoder_output1_m_a0_0_0(decoder_output1_m_a0_0[2]),
+	.decoder_output1_8(decoder_output1_Z[8]),
+	.decoder_output1_0(decoder_output1_Z[0]),
+	.decoder_input_up_0(decoder_input_up_2),
+	.decoder_input_up_11(decoder_input_up_13),
+	.decoder_input_up_10(decoder_input_up_12),
+	.decoder_input_up_13(decoder_input_up_15),
+	.linsin_0_(linsin_0_[1:0]),
+	.SUM_0_a4_1_0_0(SUM_0_a4_1[0]),
+	.signal_1__3_0(signal_1__3[0]),
+	.mcu_mem_io_down_in(mcu_mem_io_down_in[15:0]),
+	.signal_3__3_0(signal_3__3[0]),
+	.signal_2__3_0(signal_2__3[0]),
+	.signal_0__3_0(signal_0__3[0]),
+	.signal_3__6(signal_3__6[3:2]),
+	.SDi_0_a4_1_0(SDi_0_a4_1[3]),
+	.data_out_left_iv_a1_1_0(data_out_left_iv_a1_1[13]),
+	.mcu_mem_io_up_in(mcu_mem_io_up_in[15:0]),
+	.data_out_left_iv_1_a1_0_0(data_out_left_iv_1_a1_0_Z[10]),
+	.signal_2__0_iv_0_tz_0(signal_2__0_iv_0_tz[2]),
+	.SUM_3_a2_0_0(SUM_3_a2_0[0]),
+	.SUM_3_a2_1_0(SUM_3_a2_1[0]),
+	.SDi_0(SDi[3]),
+	.SDi_3_0(SDi_3[1]),
+	.SDi_4_0(SDi_4[2]),
+	.SUM_0_a4_0_0(SUM_0_a4_0[0]),
+	.SUM_0_a4_1_0_x_0(SUM_0_a4_1_0_x[0]),
+	.SDi_2_0(SDi_2[0]),
+	.CO0_3(CO0),
+	.quad117_1_RNI0G6UV9_1z(quad117_1_RNI0G6UV9),
+	.b32(b32),
+	.data_N_9_0_i(data_N_9_0_i),
+	.data_N_9_0_i_1(data_N_9_0_i_1),
+	.ecc_sel1_c(ecc_sel1_c),
+	.data_m8_2_3_1(data_m8_2_3_1),
+	.b33_0(b33_0),
+	.signal_0__2_sqmuxa_0(signal_0__2_sqmuxa_0),
+	.N_142(N_142),
+	.data_N_7_mux_i_1_1(data_N_7_mux_i_1_1),
+	.data_N_7_mux_i_1_0(data_N_7_mux_i_1_0),
+	.data_m2_e_0(data_m2_e_0),
+	.N_99(N_99),
+	.data_N_11_mux_0_i_1_0(data_N_11_mux_0_i_1_0),
+	.data_N_11_mux_0_i_1_0_1(data_N_11_mux_0_i_1_0_1),
+	.data_out_right_up9(data_out_right_up9),
+	.b33(b33),
+	.un1_SDi_3_i(un1_SDi_3_i),
+	.g2(g2),
+	.N_71_2(N_71_2),
+	.data_N_5_0_0(data_N_5_0_0),
+	.data_N_5_2_0_1(data_N_5_2_0_1),
+	.CO0_2(CO0_0),
+	.CO2_1_0(CO2_1_0),
+	.N_109_2(N_109_2),
+	.un1_quad1_NE_i(un1_quad1_NE_i),
+	.un1_quad1_0(un1_quad1_0),
+	.N_134(N_134),
+	.un1_SDi_2_1z(un1_SDi_2),
+	.N_135(N_135),
+	.quad117_0(quad117_0),
+	.quad117(quad117),
+	.ecc_sel0_c(ecc_sel0_c),
+	.g0_1_1z(g0_1),
+	.N_133(N_133),
+	.mcu_fpga_io_1(mcu_fpga_io_1)
+);
+// @6:30
+  MRSC_encoder codificador2 (
+	.encoder_output2(encoder_output2[23:21]),
+	.mcu_fpga_io_in({mcu_fpga_io_in[14:12], N_1352, mcu_fpga_io_in[10:8], N_1351, mcu_fpga_io_in[6:4], N_1350, mcu_fpga_io_in[2:0]})
+);
+// @6:31
+  MRSC_decoder decodificador2 (
+	.SDi_2_0(SDi_2[0]),
+	.SDi_3_0(SDi_3[1]),
+	.SUM_3_a2_0_0(SUM_3_a2_0[0]),
+	.SUM_3_a2_1_0(SUM_3_a2_1[0]),
+	.mcu_mem_io_down_in({mcu_mem_io_down_in[14], N_1353, mcu_mem_io_down_in[12:8]}),
+	.data_out_left_iv_1_a1_0_0(data_out_left_iv_1_a1_0_Z[10]),
+	.SDi_0_a4_1_0(SDi_0_a4_1[3]),
+	.decoder_output2_8(decoder_output2[8]),
+	.decoder_output2_0(decoder_output2[0]),
+	.decoder_output2_15(decoder_output2[15]),
+	.decoder_input_up_2(decoder_input_up_2),
+	.decoder_input_up_15(decoder_input_up_15),
+	.decoder_input_up_14(decoder_input_up_14),
+	.decoder_input_up_13(decoder_input_up_13),
+	.decoder_input_up_0(decoder_input_up_0),
+	.signal_3__6_0(signal_3__6[3]),
+	.signal_0__3_0(signal_0__3[0]),
+	.signal_2__3_0(signal_2__3[0]),
+	.signal_0__0_iv_0_tz_0(signal_0__0_iv_0_tz[1]),
+	.mcu_mem_io_up_in({mcu_mem_io_up_in[15:14], N_1356, mcu_mem_io_up_in[12], N_1355, N_1354, mcu_mem_io_up_in[9:0]}),
+	.linsin_0_(linsin_0_[1:0]),
+	.SDi_0(SDi[3]),
+	.SDi_4_0(SDi_4[2]),
+	.SUM_0_a4_0_0(SUM_0_a4_0[0]),
+	.SUM_0_a4_1_0(SUM_0_a4_1[0]),
+	.SUM_0_a4_1_0_x_0(SUM_0_a4_1_0_x[0]),
+	.CO0_2(CO0),
+	.CO0_1(CO0_0),
+	.N_71_2(N_71_2),
+	.N_84(N_84),
+	.data_m6_1_1_1(data_m6_1_1_1),
+	.b33(b33_0),
+	.N_134(N_134),
+	.N_135(N_135),
+	.signal_0__2_sqmuxa_0_1z(signal_0__2_sqmuxa_0),
+	.un1_quad1_0(un1_quad1_0),
+	.data_N_7_mux_i(data_N_7_mux_i),
+	.data_N_7_mux_i_1_1(data_N_7_mux_i_1_1),
+	.data_m8_2_3_1(data_m8_2_3_1),
+	.g2_1z(g2),
+	.quad117(quad117),
+	.CO2_1_0(CO2_1_0),
+	.N_133(N_133),
+	.un1_SDi_2(un1_SDi_2),
+	.un1_SDi_3_RNIKLUSCH_1z(un1_SDi_3_RNIKLUSCH),
+	.data_m2_e_0_sx(data_m2_e_0_sx),
+	.b32(b32_0),
+	.un1_SDi_3_i(un1_SDi_3_i_0),
+	.un1_quad1_NE_i(un1_quad1_NE_i_0),
+	.N_142(N_142),
+	.N_109_2(N_109_2),
+	.mcu_fpga_io_1(mcu_fpga_io_1)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* ecc_design */
+
+module fpga_top_design (
+  mcu_fpga_io_in,
+  mcu_mem_io_down_in,
+  mcu_mem_io_up_in,
+  encoder_output_down8,
+  encoder_output_down7,
+  encoder_output_down6,
+  encoder_output_down5,
+  encoder_output_down4,
+  encoder_output_down3,
+  encoder_output_down2,
+  encoder_output_down1,
+  encoder_output_down0,
+  encoder_output_up6,
+  encoder_output_up5,
+  encoder_output_up4,
+  encoder_output_up3,
+  encoder_output_up2,
+  encoder_output_up1,
+  encoder_output_up0,
+  encoder_output_down15,
+  encoder_output_down14,
+  encoder_output_down13,
+  encoder_output_down12,
+  encoder_output_down11,
+  encoder_output_down10,
+  encoder_output_down9,
+  encoder_output_up15,
+  encoder_output_up14,
+  encoder_output_up13,
+  encoder_output_up12,
+  encoder_output_up11,
+  encoder_output_up10,
+  encoder_output_up9,
+  encoder_output_up8,
+  encoder_output_up7,
+  ecc_sel0_c,
+  ecc_sel1_c,
+  decoder_output10,
+  decoder_output15,
+  decoder_output1,
+  decoder_output6,
+  data_N_9_1_i,
+  data_N_9_i,
+  decoder_output11,
+  decoder_output7,
+  decoder_output3,
+  decoder_output5,
+  decoder_output9,
+  data_N_11_mux_0_i,
+  decoder_output14,
+  decoder_output0,
+  data_N_9_0_i,
+  data_N_7_mux_i,
+  MCU_WE_c,
+  MCU_CS_c,
+  mcu_fpga_io_1_i,
+  mcu_fpga_io_1_1z
+)
+;
+input [15:0] mcu_fpga_io_in ;
+input [15:0] mcu_mem_io_down_in ;
+input [15:0] mcu_mem_io_up_in ;
+output encoder_output_down8 ;
+output encoder_output_down7 ;
+output encoder_output_down6 ;
+output encoder_output_down5 ;
+output encoder_output_down4 ;
+output encoder_output_down3 ;
+output encoder_output_down2 ;
+output encoder_output_down1 ;
+output encoder_output_down0 ;
+output encoder_output_up6 ;
+output encoder_output_up5 ;
+output encoder_output_up4 ;
+output encoder_output_up3 ;
+output encoder_output_up2 ;
+output encoder_output_up1 ;
+output encoder_output_up0 ;
+output encoder_output_down15 ;
+output encoder_output_down14 ;
+output encoder_output_down13 ;
+output encoder_output_down12 ;
+output encoder_output_down11 ;
+output encoder_output_down10 ;
+output encoder_output_down9 ;
+output encoder_output_up15 ;
+output encoder_output_up14 ;
+output encoder_output_up13 ;
+output encoder_output_up12 ;
+output encoder_output_up11 ;
+output encoder_output_up10 ;
+output encoder_output_up9 ;
+output encoder_output_up8 ;
+output encoder_output_up7 ;
+input ecc_sel0_c ;
+input ecc_sel1_c ;
+output decoder_output10 ;
+output decoder_output15 ;
+output decoder_output1 ;
+output decoder_output6 ;
+output data_N_9_1_i ;
+output data_N_9_i ;
+output decoder_output11 ;
+output decoder_output7 ;
+output decoder_output3 ;
+output decoder_output5 ;
+output decoder_output9 ;
+output data_N_11_mux_0_i ;
+output decoder_output14 ;
+output decoder_output0 ;
+output data_N_9_0_i ;
+output data_N_7_mux_i ;
+input MCU_WE_c ;
+input MCU_CS_c ;
+output mcu_fpga_io_1_i ;
+output mcu_fpga_io_1_1z ;
+wire encoder_output_down8 ;
+wire encoder_output_down7 ;
+wire encoder_output_down6 ;
+wire encoder_output_down5 ;
+wire encoder_output_down4 ;
+wire encoder_output_down3 ;
+wire encoder_output_down2 ;
+wire encoder_output_down1 ;
+wire encoder_output_down0 ;
+wire encoder_output_up6 ;
+wire encoder_output_up5 ;
+wire encoder_output_up4 ;
+wire encoder_output_up3 ;
+wire encoder_output_up2 ;
+wire encoder_output_up1 ;
+wire encoder_output_up0 ;
+wire encoder_output_down15 ;
+wire encoder_output_down14 ;
+wire encoder_output_down13 ;
+wire encoder_output_down12 ;
+wire encoder_output_down11 ;
+wire encoder_output_down10 ;
+wire encoder_output_down9 ;
+wire encoder_output_up15 ;
+wire encoder_output_up14 ;
+wire encoder_output_up13 ;
+wire encoder_output_up12 ;
+wire encoder_output_up11 ;
+wire encoder_output_up10 ;
+wire encoder_output_up9 ;
+wire encoder_output_up8 ;
+wire encoder_output_up7 ;
+wire ecc_sel0_c ;
+wire ecc_sel1_c ;
+wire decoder_output10 ;
+wire decoder_output15 ;
+wire decoder_output1 ;
+wire decoder_output6 ;
+wire data_N_9_1_i ;
+wire data_N_9_i ;
+wire decoder_output11 ;
+wire decoder_output7 ;
+wire decoder_output3 ;
+wire decoder_output5 ;
+wire decoder_output9 ;
+wire data_N_11_mux_0_i ;
+wire decoder_output14 ;
+wire decoder_output0 ;
+wire data_N_9_0_i ;
+wire data_N_7_mux_i ;
+wire MCU_WE_c ;
+wire MCU_CS_c ;
+wire mcu_fpga_io_1_i ;
+wire mcu_fpga_io_1_1z ;
+wire [15:0] decoder_input_up;
+wire GND ;
+wire VCC ;
+  CFG1 mcu_fpga_io_1_RNIF86G (
+	.A(mcu_fpga_io_1_1z),
+	.Y(mcu_fpga_io_1_i)
+);
+defparam mcu_fpga_io_1_RNIF86G.INIT=2'h1;
+  CFG2 mcu_fpga_io_1_RNITKO18 (
+	.A(mcu_fpga_io_1_1z),
+	.B(mcu_mem_io_up_in[13]),
+	.Y(decoder_input_up[13])
+);
+defparam mcu_fpga_io_1_RNITKO18.INIT=4'h4;
+  CFG2 mcu_fpga_io_1_RNIB3088 (
+	.A(mcu_fpga_io_1_1z),
+	.B(mcu_mem_io_up_in[2]),
+	.Y(decoder_input_up[2])
+);
+defparam mcu_fpga_io_1_RNIB3088.INIT=4'h4;
+  CFG2 mcu_fpga_io_1_RNISJO18 (
+	.A(mcu_fpga_io_1_1z),
+	.B(mcu_mem_io_up_in[12]),
+	.Y(decoder_input_up[12])
+);
+defparam mcu_fpga_io_1_RNISJO18.INIT=4'h4;
+  CFG2 mcu_fpga_io_1_RNIVMO18 (
+	.A(mcu_fpga_io_1_1z),
+	.B(mcu_mem_io_up_in[15]),
+	.Y(decoder_input_up[15])
+);
+defparam mcu_fpga_io_1_RNIVMO18.INIT=4'h4;
+  CFG2 mcu_fpga_io_1_RNI91088 (
+	.A(mcu_fpga_io_1_1z),
+	.B(mcu_mem_io_up_in[0]),
+	.Y(decoder_input_up[0])
+);
+defparam mcu_fpga_io_1_RNI91088.INIT=4'h4;
+  CFG2 mcu_fpga_io_1_RNIULO18 (
+	.A(mcu_fpga_io_1_1z),
+	.B(mcu_mem_io_up_in[14]),
+	.Y(decoder_input_up[14])
+);
+defparam mcu_fpga_io_1_RNIULO18.INIT=4'h4;
+// @5:20
+  CFG2 mcu_fpga_io_1 (
+	.A(MCU_CS_c),
+	.B(MCU_WE_c),
+	.Y(mcu_fpga_io_1_1z)
+);
+defparam mcu_fpga_io_1.INIT=4'h1;
+// @5:32
+  ecc_design modulo (
+	.decoder_input_up_15(decoder_input_up[15]),
+	.decoder_input_up_14(decoder_input_up[14]),
+	.decoder_input_up_12(decoder_input_up[12]),
+	.decoder_input_up_13(decoder_input_up[13]),
+	.decoder_input_up_0(decoder_input_up[0]),
+	.decoder_input_up_2(decoder_input_up[2]),
+	.mcu_mem_io_up_in(mcu_mem_io_up_in[15:0]),
+	.mcu_mem_io_down_in(mcu_mem_io_down_in[15:0]),
+	.mcu_fpga_io_in(mcu_fpga_io_in[15:0]),
+	.data_N_7_mux_i(data_N_7_mux_i),
+	.data_N_9_0_i(data_N_9_0_i),
+	.decoder_output0(decoder_output0),
+	.decoder_output14(decoder_output14),
+	.data_N_11_mux_0_i(data_N_11_mux_0_i),
+	.decoder_output9(decoder_output9),
+	.decoder_output5(decoder_output5),
+	.decoder_output3(decoder_output3),
+	.decoder_output7(decoder_output7),
+	.decoder_output11(decoder_output11),
+	.data_N_9_i(data_N_9_i),
+	.data_N_9_1_i(data_N_9_1_i),
+	.decoder_output6(decoder_output6),
+	.decoder_output1(decoder_output1),
+	.decoder_output15(decoder_output15),
+	.decoder_output10(decoder_output10),
+	.mcu_fpga_io_1(mcu_fpga_io_1_1z),
+	.ecc_sel1_c(ecc_sel1_c),
+	.ecc_sel0_c(ecc_sel0_c),
+	.encoder_output_up7(encoder_output_up7),
+	.encoder_output_up8(encoder_output_up8),
+	.encoder_output_up9(encoder_output_up9),
+	.encoder_output_up10(encoder_output_up10),
+	.encoder_output_up11(encoder_output_up11),
+	.encoder_output_up12(encoder_output_up12),
+	.encoder_output_up13(encoder_output_up13),
+	.encoder_output_up14(encoder_output_up14),
+	.encoder_output_up15(encoder_output_up15),
+	.encoder_output_down9(encoder_output_down9),
+	.encoder_output_down10(encoder_output_down10),
+	.encoder_output_down11(encoder_output_down11),
+	.encoder_output_down12(encoder_output_down12),
+	.encoder_output_down13(encoder_output_down13),
+	.encoder_output_down14(encoder_output_down14),
+	.encoder_output_down15(encoder_output_down15),
+	.encoder_output_up0(encoder_output_up0),
+	.encoder_output_up1(encoder_output_up1),
+	.encoder_output_up2(encoder_output_up2),
+	.encoder_output_up3(encoder_output_up3),
+	.encoder_output_up4(encoder_output_up4),
+	.encoder_output_up5(encoder_output_up5),
+	.encoder_output_up6(encoder_output_up6),
+	.encoder_output_down0(encoder_output_down0),
+	.encoder_output_down1(encoder_output_down1),
+	.encoder_output_down2(encoder_output_down2),
+	.encoder_output_down3(encoder_output_down3),
+	.encoder_output_down4(encoder_output_down4),
+	.encoder_output_down5(encoder_output_down5),
+	.encoder_output_down6(encoder_output_down6),
+	.encoder_output_down7(encoder_output_down7),
+	.encoder_output_down8(encoder_output_down8)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* fpga_top_design */
+
+module prj_2_memory_sb (
+  MCU_A_0,
+  MCU_A_1,
+  MCU_A_10,
+  MCU_A_11,
+  MCU_A_12,
+  MCU_A_13,
+  MCU_A_14,
+  MCU_A_15,
+  MCU_A_16,
+  MCU_A_17,
+  MCU_A_18,
+  MCU_A_19,
+  MCU_A_2,
+  MCU_A_20,
+  MCU_A_3,
+  MCU_A_4,
+  MCU_A_5,
+  MCU_A_6,
+  MCU_A_7,
+  MCU_A_8,
+  MCU_A_9,
+  MCU_CS,
+  MCU_LB,
+  MCU_OE,
+  MCU_UB,
+  MCU_WE,
+  ecc_sel0,
+  ecc_sel1,
+  LED1,
+  LED2,
+  SRAM_A_0,
+  SRAM_A_1,
+  SRAM_A_10,
+  SRAM_A_11,
+  SRAM_A_12,
+  SRAM_A_13,
+  SRAM_A_14,
+  SRAM_A_15,
+  SRAM_A_16,
+  SRAM_A_17,
+  SRAM_A_18,
+  SRAM_A_19,
+  SRAM_A_2,
+  SRAM_A_20,
+  SRAM_A_3,
+  SRAM_A_4,
+  SRAM_A_5,
+  SRAM_A_6,
+  SRAM_A_7,
+  SRAM_A_8,
+  SRAM_A_9,
+  SRAM_CS1,
+  SRAM_CS2,
+  SRAM_LB,
+  SRAM_OE,
+  SRAM_UB,
+  SRAM_WE,
+  mcu_fpga_io,
+  mcu_mem_io_down,
+  mcu_mem_io_up
+)
+;
+input MCU_A_0 ;
+input MCU_A_1 ;
+input MCU_A_10 ;
+input MCU_A_11 ;
+input MCU_A_12 ;
+input MCU_A_13 ;
+input MCU_A_14 ;
+input MCU_A_15 ;
+input MCU_A_16 ;
+input MCU_A_17 ;
+input MCU_A_18 ;
+input MCU_A_19 ;
+input MCU_A_2 ;
+input MCU_A_20 ;
+input MCU_A_3 ;
+input MCU_A_4 ;
+input MCU_A_5 ;
+input MCU_A_6 ;
+input MCU_A_7 ;
+input MCU_A_8 ;
+input MCU_A_9 ;
+input MCU_CS ;
+input MCU_LB ;
+input MCU_OE ;
+input MCU_UB ;
+input MCU_WE ;
+input ecc_sel0 ;
+input ecc_sel1 ;
+output LED1 ;
+output LED2 ;
+output SRAM_A_0 ;
+output SRAM_A_1 ;
+output SRAM_A_10 ;
+output SRAM_A_11 ;
+output SRAM_A_12 ;
+output SRAM_A_13 ;
+output SRAM_A_14 ;
+output SRAM_A_15 ;
+output SRAM_A_16 ;
+output SRAM_A_17 ;
+output SRAM_A_18 ;
+output SRAM_A_19 ;
+output SRAM_A_2 ;
+output SRAM_A_20 ;
+output SRAM_A_3 ;
+output SRAM_A_4 ;
+output SRAM_A_5 ;
+output SRAM_A_6 ;
+output SRAM_A_7 ;
+output SRAM_A_8 ;
+output SRAM_A_9 ;
+output SRAM_CS1 ;
+output SRAM_CS2 ;
+output SRAM_LB ;
+output SRAM_OE ;
+output SRAM_UB ;
+output SRAM_WE ;
+inout [15:0] mcu_fpga_io /* synthesis syn_tristate = 1 */ ;
+inout [15:0] mcu_mem_io_down /* synthesis syn_tristate = 1 */ ;
+inout [15:0] mcu_mem_io_up /* synthesis syn_tristate = 1 */ ;
+wire MCU_A_0 ;
+wire MCU_A_1 ;
+wire MCU_A_10 ;
+wire MCU_A_11 ;
+wire MCU_A_12 ;
+wire MCU_A_13 ;
+wire MCU_A_14 ;
+wire MCU_A_15 ;
+wire MCU_A_16 ;
+wire MCU_A_17 ;
+wire MCU_A_18 ;
+wire MCU_A_19 ;
+wire MCU_A_2 ;
+wire MCU_A_20 ;
+wire MCU_A_3 ;
+wire MCU_A_4 ;
+wire MCU_A_5 ;
+wire MCU_A_6 ;
+wire MCU_A_7 ;
+wire MCU_A_8 ;
+wire MCU_A_9 ;
+wire MCU_CS ;
+wire MCU_LB ;
+wire MCU_OE ;
+wire MCU_UB ;
+wire MCU_WE ;
+wire ecc_sel0 ;
+wire ecc_sel1 ;
+wire LED1 ;
+wire LED2 ;
+wire SRAM_A_0 ;
+wire SRAM_A_1 ;
+wire SRAM_A_10 ;
+wire SRAM_A_11 ;
+wire SRAM_A_12 ;
+wire SRAM_A_13 ;
+wire SRAM_A_14 ;
+wire SRAM_A_15 ;
+wire SRAM_A_16 ;
+wire SRAM_A_17 ;
+wire SRAM_A_18 ;
+wire SRAM_A_19 ;
+wire SRAM_A_2 ;
+wire SRAM_A_20 ;
+wire SRAM_A_3 ;
+wire SRAM_A_4 ;
+wire SRAM_A_5 ;
+wire SRAM_A_6 ;
+wire SRAM_A_7 ;
+wire SRAM_A_8 ;
+wire SRAM_A_9 ;
+wire SRAM_CS1 ;
+wire SRAM_CS2 ;
+wire SRAM_LB ;
+wire SRAM_OE ;
+wire SRAM_UB ;
+wire SRAM_WE ;
+wire [15:0] mcu_fpga_io_in;
+wire [15:0] mcu_mem_io_down_in;
+wire [15:0] mcu_mem_io_up_in;
+wire decoder_output0 ;
+wire decoder_output1 ;
+wire decoder_output3 ;
+wire decoder_output5 ;
+wire decoder_output6 ;
+wire decoder_output7 ;
+wire decoder_output9 ;
+wire decoder_output10 ;
+wire decoder_output11 ;
+wire decoder_output14 ;
+wire decoder_output15 ;
+wire encoder_output_down0 ;
+wire encoder_output_down1 ;
+wire encoder_output_down2 ;
+wire encoder_output_down3 ;
+wire encoder_output_down4 ;
+wire encoder_output_down5 ;
+wire encoder_output_down6 ;
+wire encoder_output_down7 ;
+wire encoder_output_down8 ;
+wire encoder_output_down9 ;
+wire encoder_output_down10 ;
+wire encoder_output_down11 ;
+wire encoder_output_down12 ;
+wire encoder_output_down13 ;
+wire encoder_output_down14 ;
+wire encoder_output_down15 ;
+wire encoder_output_up0 ;
+wire encoder_output_up1 ;
+wire encoder_output_up2 ;
+wire encoder_output_up3 ;
+wire encoder_output_up4 ;
+wire encoder_output_up5 ;
+wire encoder_output_up6 ;
+wire encoder_output_up7 ;
+wire encoder_output_up8 ;
+wire encoder_output_up9 ;
+wire encoder_output_up10 ;
+wire encoder_output_up11 ;
+wire encoder_output_up12 ;
+wire encoder_output_up13 ;
+wire encoder_output_up14 ;
+wire encoder_output_up15 ;
+wire GND ;
+wire VCC ;
+wire MCU_A_0_c ;
+wire MCU_A_1_c ;
+wire MCU_A_10_c ;
+wire MCU_A_11_c ;
+wire MCU_A_12_c ;
+wire MCU_A_13_c ;
+wire MCU_A_14_c ;
+wire MCU_A_15_c ;
+wire MCU_A_16_c ;
+wire MCU_A_17_c ;
+wire MCU_A_18_c ;
+wire MCU_A_19_c ;
+wire MCU_A_2_c ;
+wire MCU_A_20_c ;
+wire MCU_A_3_c ;
+wire MCU_A_4_c ;
+wire MCU_A_5_c ;
+wire MCU_A_6_c ;
+wire MCU_A_7_c ;
+wire MCU_A_8_c ;
+wire MCU_A_9_c ;
+wire MCU_CS_c ;
+wire MCU_LB_c ;
+wire MCU_OE_c ;
+wire MCU_UB_c ;
+wire MCU_WE_c ;
+wire ecc_sel0_c ;
+wire ecc_sel1_c ;
+wire fpga_top_design_0_modulo_data_N_7_mux_i ;
+wire fpga_top_design_0_modulo_data_N_9_1_i ;
+wire fpga_top_design_0_modulo_data_N_9_0_i ;
+wire fpga_top_design_0_modulo_data_N_9_i ;
+wire fpga_top_design_0_modulo_data_N_11_mux_0_i ;
+wire fpga_top_design_0_mcu_fpga_io_1 ;
+wire fpga_top_design_0_mcu_fpga_io_1_i ;
+// @11:78
+  INBUF MCU_A_0_ibuf (
+	.Y(MCU_A_0_c),
+	.PAD(MCU_A_0)
+);
+// @11:79
+  INBUF MCU_A_1_ibuf (
+	.Y(MCU_A_1_c),
+	.PAD(MCU_A_1)
+);
+// @11:80
+  INBUF MCU_A_10_ibuf (
+	.Y(MCU_A_10_c),
+	.PAD(MCU_A_10)
+);
+// @11:81
+  INBUF MCU_A_11_ibuf (
+	.Y(MCU_A_11_c),
+	.PAD(MCU_A_11)
+);
+// @11:82
+  INBUF MCU_A_12_ibuf (
+	.Y(MCU_A_12_c),
+	.PAD(MCU_A_12)
+);
+// @11:83
+  INBUF MCU_A_13_ibuf (
+	.Y(MCU_A_13_c),
+	.PAD(MCU_A_13)
+);
+// @11:84
+  INBUF MCU_A_14_ibuf (
+	.Y(MCU_A_14_c),
+	.PAD(MCU_A_14)
+);
+// @11:85
+  INBUF MCU_A_15_ibuf (
+	.Y(MCU_A_15_c),
+	.PAD(MCU_A_15)
+);
+// @11:86
+  INBUF MCU_A_16_ibuf (
+	.Y(MCU_A_16_c),
+	.PAD(MCU_A_16)
+);
+// @11:87
+  INBUF MCU_A_17_ibuf (
+	.Y(MCU_A_17_c),
+	.PAD(MCU_A_17)
+);
+// @11:88
+  INBUF MCU_A_18_ibuf (
+	.Y(MCU_A_18_c),
+	.PAD(MCU_A_18)
+);
+// @11:89
+  INBUF MCU_A_19_ibuf (
+	.Y(MCU_A_19_c),
+	.PAD(MCU_A_19)
+);
+// @11:90
+  INBUF MCU_A_2_ibuf (
+	.Y(MCU_A_2_c),
+	.PAD(MCU_A_2)
+);
+// @11:91
+  INBUF MCU_A_20_ibuf (
+	.Y(MCU_A_20_c),
+	.PAD(MCU_A_20)
+);
+// @11:92
+  INBUF MCU_A_3_ibuf (
+	.Y(MCU_A_3_c),
+	.PAD(MCU_A_3)
+);
+// @11:93
+  INBUF MCU_A_4_ibuf (
+	.Y(MCU_A_4_c),
+	.PAD(MCU_A_4)
+);
+// @11:94
+  INBUF MCU_A_5_ibuf (
+	.Y(MCU_A_5_c),
+	.PAD(MCU_A_5)
+);
+// @11:95
+  INBUF MCU_A_6_ibuf (
+	.Y(MCU_A_6_c),
+	.PAD(MCU_A_6)
+);
+// @11:96
+  INBUF MCU_A_7_ibuf (
+	.Y(MCU_A_7_c),
+	.PAD(MCU_A_7)
+);
+// @11:97
+  INBUF MCU_A_8_ibuf (
+	.Y(MCU_A_8_c),
+	.PAD(MCU_A_8)
+);
+// @11:98
+  INBUF MCU_A_9_ibuf (
+	.Y(MCU_A_9_c),
+	.PAD(MCU_A_9)
+);
+// @11:99
+  INBUF MCU_CS_ibuf (
+	.Y(MCU_CS_c),
+	.PAD(MCU_CS)
+);
+// @11:100
+  INBUF MCU_LB_ibuf (
+	.Y(MCU_LB_c),
+	.PAD(MCU_LB)
+);
+// @11:101
+  INBUF MCU_OE_ibuf (
+	.Y(MCU_OE_c),
+	.PAD(MCU_OE)
+);
+// @11:102
+  INBUF MCU_UB_ibuf (
+	.Y(MCU_UB_c),
+	.PAD(MCU_UB)
+);
+// @11:103
+  INBUF MCU_WE_ibuf (
+	.Y(MCU_WE_c),
+	.PAD(MCU_WE)
+);
+// @11:104
+  INBUF ecc_sel0_ibuf (
+	.Y(ecc_sel0_c),
+	.PAD(ecc_sel0)
+);
+// @11:105
+  INBUF ecc_sel1_ibuf (
+	.Y(ecc_sel1_c),
+	.PAD(ecc_sel1)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[0]  (
+	.Y(mcu_fpga_io_in[0]),
+	.PAD(mcu_fpga_io[0]),
+	.D(decoder_output0),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[1]  (
+	.Y(mcu_fpga_io_in[1]),
+	.PAD(mcu_fpga_io[1]),
+	.D(decoder_output1),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[2]  (
+	.Y(mcu_fpga_io_in[2]),
+	.PAD(mcu_fpga_io[2]),
+	.D(fpga_top_design_0_modulo_data_N_11_mux_0_i),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[3]  (
+	.Y(mcu_fpga_io_in[3]),
+	.PAD(mcu_fpga_io[3]),
+	.D(decoder_output3),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[4]  (
+	.Y(mcu_fpga_io_in[4]),
+	.PAD(mcu_fpga_io[4]),
+	.D(fpga_top_design_0_modulo_data_N_9_i),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[5]  (
+	.Y(mcu_fpga_io_in[5]),
+	.PAD(mcu_fpga_io[5]),
+	.D(decoder_output5),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[6]  (
+	.Y(mcu_fpga_io_in[6]),
+	.PAD(mcu_fpga_io[6]),
+	.D(decoder_output6),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[7]  (
+	.Y(mcu_fpga_io_in[7]),
+	.PAD(mcu_fpga_io[7]),
+	.D(decoder_output7),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[8]  (
+	.Y(mcu_fpga_io_in[8]),
+	.PAD(mcu_fpga_io[8]),
+	.D(fpga_top_design_0_modulo_data_N_9_0_i),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[9]  (
+	.Y(mcu_fpga_io_in[9]),
+	.PAD(mcu_fpga_io[9]),
+	.D(decoder_output9),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[10]  (
+	.Y(mcu_fpga_io_in[10]),
+	.PAD(mcu_fpga_io[10]),
+	.D(decoder_output10),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[11]  (
+	.Y(mcu_fpga_io_in[11]),
+	.PAD(mcu_fpga_io[11]),
+	.D(decoder_output11),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[12]  (
+	.Y(mcu_fpga_io_in[12]),
+	.PAD(mcu_fpga_io[12]),
+	.D(fpga_top_design_0_modulo_data_N_9_1_i),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[13]  (
+	.Y(mcu_fpga_io_in[13]),
+	.PAD(mcu_fpga_io[13]),
+	.D(fpga_top_design_0_modulo_data_N_7_mux_i),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[14]  (
+	.Y(mcu_fpga_io_in[14]),
+	.PAD(mcu_fpga_io[14]),
+	.D(decoder_output14),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:141
+  BIBUF \mcu_fpga_io_iobuf[15]  (
+	.Y(mcu_fpga_io_in[15]),
+	.PAD(mcu_fpga_io[15]),
+	.D(decoder_output15),
+	.E(fpga_top_design_0_mcu_fpga_io_1_i)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[0]  (
+	.Y(mcu_mem_io_down_in[0]),
+	.PAD(mcu_mem_io_down[0]),
+	.D(encoder_output_down0),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[1]  (
+	.Y(mcu_mem_io_down_in[1]),
+	.PAD(mcu_mem_io_down[1]),
+	.D(encoder_output_down1),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[2]  (
+	.Y(mcu_mem_io_down_in[2]),
+	.PAD(mcu_mem_io_down[2]),
+	.D(encoder_output_down2),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[3]  (
+	.Y(mcu_mem_io_down_in[3]),
+	.PAD(mcu_mem_io_down[3]),
+	.D(encoder_output_down3),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[4]  (
+	.Y(mcu_mem_io_down_in[4]),
+	.PAD(mcu_mem_io_down[4]),
+	.D(encoder_output_down4),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[5]  (
+	.Y(mcu_mem_io_down_in[5]),
+	.PAD(mcu_mem_io_down[5]),
+	.D(encoder_output_down5),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[6]  (
+	.Y(mcu_mem_io_down_in[6]),
+	.PAD(mcu_mem_io_down[6]),
+	.D(encoder_output_down6),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[7]  (
+	.Y(mcu_mem_io_down_in[7]),
+	.PAD(mcu_mem_io_down[7]),
+	.D(encoder_output_down7),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[8]  (
+	.Y(mcu_mem_io_down_in[8]),
+	.PAD(mcu_mem_io_down[8]),
+	.D(encoder_output_down8),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[9]  (
+	.Y(mcu_mem_io_down_in[9]),
+	.PAD(mcu_mem_io_down[9]),
+	.D(encoder_output_down9),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[10]  (
+	.Y(mcu_mem_io_down_in[10]),
+	.PAD(mcu_mem_io_down[10]),
+	.D(encoder_output_down10),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[11]  (
+	.Y(mcu_mem_io_down_in[11]),
+	.PAD(mcu_mem_io_down[11]),
+	.D(encoder_output_down11),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[12]  (
+	.Y(mcu_mem_io_down_in[12]),
+	.PAD(mcu_mem_io_down[12]),
+	.D(encoder_output_down12),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[13]  (
+	.Y(mcu_mem_io_down_in[13]),
+	.PAD(mcu_mem_io_down[13]),
+	.D(encoder_output_down13),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[14]  (
+	.Y(mcu_mem_io_down_in[14]),
+	.PAD(mcu_mem_io_down[14]),
+	.D(encoder_output_down14),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:142
+  BIBUF \mcu_mem_io_down_iobuf[15]  (
+	.Y(mcu_mem_io_down_in[15]),
+	.PAD(mcu_mem_io_down[15]),
+	.D(encoder_output_down15),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[0]  (
+	.Y(mcu_mem_io_up_in[0]),
+	.PAD(mcu_mem_io_up[0]),
+	.D(encoder_output_up0),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[1]  (
+	.Y(mcu_mem_io_up_in[1]),
+	.PAD(mcu_mem_io_up[1]),
+	.D(encoder_output_up1),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[2]  (
+	.Y(mcu_mem_io_up_in[2]),
+	.PAD(mcu_mem_io_up[2]),
+	.D(encoder_output_up2),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[3]  (
+	.Y(mcu_mem_io_up_in[3]),
+	.PAD(mcu_mem_io_up[3]),
+	.D(encoder_output_up3),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[4]  (
+	.Y(mcu_mem_io_up_in[4]),
+	.PAD(mcu_mem_io_up[4]),
+	.D(encoder_output_up4),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[5]  (
+	.Y(mcu_mem_io_up_in[5]),
+	.PAD(mcu_mem_io_up[5]),
+	.D(encoder_output_up5),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[6]  (
+	.Y(mcu_mem_io_up_in[6]),
+	.PAD(mcu_mem_io_up[6]),
+	.D(encoder_output_up6),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[7]  (
+	.Y(mcu_mem_io_up_in[7]),
+	.PAD(mcu_mem_io_up[7]),
+	.D(encoder_output_up7),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[8]  (
+	.Y(mcu_mem_io_up_in[8]),
+	.PAD(mcu_mem_io_up[8]),
+	.D(encoder_output_up8),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[9]  (
+	.Y(mcu_mem_io_up_in[9]),
+	.PAD(mcu_mem_io_up[9]),
+	.D(encoder_output_up9),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[10]  (
+	.Y(mcu_mem_io_up_in[10]),
+	.PAD(mcu_mem_io_up[10]),
+	.D(encoder_output_up10),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[11]  (
+	.Y(mcu_mem_io_up_in[11]),
+	.PAD(mcu_mem_io_up[11]),
+	.D(encoder_output_up11),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[12]  (
+	.Y(mcu_mem_io_up_in[12]),
+	.PAD(mcu_mem_io_up[12]),
+	.D(encoder_output_up12),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[13]  (
+	.Y(mcu_mem_io_up_in[13]),
+	.PAD(mcu_mem_io_up[13]),
+	.D(encoder_output_up13),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[14]  (
+	.Y(mcu_mem_io_up_in[14]),
+	.PAD(mcu_mem_io_up[14]),
+	.D(encoder_output_up14),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:143
+  BIBUF \mcu_mem_io_up_iobuf[15]  (
+	.Y(mcu_mem_io_up_in[15]),
+	.PAD(mcu_mem_io_up[15]),
+	.D(encoder_output_up15),
+	.E(fpga_top_design_0_mcu_fpga_io_1)
+);
+// @11:109
+  OUTBUF LED1_obuf (
+	.PAD(LED1),
+	.D(ecc_sel1_c)
+);
+// @11:110
+  OUTBUF LED2_obuf (
+	.PAD(LED2),
+	.D(ecc_sel0_c)
+);
+// @11:111
+  OUTBUF SRAM_A_0_obuf (
+	.PAD(SRAM_A_0),
+	.D(MCU_A_0_c)
+);
+// @11:112
+  OUTBUF SRAM_A_1_obuf (
+	.PAD(SRAM_A_1),
+	.D(MCU_A_1_c)
+);
+// @11:113
+  OUTBUF SRAM_A_10_obuf (
+	.PAD(SRAM_A_10),
+	.D(MCU_A_10_c)
+);
+// @11:114
+  OUTBUF SRAM_A_11_obuf (
+	.PAD(SRAM_A_11),
+	.D(MCU_A_11_c)
+);
+// @11:115
+  OUTBUF SRAM_A_12_obuf (
+	.PAD(SRAM_A_12),
+	.D(MCU_A_12_c)
+);
+// @11:116
+  OUTBUF SRAM_A_13_obuf (
+	.PAD(SRAM_A_13),
+	.D(MCU_A_13_c)
+);
+// @11:117
+  OUTBUF SRAM_A_14_obuf (
+	.PAD(SRAM_A_14),
+	.D(MCU_A_14_c)
+);
+// @11:118
+  OUTBUF SRAM_A_15_obuf (
+	.PAD(SRAM_A_15),
+	.D(MCU_A_15_c)
+);
+// @11:119
+  OUTBUF SRAM_A_16_obuf (
+	.PAD(SRAM_A_16),
+	.D(MCU_A_16_c)
+);
+// @11:120
+  OUTBUF SRAM_A_17_obuf (
+	.PAD(SRAM_A_17),
+	.D(MCU_A_17_c)
+);
+// @11:121
+  OUTBUF SRAM_A_18_obuf (
+	.PAD(SRAM_A_18),
+	.D(MCU_A_18_c)
+);
+// @11:122
+  OUTBUF SRAM_A_19_obuf (
+	.PAD(SRAM_A_19),
+	.D(MCU_A_19_c)
+);
+// @11:123
+  OUTBUF SRAM_A_2_obuf (
+	.PAD(SRAM_A_2),
+	.D(MCU_A_2_c)
+);
+// @11:124
+  OUTBUF SRAM_A_20_obuf (
+	.PAD(SRAM_A_20),
+	.D(MCU_A_20_c)
+);
+// @11:125
+  OUTBUF SRAM_A_3_obuf (
+	.PAD(SRAM_A_3),
+	.D(MCU_A_3_c)
+);
+// @11:126
+  OUTBUF SRAM_A_4_obuf (
+	.PAD(SRAM_A_4),
+	.D(MCU_A_4_c)
+);
+// @11:127
+  OUTBUF SRAM_A_5_obuf (
+	.PAD(SRAM_A_5),
+	.D(MCU_A_5_c)
+);
+// @11:128
+  OUTBUF SRAM_A_6_obuf (
+	.PAD(SRAM_A_6),
+	.D(MCU_A_6_c)
+);
+// @11:129
+  OUTBUF SRAM_A_7_obuf (
+	.PAD(SRAM_A_7),
+	.D(MCU_A_7_c)
+);
+// @11:130
+  OUTBUF SRAM_A_8_obuf (
+	.PAD(SRAM_A_8),
+	.D(MCU_A_8_c)
+);
+// @11:131
+  OUTBUF SRAM_A_9_obuf (
+	.PAD(SRAM_A_9),
+	.D(MCU_A_9_c)
+);
+// @11:132
+  OUTBUF SRAM_CS1_obuf (
+	.PAD(SRAM_CS1),
+	.D(MCU_CS_c)
+);
+// @11:133
+  OUTBUF SRAM_CS2_obuf (
+	.PAD(SRAM_CS2),
+	.D(MCU_CS_c)
+);
+// @11:134
+  OUTBUF SRAM_LB_obuf (
+	.PAD(SRAM_LB),
+	.D(MCU_LB_c)
+);
+// @11:135
+  OUTBUF SRAM_OE_obuf (
+	.PAD(SRAM_OE),
+	.D(MCU_OE_c)
+);
+// @11:136
+  OUTBUF SRAM_UB_obuf (
+	.PAD(SRAM_UB),
+	.D(MCU_UB_c)
+);
+// @11:137
+  OUTBUF SRAM_WE_obuf (
+	.PAD(SRAM_WE),
+	.D(MCU_WE_c)
+);
+  fpga_top_design fpga_top_design_0 (
+	.mcu_fpga_io_in(mcu_fpga_io_in[15:0]),
+	.mcu_mem_io_down_in(mcu_mem_io_down_in[15:0]),
+	.mcu_mem_io_up_in(mcu_mem_io_up_in[15:0]),
+	.encoder_output_down8(encoder_output_down8),
+	.encoder_output_down7(encoder_output_down7),
+	.encoder_output_down6(encoder_output_down6),
+	.encoder_output_down5(encoder_output_down5),
+	.encoder_output_down4(encoder_output_down4),
+	.encoder_output_down3(encoder_output_down3),
+	.encoder_output_down2(encoder_output_down2),
+	.encoder_output_down1(encoder_output_down1),
+	.encoder_output_down0(encoder_output_down0),
+	.encoder_output_up6(encoder_output_up6),
+	.encoder_output_up5(encoder_output_up5),
+	.encoder_output_up4(encoder_output_up4),
+	.encoder_output_up3(encoder_output_up3),
+	.encoder_output_up2(encoder_output_up2),
+	.encoder_output_up1(encoder_output_up1),
+	.encoder_output_up0(encoder_output_up0),
+	.encoder_output_down15(encoder_output_down15),
+	.encoder_output_down14(encoder_output_down14),
+	.encoder_output_down13(encoder_output_down13),
+	.encoder_output_down12(encoder_output_down12),
+	.encoder_output_down11(encoder_output_down11),
+	.encoder_output_down10(encoder_output_down10),
+	.encoder_output_down9(encoder_output_down9),
+	.encoder_output_up15(encoder_output_up15),
+	.encoder_output_up14(encoder_output_up14),
+	.encoder_output_up13(encoder_output_up13),
+	.encoder_output_up12(encoder_output_up12),
+	.encoder_output_up11(encoder_output_up11),
+	.encoder_output_up10(encoder_output_up10),
+	.encoder_output_up9(encoder_output_up9),
+	.encoder_output_up8(encoder_output_up8),
+	.encoder_output_up7(encoder_output_up7),
+	.ecc_sel0_c(ecc_sel0_c),
+	.ecc_sel1_c(ecc_sel1_c),
+	.decoder_output10(decoder_output10),
+	.decoder_output15(decoder_output15),
+	.decoder_output1(decoder_output1),
+	.decoder_output6(decoder_output6),
+	.data_N_9_1_i(fpga_top_design_0_modulo_data_N_9_1_i),
+	.data_N_9_i(fpga_top_design_0_modulo_data_N_9_i),
+	.decoder_output11(decoder_output11),
+	.decoder_output7(decoder_output7),
+	.decoder_output3(decoder_output3),
+	.decoder_output5(decoder_output5),
+	.decoder_output9(decoder_output9),
+	.data_N_11_mux_0_i(fpga_top_design_0_modulo_data_N_11_mux_0_i),
+	.decoder_output14(decoder_output14),
+	.decoder_output0(decoder_output0),
+	.data_N_9_0_i(fpga_top_design_0_modulo_data_N_9_0_i),
+	.data_N_7_mux_i(fpga_top_design_0_modulo_data_N_7_mux_i),
+	.MCU_WE_c(MCU_WE_c),
+	.MCU_CS_c(MCU_CS_c),
+	.mcu_fpga_io_1_i(fpga_top_design_0_mcu_fpga_io_1_i),
+	.mcu_fpga_io_1_1z(fpga_top_design_0_mcu_fpga_io_1)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* prj_2_memory_sb */
+

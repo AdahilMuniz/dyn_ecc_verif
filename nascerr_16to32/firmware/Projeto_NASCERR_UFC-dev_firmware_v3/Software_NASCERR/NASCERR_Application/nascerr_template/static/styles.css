@@ -1,0 +1,195 @@
+/* Adicionado para ajustar o status e o título */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-btn {
+  background-color: #3b3f5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.conteudo-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: nowrap;
+  height: auto;
+}
+
+.formulario, .log-tabela {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 45%; /* Ajuste conforme necessário */
+  box-sizing: border-box;
+  min-height: auto; 
+}
+
+.form-card, .log-tabela {
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+  margin: 0; /* Remove margens que possam interferir */
+  padding: 0; /* Remove preenchimentos internos */
+}
+
+.log-tabela, .form-card {
+  box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+}
+
+/* Ajuste da posição do formulário */
+.formulario {
+  margin-right: 20px; /* Espaço entre o formulário e a tabela */
+}
+
+.form-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Garante que os inputs e selects ocupem toda a largura */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+form button {
+  background-color: #3b3f5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#send-button_div {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 100%; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+table th {
+  background-color: #3b3f5c;
+  color: white;
+  text-align: center; /* Centraliza o texto dos cabeçalhos */
+  padding: 12px; /* Espaçamento interno para os cabeçalhos */
+}
+
+table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.status-text {
+  background-color: #3b3f5c; /* Cor de fundo para o status */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do container cinza atrás da tabela */
+.log-tabela {
+  flex-grow: 1; /* Permite que o contêiner cresça com o conteúdo */
+  display: block; /* Garante que o contêiner se ajuste ao conteúdo */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 100%;
+  overflow: auto; /* Se o conteúdo for grande, permitirá rolagem */
+  height: auto; /* Permite que a altura seja definida pelo conteúdo */
+}
+
+#send-button:disabled {
+  background-color: #cccccc; /* Cor acinzentada */
+  cursor: not-allowed; /* Indicador visual de que o botão não pode ser clicado */
+  opacity: 0.6; /* Tornar o botão um pouco translúcido */
+}
+
+#stop-button:disabled {
+  background-color: #cccccc; /* Cor acinzentada */
+  cursor: not-allowed; /* Indicador visual de que o botão não pode ser clicado */
+  opacity: 0.6; /* Tornar o botão um pouco translúcido */
+}
+
+#start-button:disabled {
+  background-color: #cccccc; /* Cor acinzentada */
+  cursor: not-allowed; /* Indicador visual de que o botão não pode ser clicado */
+  opacity: 0.6; /* Tornar o botão um pouco translúcido */
+}
+
+.log-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.log-tabela thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  background-color: #3b3f5c;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.log-tabela tbody {
+  display: block;
+  max-height: 600px; /* Altura máxima da tabela com scroll */
+  overflow-y: auto;
+  width: 100%;
+}
+
+.log-tabela tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.log-tabela th, .log-tabela td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+}

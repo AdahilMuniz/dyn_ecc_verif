@@ -1,0 +1,4 @@
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: MT420 |Found inferred clock ecc_design|data_out_right_up7_inferred_clock with period 10.00ns. Please declare a user-defined clock on net fpga_top_design_0.modulo.data_out_right_up7.
+@W: MT420 |Found inferred clock ecc_design|data_out_right_up8_inferred_clock with period 10.00ns. Please declare a user-defined clock on net fpga_top_design_0.modulo.data_out_right_up8.

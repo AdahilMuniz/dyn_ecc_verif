@@ -1,0 +1,61 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "15:55:13    02-Sep-2024",
+	"Working Directory" : "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis",
+	"Install" : "C:/Microchip/Libero_SoC_v2024.1/SynplifyPro"
+},
+"compile_dm" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "15:47:38",
+   "Runtime" : "02s",
+   "Executable Run Time" : "02s",
+   "compile_dm" : {
+      "executable" : "bin64/c_hdl.exe",
+      "Run Directory" : "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis",
+      "Run State" : "Complete",
+      "Return Code" : "0",
+      "Has Errors" : "no",
+      "Run Start Time" : "15:47:38",
+      "Run Time" : "02s",
+      "Exe Run Time" : "02s",
+      "Memory Usage" : "-",
+      "Up-to-date (run skipped)" : "no"
+   }
+},
+"compile_dm" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "15:47:49",
+   "Runtime" : "02s",
+   "Executable Run Time" : "02s",
+   "compile_dm" : {
+      "executable" : "bin64/c_hdl.exe",
+      "Run Directory" : "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis",
+      "Run State" : "Complete",
+      "Return Code" : "0",
+      "Has Errors" : "no",
+      "Run Start Time" : "15:47:49",
+      "Run Time" : "02s",
+      "Exe Run Time" : "02s",
+      "Memory Usage" : "-",
+      "Up-to-date (run skipped)" : "no"
+   }
+},
+"compile_dm" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "15:55:12",
+   "Runtime" : "01s",
+   "Executable Run Time" : "01s",
+   "compile_dm" : {
+      "executable" : "bin64/c_hdl.exe",
+      "Run Directory" : "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis",
+      "Run State" : "Complete",
+      "Return Code" : "0",
+      "Has Errors" : "no",
+      "Run Start Time" : "15:55:12",
+      "Run Time" : "01s",
+      "Exe Run Time" : "01s",
+      "Memory Usage" : "-",
+      "Up-to-date (run skipped)" : "no"
+   }
+}
+}

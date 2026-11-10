@@ -1,0 +1,13 @@
+Software Version: 2024.1.0.3
+Opened 'C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\designer\stm32\stm32_fp\stm32.pro'
+PDB file 'C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\designer\stm32\stm32.pdb' has been loaded successfully.
+DESIGN : stm32;  CHECKSUM : 25CB;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+File/Folder 'C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\designer\stm32\stm32.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\designer\stm32\stm32.ppd'; file programs Fabric.
+Fabric component bitstream digest: 1ba2e0511b5f31ef86aca129b2f9d6b5c3c2574b075e5f4909f8d60a6ddf776e
+Entire bitstream digest: 4d8029dd7429b5aed7fb11c1f2fd35c91efcbee6348f1045604e5e052b102df0
+Finished: Fri Oct 18 12:14:54 2024 (Elapsed time 00:00:03)
+
+Project saved.
+Project closed.

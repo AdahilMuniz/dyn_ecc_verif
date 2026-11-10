@@ -1,0 +1,27 @@
+1. carregar a imagem para processamento
+
+2. fazer a separação e gravação da imagem em blocos
+
+3.
+
+***********para começar o desenvolvimento, a imagem é fixada em um buffer para uma imagem de 1024x768 pixels, e posteriormente, todas as imagens selecionadas serão carregadas para esse buffer.
+
+
+
+Rotina de compressão
+
+1. Carregar a imagem							IMG_1
+
+2. Vetorização da imagem						VETOR_IMG
+	
+3. Comprime a imagem							COMPR_IMG
+
+4. Gravação da imagem comprimida
+	
+	4.1 Grava até a memória estar cheia
+	4.2 Lê a memória completa e guarda em um novo buffer		COMPR_IMG
+	4.3 Grava os próximos blocos até terminar a imagem		
+
+5. Descomprime o novo buffer						VETOR_IMG
+
+6. Remonta a imagem em matriz						NEW_IMG

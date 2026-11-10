@@ -1,0 +1,141 @@
+#Build: Synplify Pro (R) T-2022.09M-SP2-1, Build 179R, Jun 27 2023
+#install: C:\Microchip\Libero_SoC_v2023.2\SynplifyPro
+#OS: Windows 10 or later
+#Hostname: DESKTOP-OUF4AF5
+
+# Wed Jul  3 16:46:26 2024
+
+#Implementation: synthesis
+
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2-1
+Install: C:\Microchip\Libero_SoC_v2023.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp202209synp2, Build 179R, Built Jun 27 2023 09:29:56, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2-1
+Install: C:\Microchip\Libero_SoC_v2023.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+Synopsys Verilog Compiler, Version comp202209synp2, Build 179R, Built Jun 27 2023 09:29:56, @
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@I::"C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\generic\smartfusion2.v" (library work)
+@I::"C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v" (library work)
+Verilog syntax check successful!
+Selecting top level module stm32
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":258:11:258:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":268:11:268:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":278:11:278:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":288:11:288:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":298:11:298:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":308:11:308:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":318:11:318:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":328:11:328:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":338:11:338:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":348:11:348:24|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":358:11:358:25|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":368:11:368:25|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":378:11:378:25|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":388:11:388:25|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":398:11:398:25|Reference to undefined module Channel_BI
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":408:11:408:25|Reference to undefined module Channel_BI
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":9:7:9:11|Synthesizing module stm32 in library work.
+@W: CG141 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":258:11:258:24|Creating black box for Channel_BI
+	Making port OE an input
+	Making port WE an input
+	Making port SRAM_D an input
+	Making port MCU_D an input
+Running optimization stage 1 on stm32 .......
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":408:11:408:25|Removing instance Channel_BI_0_15 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":398:11:398:25|Removing instance Channel_BI_0_14 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":388:11:388:25|Removing instance Channel_BI_0_13 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":378:11:378:25|Removing instance Channel_BI_0_12 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":368:11:368:25|Removing instance Channel_BI_0_11 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":358:11:358:25|Removing instance Channel_BI_0_10 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":348:11:348:24|Removing instance Channel_BI_0_9 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":338:11:338:24|Removing instance Channel_BI_0_8 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":328:11:328:24|Removing instance Channel_BI_0_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":318:11:318:24|Removing instance Channel_BI_0_6 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":308:11:308:24|Removing instance Channel_BI_0_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":298:11:298:24|Removing instance Channel_BI_0_4 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":288:11:288:24|Removing instance Channel_BI_0_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":278:11:278:24|Removing instance Channel_BI_0_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":268:11:268:24|Removing instance Channel_BI_0_1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":258:11:258:24|Removing instance Channel_BI_0_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on stm32 (CPU Time 0h:00m:00s, Memory Used current: 89MB peak: 90MB)
+Running optimization stage 2 on stm32 .......
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":120:7:120:13|Inout MCU_D_0 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":121:7:121:13|Inout MCU_D_1 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":122:7:122:14|Inout MCU_D_10 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":123:7:123:14|Inout MCU_D_11 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":124:7:124:14|Inout MCU_D_12 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":125:7:125:14|Inout MCU_D_13 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":126:7:126:14|Inout MCU_D_14 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":127:7:127:14|Inout MCU_D_15 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":128:7:128:13|Inout MCU_D_2 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":129:7:129:13|Inout MCU_D_3 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":130:7:130:13|Inout MCU_D_4 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":131:7:131:13|Inout MCU_D_5 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":132:7:132:13|Inout MCU_D_6 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":133:7:133:13|Inout MCU_D_7 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":134:7:134:13|Inout MCU_D_8 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":135:7:135:13|Inout MCU_D_9 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":136:7:136:14|Inout SRAM_D_0 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":137:7:137:14|Inout SRAM_D_1 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":138:7:138:15|Inout SRAM_D_10 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":139:7:139:15|Inout SRAM_D_11 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":140:7:140:15|Inout SRAM_D_12 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":141:7:141:15|Inout SRAM_D_13 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":142:7:142:15|Inout SRAM_D_14 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":143:7:143:15|Inout SRAM_D_15 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":144:7:144:14|Inout SRAM_D_2 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":145:7:145:14|Inout SRAM_D_3 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":146:7:146:14|Inout SRAM_D_4 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":147:7:147:14|Inout SRAM_D_5 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":148:7:148:14|Inout SRAM_D_6 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":149:7:149:14|Inout SRAM_D_7 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":150:7:150:14|Inout SRAM_D_8 is unused
+@W: CL158 :"C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\component\work\stm32\stm32.v":151:7:151:14|Inout SRAM_D_9 is unused
+Finished optimization stage 2 on stm32 (CPU Time 0h:00m:00s, Memory Used current: 89MB peak: 90MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\Users\Lesc\Documents\LiberoProjects\stm32_test_memory\synthesis\synwork\layer0.duruntime
+
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jul  3 16:46:27 2024
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jul  3 16:46:27 2024
+
+###########################################################]
