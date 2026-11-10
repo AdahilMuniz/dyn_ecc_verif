@@ -1,0 +1,107 @@
+# Tue Oct 15 17:23:36 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\Microchip\Libero_SoC_v2024.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309act, Build 044R, Built Jan  4 2024 08:30:58, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 184MB peak: 184MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 199MB)
+
+Reading constraint file: C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\synthesis.fdc
+@L: C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb_scck.rpt 
+See clock summary report "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 199MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 199MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 199MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 195MB peak: 199MB)
+
+NConnInternalConnection caching is on
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 248MB peak: 249MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 248MB peak: 249MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 248MB peak: 249MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 248MB peak: 249MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=31 on top level netlist prj_2_memory_sb 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 250MB peak: 250MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                            Requested     Requested     Clock        Clock          Clock
+Level     Clock                                            Frequency     Period        Type         Group          Load 
+------------------------------------------------------------------------------------------------------------------------
+0 -       ecc_design|data_out_right_up7_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                        
+0 -       ecc_design|data_out_right_up8_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+========================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                                 Clock     Source                   Clock Pin                                                Non-clock Pin                                                Non-clock Pin                
+Clock                                            Load      Pin                      Seq Example                                              Seq Example                                                  Comb Example                 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ecc_design|data_out_right_up7_inferred_clock     16        mcu_fpga_io[0](port)     fpga_top_design_0.modulo.data_out_right_down[0:15].C     fpga_top_design_0.modulo.data_out_right_down[0:15].D[15]     un27_mcu_fpga_io[0].I[0](tri)
+                                                                                                                                                                                                                                       
+ecc_design|data_out_right_up8_inferred_clock     16        mcu_fpga_io[0](port)     fpga_top_design_0.modulo.data_out_right_up[0:15].C       fpga_top_design_0.modulo.data_out_right_down[0:15].D[15]     un27_mcu_fpga_io[0].I[0](tri)
+=======================================================================================================================================================================================================================================
+
+@W: MT530 :"c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\ecc_design.sv":35:4:35:7|Found inferred clock ecc_design|data_out_right_up7_inferred_clock which controls 16 sequential elements including fpga_top_design_0.modulo.data_out_right_down[0:15]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\lesc\documents\liberoprojects\prj_fpga_2memory\fpga2memory\hdl\ecc_design.sv":35:4:35:7|Found inferred clock ecc_design|data_out_right_up8_inferred_clock which controls 16 sequential elements including fpga_top_design_0.modulo.data_out_right_up[0:15]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 250MB peak: 250MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 250MB peak: 251MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 251MB peak: 251MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 163MB peak: 253MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Tue Oct 15 17:23:38 2024
+
+###########################################################]

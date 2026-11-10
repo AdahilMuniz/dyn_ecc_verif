@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>prj_2_memory_sb</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin prj_2_memory_sb:MCU_CS</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/prj_2_memory_sb/pins/prj_2_memory_sb:MCU_CS</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected top level output port prj_2_memory_sb:SRAM_CS</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/prj_2_memory_sb/pins/prj_2_memory_sb:SRAM_CS</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Out-of-date Instance</message>
+    <detail>Component definition is not consistent for instance fpga_top_design_0</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/prj_2_memory_sb/instances/fpga_top_design_0</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin fpga_top_design_0:chip_sel</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/prj_2_memory_sb/pins/fpga_top_design_0:chip_sel</crossprobe>
+  </drc>
+</drcreport>

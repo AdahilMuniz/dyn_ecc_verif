@@ -1,0 +1,6 @@
+*.SchDocPreview
+/History
+*.PrjPcbStructure
+/01-SCHEMATIC/*.Harness
+/Project Logs for Nascerr/*.LOG
+/02-PCB/*.htm

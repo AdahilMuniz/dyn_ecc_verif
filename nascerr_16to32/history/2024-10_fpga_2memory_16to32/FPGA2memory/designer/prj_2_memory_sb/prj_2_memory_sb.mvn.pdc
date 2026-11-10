@@ -1,0 +1,37 @@
+# Microchip Physical design constraints file
+
+# Version: 2024.1 2024.1.0.3
+
+# Design Name:  
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S025T , Package: 256 VF , Speed grade: STD 
+
+# Date generated: Tue Oct 15 17:23:59 2024 
+
+
+#
+# IO banks setting
+#
+
+
+#
+# Local clock constraints
+#
+
+
+#
+# Region constraints
+#
+
+
+#
+# I/O constraints
+#
+
+
+#
+# Core cell constraints
+#
+

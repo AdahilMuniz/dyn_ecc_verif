@@ -1,0 +1,12 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_encoder.sv":3:7:3:22|Synthesizing module TBEC_RSC_encoder in library work.
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_decoder.sv":2:7:2:22|Synthesizing module TBEC_RSC_decoder in library work.
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_encoder.sv":1:7:1:18|Synthesizing module MRSC_encoder in library work.
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":2:7:2:18|Synthesizing module MRSC_decoder in library work.
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":8:7:8:16|Synthesizing module ecc_design in library work.
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\design.sv":3:7:3:21|Synthesizing module fpga_top_design in library work.
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\component\work\prj_2_memory_sb\prj_2_memory_sb.v":9:7:9:21|Synthesizing module prj_2_memory_sb in library work.
+@N|Running in 64-bit mode
+

@@ -1,0 +1,3 @@
+SERNO,END_INSTANCE,END_CLOCK,START_CLOCK,START_INSTANCE,CDC_TYPE,SYNCHRONIZER,NUMBER_OF_SYNCHRONIZER_FFs,SAFE_CDC,DESCRIPTION
+1,fpga_top_design_0.modulo.data_out_right_down[0:15],ecc_design|data_out_right_up7_inferred_clock,ecc_design|data_out_right_up8_inferred_clock,NA,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing.
+2,fpga_top_design_0.modulo.data_out_right_up[0:15],ecc_design|data_out_right_up8_inferred_clock,ecc_design|data_out_right_up7_inferred_clock,NA,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing.

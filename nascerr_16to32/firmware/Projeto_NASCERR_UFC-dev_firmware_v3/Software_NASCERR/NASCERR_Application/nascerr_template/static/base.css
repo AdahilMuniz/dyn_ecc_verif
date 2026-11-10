@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .menu-lateral {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* NOVO: centraliza a logo e os itens */
+    padding: 20px 10px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .menu-lateral .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem; /* Espaço abaixo da logo */
+    width: 100%;
+  }
+  
+  .menu-lateral .logo img {
+    width: 100px; /* Ajuste o valor conforme o tamanho desejado */
+    height: auto; /* Mantém a proporção da altura */
+  }
+  
+  .menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .menu-item {
+    width: 100%;
+    padding: 15px 20px;
+    color: white; /* Cor do texto */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+  .menu-item a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    width: 100%; /* Para garantir que o link preencha o menu-item */
+  }
+  
+  .menu-item:hover {
+    background-color: #3b3f5c;
+  }
+  
+  .menu-item i {
+    margin-right: 10px;
+    color: white; /* Ícones brancos por padrão */
+  }
+
+  .firmware-version {
+    margin-top: auto; /* Coloca no fim da sidebar */
+    padding-top: 20px;
+    font-size: 14px;
+    color: #bdc3c7;
+    text-align: center;
+  }
+  
+  .conteudo {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px; /* Compensa a sidebar fixa */
+    height: 100vh;
+    overflow-y: auto; /* Habilita rolagem interna se necessário */
+  }
+  
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+
+  .conectado {
+    color: green; /* Verde para conectado */
+  }
+  
+  .desconectado {
+    color: red; /* Vermelho para desconectado */
+  }
+  
+  .tentando {
+    color: orange; /* Laranja para tentando conectar */
+    animation: spin 1s linear infinite; /* Animação de rotação */
+  }
+  
+  /* Animação para fazer o ícone girar */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .notification {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    animation: fadeInOut 4s forwards;
+  }
+  
+  .notification.success {
+    background-color: #28a745;
+  }
+  
+  .notification.error {
+    background-color: #dc3545;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+  

@@ -1,0 +1,13 @@
+[Unit]
+Description=Daemon Python para rodar o software nascerr rodando dentro da venv
+After=network.target pigpiod.service
+Wants=pigpiod.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nascerr4/Desktop/Projeto_NASCERR_UFC/Software_NASCERR/NASCERR_Application
+ExecStart=/bin/bash -c 'source /home/nascerr4/Desktop/Projeto_NASCERR_UFC/Software_NASCERR/NASCERR_Application/venv/bin/activate && exec python main.py'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

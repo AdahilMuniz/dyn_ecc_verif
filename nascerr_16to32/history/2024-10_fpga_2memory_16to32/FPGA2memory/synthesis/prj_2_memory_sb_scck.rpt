@@ -1,0 +1,50 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\Microchip\Libero_SoC_v2024.1\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+
+# Written on Tue Oct 15 17:23:36 2024
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\synthesis.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                            Requested     Requested     Clock        Clock          Clock
+Level     Clock                                            Frequency     Period        Type         Group          Load 
+------------------------------------------------------------------------------------------------------------------------
+0 -       ecc_design|data_out_right_up7_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                        
+0 -       ecc_design|data_out_right_up8_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+========================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                                 Clock     Source                   Clock Pin                                                Non-clock Pin                                                Non-clock Pin                
+Clock                                            Load      Pin                      Seq Example                                              Seq Example                                                  Comb Example                 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ecc_design|data_out_right_up7_inferred_clock     16        mcu_fpga_io[0](port)     fpga_top_design_0.modulo.data_out_right_down[0:15].C     fpga_top_design_0.modulo.data_out_right_down[0:15].D[15]     un27_mcu_fpga_io[0].I[0](tri)
+                                                                                                                                                                                                                                       
+ecc_design|data_out_right_up8_inferred_clock     16        mcu_fpga_io[0](port)     fpga_top_design_0.modulo.data_out_right_up[0:15].C       fpga_top_design_0.modulo.data_out_right_down[0:15].D[15]     un27_mcu_fpga_io[0].I[0](tri)
+=======================================================================================================================================================================================================================================

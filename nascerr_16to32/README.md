@@ -28,8 +28,10 @@ Kept for reference only; nothing here is compiled by the testbench.
 
 The STM32L4S5 payload firmware (`Firmware_CubeSat/dev_nascerr_firmware`, FreeRTOS, I2C
 register protocol to the satellite's on-board computer, OTA bootloader, external NAND
-flash database), plus PC tools (`Software_NASCERR`, `Software_SERIAL`, which includes
-test-campaign logs in `img_uploader/logs_campanhas_ieav/`) and board documents. The
+flash database), plus PC tools (`Software_NASCERR`, `Software_SERIAL`) and board documents.
+The serial/test-campaign logs from `Software_SERIAL/img_uploader/` (18 files, 171 MB, including
+`logs_campanhas_ieav/`) are **not in git**. They're in the original `Projeto_NASCERR_UFC-dev_firmware_v3.zip`,
+and gitignored on the machine that did the import. The
 firmware has its own `CLAUDE.md`; it's informative only and doesn't apply to this repo.
 
 ECC testing (`Modules/NASCERR/Experiments/`, `Sram/`):
@@ -69,6 +71,6 @@ Firmware bugs found in v3:
 
 | Folder | Date | What it is |
 |---|---|---|
-| `2024-04_rtl_initial_16to32/` | 2024-04-02 | First RTL of the project (EDA Playground): 16→32 TBEC encoder/decoder, codeword split across two SRAMs. `memory.v` is a behavioral **IS61WV2M16AL** 2M×16 async SRAM model (no license header; origin unknown, probably the vendor). The testbench uses a copy, `tb/models/IS61WV2M16AL.v`. From `../nascerr_8to16_legacy/archives/drive-download…zip` → `RTL (versão inicial)/result.zip` |
-| `2024-10_fpga_2memory_16to32/` | 2024-10-15 | Earlier `FPGA2memory` Libero project (2-bit select) plus `stm_TEST_2_MEMORY/` STM32 test firmware. From `../nascerr_8to16_legacy/archives/Documents of project…zip` → `FPGA 2 MEMORY/*.zip` |
-| `Projeto_NASCERR_UFC-dev_experiment32bits/` | 2024-10-31 → | 16→32 firmware snapshot before v3. It uses a 7-mode select (`TBEC_1_TO_3`, `TBEC_1_TO_7`, …) for an FPGA build that wasn't recovered; it **doesn't match** the submodule RTL. From `archives/Projeto_NASCERR_UFC-dev_experiment32bits.zip` |
+| `2024-04_rtl_initial_16to32/` | 2024-04-02 | First RTL of the project (EDA Playground): 16→32 TBEC encoder/decoder, codeword split across two SRAMs. `memory.v` is a behavioral **IS61WV2M16AL** 2M×16 async SRAM model (no license header; origin unknown, probably the vendor). The testbench uses a copy, `tb/models/IS61WV2M16AL.v`. From the Drive download `drive-download…zip` → `RTL (versão inicial)/result.zip` |
+| `2024-10_fpga_2memory_16to32/` | 2024-10-15 | Earlier `FPGA2memory` Libero project (2-bit select) plus `stm_TEST_2_MEMORY/` STM32 test firmware. From the Drive download `Documents of project…zip` → `FPGA 2 MEMORY/*.zip` |
+| `Projeto_NASCERR_UFC-dev_experiment32bits/` | 2024-10-31 → | 16→32 firmware snapshot before v3. It uses a 7-mode select (`TBEC_1_TO_3`, `TBEC_1_TO_7`, …) for an FPGA build that wasn't recovered; it **doesn't match** the submodule RTL. From `Projeto_NASCERR_UFC-dev_experiment32bits.zip` (the archive isn't stored in git) |
