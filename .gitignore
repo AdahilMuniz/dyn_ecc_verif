@@ -22,3 +22,9 @@ nascerr_16to32/**/Release/
 /verdi*
 /DVEfiles/
 /AN.DB/
+
+# Kept on disk but not in git: the original download archives (their contents
+# are extracted alongside) and the v3 serial/test-campaign logs (large data).
+/nascerr_8to16_legacy/archives/
+/nascerr_16to32/archives/
+/nascerr_16to32/firmware/Projeto_NASCERR_UFC-dev_firmware_v3/Software_SERIAL/img_uploader/**/*.log

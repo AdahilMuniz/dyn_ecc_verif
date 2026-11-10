@@ -10,7 +10,7 @@ A SystemVerilog/UVM 1.2 verification environment (Synopsys VCS + Verdi) for the 
 
 **Repository layout:** three version folders, plus the verification environment at the root. Each folder has a README.
 - `dyn_ecc_8to16/rtl/` is **the DUT**: the ASIC RTL. It's a clean rewrite combining the verified 2024-08 codecs (proven bit-exact by `make equiv`) with the structure of `dyn_ecc_8to16/reference/NASCERR-develop` (package, control module, tri-states only in the top, Verilator lint).
-- `nascerr_8to16_legacy/`: the original 8→16 version (`fpga/`, `firmware/`, `archives/`). Its `firmware/Projeto_NASCERR_UFC-image_processing` holds the C encoders used as the golden model.
+- `nascerr_8to16_legacy/`: the original 8→16 version (`fpga/`, `firmware/`). Its `firmware/Projeto_NASCERR_UFC-image_processing` holds the C encoders used as the golden model.
 - `nascerr_16to32/`: the most developed 16→32 version.
   - `fpga/FPGA_design` (git submodule, branch `refactor`): its RTL.
   - `firmware/Projeto_NASCERR_UFC-dev_firmware_v3`: the latest firmware. Its C TBEC/MRSC decoders are bit-exact with the submodule RTL.
@@ -22,7 +22,7 @@ A SystemVerilog/UVM 1.2 verification environment (Synopsys VCS + Verdi) for the 
 
 Background: `docs/system_analysis.md` covers how the versions relate and the open decisions. The folder READMEs record the provenance of every artifact.
 
-Zips, PDFs, Libero databases, etc. are in Git LFS, and STM32CubeIDE `Debug/` output is gitignored.
+Everything is stored as regular git files (no Git LFS; the largest file is ~23 MB). STM32CubeIDE `Debug/` output, the original download zips (`*/archives/`) and v3's serial/campaign logs are gitignored, not committed.
 
 The recovered archives are RAR5. Extract them with `python3 -I scripts/rar_extract.py ARCHIVE OUTDIR`, which uses the system libarchive. The system 7-Zip lacks RAR support, and the installed `unrar` is unrar-free 0.1.1, which silently writes garbage for RAR5.
 

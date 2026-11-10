@@ -17,7 +17,6 @@ reference, plus the RTL and UVM verification environment of the **8→16 ASIC**.
 ## Getting started
 
 ```sh
-git lfs install                  # binaries and archives are in Git LFS
 git clone <repo> && cd dyn_ecc_verif
 git submodule update --init      # nascerr_16to32/fpga/FPGA_design
 make regress                     # compile once, run all sequences (needs VCS + UVM 1.2)
