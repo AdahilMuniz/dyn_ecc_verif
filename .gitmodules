@@ -2,3 +2,7 @@
 	path = FPGA_design
 	url = https://github.com/AdahilMuniz/FPGA_design.git
 	branch = refactor
+[submodule "NASCERR"]
+	path = NASCERR
+	url = https://github.com/IagodFarias/NASCERR.git
+	branch = develop
