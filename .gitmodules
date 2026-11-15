@@ -4,5 +4,5 @@
 	branch = refactor
 [submodule "NASCERR"]
 	path = NASCERR
-	url = https://github.com/IagodFarias/NASCERR.git
+	url = https://github.com/AdahilMuniz/NASCERR.git
 	branch = develop
