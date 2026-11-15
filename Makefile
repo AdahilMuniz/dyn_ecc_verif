@@ -7,6 +7,7 @@
 #   make run     DEBUG=1    # run and produce dyn_ecc_tb.fsdb
 #   make run TEST_NAME=... SEQ_NAME=...   # choose the UVM test / sequence
 #   make run VERBOSITY=UVM_HIGH           # set UVM verbosity
+#   make compile TB_DATA_WIDTH=32 TB_ADDR_WIDTH=12   # override TB widths
 #   make clean              # remove generated files
 #
 # DEBUG=0 (default) : no FSDB, fastest run.
@@ -23,7 +24,14 @@ TIMESCALE  := 1ns/1ps
 UVM_OPT    := uvm-1.2
 FSDB       := dyn_ecc_tb.fsdb
 
-VCS_OPTS   := -full64 -sverilog -ntb_opts $(UVM_OPT) -timescale=$(TIMESCALE) -f $(FILELIST)
+# ---- Testbench compile-time widths (override the `define defaults) -----------
+# TB_DATA_WIDTH / TB_ADDR_WIDTH are passed as +define+ so they replace the
+# `ifndef-guarded defaults in tb/dyn_ecc_tb.sv.
+TB_DATA_WIDTH ?= 8
+TB_ADDR_WIDTH ?= 16
+
+VCS_OPTS   := -full64 -sverilog -ntb_opts $(UVM_OPT) -timescale=$(TIMESCALE) -f $(FILELIST) \
+              +define+TB_DATA_WIDTH=$(TB_DATA_WIDTH) +define+TB_ADDR_WIDTH=$(TB_ADDR_WIDTH)
 
 # ---- Run-time selection ------------------------------------------------------
 # TEST_NAME : UVM test to run (+UVM_TESTNAME)

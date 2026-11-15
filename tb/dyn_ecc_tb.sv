@@ -1,6 +1,19 @@
 `include "uvm_macros.svh"
 
-module dyn_ecc_tb;
+// Defaults; overridable from the command line via +define+ (see Makefile).
+`ifndef TB_DATA_WIDTH
+  `define TB_DATA_WIDTH 8
+`endif
+`ifndef TB_ADDR_WIDTH
+  `define TB_ADDR_WIDTH 16
+`endif
+
+module dyn_ecc_tb #(
+    parameter DATA_WIDTH = `TB_DATA_WIDTH,
+    parameter ADDR_WIDTH = `TB_ADDR_WIDTH,
+    parameter SIDEBAND_WWIDTH = 2,
+    parameter SIDEBAND_RWIDTH = 3
+);
 
   import uvm_pkg::*;
   import dyn_ecc_test_pkg::*;
@@ -13,69 +26,100 @@ module dyn_ecc_tb;
   always #5 clk = ~clk;
 
   // ---- Interface instances --------------------------------------------------
-  sram_if #(.DATA_WIDTH(16), .ADDR_WIDTH(16)) mcu_if0 (.clk(clk), .rstn(rst_n));
-  sram_if #(.DATA_WIDTH(16), .ADDR_WIDTH(16)) sram_if0 (.clk(clk), .rstn(rst_n));
-  sram_if #(.DATA_WIDTH(16), .ADDR_WIDTH(16)) sram_if1 (.clk(clk), .rstn(rst_n));
-  sideband_if #(.WWIDTH(3), .RWIDTH(3)) mux_if0 (.clk(clk), .rstn(rst_n));
+  sram_if #(.DATA_WIDTH(DATA_WIDTH), .ADDR_WIDTH(ADDR_WIDTH)) mcu_if0 (.clk(clk), .rstn(rst_n));
+  sram_if #(.DATA_WIDTH(DATA_WIDTH), .ADDR_WIDTH(ADDR_WIDTH)) sram_if0 (.clk(clk), .rstn(rst_n));
+  sram_if #(.DATA_WIDTH(DATA_WIDTH), .ADDR_WIDTH(ADDR_WIDTH)) sram_if1 (.clk(clk), .rstn(rst_n));
+  sideband_if #(.WWIDTH(SIDEBAND_WWIDTH), .RWIDTH(SIDEBAND_RWIDTH)) mux_if0 (.clk(clk), .rstn(rst_n));
 
   // ---- DUT buses / controls -------------------------------------------------
-  wire [15:0] mcu_fpga_io;
-  wire [15:0] fpga_mem_io_up;
-  wire [15:0] fpga_mem_io_down;
+  wire [DATA_WIDTH-1:0] cpu_data;
+  wire [DATA_WIDTH-1:0] mem_up_data;
+  wire [DATA_WIDTH-1:0] mem_down_data;
 
   logic       write_en;
+  logic       read_en;
   logic       chip_sel;
   logic [1:0] chip_sel_out;
-  logic [2:0] ecc_sel;
-  logic [0:2] flag_out;
-  logic       output_en;
+  logic [SIDEBAND_WWIDTH-1:0] ecc_sel;
+  logic [0:SIDEBAND_WWIDTH-1] flag_out;
 
-  // ---- DUT instance ---------------------------------------------------------
-  fpga_top_design dut (
-    .mcu_fpga_io      (mcu_fpga_io),
-    .fpga_mem_io_up   (fpga_mem_io_up),
-    .fpga_mem_io_down (fpga_mem_io_down),
-    .write_en         (write_en),
-    .chip_sel         (chip_sel),
-    .chip_sel_out     (chip_sel_out),
-    .ecc_sel          (ecc_sel),
-    .flag_out         (flag_out),
-    .clk              (clk),
-    .rst_n            (rst_n),
-    .output_en        (output_en)
-  );
+  // ---- DUT instance + interface<->pin bridging ------------------------------
+  // Bridges live inside each branch because the two DUTs use opposite control
+  // conventions (fpga: active-low write_en + output_en; NASCERR top:
+  // active-high read_en/write_en pair).
+  generate;
+    if (DATA_WIDTH == 16) begin : g_fpga
+      fpga_top_design dut (
+        .mcu_fpga_io      (cpu_data),
+        .fpga_mem_io_up   (mem_up_data),
+        .fpga_mem_io_down (mem_down_data),
+        .write_en         (write_en),
+        .chip_sel         (chip_sel),
+        .chip_sel_out     (chip_sel_out),
+        .ecc_sel          ({1'b0, ecc_sel}),
+        .flag_out         (flag_out),
+        .clk              (clk),
+        .rst_n            (rst_n),
+        .output_en        (read_en)
+      );
 
-  // ---- Interface <-> DUT pin bridging --------------------------------------
-  // NOTE: write_en is ACTIVE LOW in the DUT (write when write_en==0). All the
-  // polarities below follow that. A write is therefore issued by driving
-  // mcu_if0.we = 0, a read by mcu_if0.we = 1.
-  assign write_en = mcu_if0.we;
-  assign chip_sel = mcu_if0.cs;
-  assign ecc_sel  = mux_if0.wsig;
+      // write_en ACTIVE LOW: the DUT releases cpu_data during a write.
+      assign write_en = mcu_if0.we;
+      assign chip_sel = mcu_if0.cs;
+      assign ecc_sel  = mux_if0.wsig;
+      assign read_en  = 1'b1; // output_en idle (not reading)
 
-  // MCU side: on a write (write_en==0) the MCU agent drives the input word onto
-  // the bus; on a read (write_en==1) it captures the decoded word the DUT drives.
-  assign mcu_fpga_io   = (~write_en) ? mcu_if0.wdata : 'bz;
-  assign mcu_if0.rdata = ( write_en) ? mcu_fpga_io   : 'bz;
+      assign cpu_data      = (~write_en) ? mcu_if0.wdata : 'bz;
+      assign mcu_if0.rdata = ( write_en) ? cpu_data      : 'bz;
 
-  // SRAM side (up = sram_if0, down = sram_if1): on a write (write_en==0) the
-  // agent captures the codeword the DUT drives toward memory; on a read
-  // (write_en==1) it drives the stored codeword back onto the bus.
-  assign sram_if0.wdata   = (~write_en) ? fpga_mem_io_up : 'bz;
-  assign fpga_mem_io_up   = ( write_en) ? sram_if0.rdata : 'bz;
-  assign sram_if0.we      = write_en;
-  assign sram_if0.cs      = chip_sel_out[0];
+      assign sram_if0.wdata = (~write_en) ? mem_up_data    : 'bz;
+      assign mem_up_data    = ( write_en) ? sram_if0.rdata : 'bz;
+      assign sram_if0.we    = write_en;
+      assign sram_if0.cs    = chip_sel_out[0];
 
-  assign sram_if1.wdata   = (~write_en) ? fpga_mem_io_down : 'bz;
-  assign fpga_mem_io_down = ( write_en) ? sram_if1.rdata   : 'bz;
-  assign sram_if1.we      = write_en;
-  assign sram_if1.cs      = chip_sel_out[1];
+      assign sram_if1.wdata = (~write_en) ? mem_down_data  : 'bz;
+      assign mem_down_data  = ( write_en) ? sram_if1.rdata : 'bz;
+      assign sram_if1.we    = write_en;
+      assign sram_if1.cs    = chip_sel_out[1];
 
-  // Sideband: ecc mode select in (wsig -> ecc_sel), ECC flag out (flag_out -> rsig).
-  assign mux_if0.rsig = flag_out;
+      assign mux_if0.rsig = flag_out;
+    end
+    else begin : g_nascerr
+      top dut (
+        .sel(ecc_sel),
+        .read_en(read_en),
+        .write_en(write_en),
+        .cpu_data(cpu_data),
+        .ram_up_data(mem_up_data),
+        .ram_down_data(mem_down_data)
+      );
 
-  // output_en is not yet owned by any agent; tie it idle (not reading) for now.
-  assign output_en = 1'b1;
+      // FIX 1: read_en is the complement of write (not tied high), so the DUT's
+      // write path (write_en=1 && read_en=0) can actually fire.
+      assign write_en = mcu_if0.we;
+      assign read_en  = ~mcu_if0.we;
+      assign ecc_sel  = mux_if0.wsig;
+
+      // FIX 2: active-high polarity. The DUT drives cpu_data on a READ and the
+      // memory buses on a WRITE, so the TB drives the opposite side each phase.
+      assign cpu_data      = write_en ? mcu_if0.wdata : 'bz; // MCU drives on write
+      assign mcu_if0.rdata = read_en  ? cpu_data      : 'bz; // capture on read
+
+      assign sram_if0.wdata = write_en ? mem_up_data    : 'bz; // capture codeword
+      assign mem_up_data    = read_en  ? sram_if0.rdata : 'bz; // supply on read
+      assign sram_if0.we    = write_en;
+
+      assign sram_if1.wdata = write_en ? mem_down_data  : 'bz;
+      assign mem_down_data  = read_en  ? sram_if1.rdata : 'bz;
+      assign sram_if1.we    = write_en;
+
+      // FIX 3: NASCERR top has no chip_sel_out or flag outputs; drive the
+      // dependent interface signals to defined values instead of leaving them X.
+      assign sram_if0.cs  = 1'b0;
+      assign sram_if1.cs  = 1'b0;
+      assign mux_if0.rsig = '0;
+    end
+  endgenerate
 
   // ---- Reset generation -----------------------------------------------------
   initial begin

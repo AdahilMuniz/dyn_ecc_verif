@@ -38,7 +38,11 @@ class dyn_ecc_base_test extends uvm_test;
     phase.raise_objection(this, "running sequence");
     // Factory returns the overridden type if one was registered.
     seq = dyn_ecc_base_seq::type_id::create("seq");
-    seq.start(env.mcu_agt.seqr);
+    // Randomize the sequence here (randomizes the actual overridden type's rand
+    // members, e.g. write_read_seq::ecc_sel, under its constraints).
+    if (!seq.randomize())
+      `uvm_fatal(get_type_name(), "sequence randomize failed")
+    seq.start(env.v_seqr);
     phase.drop_objection(this, "sequence done");
   endtask
 

@@ -5,14 +5,16 @@
 // =============================================================================
 
 // -----------------------------------------------------------------------------
-// DUT source list (FPGA_design submodule).
+// DUT source lists (both DUTs; the TB generate-selects one by DATA_WIDTH).
 // -----------------------------------------------------------------------------
 -f script/design_filelist.f
+-f script/nascerr_filelist.f
 
 // -----------------------------------------------------------------------------
 // Interfaces (compiled before the packages/top that reference them).
 // -----------------------------------------------------------------------------
 +incdir+vips/sram
++incdir+vips/sideband
 vips/sram/sram_if.sv
 tb/sideband_if.sv
 
@@ -20,6 +22,7 @@ tb/sideband_if.sv
 // Verification IP packages.
 // -----------------------------------------------------------------------------
 vips/sram/sram_pkg.sv
+vips/sideband/sideband_pkg.sv
 
 // -----------------------------------------------------------------------------
 // Environment / sequences / tests (one package, bundled).
