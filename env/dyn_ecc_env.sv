@@ -14,6 +14,9 @@ class dyn_ecc_env extends uvm_env;
 
   dyn_ecc_virtual_sequencer  v_seqr;
 
+  sram_mem_model             mem_up;
+  sram_mem_model             mem_down;
+
   function new(string name, uvm_component parent);
     super.new(name, parent);
   endfunction
@@ -44,14 +47,25 @@ class dyn_ecc_env extends uvm_env;
 
     // Virtual sequencer: coordinates the MCU and sideband agents.
     v_seqr = dyn_ecc_virtual_sequencer::type_id::create("v_seqr", this);
+
+    // Retrieve the backdoor memory models published by the testbench.
+    if (!uvm_config_db#(sram_mem_model)::get(this, "", "mem_up", mem_up))
+      `uvm_fatal(get_type_name(),
+                 "sram_mem_model 'mem_up' not found in config_db")
+    if (!uvm_config_db#(sram_mem_model)::get(this, "", "mem_down", mem_down))
+      `uvm_fatal(get_type_name(),
+                 "sram_mem_model 'mem_down' not found in config_db")
   endfunction
 
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
 
-    // Hook the virtual sequencer's handles to the real agent sequencers.
+    // Hook the virtual sequencer's handles to the real agent sequencers and the
+    // backdoor memory models, so sequences reach them through p_sequencer.
     v_seqr.mcu_seqr = mcu_agt.seqr;
     v_seqr.mux_seqr = mux_agt.seqr;
+    v_seqr.mem_up   = mem_up;
+    v_seqr.mem_down = mem_down;
   endfunction
 
 endclass

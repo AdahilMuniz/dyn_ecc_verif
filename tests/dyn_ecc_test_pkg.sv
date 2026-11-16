@@ -16,6 +16,7 @@ package dyn_ecc_test_pkg;
   // Sequences
   `include "dyn_ecc_base_seq.sv"
   `include "write_read_seq.sv"
+  `include "write_error_read_seq.sv"
   // Environment
   `include "dyn_ecc_env.sv"
   `include "dyn_ecc_base_test.sv"

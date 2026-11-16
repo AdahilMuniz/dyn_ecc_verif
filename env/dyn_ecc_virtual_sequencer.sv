@@ -10,6 +10,11 @@ class dyn_ecc_virtual_sequencer extends uvm_sequencer;
   sram_sequencer     mcu_seqr;
   sideband_sequencer mux_seqr;
 
+  // Backdoor memory model handles, wired by the env so sequences can reach them
+  // through p_sequencer without their own config_db lookups.
+  sram_mem_model     mem_up;
+  sram_mem_model     mem_down;
+
   function new(string name, uvm_component parent);
     super.new(name, parent);
   endfunction

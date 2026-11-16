@@ -16,6 +16,7 @@ module dyn_ecc_tb #(
 );
 
   import uvm_pkg::*;
+  import sram_pkg::*;
   import dyn_ecc_test_pkg::*;
 
   // Clock and active-low reset: declared (as variables) before the interfaces
@@ -121,6 +122,39 @@ module dyn_ecc_tb #(
     end
   endgenerate
 
+  // ---- Behavioral SRAM memory models (backdoor-accessible) ------------------
+  // One model per physical memory (up/down). The storage lives in a class
+  // object whose handle is published on the config_db below, so a UVM test can
+  // edit mem[] directly (backdoor) and the change is seen here by reference.
+  sram_mem_model mem_up_model   = new("mem_up_model");
+  sram_mem_model mem_down_model = new("mem_down_model");
+
+  // The NASCERR DUT is combinational and carries no address of its own, so the
+  // memories are addressed with the MCU transaction address.
+  assign sram_if0.addr = mcu_if0.addr;
+  assign sram_if1.addr = mcu_if0.addr;
+
+  // Capture the codeword(s) the DUT presents during a write. Keyed on the MCU's
+  // we (the canonical "this cycle is a write"), sampled one edge after the
+  // driver asserts it.
+  always @(posedge clk) begin
+    if (rst_n === 1'b1 && mcu_if0.we === 1'b1) begin
+      mem_up_model.poke  (mcu_if0.addr, sram_if0.wdata);
+      mem_down_model.poke(mcu_if0.addr, sram_if1.wdata);
+    end
+  end
+
+  // Drive stored data back toward the DUT's memory-side buses. Recomputed on
+  // the clock negedge (and on address change) rather than with a continuous
+  // assign: the backing store is a class array, so element writes - whether
+  // from the write path above or from a UVM backdoor poke - are not in a
+  // continuous assign's sensitivity. Sampling on negedge keeps rdata stable and
+  // fresh before the driver samples it on the posedge (no race).
+  always @(negedge clk or mcu_if0.addr) begin
+    sram_if0.rdata = mem_up_model.peek  (mcu_if0.addr);
+    sram_if1.rdata = mem_down_model.peek(mcu_if0.addr);
+  end
+
   // ---- Reset generation -----------------------------------------------------
   initial begin
     rst_n = 1'b0;
@@ -134,6 +168,11 @@ module dyn_ecc_tb #(
     uvm_config_db#(virtual sram_if)::set    (null, "*", "sram0_if", sram_if0);
     uvm_config_db#(virtual sram_if)::set    (null, "*", "sram1_if", sram_if1);
     uvm_config_db#(virtual sideband_if)::set(null, "*", "mux_if",   mux_if0);
+
+    // Publish the memory model handles for backdoor peek/poke from the UVM env.
+    uvm_config_db#(sram_mem_model)::set(null, "*", "mem_up",   mem_up_model);
+    uvm_config_db#(sram_mem_model)::set(null, "*", "mem_down", mem_down_model);
+
     run_test();
   end
 

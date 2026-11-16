@@ -16,6 +16,7 @@ package sram_pkg;
 
   typedef enum bit { SRAM_READ = 1'b0, SRAM_WRITE = 1'b1 } sram_op_e;
 
+  `include "sram_mem_model.sv"
   `include "sram_seq_item.sv"
   `include "sram_agent_cfg.sv"
   `include "sram_sequencer.sv"

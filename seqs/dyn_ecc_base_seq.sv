@@ -16,4 +16,17 @@ class dyn_ecc_base_seq extends uvm_sequence;
     // Intentionally empty for now.
   endtask
 
+  virtual task flip_bits(int bit_pos[], bit up_down, bit [SRAM_ADDR_WIDTH-1:0] addr);
+    bit [SRAM_DATA_WIDTH-1:0] bits_to_flip;
+    foreach (bit_pos[i]) begin
+      bits_to_flip[bit_pos[i]] = 1'b1;
+    end
+    if (up_down) begin
+      p_sequencer.mem_up.poke(addr, p_sequencer.mem_up.peek(addr) ^ bits_to_flip);
+    end
+    else begin
+      p_sequencer.mem_down.poke(addr, p_sequencer.mem_down.peek(addr) ^ bits_to_flip);
+    end
+  endtask
+
 endclass
