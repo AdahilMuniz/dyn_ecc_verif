@@ -12,6 +12,14 @@ class dyn_ecc_env extends uvm_env;
   sideband_agent             mux_agt;
   sideband_agent_cfg         mux_cfg;
 
+  // Passive agents monitoring the two physical SRAM buses (up / down).
+  sram_agent                 sram0_agt;
+  sram_agent_cfg             sram0_cfg;
+  sram_agent                 sram1_agt;
+  sram_agent_cfg             sram1_cfg;
+
+  dyn_ecc_scbd               scbd;
+
   dyn_ecc_virtual_sequencer  v_seqr;
 
   sram_mem_model             mem_up;
@@ -45,6 +53,27 @@ class dyn_ecc_env extends uvm_env;
     uvm_config_db#(sideband_agent_cfg)::set(this, "mux_agt", "cfg", mux_cfg);
     mux_agt = sideband_agent::type_id::create("mux_agt", this);
 
+    // Configure the SRAM0 (up) monitor-only agent.
+    sram0_cfg = sram_agent_cfg::type_id::create("sram0_cfg");
+    sram0_cfg.is_active = UVM_PASSIVE;
+    if (!uvm_config_db#(virtual sram_if)::get(this, "", "sram0_if", sram0_cfg.vif))
+      `uvm_fatal(get_type_name(),
+                 "virtual sram_if 'sram0_if' not found in config_db")
+    uvm_config_db#(sram_agent_cfg)::set(this, "sram0_agt", "cfg", sram0_cfg);
+    sram0_agt = sram_agent::type_id::create("sram0_agt", this);
+
+    // Configure the SRAM1 (down) monitor-only agent.
+    sram1_cfg = sram_agent_cfg::type_id::create("sram1_cfg");
+    sram1_cfg.is_active = UVM_PASSIVE;
+    if (!uvm_config_db#(virtual sram_if)::get(this, "", "sram1_if", sram1_cfg.vif))
+      `uvm_fatal(get_type_name(),
+                 "virtual sram_if 'sram1_if' not found in config_db")
+    uvm_config_db#(sram_agent_cfg)::set(this, "sram1_agt", "cfg", sram1_cfg);
+    sram1_agt = sram_agent::type_id::create("sram1_agt", this);
+
+    // Scoreboard collecting transactions from every monitored interface.
+    scbd = dyn_ecc_scbd::type_id::create("scbd", this);
+
     // Virtual sequencer: coordinates the MCU and sideband agents.
     v_seqr = dyn_ecc_virtual_sequencer::type_id::create("v_seqr", this);
 
@@ -66,6 +95,12 @@ class dyn_ecc_env extends uvm_env;
     v_seqr.mux_seqr = mux_agt.seqr;
     v_seqr.mem_up   = mem_up;
     v_seqr.mem_down = mem_down;
+
+    // Connect each monitor's analysis port to the matching scoreboard imp.
+    mcu_agt.ap.connect  (scbd.mcu_imp);
+    mux_agt.ap.connect  (scbd.sb_imp);
+    sram0_agt.ap.connect(scbd.sram0_imp);
+    sram1_agt.ap.connect(scbd.sram1_imp);
   endfunction
 
 endclass

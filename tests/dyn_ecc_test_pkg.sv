@@ -10,6 +10,7 @@ package dyn_ecc_test_pkg;
   `include "uvm_macros.svh"
   import sram_pkg::*;
   import sideband_pkg::*;
+  import typedefs::*;
 
   // Virtual sequencer (needed by the sequences' p_sequencer declaration).
   `include "dyn_ecc_virtual_sequencer.sv"
@@ -18,6 +19,7 @@ package dyn_ecc_test_pkg;
   `include "write_read_seq.sv"
   `include "write_error_read_seq.sv"
   // Environment
+  `include "dyn_ecc_scbd.sv"
   `include "dyn_ecc_env.sv"
   `include "dyn_ecc_base_test.sv"
 

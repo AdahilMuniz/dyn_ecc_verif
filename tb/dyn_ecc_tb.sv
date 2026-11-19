@@ -116,9 +116,11 @@ module dyn_ecc_tb #(
 
       // FIX 3: NASCERR top has no chip_sel_out or flag outputs; drive the
       // dependent interface signals to defined values instead of leaving them X.
-      assign sram_if0.cs  = 1'b0;
-      assign sram_if1.cs  = 1'b0;
-      assign mux_if0.rsig = '0;
+      //assign sram_if0.cs  = 1'b0;
+      //assign sram_if1.cs  = 1'b0;
+      assign sram_if0.cs  = mcu_if0.cs;
+      assign sram_if1.cs  = mcu_if0.cs;
+      assign mux_if0.rsig = '0; //@TODO: Must be connected to any output flag if any in the future.
     end
   endgenerate
 
