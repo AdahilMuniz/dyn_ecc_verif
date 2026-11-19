@@ -1,0 +1,249 @@
+m255
+K4
+z2
+!s11f vlog 2023.4 2023.10, Oct 10 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/simulation
+vDecoder16bits
+Z1 2C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32.v
+Z2 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z3 !s110 1725303651
+!i10b 1
+!s100 SzMa2MRiS6bH<Yi^hNkJA1
+I<l7n]`?IjMn>9jDMO4F7H3
+S1
+R0
+Z4 w1725303622
+Z5 8C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32.v
+Z6 FC:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32.v
+!i122 0
+L0 559 144
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OW;L;2023.4;77
+r1
+!s85 0
+31
+Z9 !s108 1725303651.000000
+!s107 C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32.v|
+Z10 !s90 -reportprogress|300|-sv|-work|postsynth|C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32.v|
+!s101 -O0
+!i113 1
+Z11 o-sv -work postsynth -O0
+Z12 tCvgOpt 0
+n@decoder16bits
+vEDACdecoder
+R1
+R2
+R3
+!i10b 1
+!s100 `2TC?AjG[dcR4`j08Q1752
+I69Q?]YbKdGhdXXJKPnEjh1
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 218 208
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z13 !s107 C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32.v|
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+n@e@d@a@cdecoder
+vEDACencoder
+R1
+R2
+R3
+!i10b 1
+!s100 YFgac<0QJG^YaMUn^=0iz2
+IRc3fiM54MIC4MCbI_S71;2
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 194 22
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+n@e@d@a@cencoder
+vEncoder16bits
+R1
+R2
+R3
+!i10b 1
+!s100 _DNWYR0lCh>OEK[=UmmeF2
+IS=7zBPW^RELF:NDR_Ua0e3
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 5 163
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+n@encoder16bits
+vfpga_top_design
+R1
+R2
+R3
+!i10b 1
+!s100 6:omNA]k2ZaN>I5<bJ0Fe3
+Io2idkZkA8Va_0Vk>2ESgf1
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 983 164
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vhamming_decoder
+R1
+R2
+R3
+!i10b 1
+!s100 >>XiT:?>l@WnXljA9F6?K3
+IJzUD[a2JJ=Lj[YhLzgN6k1
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 428 129
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vhamming_encoder
+R1
+R2
+R3
+!i10b 1
+!s100 XaA7O:=1lz7L=UGN_9odk0
+I1V40gQ4_BoTc`R7jJQXeU0
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 170 22
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vhamming_top_design
+R1
+R2
+R3
+!i10b 1
+!s100 F:NT;5hmY`A5hn>S`WQRP3
+Io]`7dk=O1Q0Of]e7GjU_S1
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 705 276
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vstm32
+R1
+R2
+R3
+!i10b 1
+!s100 mcLa^<M25eaREQ>DohjmK3
+IMiB2;i9T2?hdYU]FNl85D0
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 1149 265
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R10
+!s101 -O0
+!i113 1
+R11
+R12

@@ -1,0 +1,1 @@
+./synwork/stm32_comp.srs,compile_only,Only compilation, no netlist editing or other optimization.

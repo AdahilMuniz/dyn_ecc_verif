@@ -1,0 +1,77 @@
+Synplify Pro (R) Job Log
+Date: 17:42:55    11-Jul-2024
+Install Directory: C:\Microchip\Libero_SoC_v2023.2\SynplifyPro
+
+JobFlow: synthesis
+   Run Start Time: 17:42:44
+   Runtime: 11s
+   Executable Run Time: 10 - (Sum of all child executables)
+   Current Working Directory: C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis
+
+   JobFlow: synthesis
+      Run Start Time: 17:42:44
+      Runtime: 11s
+      Executable Run Time: 10 - (Sum of all child executables)
+
+      JobFlow: compile
+         Run Start Time: 17:42:44
+         Runtime: 07s
+         Executable Run Time: 6 - (Sum of all child executables)
+
+         JobFlow: compile_flow
+            Run Start Time: 17:42:44
+            Runtime: 05s
+            Executable Run Time: 4 - (Sum of all child executables)
+
+            Job: compiler
+               executable: bin64\c_hdl.exe
+               Run Directory: C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis
+               Run State: complete
+               Return Code: 0
+               Has Errors: no
+               Run Start Time: 17:42:44
+               Run Time: 05s
+               Executable Run Time: 4 - (Executable run time excluding UI processing)
+               Memory Usage: -
+               Up-to-date (run skipped): no
+
+            Job: multi_srs_gen
+               executable: bin64\syn_nfilter.exe
+               Run Directory: C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis
+               Run State: complete
+               Return Code: 0
+               Has Errors: no
+               Run Start Time: 17:42:49
+               Run Time: 00s
+               Executable Run Time: 0 - (Executable run time excluding UI processing)
+               Memory Usage: -
+               Up-to-date (run skipped): no
+
+         Job: premap
+            executable: bin64\m_generic.exe
+            Run Directory: C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis
+            Run State: complete
+            Return Code: 0
+            Has Errors: no
+            Run Start Time: 17:42:49
+            Run Time: 02s
+            Executable Run Time: 2 - (Executable run time excluding UI processing)
+            Memory Usage: -
+            Up-to-date (run skipped): no
+
+      JobFlow: map
+         Run Start Time: 17:42:51
+         Runtime: 04s
+         Executable Run Time: 4 - (Sum of all child executables)
+
+         Job: fpga_mapper
+            executable: bin64\m_generic.exe
+            Run Directory: C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis
+            Run State: complete
+            Return Code: 0
+            Has Errors: no
+            Run Start Time: 17:42:51
+            Run Time: 04s
+            Executable Run Time: 4 - (Executable run time excluding UI processing)
+            Memory Usage: -
+            Up-to-date (run skipped): no

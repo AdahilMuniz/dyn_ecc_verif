@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Thu Jul 11 17:42:30 2024
+Project   :  C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy
+Component :  stm32
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/component/work/stm32/stm32.v
+

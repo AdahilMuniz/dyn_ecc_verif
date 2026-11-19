@@ -1,0 +1,681 @@
+
+Path:
+
+port     fpga_mem_io[2]
+output   fpga_mem_io[15:0].fpga_mem_io[2]
+net      fpga_mem_io[2]
+input    fpga_top_design_0.decoder_input[2].I[0]
+instance fpga_top_design_0.decoder_input[2] (cell tri)
+output   fpga_top_design_0.decoder_input[2].OUT[0]
+net      fpga_top_design_0.decoder_input[2]
+input    fpga_top_design_0.modulo_hamming.decodificador.received_data[2].A[0]
+instance fpga_top_design_0.modulo_hamming.decodificador.received_data[2] (cell mux)
+output   fpga_top_design_0.modulo_hamming.decodificador.received_data[2].OUT[0]
+net      fpga_top_design_0.modulo_hamming.decodificador.received_data[2]
+input    fpga_top_design_0.modulo_hamming.data_out_left[15:0].D1[1]
+instance fpga_top_design_0.modulo_hamming.data_out_left[15:0] (cell pmux)
+
+End path
+
+Worst Path to Pin for instance fpga_top_design_0/modulo_hamming/data_out_left[15:0] 
+
+
+Clock table:
+
+type  id |  per(ns) |     load |   fanout | group name                       | clock name                      
+---- ----+----------+----------+----------+----------------------------------+---------------------------------
+   C      0      10.00       0.00          0   system_clkgroup                    System                          
+			.syn_refclock_type	[int]    9
+   C      1      10.00       0.00          0   async_clock_clkgroup               (no clock)                      
+			.syn_refclock_type	[int]    10
+--- -----+----------+----------+----------+----------------------------------+---------------------------------
+
+End of Clock table:
+
+
+Clock Commands:
+
+  consid   names   split    user    resolved   generated name
+  ------   -----   -----    ----    --------   --------- ----
+
+End of Clock Commands
+
+
+Clock Objects:
+
+     command    resolved                                 
+      consid      consid    user    resolved   generated name
+     -------     -------    ----    --------   --------- ----
+
+End of Clock Objects
+
+
+Constraints:
+
+
+Artificial Constraints Assignment:
+
+
+End of Constraints:
+
+
+CDB:
+
+
+End of CDB:
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+Instances: 
+
+fpga_top_design_0.modulo_hamming.data_out_left[15:0]	Cell=pmux Port=84 Model=prim level=340 state=0x4005003  
+			Model (MAX) for TAARC_ALWAYS_APPLY (generated):
+				[16 CHANGE] => [0 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [1 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [2 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [3 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [4 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [5 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [6 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [7 CHANGE] delay = 1.2556, slope = 0.0001
+				[16 CHANGE] => [8 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [9 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [10 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [11 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [12 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [13 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [14 CHANGE] delay = 1.0913, slope = 0.0001
+				[16 CHANGE] => [15 CHANGE] delay = 1.0913, slope = 0.0001
+				[17 FALL] => [0 FALL] delay = 1.3672, slope = 0.0001
+				[17 RISE] => [0 RISE] delay = 1.3672, slope = 0.0001
+				[18 FALL] => [1 FALL] delay = 1.3672, slope = 0.0001
+				[18 RISE] => [1 RISE] delay = 1.3672, slope = 0.0001
+				[19 FALL] => [2 FALL] delay = 1.3672, slope = 0.0001
+				[19 RISE] => [2 RISE] delay = 1.3672, slope = 0.0001
+				[20 FALL] => [3 FALL] delay = 1.3672, slope = 0.0001
+				[20 RISE] => [3 RISE] delay = 1.3672, slope = 0.0001
+				[21 FALL] => [4 FALL] delay = 1.3672, slope = 0.0001
+				[21 RISE] => [4 RISE] delay = 1.3672, slope = 0.0001
+				[22 FALL] => [5 FALL] delay = 1.3672, slope = 0.0001
+				[22 RISE] => [5 RISE] delay = 1.3672, slope = 0.0001
+				[23 FALL] => [6 FALL] delay = 1.3672, slope = 0.0001
+				[23 RISE] => [6 RISE] delay = 1.3672, slope = 0.0001
+				[24 FALL] => [7 FALL] delay = 1.3672, slope = 0.0001
+				[24 RISE] => [7 RISE] delay = 1.3672, slope = 0.0001
+				[25 FALL] => [8 FALL] delay = 1.0386, slope = 0.0001
+				[25 RISE] => [8 RISE] delay = 1.0386, slope = 0.0001
+				[26 FALL] => [9 FALL] delay = 1.0386, slope = 0.0001
+				[26 RISE] => [9 RISE] delay = 1.0386, slope = 0.0001
+				[27 FALL] => [10 FALL] delay = 1.0386, slope = 0.0001
+				[27 RISE] => [10 RISE] delay = 1.0386, slope = 0.0001
+				[28 FALL] => [11 FALL] delay = 1.0386, slope = 0.0001
+				[28 RISE] => [11 RISE] delay = 1.0386, slope = 0.0001
+				[29 FALL] => [12 FALL] delay = 1.0386, slope = 0.0001
+				[29 RISE] => [12 RISE] delay = 1.0386, slope = 0.0001
+				[30 FALL] => [13 FALL] delay = 1.0386, slope = 0.0001
+				[30 RISE] => [13 RISE] delay = 1.0386, slope = 0.0001
+				[31 FALL] => [14 FALL] delay = 1.0386, slope = 0.0001
+				[31 RISE] => [14 RISE] delay = 1.0386, slope = 0.0001
+				[32 FALL] => [15 FALL] delay = 1.0386, slope = 0.0001
+				[32 RISE] => [15 RISE] delay = 1.0386, slope = 0.0001
+				[33 CHANGE] => [0 CHANGE] delay = 1.1734, slope = 0.0001
+				[33 CHANGE] => [1 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [2 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [3 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [4 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [5 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [6 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [7 CHANGE] delay = 1.0913, slope = 0.0001
+				[33 CHANGE] => [8 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [9 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [10 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [11 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [12 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [13 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [14 CHANGE] delay = 1.2556, slope = 0.0001
+				[33 CHANGE] => [15 CHANGE] delay = 1.2556, slope = 0.0001
+				[34 FALL] => [0 FALL] delay = 1.2029, slope = 0.0001
+				[34 RISE] => [0 RISE] delay = 1.2029, slope = 0.0001
+				[35 FALL] => [1 FALL] delay = 1.0386, slope = 0.0001
+				[35 RISE] => [1 RISE] delay = 1.0386, slope = 0.0001
+				[36 FALL] => [2 FALL] delay = 1.0386, slope = 0.0001
+				[36 RISE] => [2 RISE] delay = 1.0386, slope = 0.0001
+				[37 FALL] => [3 FALL] delay = 1.0386, slope = 0.0001
+				[37 RISE] => [3 RISE] delay = 1.0386, slope = 0.0001
+				[38 FALL] => [4 FALL] delay = 1.0386, slope = 0.0001
+				[38 RISE] => [4 RISE] delay = 1.0386, slope = 0.0001
+				[39 FALL] => [5 FALL] delay = 1.0386, slope = 0.0001
+				[39 RISE] => [5 RISE] delay = 1.0386, slope = 0.0001
+				[40 FALL] => [6 FALL] delay = 1.0386, slope = 0.0001
+				[40 RISE] => [6 RISE] delay = 1.0386, slope = 0.0001
+				[41 FALL] => [7 FALL] delay = 1.0386, slope = 0.0001
+				[41 RISE] => [7 RISE] delay = 1.0386, slope = 0.0001
+				[42 FALL] => [8 FALL] delay = 1.3672, slope = 0.0001
+				[42 RISE] => [8 RISE] delay = 1.3672, slope = 0.0001
+				[43 FALL] => [9 FALL] delay = 1.3672, slope = 0.0001
+				[43 RISE] => [9 RISE] delay = 1.3672, slope = 0.0001
+				[44 FALL] => [10 FALL] delay = 1.3672, slope = 0.0001
+				[44 RISE] => [10 RISE] delay = 1.3672, slope = 0.0001
+				[45 FALL] => [11 FALL] delay = 1.3672, slope = 0.0001
+				[45 RISE] => [11 RISE] delay = 1.3672, slope = 0.0001
+				[46 FALL] => [12 FALL] delay = 1.3672, slope = 0.0001
+				[46 RISE] => [12 RISE] delay = 1.3672, slope = 0.0001
+				[47 FALL] => [13 FALL] delay = 1.3672, slope = 0.0001
+				[47 RISE] => [13 RISE] delay = 1.3672, slope = 0.0001
+				[48 FALL] => [14 FALL] delay = 1.3672, slope = 0.0001
+				[48 RISE] => [14 RISE] delay = 1.3672, slope = 0.0001
+				[49 FALL] => [15 FALL] delay = 1.3672, slope = 0.0001
+				[49 RISE] => [15 RISE] delay = 1.3672, slope = 0.0001
+				[50 CHANGE] => [0 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [1 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [2 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [3 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [4 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [5 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [6 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [7 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [8 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [9 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [10 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [11 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [12 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [13 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [14 CHANGE] delay = 1.2556, slope = 0.0001
+				[50 CHANGE] => [15 CHANGE] delay = 1.2556, slope = 0.0001
+				[51 FALL] => [0 FALL] delay = 1.3672, slope = 0.0001
+				[51 RISE] => [0 RISE] delay = 1.3672, slope = 0.0001
+				[52 FALL] => [1 FALL] delay = 1.3672, slope = 0.0001
+				[52 RISE] => [1 RISE] delay = 1.3672, slope = 0.0001
+				[53 FALL] => [2 FALL] delay = 1.3672, slope = 0.0001
+				[53 RISE] => [2 RISE] delay = 1.3672, slope = 0.0001
+				[54 FALL] => [3 FALL] delay = 1.3672, slope = 0.0001
+				[54 RISE] => [3 RISE] delay = 1.3672, slope = 0.0001
+				[55 FALL] => [4 FALL] delay = 1.3672, slope = 0.0001
+				[55 RISE] => [4 RISE] delay = 1.3672, slope = 0.0001
+				[56 FALL] => [5 FALL] delay = 1.3672, slope = 0.0001
+				[56 RISE] => [5 RISE] delay = 1.3672, slope = 0.0001
+				[57 FALL] => [6 FALL] delay = 1.3672, slope = 0.0001
+				[57 RISE] => [6 RISE] delay = 1.3672, slope = 0.0001
+				[58 FALL] => [7 FALL] delay = 1.3672, slope = 0.0001
+				[58 RISE] => [7 RISE] delay = 1.3672, slope = 0.0001
+				[59 FALL] => [8 FALL] delay = 1.3672, slope = 0.0001
+				[59 RISE] => [8 RISE] delay = 1.3672, slope = 0.0001
+				[60 FALL] => [9 FALL] delay = 1.3672, slope = 0.0001
+				[60 RISE] => [9 RISE] delay = 1.3672, slope = 0.0001
+				[61 FALL] => [10 FALL] delay = 1.3672, slope = 0.0001
+				[61 RISE] => [10 RISE] delay = 1.3672, slope = 0.0001
+				[62 FALL] => [11 FALL] delay = 1.3672, slope = 0.0001
+				[62 RISE] => [11 RISE] delay = 1.3672, slope = 0.0001
+				[63 FALL] => [12 FALL] delay = 1.3672, slope = 0.0001
+				[63 RISE] => [12 RISE] delay = 1.3672, slope = 0.0001
+				[64 FALL] => [13 FALL] delay = 1.3672, slope = 0.0001
+				[64 RISE] => [13 RISE] delay = 1.3672, slope = 0.0001
+				[65 FALL] => [14 FALL] delay = 1.3672, slope = 0.0001
+				[65 RISE] => [14 RISE] delay = 1.3672, slope = 0.0001
+				[66 FALL] => [15 FALL] delay = 1.3672, slope = 0.0001
+				[66 RISE] => [15 RISE] delay = 1.3672, slope = 0.0001
+				[67 CHANGE] => [0 CHANGE] delay = 1.0913, slope = 0.0001
+				[67 CHANGE] => [1 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [2 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [3 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [4 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [5 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [6 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [7 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [8 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [9 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [10 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [11 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [12 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [13 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [14 CHANGE] delay = 1.1734, slope = 0.0001
+				[67 CHANGE] => [15 CHANGE] delay = 1.1734, slope = 0.0001
+				[68 FALL] => [0 FALL] delay = 1.0386, slope = 0.0001
+				[68 RISE] => [0 RISE] delay = 1.0386, slope = 0.0001
+				[69 FALL] => [1 FALL] delay = 1.2029, slope = 0.0001
+				[69 RISE] => [1 RISE] delay = 1.2029, slope = 0.0001
+				[70 FALL] => [2 FALL] delay = 1.2029, slope = 0.0001
+				[70 RISE] => [2 RISE] delay = 1.2029, slope = 0.0001
+				[71 FALL] => [3 FALL] delay = 1.2029, slope = 0.0001
+				[71 RISE] => [3 RISE] delay = 1.2029, slope = 0.0001
+				[72 FALL] => [4 FALL] delay = 1.2029, slope = 0.0001
+				[72 RISE] => [4 RISE] delay = 1.2029, slope = 0.0001
+				[73 FALL] => [5 FALL] delay = 1.2029, slope = 0.0001
+				[73 RISE] => [5 RISE] delay = 1.2029, slope = 0.0001
+				[74 FALL] => [6 FALL] delay = 1.2029, slope = 0.0001
+				[74 RISE] => [6 RISE] delay = 1.2029, slope = 0.0001
+				[75 FALL] => [7 FALL] delay = 1.2029, slope = 0.0001
+				[75 RISE] => [7 RISE] delay = 1.2029, slope = 0.0001
+				[76 FALL] => [8 FALL] delay = 1.2029, slope = 0.0001
+				[76 RISE] => [8 RISE] delay = 1.2029, slope = 0.0001
+				[77 FALL] => [9 FALL] delay = 1.2029, slope = 0.0001
+				[77 RISE] => [9 RISE] delay = 1.2029, slope = 0.0001
+				[78 FALL] => [10 FALL] delay = 1.2029, slope = 0.0001
+				[78 RISE] => [10 RISE] delay = 1.2029, slope = 0.0001
+				[79 FALL] => [11 FALL] delay = 1.2029, slope = 0.0001
+				[79 RISE] => [11 RISE] delay = 1.2029, slope = 0.0001
+				[80 FALL] => [12 FALL] delay = 1.2029, slope = 0.0001
+				[80 RISE] => [12 RISE] delay = 1.2029, slope = 0.0001
+				[81 FALL] => [13 FALL] delay = 1.2029, slope = 0.0001
+				[81 RISE] => [13 RISE] delay = 1.2029, slope = 0.0001
+				[82 FALL] => [14 FALL] delay = 1.2029, slope = 0.0001
+				[82 RISE] => [14 RISE] delay = 1.2029, slope = 0.0001
+				[83 FALL] => [15 FALL] delay = 1.2029, slope = 0.0001
+				[83 RISE] => [15 RISE] delay = 1.2029, slope = 0.0001
+		Inst's props
+		Cell's props
+		View's props
+			o[0] OUT[0]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[0]	level=330
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.1834:0.0001 	fall=2002.1834:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[1] OUT[1]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[1]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[2] OUT[2]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[2]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[3] OUT[3]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[3]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[4] OUT[4]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[4]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[5] OUT[5]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[5]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[6] OUT[6]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[6]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[7] OUT[7]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[7]	level=350
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2002.3477:0.0001 	fall=2002.3477:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[8] OUT[8]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[8]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1987.6621:0.0001 	fall=1987.6621:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[9] OUT[9]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[9]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=460.9783:0.0001 	fall=460.9783:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[10] OUT[10]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[10]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1987.6921:0.0001 	fall=1987.6921:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[11] OUT[11]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[11]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=460.9783:0.0001 	fall=460.9783:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[12] OUT[12]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[12]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1987.2281:0.0001 	fall=1987.2281:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[13] OUT[13]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[13]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=459.5233:0.0001 	fall=459.5233:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[14] OUT[14]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[14]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=459.5233:0.0001 	fall=459.5233:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			o[15] OUT[15]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.data_out_left[15]	level=110
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=459.5233:0.0001 	fall=459.5233:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[16] D0[0] state=0x0	fpga_top_design_0.modulo_hamming.data_out_right6	level=50
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1.8943:0.0001 	fall=1.8943:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[17] D0[1] state=0x0	fpga_top_design_0.decoder_input[0]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1987.191:0.0001 	fall=1987.191:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[18] D0[2] state=0x0	fpga_top_design_0.decoder_input[1]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1987.196:0.0001 	fall=1987.196:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[19] D0[3] state=0x0	fpga_top_design_0.decoder_input[2]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1985.5527:0.0001 	fall=1985.5527:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[20] D0[4] state=0x0	fpga_top_design_0.decoder_input[3]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=6.4535:0.0001 	fall=6.4535:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[21] D0[5] state=0x0	fpga_top_design_0.decoder_input[4]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1986.6785:0.0001 	fall=1986.6785:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[22] D0[6] state=0x0	fpga_top_design_0.decoder_input[5]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=6.4735:0.0001 	fall=6.4735:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[23] D0[7] state=0x0	fpga_top_design_0.decoder_input[6]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=5.6974:0.0001 	fall=5.6974:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[24] D0[8] state=0x0	fpga_top_design_0.decoder_input[7]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=6.4635:0.0001 	fall=6.4635:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[25] D0[9] state=0x0	fpga_top_design_0.decoder_input[8]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1986.6235:0.0001 	fall=1986.6235:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[26] D0[10] state=0x0	fpga_top_design_0.decoder_input[9]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=459.9397:0.0001 	fall=459.9397:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[27] D0[11] state=0x0	fpga_top_design_0.decoder_input[10]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1986.6535:0.0001 	fall=1986.6535:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[28] D0[12] state=0x0	fpga_top_design_0.decoder_input[11]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=459.9397:0.0001 	fall=459.9397:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[29] D0[13] state=0x0	fpga_top_design_0.decoder_input[12]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1986.1895:0.0001 	fall=1986.1895:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[30] D0[14] state=0x0	fpga_top_design_0.decoder_input[13]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=458.4847:0.0001 	fall=458.4847:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[31] D0[15] state=0x0	fpga_top_design_0.decoder_input[14]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=458.4847:0.0001 	fall=458.4847:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[32] D0[16] state=0x0	fpga_top_design_0.decoder_input[15]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=458.4847:0.0001 	fall=458.4847:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[33] D1[0] state=0x0	fpga_top_design_0.modulo_hamming.data_out_right7	level=50
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1.8943:0.0001 	fall=1.8943:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[34] D1[1] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[2]	level=310
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2000.2417:0.0001 	fall=2000.2417:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[35] D1[2] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[4]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[36] D1[3] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[5]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[37] D1[4] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[6]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[38] D1[5] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[8]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[39] D1[6] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[9]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[40] D1[7] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[10]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[41] D1[8] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[11]	level=330
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1982:0.0001 	fall=2001.1982:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[42] D1[9] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[43] D1[10] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[44] D1[11] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[45] D1[12] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[46] D1[13] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[47] D1[14] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[48] D1[15] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[49] D1[16] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[50] D2[0] state=0x0	fpga_top_design_0.modulo_hamming.data_out_right8	level=50
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1.9243:0.0001 	fall=1.9243:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[51] D2[1] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[0]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[52] D2[2] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[1]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[53] D2[3] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[2]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[54] D2[4] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[3]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[55] D2[5] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[4]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[56] D2[6] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[5]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[57] D2[7] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[6]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[58] D2[8] state=0x0	fpga_top_design_0.modulo_hamming.decodificador2.signal[7]	level=210
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1993.9309:0.0001 	fall=1993.9309:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[59] D2[9] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[60] D2[10] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[61] D2[11] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[62] D2[12] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[63] D2[13] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[64] D2[14] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[65] D2[15] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[66] D2[16] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[67] D3[0] state=0x0	fpga_top_design_0.modulo_hamming.data_out_right9	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2.7111:0.0001 	fall=2.7111:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[68] D3[1] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[8]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[69] D3[2] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[9]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[70] D3[3] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[10]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[71] D3[4] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[11]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[72] D3[5] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[12]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[73] D3[6] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[13]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[74] D3[7] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[14]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[75] D3[8] state=0x0	fpga_top_design_0.modulo_hamming.decodificador3.V[15]	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.1448:0.0001 	fall=2001.1448:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[76] D3[9] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[77] D3[10] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[78] D3[11] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[79] D3[12] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[80] D3[13] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[81] D3[14] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[82] D3[15] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+			i[83] D3[16] state=0x0	fpga_top_design_0.modulo_hamming.GND	level=10
+fpga_top_design_0.modulo_hamming.decodificador.received_data[2]	Cell=mux Port=4 Model=prim level=300 state=0x4004000  
+			Model (MAX) for TAARC_ALWAYS_APPLY (generated):
+				[1 FALL] => [0 FALL] delay = 0.9565, slope = 0.0001
+				[1 RISE] => [0 RISE] delay = 0.9565, slope = 0.0001
+				[2 FALL] => [0 FALL] delay = 0.9565, slope = 0.0001
+				[2 RISE] => [0 RISE] delay = 0.9565, slope = 0.0001
+				[3 CHANGE] => [0 CHANGE] delay = 0.9565, slope = 0.0001
+		Inst's props
+		Cell's props
+		View's props
+			o[0] OUT[0]	0.000000 state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data[2]	level=310
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2000.2417:0.0001 	fall=2000.2417:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[1] A[0] state=0x0	fpga_top_design_0.decoder_input[2]	level=90
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1985.5527:0.0001 	fall=1985.5527:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[2] B[0] state=0x0	fpga_top_design_0.modulo_hamming.decodificador.un2_received_data	level=290
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1999.2852:0.0001 	fall=1999.2852:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[3] SEL state=0x0	fpga_top_design_0.modulo_hamming.decodificador.received_data_dec[2]	level=250
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1997.7195:0.0001 	fall=1997.7195:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+fpga_top_design_0.decoder_input[2]	Cell=tri Port=3 Model=prim level=80 state=0x4004000  
+			Model (MAX) for TAARC_ALWAYS_APPLY (generated):
+				[1 FALL] => [0 FALL] delay = 1.1, slope = 0.0001
+				[1 RISE] => [0 RISE] delay = 1.1, slope = 0.0001
+				[2 RISE] => [0 FALL] delay = 1.1, slope = 0.0001
+				[2 RISE] => [0 RISE] delay = 1.1, slope = 0.0001
+		Inst's props
+		Cell's props
+		View's props
+			o[0] OUT[0]	0.000000 state=0x0	fpga_top_design_0.decoder_input[2]	level=90
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1985.5527:0.0001 	fall=1985.5527:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[1] I[0] state=0x0	fpga_mem_io[2]	level=10
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1984.4527:0.0001 	fall=1984.4527:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+			i[2] E state=0x0	fpga_top_design_0.un15_mcu_fpga_io	level=70
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2.1113:0.0001 	fall=2.1113:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+
+End of Instances: 
+
+
+Bit Ports: 
+
+[b]	fpga_mem_io[2]
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=0.8:0.0001 	fall=0.8:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=1984.4527:0.0001 	fall=1984.4527:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+
+End of Bit Ports: 
+
+
+Instances list for Analyst x-probing: 
+
+select { fpga_mem_io[2] fpga_top_design_0.decoder_input[2] fpga_top_design_0.modulo_hamming.data_out_left[15:0] fpga_top_design_0.modulo_hamming.decodificador.received_data[2] }
+End of Instances list for Analyst x-probing: 
+

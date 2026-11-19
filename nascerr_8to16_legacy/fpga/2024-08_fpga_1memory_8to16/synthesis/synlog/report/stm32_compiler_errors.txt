@@ -1,0 +1,2 @@
+@E: CG749 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\fpga_top_design.sv":8:36:8:38|An inout port (clk) must be a net type
+

@@ -1,0 +1,13 @@
+Software Version: 2023.2.0.8
+Opened 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\designer\stm32\stm32_fp\stm32.pro'
+PDB file 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\designer\stm32\stm32.pdb' has been loaded successfully.
+DESIGN : stm32;  CHECKSUM : E58D;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+File/Folder 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\designer\stm32\stm32.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\designer\stm32\stm32.ppd'; file programs Fabric.
+Fabric component bitstream digest: b901cadfd9006a9aa6cd5cc0485ed4450bb8f547089130403657fec1082be1c1
+Entire bitstream digest: f8a6478479acd0b5908738fe1fb37c7f054c24b67025a050f5721f221563ed55
+Finished: Thu Jul 11 17:43:51 2024 (Elapsed time 00:00:05)
+
+Project saved.
+Project closed.

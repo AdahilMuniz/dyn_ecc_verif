@@ -1,0 +1,675 @@
+# Microchip I/O Physical Design Constraints file
+
+# User I/O Constraints file 
+
+# Version: 2024.1 2024.1.0.3
+
+# Family: SmartFusion2 , Die: M2S025T , Package: 256 VF
+
+# Date generated: Tue Oct 15 17:23:19 2024 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io LED1            \
+    -pinname F3        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io LED2            \
+    -pinname F4        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io MCU_A_0        \
+    -pinname T6       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_1        \
+    -pinname P6       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_10       \
+    -pinname M8       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_11       \
+    -pinname N8       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_12       \
+    -pinname R9       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_13       \
+    -pinname M16      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_14       \
+    -pinname N7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_15       \
+    -pinname P9       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_16       \
+    -pinname R12      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_17       \
+    -pinname M9       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_18       \
+    -pinname T9       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_19       \
+    -pinname G3       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_2        \
+    -pinname R6       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_20       \
+    -pinname G2       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_3        \
+    -pinname P7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_4        \
+    -pinname T8       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_5        \
+    -pinname T7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_6        \
+    -pinname R10      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_7        \
+    -pinname K16      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_8        \
+    -pinname L14      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_A_9        \
+    -pinname N10      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_CS         \
+    -pinname M7       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_LB         \
+    -pinname H3       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_OE         \
+    -pinname H4       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_UB         \
+    -pinname K15      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io MCU_WE         \
+    -pinname H5       \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io SRAM_A_0        \
+    -pinname C10       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_1        \
+    -pinname B8        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_10       \
+    -pinname C6        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_11       \
+    -pinname B7        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_12       \
+    -pinname B3        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_13       \
+    -pinname A3        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_14       \
+    -pinname A4        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_15       \
+    -pinname A5        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_16       \
+    -pinname B5        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_17       \
+    -pinname B6        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_18       \
+    -pinname A2        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_19       \
+    -pinname B2        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_2        \
+    -pinname A10       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_20       \
+    -pinname D2        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_3        \
+    -pinname A9        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_4        \
+    -pinname D8        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_5        \
+    -pinname D7        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_6        \
+    -pinname C9        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_7        \
+    -pinname C8        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_8        \
+    -pinname A8        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_A_9        \
+    -pinname A7        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_CS1        \
+    -pinname D1        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_CS2        \
+    -pinname F14       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_LB         \
+    -pinname C5        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_OE         \
+    -pinname C3        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_UB         \
+    -pinname C4        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io SRAM_WE         \
+    -pinname B1        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io ecc_sel0       \
+    -pinname J12      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io ecc_sel1       \
+    -pinname K12      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {mcu_fpga_io[0]}  \
+    -pinname M10         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[1]}  \
+    -pinname P8          \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[2]}  \
+    -pinname R8          \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[3]}  \
+    -pinname J5          \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[4]}  \
+    -pinname N16         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[5]}  \
+    -pinname R13         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[6]}  \
+    -pinname T13         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[7]}  \
+    -pinname N15         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[8]}  \
+    -pinname M15         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[9]}  \
+    -pinname P12         \
+    -fixed yes           \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[10]}  \
+    -pinname T12          \
+    -fixed yes            \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[11]}  \
+    -pinname N14          \
+    -fixed yes            \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[12]}  \
+    -pinname M13          \
+    -fixed yes            \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[13]}  \
+    -pinname L12          \
+    -fixed yes            \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[14]}  \
+    -pinname L11          \
+    -fixed yes            \
+    -DIRECTION INOUT
+
+
+set_io {mcu_fpga_io[15]}  \
+    -pinname T11          \
+    -fixed yes            \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[0]}  \
+    -pinname B15             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[1]}  \
+    -pinname C15             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[2]}  \
+    -pinname D13             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[3]}  \
+    -pinname D14             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[4]}  \
+    -pinname F15             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[5]}  \
+    -pinname E14             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[6]}  \
+    -pinname E15             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[7]}  \
+    -pinname F16             \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[8]}  \
+    -pinname D4              \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[9]}  \
+    -pinname D3              \
+    -fixed yes               \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[10]}  \
+    -pinname E16              \
+    -fixed yes                \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[11]}  \
+    -pinname D16              \
+    -fixed yes                \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[12]}  \
+    -pinname C16              \
+    -fixed yes                \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[13]}  \
+    -pinname B16              \
+    -fixed yes                \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[14]}  \
+    -pinname E12              \
+    -fixed yes                \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_down[15]}  \
+    -pinname E11              \
+    -fixed yes                \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[0]}  \
+    -pinname C14           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[1]}  \
+    -pinname B13           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[2]}  \
+    -pinname F13           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[3]}  \
+    -pinname C12           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[4]}  \
+    -pinname A15           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[5]}  \
+    -pinname A14           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[6]}  \
+    -pinname A13           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[7]}  \
+    -pinname A12           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[8]}  \
+    -pinname D11           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[9]}  \
+    -pinname E10           \
+    -fixed yes             \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[10]}  \
+    -pinname C11            \
+    -fixed yes              \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[11]}  \
+    -pinname B12            \
+    -fixed yes              \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[12]}  \
+    -pinname C1             \
+    -fixed yes              \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[13]}  \
+    -pinname E2             \
+    -fixed yes              \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[14]}  \
+    -pinname B10            \
+    -fixed yes              \
+    -DIRECTION INOUT
+
+
+set_io {mcu_mem_io_up[15]}  \
+    -pinname B11            \
+    -fixed yes              \
+    -DIRECTION INOUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+
+#
+#Ports using Dedicated Pins
+
+#
+

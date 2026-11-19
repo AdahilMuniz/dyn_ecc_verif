@@ -1,0 +1,492 @@
+# Microchip Physical design constraints file
+
+# Version: 2024.1 2024.1.0.3
+
+# Design Name: prj_2_memory_sb 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S025T , Package: 256 VF , Speed grade: STD 
+
+# Date generated: Tue Oct 15 17:24:25 2024 
+
+
+#
+# I/O constraints
+#
+
+set_io LED1 -DIRECTION OUTPUT -pinname F3 -fixed no
+set_io LED2 -DIRECTION OUTPUT -pinname F4 -fixed no
+set_io MCU_A_0 -DIRECTION INPUT -pinname T6 -fixed no
+set_io MCU_A_1 -DIRECTION INPUT -pinname P6 -fixed no
+set_io MCU_A_10 -DIRECTION INPUT -pinname M8 -fixed no
+set_io MCU_A_11 -DIRECTION INPUT -pinname N8 -fixed no
+set_io MCU_A_12 -DIRECTION INPUT -pinname R9 -fixed no
+set_io MCU_A_13 -DIRECTION INPUT -pinname M16 -fixed no
+set_io MCU_A_14 -DIRECTION INPUT -pinname N7 -fixed no
+set_io MCU_A_15 -DIRECTION INPUT -pinname P9 -fixed no
+set_io MCU_A_16 -DIRECTION INPUT -pinname R12 -fixed no
+set_io MCU_A_17 -DIRECTION INPUT -pinname M9 -fixed no
+set_io MCU_A_18 -DIRECTION INPUT -pinname T9 -fixed no
+set_io MCU_A_19 -DIRECTION INPUT -pinname G3 -fixed no
+set_io MCU_A_2 -DIRECTION INPUT -pinname R6 -fixed no
+set_io MCU_A_20 -DIRECTION INPUT -pinname G2 -fixed no
+set_io MCU_A_3 -DIRECTION INPUT -pinname P7 -fixed no
+set_io MCU_A_4 -DIRECTION INPUT -pinname T8 -fixed no
+set_io MCU_A_5 -DIRECTION INPUT -pinname T7 -fixed no
+set_io MCU_A_6 -DIRECTION INPUT -pinname R10 -fixed no
+set_io MCU_A_7 -DIRECTION INPUT -pinname K16 -fixed no
+set_io MCU_A_8 -DIRECTION INPUT -pinname L14 -fixed no
+set_io MCU_A_9 -DIRECTION INPUT -pinname N10 -fixed no
+set_io MCU_CS -DIRECTION INPUT -pinname M7 -fixed no
+set_io MCU_LB -DIRECTION INPUT -pinname H3 -fixed no
+set_io MCU_OE -DIRECTION INPUT -pinname H4 -fixed no
+set_io MCU_UB -DIRECTION INPUT -pinname K15 -fixed no
+set_io MCU_WE -DIRECTION INPUT -pinname H5 -fixed no
+set_io SRAM_A_0 -DIRECTION OUTPUT -pinname C10 -fixed no
+set_io SRAM_A_1 -DIRECTION OUTPUT -pinname B8 -fixed no
+set_io SRAM_A_10 -DIRECTION OUTPUT -pinname C6 -fixed no
+set_io SRAM_A_11 -DIRECTION OUTPUT -pinname B7 -fixed no
+set_io SRAM_A_12 -DIRECTION OUTPUT -pinname B3 -fixed no
+set_io SRAM_A_13 -DIRECTION OUTPUT -pinname A3 -fixed no
+set_io SRAM_A_14 -DIRECTION OUTPUT -pinname A4 -fixed no
+set_io SRAM_A_15 -DIRECTION OUTPUT -pinname A5 -fixed no
+set_io SRAM_A_16 -DIRECTION OUTPUT -pinname B5 -fixed no
+set_io SRAM_A_17 -DIRECTION OUTPUT -pinname B6 -fixed no
+set_io SRAM_A_18 -DIRECTION OUTPUT -pinname A2 -fixed no
+set_io SRAM_A_19 -DIRECTION OUTPUT -pinname B2 -fixed no
+set_io SRAM_A_2 -DIRECTION OUTPUT -pinname A10 -fixed no
+set_io SRAM_A_20 -DIRECTION OUTPUT -pinname D2 -fixed no
+set_io SRAM_A_3 -DIRECTION OUTPUT -pinname A9 -fixed no
+set_io SRAM_A_4 -DIRECTION OUTPUT -pinname D8 -fixed no
+set_io SRAM_A_5 -DIRECTION OUTPUT -pinname D7 -fixed no
+set_io SRAM_A_6 -DIRECTION OUTPUT -pinname C9 -fixed no
+set_io SRAM_A_7 -DIRECTION OUTPUT -pinname C8 -fixed no
+set_io SRAM_A_8 -DIRECTION OUTPUT -pinname A8 -fixed no
+set_io SRAM_A_9 -DIRECTION OUTPUT -pinname A7 -fixed no
+set_io SRAM_CS1 -DIRECTION OUTPUT -pinname D1 -fixed no
+set_io SRAM_CS2 -DIRECTION OUTPUT -pinname F14 -fixed no
+set_io SRAM_LB -DIRECTION OUTPUT -pinname C5 -fixed no
+set_io SRAM_OE -DIRECTION OUTPUT -pinname C3 -fixed no
+set_io SRAM_UB -DIRECTION OUTPUT -pinname C4 -fixed no
+set_io SRAM_WE -DIRECTION OUTPUT -pinname B1 -fixed no
+set_io ecc_sel0 -DIRECTION INPUT -pinname J12 -fixed no
+set_io ecc_sel1 -DIRECTION INPUT -pinname K12 -fixed no
+set_io mcu_fpga_io\[0\] -DIRECTION INOUT -pinname M10 -fixed no
+set_io mcu_fpga_io\[1\] -DIRECTION INOUT -pinname P8 -fixed no
+set_io mcu_fpga_io\[2\] -DIRECTION INOUT -pinname R8 -fixed no
+set_io mcu_fpga_io\[3\] -DIRECTION INOUT -pinname J5 -fixed no
+set_io mcu_fpga_io\[4\] -DIRECTION INOUT -pinname N16 -fixed no
+set_io mcu_fpga_io\[5\] -DIRECTION INOUT -pinname R13 -fixed no
+set_io mcu_fpga_io\[6\] -DIRECTION INOUT -pinname T13 -fixed no
+set_io mcu_fpga_io\[7\] -DIRECTION INOUT -pinname N15 -fixed no
+set_io mcu_fpga_io\[8\] -DIRECTION INOUT -pinname M15 -fixed no
+set_io mcu_fpga_io\[9\] -DIRECTION INOUT -pinname P12 -fixed no
+set_io mcu_fpga_io\[10\] -DIRECTION INOUT -pinname T12 -fixed no
+set_io mcu_fpga_io\[11\] -DIRECTION INOUT -pinname N14 -fixed no
+set_io mcu_fpga_io\[12\] -DIRECTION INOUT -pinname M13 -fixed no
+set_io mcu_fpga_io\[13\] -DIRECTION INOUT -pinname L12 -fixed no
+set_io mcu_fpga_io\[14\] -DIRECTION INOUT -pinname L11 -fixed no
+set_io mcu_fpga_io\[15\] -DIRECTION INOUT -pinname T11 -fixed no
+set_io mcu_mem_io_down\[0\] -DIRECTION INOUT -pinname B15 -fixed no
+set_io mcu_mem_io_down\[1\] -DIRECTION INOUT -pinname C15 -fixed no
+set_io mcu_mem_io_down\[2\] -DIRECTION INOUT -pinname D13 -fixed no
+set_io mcu_mem_io_down\[3\] -DIRECTION INOUT -pinname D14 -fixed no
+set_io mcu_mem_io_down\[4\] -DIRECTION INOUT -pinname F15 -fixed no
+set_io mcu_mem_io_down\[5\] -DIRECTION INOUT -pinname E14 -fixed no
+set_io mcu_mem_io_down\[6\] -DIRECTION INOUT -pinname E15 -fixed no
+set_io mcu_mem_io_down\[7\] -DIRECTION INOUT -pinname F16 -fixed no
+set_io mcu_mem_io_down\[8\] -DIRECTION INOUT -pinname D4 -fixed no
+set_io mcu_mem_io_down\[9\] -DIRECTION INOUT -pinname D3 -fixed no
+set_io mcu_mem_io_down\[10\] -DIRECTION INOUT -pinname E16 -fixed no
+set_io mcu_mem_io_down\[11\] -DIRECTION INOUT -pinname D16 -fixed no
+set_io mcu_mem_io_down\[12\] -DIRECTION INOUT -pinname C16 -fixed no
+set_io mcu_mem_io_down\[13\] -DIRECTION INOUT -pinname B16 -fixed no
+set_io mcu_mem_io_down\[14\] -DIRECTION INOUT -pinname E12 -fixed no
+set_io mcu_mem_io_down\[15\] -DIRECTION INOUT -pinname E11 -fixed no
+set_io mcu_mem_io_up\[0\] -DIRECTION INOUT -pinname C14 -fixed no
+set_io mcu_mem_io_up\[1\] -DIRECTION INOUT -pinname B13 -fixed no
+set_io mcu_mem_io_up\[2\] -DIRECTION INOUT -pinname F13 -fixed no
+set_io mcu_mem_io_up\[3\] -DIRECTION INOUT -pinname C12 -fixed no
+set_io mcu_mem_io_up\[4\] -DIRECTION INOUT -pinname A15 -fixed no
+set_io mcu_mem_io_up\[5\] -DIRECTION INOUT -pinname A14 -fixed no
+set_io mcu_mem_io_up\[6\] -DIRECTION INOUT -pinname A13 -fixed no
+set_io mcu_mem_io_up\[7\] -DIRECTION INOUT -pinname A12 -fixed no
+set_io mcu_mem_io_up\[8\] -DIRECTION INOUT -pinname D11 -fixed no
+set_io mcu_mem_io_up\[9\] -DIRECTION INOUT -pinname E10 -fixed no
+set_io mcu_mem_io_up\[10\] -DIRECTION INOUT -pinname C11 -fixed no
+set_io mcu_mem_io_up\[11\] -DIRECTION INOUT -pinname B12 -fixed no
+set_io mcu_mem_io_up\[12\] -DIRECTION INOUT -pinname C1 -fixed no
+set_io mcu_mem_io_up\[13\] -DIRECTION INOUT -pinname E2 -fixed no
+set_io mcu_mem_io_up\[14\] -DIRECTION INOUT -pinname B10 -fixed no
+set_io mcu_mem_io_up\[15\] -DIRECTION INOUT -pinname B11 -fixed no
+
+#
+# Core cell constraints
+#
+
+set_location fpga_top_design_0/modulo/data_out_left_iv_N_6L11_0 -fixed no 479 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_sx_RNO\[5\] -fixed no 502 120
+set_location fpga_top_design_0/modulo/g0_4 -fixed no 489 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1_0\[14\] -fixed no 437 123
+set_location fpga_top_design_0/modulo/decodificador1/g0_7 -fixed no 491 129
+set_location fpga_top_design_0/modulo/decodificador1/CO0_0 -fixed no 466 123
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[0\] -fixed no 514 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[1\] -fixed no 491 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9_0 -fixed no 482 126
+set_location fpga_top_design_0/modulo/decodificador2/SP_0_a2\[3\] -fixed no 477 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a2_0\[10\] -fixed no 479 126
+set_location fpga_top_design_0/modulo/decodificador1/b34 -fixed no 503 123
+set_location fpga_top_design_0/modulo/decodificador1/N_8_1.g0 -fixed no 467 120
+set_location fpga_top_design_0/modulo/data_out_right_up\[6\] -fixed no 511 127
+set_location fpga_top_design_0/modulo/data_out_left_iv_a0_0\[9\] -fixed no 501 120
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[7\] -fixed no 508 126
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[4\] -fixed no 513 126
+set_location fpga_top_design_0/modulo/decodificador2/signal\[0\]_2_sqmuxa_0 -fixed no 459 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_RNO\[6\] -fixed no 503 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1\[13\] -fixed no 501 123
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_2_RNO -fixed no 465 123
+set_location fpga_top_design_0/modulo/decodificador1/signal\[0\]_RNI9F16PH\[2\] -fixed no 501 126
+set_location fpga_top_design_0/modulo/decodificador1/b33_1.CO2_1 -fixed no 463 117
+set_location fpga_top_design_0/modulo/decodificador1/N_23_1.SUM_4_i\[0\] -fixed no 477 123
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[3\] -fixed no 504 126
+set_location fpga_top_design_0/modulo/decodificador2/b33_1.CO2_1_tz_0 -fixed no 443 120
+set_location fpga_top_design_0/modulo/data_out_right_down_1_1_1\[4\] -fixed no 518 123
+set_location fpga_top_design_0/modulo/data_out_right_up\[2\] -fixed no 504 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_1\[10\] -fixed no 471 126
+set_location fpga_top_design_0/modulo/decodificador1/b33_1.CO2_1_tz_0 -fixed no 462 117
+set_location fpga_top_design_0/modulo/decodificador2/quad117_N_3_mux_i_1 -fixed no 491 132
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_2 -fixed no 456 126
+set_location fpga_top_design_0/modulo/decodificador1/SDi_2_0_a4_RNI1FL8A1\[0\] -fixed no 466 120
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNI7SRM3_0 -fixed no 293 72
+set_location fpga_top_design_0/modulo/data_out_right_up7_inferred_clock_RNI6DIC_0/U0_RGB1 -fixed no 446 126
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0_RNIE52T9D -fixed no 503 129
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[15\] -fixed no 513 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_2_1\[1\] -fixed no 502 123
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1_RNI4LSUTM -fixed no 491 120
+set_location fpga_top_design_0/modulo/data_out_right_down\[1\] -fixed no 506 127
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO_0\[1\] -fixed no 512 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_RNO_1\[5\] -fixed no 489 126
+set_location fpga_top_design_0/mcu_fpga_io_1_RNITKO18 -fixed no 479 129
+set_location fpga_top_design_0/modulo/data_out_right_down\[6\] -fixed no 527 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[8\] -fixed no 502 129
+set_location fpga_top_design_0/modulo/decodificador2/b32_1.CO2_tz_0 -fixed no 442 120
+set_location fpga_top_design_0/modulo/decodificador2/N_8_1.CO0 -fixed no 465 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_a0_0\[5\] -fixed no 494 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_0\[8\] -fixed no 501 129
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_1.SUM_0_a4_2_1\[0\] -fixed no 490 132
+set_location fpga_top_design_0/modulo/data_out_right_down\[4\] -fixed no 521 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_RNO_1\[15\] -fixed no 482 117
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIB3088 -fixed no 474 129
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNIB8KI4O -fixed no 490 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1\[6\] -fixed no 499 126
+set_location flash_freeze_inst/INST_FLASH_FREEZE_IP -fixed no 624 8
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9_N_6L11_RNO -fixed no 483 126
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNISILKJ -fixed no 489 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_3_1\[9\] -fixed no 461 126
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0_RNITRKNK6 -fixed no 489 132
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2 -fixed no 488 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[9\] -fixed no 500 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a1_0_RNIVQ5PK\[10\] -fixed no 458 126
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1_RNIFCA8MN -fixed no 488 120
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_m2_1 -fixed no 487 132
+set_location fpga_top_design_0/modulo/decodificador1/SDi_4_0_a4_1\[2\] -fixed no 465 129
+set_location fpga_top_design_0/modulo/decodificador1/SDi_0_a4_1\[3\] -fixed no 442 126
+set_location fpga_top_design_0/modulo/data_out_right_down\[3\] -fixed no 511 121
+set_location fpga_top_design_0/modulo/data_out_right_up\[14\] -fixed no 505 124
+set_location fpga_top_design_0/modulo/data_m2_e_0_0 -fixed no 495 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_RNO_0\[6\] -fixed no 498 126
+set_location fpga_top_design_0/modulo/data_out_left_iv\[8\] -fixed no 500 129
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1_RNIUQ22MN -fixed no 487 120
+set_location fpga_top_design_0/modulo/decodificador1/g0_3 -fixed no 441 120
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNIOELKJ -fixed no 485 126
+set_location fpga_top_design_0/modulo/decodificador2/un1_SDi_3_RNIKLUSCH -fixed no 442 123
+set_location fpga_top_design_0/modulo/decodificador1/un1_SP_3 -fixed no 464 123
+set_location fpga_top_design_0/modulo/decodificador2/SP_2_0_a4_1\[0\] -fixed no 475 120
+set_location fpga_top_design_0/modulo/decodificador1/SDi_4_0_a4\[2\] -fixed no 467 129
+set_location fpga_top_design_0/modulo/decodificador1/SDi_4_0_a4_0\[2\] -fixed no 458 129
+set_location fpga_top_design_0/modulo/data_out_right_up\[12\] -fixed no 509 127
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[3\]_i\[0\] -fixed no 478 132
+set_location fpga_top_design_0/modulo/decodificador1/SDi_2_0_a4\[0\] -fixed no 472 129
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[13\] -fixed no 514 126
+set_location fpga_top_design_0/modulo/decodificador1/_l1.signal\[1\]_6_i_o4\[2\] -fixed no 484 129
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[3\] -fixed no 511 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_a0_0\[1\] -fixed no 482 123
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_1.SUM_0_a4_1_0_x\[0\] -fixed no 486 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_0\[0\] -fixed no 473 123
+set_location fpga_top_design_0/modulo/decodificador1/b33_1.ANB0_N_2L1 -fixed no 438 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_3L3 -fixed no 468 126
+set_location fpga_top_design_0/modulo/decodificador2/N_1_1.SUM_3\[0\] -fixed no 440 126
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1_RNI6SAJ9A -fixed no 493 129
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[9\] -fixed no 505 126
+set_location fpga_top_design_0/modulo/data_out_right_down\[14\] -fixed no 507 127
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a1_0_RNIRMKOHI\[10\] -fixed no 487 126
+set_location fpga_top_design_0/modulo/codificador1/Di\[1\]_1 -fixed no 519 123
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_3_RNIUJ25DF -fixed no 500 126
+set_location fpga_top_design_0/mcu_fpga_io_1 -fixed no 207 129
+set_location fpga_top_design_0/modulo/decodificador1/N_15_1.SUM_0_a2_0\[0\] -fixed no 483 129
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_2_1_N_2L1 -fixed no 457 126
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a4_RNILUPS01\[2\] -fixed no 439 126
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.SUM_0_a2\[0\] -fixed no 490 129
+set_location fpga_top_design_0/modulo/decodificador2/SP_2_0_a4\[0\] -fixed no 470 120
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[1\] -fixed no 515 126
+set_location fpga_top_design_0/modulo/data_out_right_up\[0\] -fixed no 510 124
+set_location fpga_top_design_0/modulo/decodificador1/_l3.signal\[3\]_6_i_o4\[2\] -fixed no 434 123
+set_location fpga_top_design_0/modulo/data_out_right_up\[3\] -fixed no 504 127
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[11\] -fixed no 505 120
+set_location fpga_top_design_0/modulo/decodificador1/N_21_1.SUM_0_a2\[0\] -fixed no 473 132
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_m5_i_x2 -fixed no 476 132
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1_RNI0G6UV9 -fixed no 497 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_2L1 -fixed no 481 126
+set_location fpga_top_design_0/modulo/data_out_right_up\[11\] -fixed no 509 124
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[8\] -fixed no 515 123
+set_location fpga_top_design_0/modulo/data_out_right_up7_inferred_clock_RNIQ59QDA -fixed no 496 126
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIF86G -fixed no 498 120
+set_location fpga_top_design_0/modulo/data_out_right_down_1_1\[6\] -fixed no 526 123
+set_location fpga_top_design_0/modulo/decodificador1/_l0.signal\[0\]_6_i\[2\] -fixed no 475 129
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1_RNINN2GQ6 -fixed no 482 120
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a4_RNISPRDU3\[2\] -fixed no 440 120
+set_location fpga_top_design_0/modulo/decodificador1/signal\[3\]_0_iv_0_tz_0\[1\] -fixed no 494 126
+set_location fpga_top_design_0/modulo/decodificador1/SDi_0_a4_1_0\[3\] -fixed no 464 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1\[1\] -fixed no 499 123
+set_location fpga_top_design_0/modulo/data_out_right_down\[8\] -fixed no 511 124
+set_location fpga_top_design_0/modulo/decodificador1/SDi_2_0_a4_RNIENN206\[0\] -fixed no 461 117
+set_location fpga_top_design_0/modulo/data_out_right_up\[7\] -fixed no 508 127
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9_N_5L9 -fixed no 475 123
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.SUM_0_a4_1\[0\] -fixed no 489 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[0\] -fixed no 498 129
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[1\] -fixed no 506 126
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_m2_0 -fixed no 488 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_6L10 -fixed no 433 123
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[12\] -fixed no 516 123
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0_RNIVS2CKD -fixed no 488 117
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_2 -fixed no 463 123
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0_1_0 -fixed no 481 129
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[3\]_i\[1\] -fixed no 475 132
+set_location fpga_top_design_0/modulo/decodificador2/signal\[0\]_0_iv_0_tz\[1\] -fixed no 489 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_s_a1_0\[14\] -fixed no 438 123
+set_location fpga_top_design_0/modulo/data_out_right_down\[11\] -fixed no 505 121
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a1_0_0\[10\] -fixed no 475 126
+set_location fpga_top_design_0/modulo/decodificador1/SUM_0_0_a2_1\[0\] -fixed no 443 126
+set_location fpga_top_design_0/modulo/codificador1/P\[3\] -fixed no 506 120
+set_location fpga_top_design_0/modulo/decodificador1/g0_5 -fixed no 464 120
+set_location fpga_top_design_0/modulo/decodificador1/SDi_2_0_a4_RNIJ49N75\[0\] -fixed no 460 117
+set_location fpga_top_design_0/modulo/data_out_right_down\[12\] -fixed no 516 124
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_3_RNI50U1P6 -fixed no 502 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_N_5L9 -fixed no 477 117
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[2\]_i_s\[0\] -fixed no 471 129
+set_location fpga_top_design_0/modulo/codificador1/Di\[0\]_0 -fixed no 508 123
+set_location fpga_top_design_0/modulo/decodificador1/quad117_1 -fixed no 478 126
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[1\]_i\[0\] -fixed no 487 129
+set_location fpga_top_design_0/modulo/codificador2/P\[3\] -fixed no 512 120
+set_location fpga_top_design_0/modulo/decodificador1/SP_0_a2\[3\] -fixed no 479 132
+set_location fpga_top_design_0/modulo/decodificador1/un2_1.CO3_0 -fixed no 486 129
+set_location fpga_top_design_0/modulo/decodificador1/signal\[3\]_0_iv_0_tz_0_RNIF9PDVI\[1\] -fixed no 488 126
+set_location fpga_top_design_0/modulo/decodificador2/b33_1.CO2_1 -fixed no 438 120
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_1_N_2L1 -fixed no 474 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_0_RNO\[6\] -fixed no 473 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1_RNISFP4I41\[13\] -fixed no 461 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_1\[9\] -fixed no 494 123
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[11\] -fixed no 509 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a0_0_0\[10\] -fixed no 473 126
+set_location fpga_top_design_0/modulo/decodificador2/un1_SDi_3 -fixed no 466 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1_0\[5\] -fixed no 490 126
+set_location fpga_top_design_0/modulo/data_out_right_up\[5\] -fixed no 507 124
+set_location fpga_top_design_0/modulo/decodificador1/b32_1.CO2_1 -fixed no 459 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_RNO\[6\] -fixed no 470 123
+set_location ip_interface_inst -fixed no 203 0
+set_location fpga_top_design_0/modulo/decodificador1/_l0.signal\[0\]_6_i_RNI0BDH77\[2\] -fixed no 470 126
+set_location fpga_top_design_0/modulo/decodificador1/N_23_1.SUM_1_i\[0\] -fixed no 478 129
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[0\]_i\[0\] -fixed no 496 129
+set_location fpga_top_design_0/modulo/data_out_right_up\[4\] -fixed no 513 127
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIVMO18 -fixed no 494 129
+set_location fpga_top_design_0/modulo/decodificador2/SP_2_0_a4_RNIQ36BK\[0\] -fixed no 439 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_N_5L9_0 -fixed no 476 117
+set_location fpga_top_design_0/modulo/data_out_right_down_1\[5\] -fixed no 507 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1_0\[1\] -fixed no 491 126
+set_location fpga_top_design_0/modulo/decodificador2/signal\[0\]_0\[2\] -fixed no 464 126
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[13\] -fixed no 510 126
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0_RNI6QQ6VC -fixed no 495 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_3L4_0 -fixed no 472 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a0_0\[10\] -fixed no 467 117
+set_location fpga_top_design_0/modulo/decodificador2/g2 -fixed no 462 123
+set_location fpga_top_design_0/modulo/decodificador1/N_8_1.g0_1 -fixed no 457 120
+set_location fpga_top_design_0/modulo/data_out_right_up7_inferred_clock_RNI6DIC -fixed no 510 123
+set_location fpga_top_design_0/modulo/data_out_right_up\[13\] -fixed no 514 127
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_1_N_3L3 -fixed no 485 132
+set_location fpga_top_design_0/modulo/decodificador1/N_1_1.SUM_0_a2\[0\] -fixed no 467 123
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[2\]_i\[0\] -fixed no 476 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_4L6_0 -fixed no 497 123
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNI4RLKJ -fixed no 480 120
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[9\] -fixed no 517 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_RNO\[5\] -fixed no 488 123
+set_location fpga_top_design_0/modulo/decodificador2/SP_0_a4_1_0\[3\] -fixed no 473 129
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_1.SUM_0_a4_2\[0\] -fixed no 484 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_7L13 -fixed no 487 123
+set_location fpga_top_design_0/modulo/decodificador2/SP_3_0_a4\[1\] -fixed no 463 120
+set_location fpga_top_design_0/modulo/decodificador1/g0_N_2L1 -fixed no 462 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_3_1_sx\[9\] -fixed no 460 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_4L6_1 -fixed no 474 123
+set_location fpga_top_design_0/modulo/data_out_right_up8 -fixed no 499 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_RNO\[15\] -fixed no 487 117
+set_location fpga_top_design_0/modulo/decodificador1/_l0.signal\[0\]_3_i\[0\] -fixed no 499 129
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_2_1_N_2L1_sx -fixed no 470 129
+set_location fpga_top_design_0/modulo/decodificador1/N_21_1.SUM_1_i\[0\] -fixed no 474 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_RNO_0\[6\] -fixed no 479 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1_0\[9\] -fixed no 480 126
+set_location fpga_top_design_0/modulo/decodificador1/_l1.signal\[1\]_6_i_o4_RNI4SM2SN\[3\] -fixed no 484 120
+set_location fpga_top_design_0/modulo/decodificador2/b33_1.CO1_0_tz -fixed no 437 120
+set_location fpga_top_design_0/modulo/decodificador1/SDi_0_a4_0\[3\] -fixed no 463 129
+set_location fpga_top_design_0/modulo/decodificador1/b32_1.CO2_1_tz_0 -fixed no 458 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_1\[15\] -fixed no 480 117
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_1_0_1 -fixed no 483 132
+set_location fpga_top_design_0/modulo/decodificador1/g0_2_N_2L1 -fixed no 472 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_N_4L7 -fixed no 469 123
+set_location fpga_top_design_0/modulo/codificador1/P\[0\] -fixed no 523 123
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI91088 -fixed no 485 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a1_0_RNISN5PK\[10\] -fixed no 476 123
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[0\]_i\[1\] -fixed no 482 129
+set_location fpga_top_design_0/modulo/data_out_right_up\[9\] -fixed no 505 127
+set_location fpga_top_design_0/modulo/data_out_left_iv\[4\] -fixed no 474 117
+set_location fpga_top_design_0/modulo/decodificador1/g0_1 -fixed no 461 120
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a4_RNI17D263\[2\] -fixed no 436 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_1\[6\] -fixed no 493 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_RNO_0\[15\] -fixed no 481 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_1_1\[14\] -fixed no 440 123
+set_location fpga_top_design_0/modulo/decodificador1/g1_0 -fixed no 460 120
+set_location fpga_top_design_0/modulo/data_out_left_iv\[10\] -fixed no 476 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_4L5 -fixed no 472 126
+set_location fpga_top_design_0/modulo/decodificador1/g0_6 -fixed no 478 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_3L4 -fixed no 497 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a0_0_RNIOEFUK\[10\] -fixed no 497 129
+set_location fpga_top_design_0/modulo/decodificador1/N_1_1.CO0 -fixed no 462 129
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[14\] -fixed no 507 126
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNIU9RHBO -fixed no 483 120
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a4\[2\] -fixed no 437 126
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a2\[2\] -fixed no 461 129
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNINJND5 -fixed no 484 126
+set_location fpga_top_design_0/modulo/data_out_right_down\[0\] -fixed no 514 124
+set_location fpga_top_design_0/modulo/decodificador1/_l3.signal\[3\]_6_i\[3\] -fixed no 483 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1_0\[13\] -fixed no 486 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9_N_7L13 -fixed no 486 123
+set_location fpga_top_design_0/modulo/decodificador1/_l1.signal\[1\]_6_i_o4_RNIDM5P6N\[3\] -fixed no 486 120
+set_location fpga_top_design_0/modulo/data_out_right_down\[9\] -fixed no 517 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_5L8_0 -fixed no 473 117
+set_location fpga_top_design_0/modulo/data_out_left_iv\[0\] -fixed no 493 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_RNO_0\[5\] -fixed no 485 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_s_a2_0\[14\] -fixed no 436 123
+set_location fpga_top_design_0/modulo/decodificador1/N_1_1.SUM_0_a2_1\[0\] -fixed no 462 126
+set_location fpga_top_design_0/modulo/data_out_right_down_1\[6\] -fixed no 527 123
+set_location fpga_top_design_0/modulo/decodificador1/N_21_1.SUM_0_a4_1\[0\] -fixed no 471 132
+set_location fpga_top_design_0/modulo/decodificador2/signal\[0\]_0_RNIVV70701\[2\] -fixed no 474 126
+set_location fpga_top_design_0/modulo/decodificador1/b33_1.ANB0 -fixed no 435 120
+set_location fpga_top_design_0/modulo/decodificador1/linsin\[2\]_i\[1\] -fixed no 470 132
+set_location fpga_top_design_0/modulo/decodificador1/SDi_3_0_a4\[1\] -fixed no 472 123
+set_location fpga_top_design_0/modulo/data_out_right_down\[15\] -fixed no 513 124
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0_1 -fixed no 463 126
+set_location fpga_top_design_0/modulo/decodificador1/N_1_1.CO0_1 -fixed no 460 129
+set_location fpga_top_design_0/modulo/decodificador1/g0_2 -fixed no 469 132
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_6L11 -fixed no 496 123
+set_location fpga_top_design_0/modulo/decodificador2/un1_SDi_3_RNIROCKHH -fixed no 484 123
+set_location fpga_top_design_0/modulo/decodificador2/SP_0_a4\[3\] -fixed no 477 129
+set_location fpga_top_design_0/modulo/decodificador2/quad117_m1_e_0 -fixed no 467 126
+set_location fpga_top_design_0/modulo/decodificador1/b32_1.CO1_0_tz -fixed no 457 117
+set_location fpga_top_design_0/modulo/data_out_left_iv_RNO\[6\] -fixed no 490 123
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_2_1 -fixed no 460 123
+set_location fpga_top_design_0/modulo/data_out_right_up7_inferred_clock_RNI6DIC_0 -fixed no 297 72
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a4_1\[2\] -fixed no 436 126
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[10\] -fixed no 522 123
+set_location fpga_top_design_0/modulo/codificador2/P\[2\] -fixed no 515 120
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_0_tz -fixed no 459 123
+set_location fpga_top_design_0/modulo/decodificador2/N_1_1.SUM_0\[0\] -fixed no 435 126
+set_location fpga_top_design_0/modulo/data_out_right_down\[5\] -fixed no 507 121
+set_location fpga_top_design_0/modulo/data_out_right_down_1\[4\] -fixed no 521 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_3L4_RNO -fixed no 500 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_2_1\[5\] -fixed no 495 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_sx\[5\] -fixed no 503 120
+set_location fpga_top_design_0/modulo/data_out_right_up7 -fixed no 492 120
+set_location fpga_top_design_0/modulo/decodificador2/N_1_1.CO0_N_2L1 -fixed no 459 129
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO_0\[3\] -fixed no 508 120
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_1.SUM_0_a4_1_0_1\[0\] -fixed no 485 129
+set_location fpga_top_design_0/mcu_fpga_io_1_RNISJO18 -fixed no 472 117
+set_location fpga_top_design_0/modulo/decodificador1/g0_8 -fixed no 479 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_0\[6\] -fixed no 471 120
+set_location fpga_top_design_0/modulo/data_out_right_up\[10\] -fixed no 506 124
+set_location fpga_top_design_0/modulo/decodificador1/b33_1.CO1_0_tz -fixed no 456 117
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[14\] -fixed no 505 123
+set_location fpga_top_design_0/modulo/decodificador1/N_8_1.g0_0 -fixed no 459 120
+set_location fpga_top_design_0/modulo/decodificador1/g0_4 -fixed no 458 120
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[6\] -fixed no 511 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[5\] -fixed no 496 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[6\] -fixed no 493 123
+set_location fpga_top_design_0/modulo/data_out_right_up\[1\] -fixed no 515 127
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a1_0_RNIPJQG97\[10\] -fixed no 443 123
+set_location fpga_top_design_0/modulo/decodificador1/un1_SP_3_1_0 -fixed no 458 123
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNI7SRM3 -fixed no 486 126
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNI7SRM3_0/U0_RGB1 -fixed no 447 126
+set_location fpga_top_design_0/modulo/decodificador1/SDi_3_0_a4_1_0\[1\] -fixed no 476 120
+set_location fpga_top_design_0/modulo/decodificador2/b32_1.CO2 -fixed no 434 120
+set_location fpga_top_design_0/modulo/data_out_right_down\[13\] -fixed no 510 127
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[14\] -fixed no 435 123
+set_location fpga_top_design_0/modulo/decodificador2/b32_1.CO1_0_tz -fixed no 433 120
+set_location fpga_top_design_0/modulo/decodificador2/SP_4_0_a4_1_0\[2\] -fixed no 434 126
+set_location fpga_top_design_0/modulo/decodificador2/N_1_1.SUM_2\[0\] -fixed no 432 126
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L8 -fixed no 439 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_a0_0\[14\] -fixed no 441 123
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[8\] -fixed no 511 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_a1_0\[10\] -fixed no 506 123
+set_location fpga_top_design_0/modulo/decodificador1/SP_0_a4\[3\] -fixed no 456 129
+set_location fpga_top_design_0/modulo/data_out_right_up\[15\] -fixed no 508 124
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[2\] -fixed no 504 123
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_1_0 -fixed no 482 132
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_6_2_RNO_0 -fixed no 457 123
+set_location fpga_top_design_0/modulo/decodificador1/SDi_2_0_a4_1_0\[0\] -fixed no 469 129
+set_location fpga_top_design_0/modulo/decodificador1/_l0.signal\[0\]_3_i_RNIUG3TU9\[0\] -fixed no 492 129
+set_location fpga_top_design_0/modulo/data_out_right_down_1_N_2L1 -fixed no 510 120
+set_location fpga_top_design_0/modulo/decodificador1/SDi_2_0_a4_1\[0\] -fixed no 468 129
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIULO18 -fixed no 477 120
+set_location fpga_top_design_0/modulo/data_out_right_down_RNO\[2\] -fixed no 512 123
+set_location fpga_top_design_0/modulo/decodificador1/N_1_1.SUM_0_a4_0\[0\] -fixed no 456 123
+set_location fpga_top_design_0/modulo/data_out_right_down\[10\] -fixed no 522 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9_N_6L11 -fixed no 483 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_RNO_2\[15\] -fixed no 491 117
+set_location fpga_top_design_0/modulo/data_out_right_down_1_1\[5\] -fixed no 514 120
+set_location fpga_top_design_0/modulo/data_out_left_iv\[15\] -fixed no 484 117
+set_location fpga_top_design_0/modulo/data_out_right_down\[7\] -fixed no 504 121
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9_N_3L3 -fixed no 485 120
+set_location fpga_top_design_0/modulo/decodificador2/N_1_1.CO0 -fixed no 457 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_3L3 -fixed no 481 123
+set_location fpga_top_design_0/modulo/decodificador1/_l1.signal\[1\]_6_i_o4\[3\] -fixed no 481 120
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.CO2_1 -fixed no 481 132
+set_location fpga_top_design_0/modulo/decodificador1/SUM_0_0_a2\[0\] -fixed no 441 126
+set_location fpga_top_design_0/modulo/data_out_right_up_RNO\[12\] -fixed no 509 126
+set_location fpga_top_design_0/modulo/decodificador1/b32_1.ANB0 -fixed no 432 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_1\[14\] -fixed no 432 123
+set_location fpga_top_design_0/modulo/data_out_left_iv\[12\] -fixed no 475 117
+set_location fpga_top_design_0/modulo/decodificador1/SDi_0_a4\[3\] -fixed no 466 129
+set_location fpga_top_design_0/modulo/data_out_left_iv_0\[10\] -fixed no 469 126
+set_location fpga_top_design_0/modulo/decodificador1/un1_SDi_3 -fixed no 465 120
+set_location fpga_top_design_0/modulo/data_out_right_down_1_1\[4\] -fixed no 524 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_N_4L7_0 -fixed no 469 120
+set_location fpga_top_design_0/modulo/data_out_left_iv\[6\] -fixed no 495 120
+set_location fpga_top_design_0/modulo/data_out_left_iv_a1\[5\] -fixed no 492 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_5L8 -fixed no 469 117
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_1.SUM_0_a4_1_0\[0\] -fixed no 480 132
+set_location fpga_top_design_0/modulo/codificador1/P\[1\] -fixed no 525 123
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNIQ2MRC -fixed no 478 120
+set_location fpga_top_design_0/modulo/codificador2/P\[1\] -fixed no 520 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_1_N_3L4 -fixed no 471 123
+set_location fpga_top_design_0/modulo/data_out_left_iv_N_6L11 -fixed no 468 117
+set_location fpga_top_design_0/modulo/data_out_right_down\[2\] -fixed no 512 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_5L9 -fixed no 480 123
+set_location fpga_top_design_0/modulo/decodificador1/un2_6_2.SUM_0_a4_0\[0\] -fixed no 480 129
+set_location fpga_top_design_0/modulo/data_out_right_up\[8\] -fixed no 515 124
+set_location fpga_top_design_0/modulo/data_out_left_iv_0_N_2L1 -fixed no 468 123
+set_location fpga_top_design_0/modulo/decodificador1/SUM_3_a2_1\[0\] -fixed no 456 120
+set_location fpga_top_design_0/modulo/decodificador1/signal\[0\]\[2\] -fixed no 492 126
+set_location fpga_top_design_0/modulo/decodificador2/signal\[0\]_0_RNIP94HH\[2\] -fixed no 477 126
+set_location fpga_top_design_0/modulo/decodificador2/SP_3_0_a2\[1\] -fixed no 468 132
+set_location fpga_top_design_0/modulo/data_out_right_down_1\[7\] -fixed no 504 120
+set_location fpga_top_design_0/modulo/data_out_right_up7_inferred_clock_RNI6DIC_0/U0_RGB1_RGB0 -fixed no 446 123
+set_location fpga_top_design_0/modulo/data_out_right_up7_inferred_clock_RNI6DIC_0/U0_RGB1_RGB1 -fixed no 446 120
+set_location fpga_top_design_0/modulo/data_out_right_up8_inferred_clock_RNI7SRM3_0/U0_RGB1_RGB0 -fixed no 447 123

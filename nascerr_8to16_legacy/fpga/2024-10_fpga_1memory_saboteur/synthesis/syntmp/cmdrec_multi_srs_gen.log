@@ -1,0 +1,7 @@
+D:\Microchip\Libero_SoC_v2024.1\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  stm32  -multisrs  "C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.srs"  -osyn  "C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\synthesis\synwork\stm32_mult.srs"  -log  "C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\synthesis\synlog\stm32_multi_srs_gen.srr" 
+relcom:D:\Microchip\Libero_SoC_v2024.1\SynplifyPro\bin64\syn_nfilter.exe -link -top stm32 -multisrs "C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.srs" -osyn "C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\synthesis\synwork\stm32_mult.srs" -log "C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\synthesis\synlog\stm32_multi_srs_gen.srr"
+rc:0 success:1 runtime:0
+file:..\synwork\stm32_comp.srs|io:i|time:1729264285|size:17345|exec:0|csum:74EC00F3E50A57618D7E800C383F5551
+file:..\synwork\stm32_mult.srs|io:o|time:1729264287|size:4078|exec:0|csum:
+file:..\synlog\stm32_multi_srs_gen.srr|io:o|time:1729264287|size:1274|exec:0|csum:
+file:d:\microchip\libero_soc_v2024.1\synplifypro\bin64\syn_nfilter.exe|io:i|time:1704385664|size:10549248|exec:1|csum:0A08FED8FB1594556EFD70D403F152B0

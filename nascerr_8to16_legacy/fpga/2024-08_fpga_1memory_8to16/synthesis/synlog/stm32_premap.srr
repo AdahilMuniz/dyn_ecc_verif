@@ -1,0 +1,122 @@
+# Thu Aug  1 17:08:12 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-AM6N5UD
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309act, Build 044R, Built Jan  4 2024 08:30:58, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 200MB)
+
+Reading constraint file: C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\designer\stm32\synthesis.fdc
+@L: C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\stm32_scck.rpt 
+See clock summary report "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\stm32_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 200MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 200MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 200MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 200MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+NConnInternalConnection caching is on
+@N: FX1171 :"c:\users\elena\documents\elena\stm32_test_memory - copy\hdl\hamming_top_design.sv":65:2:65:10|Found instance fpga_top_design_0.modulo_hamming.reg_erro with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 248MB peak: 249MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 248MB peak: 249MB)
+
+@N: MO111 :"c:\users\elena\documents\elena\stm32_test_memory - copy\component\work\osc_c0\osc_c0_0\osc_c0_osc_c0_0_osc.v":17:7:17:20|Tristate driver RCOSC_1MHZ_CCC (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) on net RCOSC_1MHZ_CCC (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\users\elena\documents\elena\stm32_test_memory - copy\component\work\osc_c0\osc_c0_0\osc_c0_osc_c0_0_osc.v":18:7:18:20|Tristate driver RCOSC_1MHZ_O2F (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) on net RCOSC_1MHZ_O2F (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\users\elena\documents\elena\stm32_test_memory - copy\component\work\osc_c0\osc_c0_0\osc_c0_osc_c0_0_osc.v":15:7:15:24|Tristate driver RCOSC_25_50MHZ_CCC (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) on net RCOSC_25_50MHZ_CCC (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\users\elena\documents\elena\stm32_test_memory - copy\component\work\osc_c0\osc_c0_0\osc_c0_osc_c0_0_osc.v":19:7:19:16|Tristate driver XTLOSC_CCC (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) on net XTLOSC_CCC (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\users\elena\documents\elena\stm32_test_memory - copy\component\work\osc_c0\osc_c0_0\osc_c0_osc_c0_0_osc.v":20:7:20:16|Tristate driver XTLOSC_O2F (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) on net XTLOSC_O2F (in view: work.OSC_C0_OSC_C0_0_OSC(verilog)) has its enable tied to GND.
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 248MB peak: 249MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 248MB peak: 249MB)
+
+
+
+Arrival time overflows: pin fpga_top_design_0.modulo_hamming.decodificador.un3_received_data\.un3_received_data[4:0].D0[0], net fpga_top_design_0.modulo_hamming.decodificador.verify_bit_2[0]
+
+Printing path to pin cut_loop_path.txt in file fpga_top_design_0.modulo_hamming.decodificador.un3_received_data\.un3_received_data[4:0].D0[0]
+
+
+Arrival time overflows: pin fpga_top_design_0.modulo_hamming.decodificador.un3_received_data\.un3_received_data[4:0].D0[0], net fpga_top_design_0.modulo_hamming.decodificador.verify_bit_2[0]
+
+Printing path to pin cut_loop_path.txt in file fpga_top_design_0.modulo_hamming.decodificador.un3_received_data\.un3_received_data[4:0].D0[0]
+@N: FX1184 |Applying syn_allowed_resources blockrams=10 on top level netlist stm32 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 250MB peak: 250MB)
+
+
+
+Clock Summary
+******************
+
+          Start     Requested     Requested     Clock     Clock     Clock
+Level     Clock     Frequency     Period        Type      Group     Load 
+-------------------------------------------------------------------------
+=========================================================================
+
+
+
+Clock Load Summary
+***********************
+
+          Clock     Source     Clock Pin       Non-clock Pin     Non-clock Pin
+Clock     Load      Pin        Seq Example     Seq Example       Comb Example 
+------------------------------------------------------------------------------
+==============================================================================
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\stm32.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 251MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 251MB)
+
+
+
+Arrival time overflows: pin fpga_top_design_0.modulo_hamming.decodificador3.SV1[15].I[0], net fpga_top_design_0.modulo_hamming.decodificador3._l7\.V_39[15]
+
+Printing path to pin cut_loop_path.txt in file fpga_top_design_0.modulo_hamming.decodificador3.SV1[15].I[0]
+Found loop at net fpga_top_design_0.modulo_hamming.data_in_right[0], pin fpga_top_design_0.modulo_hamming.data_out_left[15:0].D0[1]
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 167MB peak: 253MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Aug  1 17:08:13 2024
+
+###########################################################]

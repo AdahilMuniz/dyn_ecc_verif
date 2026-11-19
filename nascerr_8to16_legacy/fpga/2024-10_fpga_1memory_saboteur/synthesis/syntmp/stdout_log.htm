@@ -1,0 +1,109 @@
+<html><body><samp><pre>
+<!@TC:1729264436>
+
+                               Synplify (R) Base 
+
+                  Version V-2023.09M for win64 - Jan 04, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    C:\Microchip\Libero_SoC_v2024.1\SynplifyPro\bin64\mbin\synplify.exe
+Install:     C:\Microchip\Libero_SoC_v2024.1\SynplifyPro
+Hostname:    DESKTOP-OUF4AF5
+Date:        Mon Sep  2 15:45:15 2024
+Version:     V-2023.09M
+
+Arguments:   -product synplify_base stm32_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+
+
+
+% run_tcl -fg stm32_syn.tcl
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv"
+scm2hydra_preserve_rtl_sig is not supported in current product.
+add_dut_hierarchy is not supported in current product.
+prepare_readback is not supported in current product.
+auto_infer_blackbox is not supported in current product.
+TCL script complete: "stm32_syn.tcl"
+Loaded XDM (Hierarchy) data base - elapsed time 0:0 Blocks=9
+@N Implementation 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32_syn.prj|synthesis' design hierarchy loaded from database
+% project -run compile_dm
+log file: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32.srr"
+Running: compile_dm in foreground
+
+Generating DM database...
+Loaded XDM (Hierarchy) data base - elapsed time 0:0 Blocks=9
+@N Implementation 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32_syn.prj|synthesis' design hierarchy loaded from database
+
+compile_dm completed
+# Mon Sep  2 15:47:40 2024
+
+Return Code: 0
+Run Time:00h:00m:02s
+0
+% project -run compile_dm
+log file: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32.srr"
+Running: compile_dm in foreground
+
+Generating DM database...
+Loaded XDM (Hierarchy) data base - elapsed time 0:0 Blocks=9
+@N Implementation 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32_syn.prj|synthesis' design hierarchy loaded from database
+
+compile_dm completed
+# Mon Sep  2 15:47:51 2024
+
+Return Code: 0
+Run Time:00h:00m:02s
+0
+% project -run compile_dm
+log file: "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32.srr"
+Running: compile_dm in foreground
+
+Generating DM database...
+Loaded XDM (Hierarchy) data base - elapsed time 0:0 Blocks=9
+@N Implementation 'C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32_syn.prj|synthesis' design hierarchy loaded from database
+
+compile_dm completed
+# Mon Sep  2 15:55:13 2024
+
+Return Code: 0
+Run Time:00h:00m:01s
+0
+% set_option -technology SMARTFUSION2
+% set_option -write_verilog 1
+% set_option -frequency 100.000000
+% impl -add "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/synthesis_1" synthesis -type fpga
+Copied C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\stm32.srs to C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synthesis_1\stm32.srs
+% set_option -write_vhdl 1
+% project -save "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32_syn.prj" 
+% project -close "C:/Users/Lesc/Desktop/ECC/Libero/stm32_test_memory - Copy/synthesis/stm32_syn.prj"
+exit status=0
+License checkin: synplifypro_actel
+
+</pre></samp></body></html>

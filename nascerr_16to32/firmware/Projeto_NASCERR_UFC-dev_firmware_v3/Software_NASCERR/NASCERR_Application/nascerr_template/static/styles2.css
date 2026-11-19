@@ -1,0 +1,165 @@
+  /* Estilo do container cinza atrás da tabela */
+  .tabela-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80vh; /* Ajuste este valor conforme necessário */
+    
+    overflow-x: auto; /* Barra de rolagem horizontal apenas dentro do container */
+    background-color: #e0e0e0; /* Cor de fundo cinza */
+    padding: 20px; /* Espaçamento interno para o container */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 100%; /* O container ocupa toda a largura */
+    margin: 0 auto; /* Centraliza o container */
+  }
+
+  .tabela-container table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #3b3f5c; /* Cor de fundo do cabeçalho */
+    color: white;
+    z-index: 100; /* Garante que o cabeçalho fique acima das linhas */
+    text-align: center;
+    padding: 15px;
+  }
+
+  table {
+    width: 80%; /* Aumenta o tamanho da tabela */
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+  }
+  
+  table th {
+    background-color: #3b3f5c;
+    color: white;
+    text-align: center; /* Centraliza o texto dos cabeçalhos */
+    padding: 12px; /* Espaçamento interno para os cabeçalhos */
+}
+  
+  table tr:nth-child(even) {
+    background-color: #f4f4f4;
+  }
+
+  .status-text {
+    background-color: #3b3f5c; /* Cor de fundo para o status */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+  }
+
+  .status-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-container i {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    color: white; /* Cor do ícone */
+    font-size: 20px; /* Tamanho do ícone */
+  }
+
+  td {
+    vertical-align: middle; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 12px; /* Espaçamento interno */
+}
+
+   /* Estilo básico do botão de salvar */
+   .save-button {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0 auto; /* Centraliza o botão de download */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    color: #28a745; /* Cor verde para ícone */
+    font-size: 30px; /* Ícone maior e mais visível */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  }
+  
+  /* Animação ao passar o mouse */
+  .save-button:hover {
+    color: #218838; /* Verde mais escuro no hover */
+    transform: scale(1.2); /* Aumenta ligeiramente o tamanho do ícone */
+  }
+  
+  /* Remover o contorno de foco */
+  .save-button:focus {
+    outline: none;
+  }
+
+  .error-quantity {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    vertical-align: middle; /* Centraliza o texto verticalmente */
+    padding: 12px; /* Espaçamento interno opcional */
+}
+
+  .corrected-quantity {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    vertical-align: middle; /* Centraliza o texto verticalmente */
+    padding: 12px; /* Espaçamento interno opcional */
+}
+
+  .data-quantity {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  vertical-align: middle; /* Centraliza o texto verticalmente */
+  padding: 12px; /* Espaçamento interno opcional */
+}
+
+.scrollable-tbody {
+  max-height: 700px; /* ou outro valor fixo/ajustável */
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.scrollable-tbody table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scrollable-tbody tbody td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.scrollable-table-wrapper {
+  max-height: 550px;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.scrollable-table-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed; /* Essencial para alinhar colunas com scroll */
+}
+
+.scrollable-table-wrapper thead th {
+  position: sticky;
+  top: 0;
+  background-color: #3b3f5c;
+  color: white;
+  z-index: 2;
+}
+
+.scrollable-table-wrapper th,
+.scrollable-table-wrapper td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+

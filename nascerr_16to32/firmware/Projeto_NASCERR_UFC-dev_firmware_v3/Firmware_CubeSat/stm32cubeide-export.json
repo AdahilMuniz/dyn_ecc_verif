@@ -1,0 +1,852 @@
+{
+  "name": "dev_nascerr_firmware",
+  "source_ide": "STM32CubeIDE",
+  "path": "/home/dan-alencar/Documents/GitHub/Projeto_NASCERR_UFC/Firmware_CubeSat/dev_nascerr_firmware",
+  "languages": [
+      "C"
+  ],
+  "configurations": [
+    {
+      "name": "Debug",
+      "output_filename": "dev_nascerr_firmware",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32L4S5QIIx",
+      "board": "genericBoard",
+      "sources": [
+        { "path": "Core/Src/adc.c" },
+
+        { "path": "Core/Src/dma.c" },
+
+        { "path": "Core/Src/fmc.c" },
+
+        { "path": "Core/Src/freertos.c" },
+
+        { "path": "Core/Src/gpio.c" },
+
+        { "path": "Core/Src/hash.c" },
+
+        { "path": "Core/Src/i2c.c" },
+
+        { "path": "Core/Src/i2c_slave.c" },
+
+        { "path": "Core/Src/iwdg.c" },
+
+        { "path": "Core/Src/main.c" },
+
+        { "path": "Core/Src/spi.c" },
+
+        { "path": "Core/Src/stm32l4xx_hal_msp.c" },
+
+        { "path": "Core/Src/stm32l4xx_hal_timebase_tim.c" },
+
+        { "path": "Core/Src/stm32l4xx_it.c" },
+
+        { "path": "Core/Src/syscalls.c" },
+
+        { "path": "Core/Src/sysmem.c" },
+
+        { "path": "Core/Src/system_stm32l4xx.c" },
+
+        { "path": "Core/Src/tim.c" },
+
+        { "path": "Core/Src/uart_handler.c" },
+
+        { "path": "Core/Src/usart.c" },
+
+        { "path": "Core/Startup/startup_stm32l4s5qiix.s" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hash.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hash_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_iwdg.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_nand.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_nor.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sram.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_fmc.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/croutine.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/list.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/queue.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/tasks.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/timers.c" },
+
+        { "path": "Modules/NASCERR/Application/NASCERR_Control.c" },
+
+        { "path": "Modules/NASCERR/Application/NASCERR_Scheduler.c" },
+
+        { "path": "Modules/NASCERR/Bootloader/NASCERR_BootInterface.c" },
+
+        { "path": "Modules/NASCERR/Bootloader/NASCERR_Bootloader.c" },
+
+        { "path": "Modules/NASCERR/Communication/NASCERR_Protocol.c" },
+
+        { "path": "Modules/NASCERR/Communication/NASCERR_Registers.c" },
+
+        { "path": "Modules/NASCERR/Database/NASCERR_DB.c" },
+
+        { "path": "Modules/NASCERR/Database/NASCERR_SchedulerDB.c" },
+
+        { "path": "Modules/NASCERR/Experiments/NASCERR_ECCs_32bits.c" },
+
+        { "path": "Modules/NASCERR/Experiments/NASCERR_Experiment.c" },
+
+        { "path": "Modules/NASCERR/Experiments/NASCERR_ImageProcessing.c" },
+
+        { "path": "Modules/NASCERR/ExternalFlash/NASCERR_Flash.c" },
+
+        { "path": "Modules/NASCERR/ExternalFlash/flash_saboteur.c" },
+
+        { "path": "Modules/NASCERR/ExternalFlash/flash_w25n01g.c" },
+
+        { "path": "Modules/NASCERR/Hardware/NASCERR_HW_Status.c" },
+
+        { "path": "Modules/NASCERR/Hardware/NASCERR_IOs.c" },
+
+        { "path": "Modules/NASCERR/InternalFlash/NASCERR_InternalFlash.c" },
+
+        { "path": "Modules/NASCERR/Sram/NASCERR_Memory_32bits.c" },
+
+        { "path": "Modules/NASCERR/System/NASCERR_Log.c" },
+
+        { "path": "Modules/NASCERR/System/NASCERR_System.c" },
+
+        { "path": "Modules/NASCERR/Utils/NASCERR_SysTime.c" },
+
+        { "path": "Modules/NASCERR/Utils/NASCERR_Util.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.debuglevel": "-g3"                   
+,                      "option.definedsymbols": "-DDEBUG"                   
+,                      "option.includepaths": "-I../Core/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy, -I../Middlewares/Third_Party/FreeRTOS/Source/include, -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2, -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F, -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include, -I../Drivers/CMSIS/Include"                   
+,                      "option.preprocessassembler": "-x assembler-with-cpp"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-u _printf_float",
+
+                  "-mcpu=cortex-m4",
+
+                  "-g3",
+
+                  "-DDEBUG",
+
+                  "-I../Core/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/include",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+
+                  "-I../Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+
+                  "-I../Drivers/CMSIS/Include",
+
+                  "-x",
+
+                  "assembler-with-cpp"
+              ]
+            }
+,            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11"                   
+,                      "option.debuglevel": "-g3"                   
+,                      "option.definedsymbols": "-DDEBUG, -DUSE_HAL_DRIVER, -DSTM32L4S5xx"                   
+,                      "option.includepaths": "-I../Core/Inc, -I../Modules/NASCERR/, -I../Modules/NASCERR/Bootloader, -I../Modules/NASCERR/InternalFlash, -I../Drivers/STM32L4xx_HAL_Driver/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy, -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include, -I../Drivers/CMSIS/Include, -I../Middlewares/Third_Party/FreeRTOS/Source/include, -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2, -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F, -I../Modules/NASCERR/Application, -I../Modules/NASCERR/Bootloader, -I../Modules/NASCERR/Communication, -I../Modules/NASCERR/Database, -I../Modules/NASCERR/Experiments, -I../Modules/NASCERR/ExternalFlash, -I../Modules/NASCERR/Hardware, -I../Modules/NASCERR/Sram, -I../Modules/NASCERR/System, -I../Modules/NASCERR/Utils"                   
+,                      "option.optimization.level": "-O0"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-u _printf_float",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu11",
+
+                  "-g3",
+
+                  "-DDEBUG",
+
+                  "-DUSE_HAL_DRIVER",
+
+                  "-DSTM32L4S5xx",
+
+                  "-I../Core/Inc",
+
+                  "-I../Modules/NASCERR/",
+
+                  "-I../Modules/NASCERR/Bootloader",
+
+                  "-I../Modules/NASCERR/InternalFlash",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
+
+                  "-I../Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+
+                  "-I../Drivers/CMSIS/Include",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/include",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+
+                  "-I../Modules/NASCERR/Application",
+
+                  "-I../Modules/NASCERR/Communication",
+
+                  "-I../Modules/NASCERR/Database",
+
+                  "-I../Modules/NASCERR/Experiments",
+
+                  "-I../Modules/NASCERR/ExternalFlash",
+
+                  "-I../Modules/NASCERR/Hardware",
+
+                  "-I../Modules/NASCERR/Sram",
+
+                  "-I../Modules/NASCERR/System",
+
+                  "-I../Modules/NASCERR/Utils",
+
+                  "-O0",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14"                   
+,                      "option.debuglevel": "-g3"                   
+,                      "option.optimization.level": "-O0"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.noexceptions": "-fno-exceptions"                   
+,                      "option.nortti": "-fno-rtti"                   
+,                      "option.nousecxaatexit": "-fno-use-cxa-atexit"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-u _printf_float",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu++14",
+
+                  "-g3",
+
+                  "-O0",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-fno-exceptions",
+
+                  "-fno-rtti",
+
+                  "-fno-use-cxa-atexit",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/dan-alencar/Documents/GitHub/Projeto_NASCERR_UFC/Firmware_CubeSat/dev_nascerr_firmware/STM32L4S5QIIX_FLASH.ld\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"dev_nascerr_firmware.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-u _printf_float",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"/home/dan-alencar/Documents/GitHub/Projeto_NASCERR_UFC/Firmware_CubeSat/dev_nascerr_firmware/STM32L4S5QIIX_FLASH.ld\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"dev_nascerr_firmware.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"dev_nascerr_firmware.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-u _printf_float",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"dev_nascerr_firmware.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-u _printf_float",
+
+                  "-mcpu=cortex-m4",
+
+                  "-r"
+              ]
+            }
+      ]
+    },
+    {
+      "name": "Release",
+      "output_filename": "dev_nascerr_firmware",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32L4S5QIIx",
+      "board": "genericBoard",
+      "sources": [
+        { "path": "Core/Src/adc.c" },
+
+        { "path": "Core/Src/dma.c" },
+
+        { "path": "Core/Src/fmc.c" },
+
+        { "path": "Core/Src/freertos.c" },
+
+        { "path": "Core/Src/gpio.c" },
+
+        { "path": "Core/Src/hash.c" },
+
+        { "path": "Core/Src/i2c.c" },
+
+        { "path": "Core/Src/i2c_slave.c" },
+
+        { "path": "Core/Src/iwdg.c" },
+
+        { "path": "Core/Src/main.c" },
+
+        { "path": "Core/Src/spi.c" },
+
+        { "path": "Core/Src/stm32l4xx_hal_msp.c" },
+
+        { "path": "Core/Src/stm32l4xx_hal_timebase_tim.c" },
+
+        { "path": "Core/Src/stm32l4xx_it.c" },
+
+        { "path": "Core/Src/syscalls.c" },
+
+        { "path": "Core/Src/sysmem.c" },
+
+        { "path": "Core/Src/system_stm32l4xx.c" },
+
+        { "path": "Core/Src/tim.c" },
+
+        { "path": "Core/Src/uart_handler.c" },
+
+        { "path": "Core/Src/usart.c" },
+
+        { "path": "Core/Startup/startup_stm32l4s5qiix.s" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hash.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hash_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_iwdg.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_nand.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_nor.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sram.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c" },
+
+        { "path": "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_fmc.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/croutine.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/list.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/queue.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/tasks.c" },
+
+        { "path": "Middlewares/Third_Party/FreeRTOS/Source/timers.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.includepaths": "-I../Core/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy, -I../Middlewares/Third_Party/FreeRTOS/Source/include, -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2, -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F, -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include, -I../Drivers/CMSIS/Include"                   
+,                      "option.preprocessassembler": "-x assembler-with-cpp"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-I../Core/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/include",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+
+                  "-I../Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+
+                  "-I../Drivers/CMSIS/Include",
+
+                  "-x",
+
+                  "assembler-with-cpp"
+              ]
+            }
+,            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11"                   
+,                      "option.definedsymbols": "-DUSE_HAL_DRIVER, -DSTM32L4S5xx"                   
+,                      "option.includepaths": "-I../Core/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc, -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy, -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include, -I../Drivers/CMSIS/Include, -I../Middlewares/Third_Party/FreeRTOS/Source/include, -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2, -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"                   
+,                      "option.optimization.level": "-Os"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu11",
+
+                  "-DUSE_HAL_DRIVER",
+
+                  "-DSTM32L4S5xx",
+
+                  "-I../Core/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc",
+
+                  "-I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
+
+                  "-I../Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+
+                  "-I../Drivers/CMSIS/Include",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/include",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+
+                  "-I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+
+                  "-Os",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14"                   
+,                      "option.optimization.level": "-Os"                   
+,                      "option.ffunction": "-ffunction-sections"                   
+,                      "option.fdata": "-fdata-sections"                   
+,                      "option.noexceptions": "-fno-exceptions"                   
+,                      "option.nortti": "-fno-rtti"                   
+,                      "option.nousecxaatexit": "-fno-use-cxa-atexit"                   
+,                      "option.warnings.all": "-Wall"                   
+,                      "option.fstackusage": "-fstack-usage"                   
+,                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-std=gnu++14",
+
+                  "-Os",
+
+                  "-ffunction-sections",
+
+                  "-fdata-sections",
+
+                  "-fno-exceptions",
+
+                  "-fno-rtti",
+
+                  "-fno-use-cxa-atexit",
+
+                  "-Wall",
+
+                  "-fstack-usage",
+
+                  "-fcyclomatic-complexity"
+              ]
+            }
+,            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/dan-alencar/Documents/GitHub/Projeto_NASCERR_UFC/Firmware_CubeSat/dev_nascerr_firmware/STM32L4S5QIIX_FLASH.ld\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"dev_nascerr_firmware.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"/home/dan-alencar/Documents/GitHub/Projeto_NASCERR_UFC/Firmware_CubeSat/dev_nascerr_firmware/STM32L4S5QIIX_FLASH.ld\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"dev_nascerr_firmware.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\""                   
+,                      "option.systemcalls": "--specs=nosys.specs"                   
+,                      "option.map": "-Wl,-Map=\"dev_nascerr_firmware.map\""                   
+,                      "option.gcsections": "-Wl,--gc-sections"                   
+,                      "option.static": "-static"                   
+,                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o"                   
+,                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-T\"\"",
+
+                  "--specs=nosys.specs",
+
+                  "-Wl,-Map=\"dev_nascerr_firmware.map\"",
+
+                  "-Wl,--gc-sections",
+
+                  "-static"
+              ]
+            }
+,            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"                   
+              },
+
+              
+              "flags": [
+                  "-mfpu=fpv4-sp-d16",
+
+                  "-mfloat-abi=hard",
+
+                  "-mthumb",
+
+                  "--specs=nano.specs",
+
+                  "-mcpu=cortex-m4",
+
+                  "-r"
+              ]
+            }
+      ]
+    }
+  ]
+}

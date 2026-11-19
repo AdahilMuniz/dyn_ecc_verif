@@ -1,0 +1,71 @@
+Info: No timing constraint has been associated to the 'Place and Route' tool. 'Place and Route' will be run in non Timing Driven mode.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : OFF
+Power-driven             : OFF
+I/O Register Combining   : OFF
+High-effort              : OFF
+Repair min-delay         : OFF
+Incremental              : OFF
+
+INFO: Reading User PDC file C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 105 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 0 seconds
+
+Placer V5.0 - 2024.1.0 
+Design: prj_2_memory_sb                 Started: Tue Oct 15 17:24:04 2024
+
+Initializing Normal-Effort Standard Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 0 seconds
+Placement                : 0 seconds
+Improvement              : 0 seconds
+
+Placer completed successfully.
+
+Design: prj_2_memory_sb                 
+Finished: Tue Oct 15 17:24:09 2024
+Total CPU Time:     00:00:04            Total Elapsed Time: 00:00:05
+Total Memory Usage: 139.3 Mbytes
+                        o - o - o - o - o - o
+
+
+Router 
+Design: C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sbStarted: Tue Oct 15 17:24:13 2024
+
+
+Router completed successfully.
+
+Design: C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\designer\prj_2_memory_sb\prj_2_memory_sb
+Finished: Tue Oct 15 17:24:25 2024
+Total CPU Time:     00:00:11            Total Elapsed Time: 00:00:12
+Total Memory Usage: 895.9 Mbytes
+                        o - o - o - o - o - o
+
+Resource Usage
++---------------+------+-------+------------+
+| Type          | Used | Total | Percentage |
++---------------+------+-------+------------+
+| 4LUT          | 324  | 27696 | 1.17       |
+| DFF           | 32   | 27696 | 0.12       |
+| I/O Register  | 0    | 414   | 0.00       |
+| Logic Element | 325  | 27696 | 1.17       |
++---------------+------+-------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  105  | 100.00%    |
+| Placed |  0    | 0.00%      |
++--------+-------+------------+
+

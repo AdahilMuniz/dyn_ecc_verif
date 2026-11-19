@@ -1,0 +1,726 @@
+$date
+	Tue Jul  2 14:38:15 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module test_memory $end
+$var wire 16 ! dataIO [15:0] $end
+$var wire 16 " data_out [15:0] $end
+$var wire 16 # dataIO1 [15:0] $end
+$var reg 21 $ Address [20:0] $end
+$var reg 1 % CE_bar $end
+$var reg 1 & LB_bar $end
+$var reg 1 ' OE_bar $end
+$var reg 1 ( UB_bar $end
+$var reg 1 ) WE_bar $end
+$var reg 16 * data_in [15:0] $end
+$var reg 1 + data_in_en $end
+$var reg 1 , sel $end
+$scope module test $end
+$var wire 16 - decoder_input [15:0] $end
+$var wire 16 . encoder_input [15:0] $end
+$var wire 16 / fpga_mem_io [15:0] $end
+$var wire 16 0 mcu_fpga_io [15:0] $end
+$var wire 1 , sel $end
+$var wire 1 + write_enable $end
+$var wire 16 1 memory_data [15:0] $end
+$var wire 16 2 encoder_output [15:0] $end
+$var wire 16 3 decoder_output [15:0] $end
+$scope module bloco $end
+$var wire 16 4 data_in_decoder [15:0] $end
+$var wire 16 5 data_in_encoder [15:0] $end
+$var wire 1 , sel $end
+$var wire 16 6 data_out_temp1 [15:0] $end
+$var wire 16 7 data_out_encoder [15:0] $end
+$var wire 16 8 data_out_decoder [15:0] $end
+$var wire 16 9 codified_data1 [15:0] $end
+$var reg 16 : codified_data2 [15:0] $end
+$var reg 16 ; data_out_temp2 [15:0] $end
+$scope module decoder_0 $end
+$var wire 16 < data_in [0:15] $end
+$var wire 16 = data_out [0:15] $end
+$var reg 2 > SDi [0:1] $end
+$var reg 2 ? SP [0:1] $end
+$var reg 8 @ red [0:7] $end
+$scope begin $unm_blk_2 $end
+$var integer 32 A b [31:0] $end
+$var integer 32 B quad1 [31:0] $end
+$var integer 32 C quad2 [31:0] $end
+$var integer 32 D sumSDi [31:0] $end
+$var integer 32 E sumSL [31:0] $end
+$var integer 32 F sumSP [31:0] $end
+$upscope $end
+$upscope $end
+$scope module encoder_0 $end
+$var wire 16 G data_in [0:15] $end
+$var wire 16 H data_out [0:15] $end
+$scope begin $unm_blk_1 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 I i [31:0] $end
+$upscope $end
+$scope task read $end
+$upscope $end
+$scope task write $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 I
+b0 H
+b0zzzzzzzz G
+bx F
+bx E
+bx D
+b0 C
+b0 B
+bx A
+bz @
+bx ?
+bx >
+b0zzzzzzzz =
+bz <
+bx ;
+bx :
+b0 9
+b0zzzzzzzz 8
+b0 7
+b0zzzzzzzz 6
+b0zzzzzzzz 5
+bz 4
+b0zzzzzzzz 3
+b0 2
+bz 1
+b0zzzzzzzz 0
+bz /
+b0zzzzzzzz .
+bz -
+1,
+0+
+b10001110 *
+1)
+1(
+x'
+1&
+1%
+b0 $
+bz #
+b0zzzzzzzz "
+b0zzzzzzzz !
+$end
+#1000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10001110 "
+b10001110 .
+b10001110 5
+b10001110 G
+b10001110 !
+b10001110 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#2000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b1 I
+b10000 $
+b10001111 *
+#3000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10001111 "
+b10001111 .
+b10001111 5
+b10001111 G
+b10001111 !
+b10001111 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#4000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b10 I
+b100000 $
+b10010000 *
+#5000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010000 "
+b10010000 .
+b10010000 5
+b10010000 G
+b10010000 !
+b10010000 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#6000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b11 I
+b110000 $
+b10010001 *
+#7000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010001 "
+b10010001 .
+b10010001 5
+b10010001 G
+b10010001 !
+b10010001 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#8000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b100 I
+b1000000 $
+b10010010 *
+#9000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010010 "
+b10010010 .
+b10010010 5
+b10010010 G
+b10010010 !
+b10010010 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#10000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b101 I
+b1010000 $
+b10010011 *
+#11000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010011 "
+b10010011 .
+b10010011 5
+b10010011 G
+b10010011 !
+b10010011 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#12000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b110 I
+b1100000 $
+b10010100 *
+#13000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010100 "
+b10010100 .
+b10010100 5
+b10010100 G
+b10010100 !
+b10010100 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#14000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b111 I
+b1110000 $
+b10010101 *
+#15000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010101 "
+b10010101 .
+b10010101 5
+b10010101 G
+b10010101 !
+b10010101 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#16000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b1000 I
+b10000000 $
+b10010110 *
+#17000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010110 "
+b10010110 .
+b10010110 5
+b10010110 G
+b10010110 !
+b10010110 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#18000
+b0zzzzzzzz 3
+b0zzzzzzzz 8
+b0zzzzzzzz 6
+b0zzzzzzzz =
+b0 2
+b0 7
+bx E
+bx D
+bx >
+bx F
+bx ?
+bz @
+b0 9
+b0 H
+bz #
+bz /
+bz -
+bz 4
+bz <
+bz 1
+b0zzzzzzzz "
+b0zzzzzzzz .
+b0zzzzzzzz 5
+b0zzzzzzzz G
+b0zzzzzzzz !
+b0zzzzzzzz 0
+0+
+1)
+1&
+1(
+1%
+b1001 I
+b10010000 $
+b10010111 *
+#19000
+b0 3
+b0 8
+b0 6
+b0 =
+b0 E
+b0 D
+b0 >
+b0 F
+b0 ?
+b0 @
+b10010111 "
+b10010111 .
+b10010111 5
+b10010111 G
+b10010111 !
+b10010111 0
+b0 #
+b0 /
+b0 -
+b0 4
+b0 <
+b0 1
+1+
+1'
+1&
+1(
+1%
+#20000
+b10011000 "
+b10011000 .
+b10011000 5
+b10011000 G
+b10011000 !
+b10011000 0
+b1010 I
+b10100000 $
+b10011000 *
