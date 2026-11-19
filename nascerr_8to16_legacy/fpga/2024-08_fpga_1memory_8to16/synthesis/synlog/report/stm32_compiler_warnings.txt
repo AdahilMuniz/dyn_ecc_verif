@@ -1,0 +1,21 @@
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":4:13:4:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":14:13:14:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":27:13:27:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":43:13:43:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":55:13:55:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":67:13:67:25|User defined pragma syn_black_box detected
+@W: CG1337 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Decoder16bits.sv":113:9:113:11|Net sig is not declared.
+@W: CG133 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_encoder.sv":7:16:7:21|Object parity is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG1340 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":21:55:21:67|Index into variable received_data could be out of range ; a simulation mismatch is possible.
+@W: CG133 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Encoder16bits.sv":14:10:14:10|Object b is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":15:7:15:24|*Output RCOSC_25_50MHZ_CCC has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:39:1:45|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL247 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:39:4:45|Input port bit 0 of data_in[15:0] is unused
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:42:3:48|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":2:21:2:32|Input port bits 15 to 12 of encoded_data[15:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_encoder.sv":2:21:2:27|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+

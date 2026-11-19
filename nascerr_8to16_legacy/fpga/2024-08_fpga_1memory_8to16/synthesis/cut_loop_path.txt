@@ -1,0 +1,86 @@
+
+Path:
+
+port     fpga_mem_io[0]
+output   fpga_mem_io[15:0].fpga_mem_io[0]
+net      fpga_mem_io[0]
+input    fpga_mem_io[15:0].fpga_mem_io[0]
+port     fpga_mem_io[0]
+
+End path
+
+Worst Path to Pin for instance fpga_mem_io[15:0] 
+
+
+Clock table:
+
+type  id |  per(ns) |     load |   fanout | group name                       | clock name                      
+---- ----+----------+----------+----------+----------------------------------+---------------------------------
+   C      0      10.00       0.00          0   system_clkgroup                    System                          
+			.syn_refclock_type	[int]    9
+   C      1      10.00       0.00          0   async_clock_clkgroup               (no clock)                      
+			.syn_refclock_type	[int]    10
+--- -----+----------+----------+----------+----------------------------------+---------------------------------
+
+End of Clock table:
+
+
+Clock Commands:
+
+  consid   names   split    user    resolved   generated name
+  ------   -----   -----    ----    --------   --------- ----
+
+End of Clock Commands
+
+
+Clock Objects:
+
+     command    resolved                                 
+      consid      consid    user    resolved   generated name
+     -------     -------    ----    --------   --------- ----
+
+End of Clock Objects
+
+
+Constraints:
+
+
+Artificial Constraints Assignment:
+
+
+End of Constraints:
+
+
+CDB:
+
+
+End of CDB:
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+Bit Ports: 
+
+[b]	fpga_mem_io[0]
+				[Data				[data record - output] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=0.8:0.0001 	fall=0.8:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+				[Data				[data record - input] - MAX]
+					[event]		ref=(no clock):r cons=NIL history=NIL period=10.0
+					[arrival]	rise=2001.9553:0.0001 	fall=2001.9553:0.0001
+					[require]	rise=NaN:NaN 	fall=NaN:NaN
+
+End of Bit Ports: 
+

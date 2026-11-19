@@ -1,0 +1,7 @@
+C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  stm32  -multisrs  "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.srs"  -osyn  "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synwork\stm32_mult.srs"  -log  "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synlog\stm32_multi_srs_gen.srr" 
+relcom:..\..\..\..\..\..\..\..\Microchip\Libero_SoC_v2023.2\SynplifyPro\bin64\syn_nfilter.exe -link -top stm32 -multisrs "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.srs" -osyn "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synwork\stm32_mult.srs" -log "C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\synthesis\synlog\stm32_multi_srs_gen.srr"
+rc:0 success:1 runtime:0
+file:..\synwork\stm32_comp.srs|io:i|time:1720730568|size:14236|exec:0|csum:6539ECF32BC26720C238BB920A193100
+file:..\synwork\stm32_mult.srs|io:o|time:1720730569|size:3195|exec:0|csum:
+file:..\synlog\stm32_multi_srs_gen.srr|io:o|time:1720730569|size:1186|exec:0|csum:
+file:..\..\..\..\..\..\..\..\Microchip\Libero_SoC_v2023.2\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1691490330|size:10452480|exec:1|csum:C2B49D9CC1CC5913A59BA97F5F9B52BC

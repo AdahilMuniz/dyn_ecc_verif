@@ -1,0 +1,12 @@
+[Unit]
+Description=Atualiza automaticamente o repositório NASCERR no boot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nascerr4
+ExecStart= /home/nascerr4/Desktop/Projeto_NASCERR_UFC/Software_NASCERR/NASCERR_Application/daemon/update_repositorio.sh
+
+[Install]
+WantedBy=multi-user.target

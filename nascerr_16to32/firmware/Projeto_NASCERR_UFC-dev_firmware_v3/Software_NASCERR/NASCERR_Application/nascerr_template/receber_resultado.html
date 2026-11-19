@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receber Resultado</title>
+  <link rel="stylesheet" href="/static/base.css">
+  <link rel="stylesheet" href="/static/styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container_re">
+    <!-- Menu Lateral -->
+    {% include 'header.html' %}
+
+    <!-- Conteúdo Principal -->
+    <div class="conteudo">
+      <header>
+        <h1>Recepção de Resultado</h1>
+        <div class="status-conexao">
+          <i class="fas fa-circle conectado"></i> <span id="status-text">Conectado</span>
+        </div>    
+      </header>
+
+      <!-- Tabela de Resultados -->
+      <div class="tabela-container">
+        <div class="scrollable-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Horário</th>
+                <th>Status</th>
+                <th>ID</th>
+                <th>Quantidade de dados</th>
+                <th>Dados corretos</th>
+                <th>Quantidade de erros</th>
+                <th>Salvar em CSV</th>
+              </tr>
+            </thead>
+            <tbody id="dynamic-tbody">
+              <!-- linhas adicionadas por JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="notification-container"></div>
+  <script src="/static/scripts.js"></script>
+</body>
+</html>

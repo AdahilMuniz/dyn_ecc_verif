@@ -1,0 +1,7 @@
+C:\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  stm32  -multisrs  "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.srs"  -osyn  "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\stm32_mult.srs"  -log  "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synlog\stm32_multi_srs_gen.srr" 
+relcom:..\..\..\..\..\..\..\SynplifyPro\bin64\syn_nfilter.exe -link -top stm32 -multisrs "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.srs" -osyn "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\stm32_mult.srs" -log "C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synlog\stm32_multi_srs_gen.srr"
+rc:0 success:1 runtime:0
+file:..\synwork\stm32_comp.srs|io:i|time:1722542891|size:18114|exec:0|csum:FCE1EB71E337A7D9D54F170530A46965
+file:..\synwork\stm32_mult.srs|io:o|time:1722542892|size:3632|exec:0|csum:
+file:..\synlog\stm32_multi_srs_gen.srr|io:o|time:1722542892|size:1149|exec:0|csum:
+file:..\..\..\..\..\..\..\synplifypro\bin64\syn_nfilter.exe|io:i|time:1704385664|size:10549248|exec:1|csum:0A08FED8FB1594556EFD70D403F152B0

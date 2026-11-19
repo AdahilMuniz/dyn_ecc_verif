@@ -1,0 +1,20 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:8:3:20|Synthesizing module Encoder16bits in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:7:4:19|Synthesizing module Decoder16bits in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\Encoder16bits_random.sv":3:8:3:27|Synthesizing module Encoder16bits_random in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:7:1:17|Synthesizing module EDACencoder in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\EDACdecoder.sv":1:7:1:17|Synthesizing module EDACdecoder in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\hamming_top_design.sv":9:7:9:24|Synthesizing module hamming_top_design in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\fpga_top_design.sv":3:7:3:21|Synthesizing module fpga_top_design in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\hdl\lfsr_random_generator.sv":2:7:2:27|Synthesizing module lfsr_random_generator in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":51:7:51:24|Synthesizing module RCOSC_25_50MHZ_FAB in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ in library work.
+@N: CG364 :"D:\Microchip\Libero_SoC_v2024.1\SynplifyPro\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":5:7:5:25|Synthesizing module OSC_C0_OSC_C0_0_OSC in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0.v":33:7:33:12|Synthesizing module OSC_C0 in library work.
+@N: CG364 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\stm32\stm32.v":9:7:9:11|Synthesizing module stm32 in library work.
+@N: CL159 :"C:\Users\Lucas\OneDrive\Documentos\Projeto Nascerr\FPGA_project-main\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":14:7:14:9|Input XTL is unused.
+@N|Running in 64-bit mode
+

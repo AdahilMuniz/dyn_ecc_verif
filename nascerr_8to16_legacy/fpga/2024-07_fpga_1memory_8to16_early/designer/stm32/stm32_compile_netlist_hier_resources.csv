@@ -1,0 +1,11 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Single-Ended I/O
+Primitives/Primitives,0,67
+fpga_top_design_0/Primitives,2,0
+fpga_top_design_0/modulo_hamming/Primitives,65,0
+fpga_top_design_0/modulo_hamming/codificador/Primitives,3,0
+fpga_top_design_0/modulo_hamming/codificador2/Primitives,10,0
+fpga_top_design_0/modulo_hamming/codificador3/Primitives,6,0
+fpga_top_design_0/modulo_hamming/decodificador/Primitives,27,0
+fpga_top_design_0/modulo_hamming/decodificador2/Primitives,26,0
+fpga_top_design_0/modulo_hamming/decodificador3/Primitives,63,0

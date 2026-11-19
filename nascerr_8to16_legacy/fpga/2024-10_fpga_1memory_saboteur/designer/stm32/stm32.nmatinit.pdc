@@ -1,0 +1,269 @@
+# Microchip Physical design constraints file
+
+# Version: 2024.1 2024.1.0.3
+
+# Design Name: stm32 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S005 , Package: 144 TQ , Speed grade: -1 
+
+# Date generated: Fri Oct 18 12:14:37 2024 
+
+
+#
+# I/O constraints
+#
+
+set_io MCU_A_0 -DIRECTION INPUT -pinname 19 -fixed no
+set_io MCU_A_1 -DIRECTION INPUT -pinname 15 -fixed no
+set_io MCU_A_10 -DIRECTION INPUT -pinname 22 -fixed no
+set_io MCU_A_2 -DIRECTION INPUT -pinname 16 -fixed no
+set_io MCU_A_3 -DIRECTION INPUT -pinname 81 -fixed no
+set_io MCU_A_4 -DIRECTION INPUT -pinname 99 -fixed no
+set_io MCU_A_5 -DIRECTION INPUT -pinname 100 -fixed no
+set_io MCU_A_6 -DIRECTION INPUT -pinname 67 -fixed no
+set_io MCU_A_7 -DIRECTION INPUT -pinname 63 -fixed no
+set_io MCU_A_8 -DIRECTION INPUT -pinname 90 -fixed no
+set_io MCU_A_9 -DIRECTION INPUT -pinname 66 -fixed no
+set_io MCU_CS -DIRECTION INPUT -pinname 14 -fixed no
+set_io MCU_LB -DIRECTION INPUT -pinname 62 -fixed no
+set_io MCU_OE -DIRECTION INPUT -pinname 9 -fixed no
+set_io MCU_UB -DIRECTION INPUT -pinname 38 -fixed no
+set_io MCU_WE -DIRECTION INPUT -pinname 10 -fixed no
+set_io SRAM_A_0 -DIRECTION OUTPUT -pinname 135 -fixed no
+set_io SRAM_A_1 -DIRECTION OUTPUT -pinname 136 -fixed no
+set_io SRAM_A_10 -DIRECTION OUTPUT -pinname 29 -fixed no
+set_io SRAM_A_2 -DIRECTION OUTPUT -pinname 137 -fixed no
+set_io SRAM_A_3 -DIRECTION OUTPUT -pinname 140 -fixed no
+set_io SRAM_A_4 -DIRECTION OUTPUT -pinname 142 -fixed no
+set_io SRAM_A_5 -DIRECTION OUTPUT -pinname 143 -fixed no
+set_io SRAM_A_6 -DIRECTION OUTPUT -pinname 144 -fixed no
+set_io SRAM_A_7 -DIRECTION OUTPUT -pinname 23 -fixed no
+set_io SRAM_A_8 -DIRECTION OUTPUT -pinname 24 -fixed no
+set_io SRAM_A_9 -DIRECTION OUTPUT -pinname 28 -fixed no
+set_io SRAM_CS -DIRECTION OUTPUT -pinname 30 -fixed no
+set_io SRAM_LB -DIRECTION OUTPUT -pinname 34 -fixed no
+set_io SRAM_OE -DIRECTION OUTPUT -pinname 36 -fixed no
+set_io SRAM_UB -DIRECTION OUTPUT -pinname 35 -fixed no
+set_io SRAM_WE -DIRECTION OUTPUT -pinname 31 -fixed no
+set_io ecc_sel0 -DIRECTION INPUT -pinname 7 -fixed no
+set_io ecc_sel1 -DIRECTION INPUT -pinname 3 -fixed no
+set_io fpga_mem_io\[0\] -DIRECTION INOUT -pinname 110 -fixed no
+set_io fpga_mem_io\[1\] -DIRECTION INOUT -pinname 111 -fixed no
+set_io fpga_mem_io\[2\] -DIRECTION INOUT -pinname 112 -fixed no
+set_io fpga_mem_io\[3\] -DIRECTION INOUT -pinname 115 -fixed no
+set_io fpga_mem_io\[4\] -DIRECTION INOUT -pinname 116 -fixed no
+set_io fpga_mem_io\[5\] -DIRECTION INOUT -pinname 117 -fixed no
+set_io fpga_mem_io\[6\] -DIRECTION INOUT -pinname 118 -fixed no
+set_io fpga_mem_io\[7\] -DIRECTION INOUT -pinname 122 -fixed no
+set_io fpga_mem_io\[8\] -DIRECTION INOUT -pinname 123 -fixed no
+set_io fpga_mem_io\[9\] -DIRECTION INOUT -pinname 124 -fixed no
+set_io fpga_mem_io\[10\] -DIRECTION INOUT -pinname 125 -fixed no
+set_io fpga_mem_io\[11\] -DIRECTION INOUT -pinname 128 -fixed no
+set_io fpga_mem_io\[12\] -DIRECTION INOUT -pinname 129 -fixed no
+set_io fpga_mem_io\[13\] -DIRECTION INOUT -pinname 130 -fixed no
+set_io fpga_mem_io\[14\] -DIRECTION INOUT -pinname 131 -fixed no
+set_io fpga_mem_io\[15\] -DIRECTION INOUT -pinname 134 -fixed no
+set_io mcu_fpga_io\[0\] -DIRECTION INOUT -pinname 93 -fixed no
+set_io mcu_fpga_io\[1\] -DIRECTION INOUT -pinname 91 -fixed no
+set_io mcu_fpga_io\[2\] -DIRECTION INOUT -pinname 21 -fixed no
+set_io mcu_fpga_io\[3\] -DIRECTION INOUT -pinname 20 -fixed no
+set_io mcu_fpga_io\[4\] -DIRECTION INOUT -pinname 94 -fixed no
+set_io mcu_fpga_io\[5\] -DIRECTION INOUT -pinname 98 -fixed no
+set_io mcu_fpga_io\[6\] -DIRECTION INOUT -pinname 88 -fixed no
+set_io mcu_fpga_io\[7\] -DIRECTION INOUT -pinname 92 -fixed no
+set_io mcu_fpga_io\[8\] -DIRECTION INOUT -pinname 85 -fixed no
+set_io mcu_fpga_io\[9\] -DIRECTION INOUT -pinname 89 -fixed no
+set_io mcu_fpga_io\[10\] -DIRECTION INOUT -pinname 82 -fixed no
+set_io mcu_fpga_io\[11\] -DIRECTION INOUT -pinname 87 -fixed no
+set_io mcu_fpga_io\[12\] -DIRECTION INOUT -pinname 86 -fixed no
+set_io mcu_fpga_io\[13\] -DIRECTION INOUT -pinname 101 -fixed no
+set_io mcu_fpga_io\[14\] -DIRECTION INOUT -pinname 40 -fixed no
+set_io mcu_fpga_io\[15\] -DIRECTION INOUT -pinname 61 -fixed no
+set_io turn_on_generator -DIRECTION INPUT -pinname 8 -fixed no
+
+#
+# Core cell constraints
+#
+
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1\[1\] -fixed no 212 33
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIH8NC8 -fixed no 194 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv\[5\] -fixed no 179 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[14\] -fixed no 177 27
+set_location fpga_top_design_0/mcu_fpga_io_1 -fixed no 65 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V\[13\] -fixed no 214 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1\[2\] -fixed no 203 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/b20.ALTB\[0\] -fixed no 203 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3_1\[6\] -fixed no 215 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[13\] -fixed no 165 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI47VJ4 -fixed no 161 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNII9NC8 -fixed no 164 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[6\] -fixed no 214 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_15_0_a2\[13\] -fixed no 191 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_18_1.SUM_0_a2\[0\] -fixed no 190 33
+set_location fpga_top_design_0/modulo_hamming/m48_0 -fixed no 179 36
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIG7NC8 -fixed no 163 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI36VJ4 -fixed no 178 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V -fixed no 201 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_8_3_0_a4_0_0 -fixed no 191 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/b38_1.ANB0 -fixed no 190 24
+set_location fpga_top_design_0/modulo_hamming/i17_mux_0_i -fixed no 157 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V1_8_i_o4\[13\] -fixed no 213 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_18_1.SUM_0_a4_2\[0\] -fixed no 212 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_3_1.SUM_0_a4\[0\] -fixed no 191 33
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[5\] -fixed no 211 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_4_0_a2_RNI0US825_0\[2\] -fixed no 176 24
+set_location fpga_top_design_0/modulo_hamming/m61_1_1 -fixed no 182 36
+set_location OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ_FAB_CLKINT/U0_RGB1 -fixed no 218 36
+set_location fpga_top_design_0/modulo_hamming/m71_e -fixed no 178 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal\[4\] -fixed no 213 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_13_0_a4\[11\] -fixed no 202 24
+set_location fpga_top_design_0/modulo_hamming/m6 -fixed no 179 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_20_1.SUM_0_a2\[0\] -fixed no 200 24
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI69VJ4 -fixed no 196 33
+set_location fpga_top_design_0/modulo_hamming/i17_mux_1_i -fixed no 168 36
+set_location fpga_top_design_0/modulo_hamming/m27 -fixed no 178 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv_0\[2\] -fixed no 202 27
+set_location fpga_top_design_0/modulo_hamming/N_103_mux_i -fixed no 176 36
+set_location fpga_top_design_0/modulo_hamming/i17_mux_3_i -fixed no 190 36
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_4_0_a4\[2\] -fixed no 190 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/SX_2_i_o4\[0\] -fixed no 195 33
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[10\] -fixed no 215 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_5_1.SUM_0_a4_2\[0\] -fixed no 189 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_5_0_a4\[3\] -fixed no 188 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv\[6\] -fixed no 215 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_3_1.SUM_0_a2\[0\] -fixed no 198 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[12\] -fixed no 208 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[15\] -fixed no 210 27
+set_location fpga_top_design_0/modulo_hamming/m31_1_0 -fixed no 177 33
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[1\] -fixed no 208 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V1_5_0_a2\[10\] -fixed no 189 24
+set_location fpga_top_design_0/modulo_hamming/N_58_i -fixed no 184 36
+set_location fpga_top_design_0/modulo_hamming/m16_1_0 -fixed no 162 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/b38_1.ANC3 -fixed no 175 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/b21.ALTB\[0\] -fixed no 201 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI58VJ4 -fixed no 193 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_15_0_a2_RNI5MMHR\[13\] -fixed no 188 24
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIU0VJ4 -fixed no 201 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_18_1.CO0 -fixed no 187 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIKBNC8 -fixed no 176 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/SD_0_a4\[0\] -fixed no 198 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv\[2\] -fixed no 200 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/un1_part2_1 -fixed no 199 27
+set_location fpga_top_design_0/modulo_hamming/m9_1_0 -fixed no 176 33
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI25VJ4 -fixed no 209 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V\[14\] -fixed no 212 24
+set_location fpga_top_design_0/modulo_hamming/m35 -fixed no 180 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_29_m\[1\] -fixed no 198 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI03VJ4 -fixed no 192 33
+set_location fpga_top_design_0/modulo_hamming/N_34_i -fixed no 175 36
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_4_0_a2_RNI0US825\[2\] -fixed no 174 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/_l1.signal_23_i_o4\[7\] -fixed no 175 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1_2\[1\] -fixed no 210 33
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1\[3\] -fixed no 197 24
+set_location fpga_top_design_0/modulo_hamming/m85 -fixed no 174 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/b22 -fixed no 174 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/_l1.signal_30_0_a4\[2\] -fixed no 197 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_1_1.SUM_0_a4\[0\] -fixed no 189 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_18_1.SUM_0_a4_1\[0\] -fixed no 209 33
+set_location fpga_top_design_0/modulo_hamming/data_out_right_3_1\[12\] -fixed no 173 36
+set_location fpga_top_design_0/modulo_hamming/m45_1_0 -fixed no 160 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[7\] -fixed no 211 24
+set_location fpga_top_design_0/modulo_hamming/m52_1_0 -fixed no 175 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_21_m\[2\] -fixed no 196 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_14_0_a4\[12\] -fixed no 187 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1\[7\] -fixed no 210 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_16_1.SUM_0_a4\[0\] -fixed no 188 33
+set_location fpga_top_design_0/modulo_hamming/N_67_i -fixed no 181 36
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIF86G -fixed no 101 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_4_0_a2_RNIJNJRC1\[2\] -fixed no 186 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_4_0_a2\[2\] -fixed no 186 27
+set_location fpga_top_design_0/modulo_hamming/i17_mux_i -fixed no 174 33
+set_location fpga_top_design_0/modulo_hamming/m78 -fixed no 172 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv\[1\] -fixed no 195 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_4_0_a2_RNI0US825_1\[2\] -fixed no 173 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/_l0.signal_27_0_a4_0\[5\] -fixed no 173 27
+set_location fpga_top_design_0/modulo_hamming/i17_mux_4_i -fixed no 159 27
+set_location OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ -fixed no 396 44
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_9_0_a4\[7\] -fixed no 187 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_0_a2_RNINNS5U\[15\] -fixed no 185 24
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIJANC8 -fixed no 172 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_16_1.CO0 -fixed no 186 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/b38_1.CO3 -fixed no 172 24
+set_location fpga_top_design_0/modulo_hamming/m63_e -fixed no 189 36
+set_location fpga_top_design_0/modulo_hamming/m19 -fixed no 173 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_16_1.SUM_0_a4_0\[0\] -fixed no 185 33
+set_location OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ_FAB -fixed no 397 44
+set_location fpga_top_design_0/modulo_hamming/data_out_right_3\[12\] -fixed no 171 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv_0\[5\] -fixed no 171 27
+set_location fpga_top_design_0/modulo_hamming/m42 -fixed no 158 27
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI7AVJ4 -fixed no 207 33
+set_location fpga_top_design_0/mcu_fpga_io_1_RNI14VJ4 -fixed no 196 24
+set_location fpga_top_design_0/modulo_hamming/i17_mux_5_i -fixed no 172 33
+set_location fpga_top_design_0/modulo_hamming/m61 -fixed no 191 36
+set_location lfsr_random_generator_0/lfsr\[0\] -fixed no 186 37
+set_location fpga_top_design_0/modulo_hamming/m65_2_0 -fixed no 183 36
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_5_1.CO0 -fixed no 184 33
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[0\] -fixed no 202 33
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[8\] -fixed no 207 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1_2\[2\] -fixed no 195 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[11\] -fixed no 199 24
+set_location fpga_top_design_0/modulo_hamming/m89 -fixed no 170 36
+set_location fpga_top_design_0/modulo_hamming/m76 -fixed no 169 36
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_3_1.CO0 -fixed no 184 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1\[0\] -fixed no 203 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V_3 -fixed no 209 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_5_0_a2\[3\] -fixed no 183 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V1_4_0_a2\[9\] -fixed no 183 33
+set_location fpga_top_design_0/modulo_hamming/i17_mux_2_i -fixed no 171 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv_0\[6\] -fixed no 170 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V_4 -fixed no 200 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/un1_part1_0_a4 -fixed no 185 27
+set_location OSC_C0_0/OSC_C0_0/I_RCOSC_25_50MHZ_FAB_CLKINT -fixed no 223 30
+set_location fpga_top_design_0/modulo_hamming/N_58_i_1_0 -fixed no 185 36
+set_location fpga_top_design_0/modulo_hamming/decodificador3/V_0 -fixed no 208 24
+set_location fpga_top_design_0/modulo_hamming/m23_1_0 -fixed no 177 36
+set_location fpga_top_design_0/modulo_hamming/decodificador3/b38_1.ANC3_1 -fixed no 171 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal\[0\] -fixed no 197 33
+set_location lfsr_random_generator_0/lfsr\[1\] -fixed no 189 37
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_8_0_a4\[6\] -fixed no 182 33
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIV1VJ4 -fixed no 213 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_6_0_a2_RNINQ0255_0\[4\] -fixed no 170 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_29_m\[5\] -fixed no 169 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_20_1.CO0 -fixed no 206 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_0_a2\[15\] -fixed no 182 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_6_0_a2_RNINQ0255\[4\] -fixed no 169 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_16_0_a4\[14\] -fixed no 181 24
+set_location fpga_top_design_0/modulo_hamming/m65_1_0 -fixed no 188 36
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[2\] -fixed no 194 24
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_33_m\[6\] -fixed no 168 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left\[9\] -fixed no 205 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_7_0_a4\[5\] -fixed no 181 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_9_0_a4_0\[7\] -fixed no 180 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/part1_0_a4\[0\] -fixed no 207 24
+set_location fpga_top_design_0/mcu_fpga_io_1_RNIF6NC8 -fixed no 204 33
+set_location fpga_top_design_0/modulo_hamming/N_13_0_i -fixed no 156 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_3_i\[1\] -fixed no 205 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_6_0_a2\[4\] -fixed no 199 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_5_0_a2_RNIJ4SVR1\[3\] -fixed no 184 27
+set_location fpga_top_design_0/modulo_hamming/m3 -fixed no 186 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal_0_iv_0\[1\] -fixed no 194 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal\[3\] -fixed no 193 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[4\] -fixed no 206 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/b38_1.CO1 -fixed no 168 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_5_1.SUM_0_a4\[0\] -fixed no 183 27
+set_location fpga_top_design_0/modulo_hamming/N_102_mux_i -fixed no 170 33
+set_location fpga_top_design_0/modulo_hamming/decodificador2/signal\[7\] -fixed no 205 24
+set_location fpga_top_design_0/modulo_hamming/m48 -fixed no 169 33
+set_location fpga_top_design_0/modulo_hamming/m39_1_0 -fixed no 187 36
+set_location fpga_top_design_0/modulo_hamming/decodificador2/SD_0_a4\[1\] -fixed no 193 24
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_6_0_a2_RNIKQSSS1\[4\] -fixed no 182 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/N_1_1.CO0 -fixed no 180 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3\[3\] -fixed no 192 24
+set_location fpga_top_design_0/modulo_hamming/data_out_left_1\[4\] -fixed no 204 24
+set_location fpga_top_design_0/modulo_hamming/m69 -fixed no 168 33
+set_location fpga_top_design_0/modulo_hamming/decodificador3/_l7.V_39_0_a2\[15\] -fixed no 181 27
+set_location fpga_top_design_0/modulo_hamming/decodificador3/SV1_6_0_a2_RNI1NDKK\[4\] -fixed no 180 27
+set_location fpga_top_design_0/modulo_hamming/decodificador2/part2_0_a4\[0\] -fixed no 192 27
+set_location fpga_top_design_0/modulo_hamming/data_out_left_3_1\[5\] -fixed no 204 27

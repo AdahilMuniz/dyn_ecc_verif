@@ -1,0 +1,2 @@
+@E: CG342 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv":111:9:111:21|Expecting target variable, found temp_data_out -- possible misspelling
+

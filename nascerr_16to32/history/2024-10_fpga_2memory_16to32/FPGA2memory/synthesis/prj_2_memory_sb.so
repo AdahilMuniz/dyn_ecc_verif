@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>prj_2_memory_sb</design>
+	<target_verilog>C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb.vm</target_verilog>
+</SynplifyOutput>

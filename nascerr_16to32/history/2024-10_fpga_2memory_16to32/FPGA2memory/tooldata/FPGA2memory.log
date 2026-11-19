@@ -1,0 +1,16 @@
+Project Name: FPGA2memory
+Location: C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S025T-VF256
+Family         : SmartFusion2
+Die            : M2S025T
+Package        : 256 VF
+Speed          : STD
+Core Voltage   : 1.2
+Range          : COM

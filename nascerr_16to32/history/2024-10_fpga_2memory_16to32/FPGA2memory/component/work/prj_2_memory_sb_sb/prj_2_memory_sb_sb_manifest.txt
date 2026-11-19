@@ -1,0 +1,41 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2024.1 (Version 2024.1.0.3)
+
+Date      :  Tue Oct 15 12:12:55 2024
+Project   :  C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory
+Component :  prj_2_memory_sb_sb
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/prj_2_memory_sb_sb.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/prj_2_memory_sb_sb.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/CCC_0/prj_2_memory_sb_sb_CCC_0_FCCC.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/Actel/DirectCore/CoreResetP/7.1.100/rtl/vlog/core/coreresetp.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/Actel/DirectCore/CoreResetP/7.1.100/rtl/vlog/core/coreresetp_pcie_hotreset.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/FABOSC_0/prj_2_memory_sb_sb_FABOSC_0_OSC.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/prj_2_memory_sb_sb.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/prj_2_memory_sb_sb_MSS.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/Actel/SgCore/OSC/2.0.101/osc_comps.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/prj_2_memory_sb_sb_MSS_syn.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/Actel/SgCore/OSC/2.0.101/osc_comps_pre.v
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/prj_2_memory_sb_sb_MSS_pre.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/subsystem.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/subsystem.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb/subsystem.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/CM3_compile_bfm.tcl
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/user.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/test.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/Actel/SmartFusion2MSS/MSS/1.1.500/peripheral_init.bfm
+
+Firmware files for all Software IDE tools:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb_MSS/sys_config_mss_clocks.h
+
+Constraint files:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb\CCC_0\prj_2_memory_sb_sb_CCC_0_FCCC.sdc
+    C:/Users/Lesc/Documents/LiberoProjects/prj_FPGA_2memory/FPGA2memory/component/work/prj_2_memory_sb_sb\FABOSC_0\prj_2_memory_sb_sb_FABOSC_0_OSC.sdc

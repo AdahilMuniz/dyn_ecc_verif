@@ -1,0 +1,84 @@
+Error Report for  - Users\Vitorino\AppData\Local\Temp\QjzE4E2.tmp
+25/10/2024 14:29:12
+
+Warning arcs were not exported.
+
+Net 3.3V_FPGA_OUT_1 with allias 1 too long.
+Net 3.3V_FPGA_OUT_2 with allias 2 too long.
+Net 3.3V_FPGA_SENSE with allias 3 too long.
+Warning pad shape change for U1000-56 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-54 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-53 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-52 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-51 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-47 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-46 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-42 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-40 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-39 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-38 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-37 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-35 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-34 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-30 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-29 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-28 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-27 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-24 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-23 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-22 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-20 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-19 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-18 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-17 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-15 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-14 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-43 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-31 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-2 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-50 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-44 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-36 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-16 from  to rectangular 10.63mil,22.835mil
+Component Designator XTAL301 too long.
+Component Designator XTAL301 too long.
+Pad name A1_B12 too long.
+Pad name B1_A12 too long.
+Warning pad shape change for U1000-45 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-41 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-21 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-10 from  to rectangular 10.63mil,22.835mil
+Component Designator XTAL1000 too long.
+Component Designator XTAL1000 too long.
+Component Designator XTAL300 too long.
+Component Designator XTAL300 too long.
+Component Designator XTAL100 too long.
+Component Designator XTAL100 too long.
+Component Designator XTAL300 too long.
+Component Designator XTAL300 too long.
+Warning pad shape change for U1000-11 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-1 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-55 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-6 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-13 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-12 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-33 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-32 from  to rectangular 10.63mil,22.835mil
+Component Designator XTAL100 too long.
+Component Designator XTAL100 too long.
+Component Designator XTAL101 too long.
+Component Designator XTAL101 too long.
+Warning pad shape change for U1000-3 from  to rectangular 10.63mil,22.835mil
+Component Designator XTAL1000 too long.
+Warning pad shape change for U1000-4 from  to rectangular 10.63mil,22.835mil
+Component Designator XTAL1000 too long.
+Warning pad shape change for U1000-25 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-48 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-26 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-49 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-7 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-8 from  to rectangular 10.63mil,22.835mil
+Pad name A4_B9 too long.
+Pad name B4_A9 too long.
+Warning pad shape change for U1000-5 from  to rectangular 10.63mil,22.835mil
+Warning pad shape change for U1000-9 from  to rectangular 10.63mil,22.835mil

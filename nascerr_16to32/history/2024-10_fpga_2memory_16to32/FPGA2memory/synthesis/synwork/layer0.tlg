@@ -1,0 +1,50 @@
+Selecting top level module prj_2_memory_sb
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_encoder.sv":3:7:3:22|Synthesizing module TBEC_RSC_encoder in library work.
+Running optimization stage 1 on TBEC_RSC_encoder .......
+Finished optimization stage 1 on TBEC_RSC_encoder (CPU Time 0h:00m:00s, Memory Used current: 90MB peak: 90MB)
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_decoder.sv":2:7:2:22|Synthesizing module TBEC_RSC_decoder in library work.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_decoder.sv":8:12:8:15|Object flag is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on TBEC_RSC_decoder .......
+Finished optimization stage 1 on TBEC_RSC_decoder (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_encoder.sv":1:7:1:18|Synthesizing module MRSC_encoder in library work.
+Running optimization stage 1 on MRSC_encoder .......
+Finished optimization stage 1 on MRSC_encoder (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":2:7:2:18|Synthesizing module MRSC_decoder in library work.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":13:14:13:18|Object sumSP is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":13:20:13:25|Object sumSDi is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv":4:12:4:14|Object red is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on MRSC_decoder .......
+Finished optimization stage 1 on MRSC_decoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 96MB)
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":8:7:8:16|Synthesizing module ecc_design in library work.
+Running optimization stage 1 on ecc_design .......
+@W: CL118 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|Latch generated from always block for signal data_out_right_up[0:15]; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|Latch generated from always block for signal data_out_right_down[0:15]; possible missing assignment in an if or case statement.
+@W: CL217 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|always_comb does not infer combinatorial logic
+@W: CL217 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv":35:4:35:7|always_comb does not infer combinatorial logic
+Finished optimization stage 1 on ecc_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 96MB)
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\design.sv":3:7:3:21|Synthesizing module fpga_top_design in library work.
+Running optimization stage 1 on fpga_top_design .......
+Finished optimization stage 1 on fpga_top_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 96MB)
+@N: CG364 :"C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\component\work\prj_2_memory_sb\prj_2_memory_sb.v":9:7:9:21|Synthesizing module prj_2_memory_sb in library work.
+Running optimization stage 1 on prj_2_memory_sb .......
+Finished optimization stage 1 on prj_2_memory_sb (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 96MB)
+Running optimization stage 2 on prj_2_memory_sb .......
+Finished optimization stage 2 on prj_2_memory_sb (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 96MB)
+Running optimization stage 2 on fpga_top_design .......
+Finished optimization stage 2 on fpga_top_design (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 96MB)
+Running optimization stage 2 on ecc_design .......
+Finished optimization stage 2 on ecc_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 96MB)
+Running optimization stage 2 on MRSC_decoder .......
+Finished optimization stage 2 on MRSC_decoder (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Running optimization stage 2 on MRSC_encoder .......
+Finished optimization stage 2 on MRSC_encoder (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Running optimization stage 2 on TBEC_RSC_decoder .......
+Finished optimization stage 2 on TBEC_RSC_decoder (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 96MB)
+Running optimization stage 2 on TBEC_RSC_encoder .......
+Finished optimization stage 2 on TBEC_RSC_encoder (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 96MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\synwork\layer0.duruntime
+
+

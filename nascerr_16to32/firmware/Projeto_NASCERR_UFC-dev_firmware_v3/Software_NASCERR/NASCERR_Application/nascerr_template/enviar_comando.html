@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface de Comando</title>
+  <link rel="stylesheet" href="/static/base.css">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu Lateral -->
+    {% include 'header.html' %}
+  
+    <!-- Conteúdo Principal -->
+    <div class="conteudo">
+      <header>
+        <h1>Envio de Comando</h1>
+        <div class="status-conexao">
+          <i class="fas fa-circle conectado"></i> <span id="status-text">Conectado</span>
+        </div>
+      </header>
+      
+      <!-- Seção com Formulário e Tabela -->
+      <section class="conteudo-principal">  
+        <!-- Formulário à esquerda -->
+        <div class="formulario">
+          <div class="form-card">
+            <form id="experiment-form" enctype="multipart/form-data">
+              <div id="cmd_type_div" style="display: block;">
+                <label for="cmd_type">Tipo de comando</label>
+                <select id="cmd_type" name="cmd_type" required>
+                  <option value="">Selecione o comando</option>
+                  {% for cmd_name, cmd_value in cmd_options %}
+                  <option value="{{ cmd_value }}">{{ cmd_name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div id="repeat_div" style="display: block;">
+                <label for="repeat">Número de repetições</label>
+                <input type="number" id="repeat" name="repeat" placeholder="Insira o número de repetições do experimento" min="1">
+              </div>
+
+              <div id="delay_div" style="display: block;">
+                <label for="delay">Delay</label>
+                <input type="number" id="delay" name="delay" placeholder="Insira o delay em minutos" min="0">
+              </div>
+
+              <div id="data_length_div" style="display: block;">
+                <label for="data_length">Tamanho do dado</label>
+                <input type="number" id="data_length" name="data_length" placeholder="Insira a quantidade de palavras que serão escritas" min="1" max="1024" required>
+              </div>
+
+              <div id="write_type_div" style="display: block;">
+                <label for="write_type">Tipo de escrita</label>
+                <select id="write_type" name="write_type" required>
+                  <option value="">Selecione o tipo de escrita</option>
+                  {% for write_name, write_value in write_options %}
+                  <option value="{{ write_value }}">{{ write_name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div id="read_div" style="display: block;">
+                <label for="read">Modo de leitura</label>
+                <select id="read" name="read" required>
+                  <option value="">Selecione a forma de leitura</option>
+                  {% for read_name, read_value in read_options %}
+                  <option value="{{ read_value }}">{{ read_name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div id="offset_div" style="display: block;">
+                <label for="offset">Offset</label>
+                <input type="number" id="offset" name="offset" placeholder="Insira o offset" min="0">
+              </div>
+
+              <div id="ecc_type_div" style="display: block;">
+                <label for="ecc">Codificador</label>
+                <select id="ecc" name="ecc">
+                  <option value="">Selecione o ECC utilizado</option>
+                  {% for ecc_name, ecc_value in ecc_options %}
+                    <option value="{{ ecc_value }}">{{ ecc_name }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div id="estimated_time_div" style="display: block;">
+                <label for="estimated_time">Tempo estimado (minutos)</label>
+                <input type="text" id="estimated_time" name="estimated_time" readonly>
+              </div>
+
+              <div id="send-button_div" style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                <button id="send-button" type="button">Enviar</button>
+                <button id="start-button" type="button" style="display: none;">Iniciar</button>
+                <button id="stop-button" type="button" style="display: none;">Parar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tabela de Log à direita -->
+        <div class="log-tabela">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Data de Envio</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="log-tabela-body">
+              <!-- conteúdo será preenchido via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        
+      </section>
+    </div>
+  </div>
+  <div id="notification-container"></div>
+  <script src="/static/scripts.js"></script>
+</body>
+</html>

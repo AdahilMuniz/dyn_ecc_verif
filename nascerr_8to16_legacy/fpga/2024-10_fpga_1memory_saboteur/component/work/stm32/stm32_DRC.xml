@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>stm32</header>
+  <drc>
+    <status>D:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Out-of-date Instance</message>
+    <detail>Component definition is not consistent for instance fpga_top_design_0</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/stm32/instances/fpga_top_design_0</crossprobe>
+  </drc>
+  <drc>
+    <status>D:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Unused Instance</message>
+    <detail>lfsr_random_generator_0 output pins are not being used.  Connect or mark them unused</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/stm32/instances/lfsr_random_generator_0</crossprobe>
+  </drc>
+  <drc>
+    <status>D:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin lfsr_random_generator_0:reset</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/stm32/pins/lfsr_random_generator_0:reset</crossprobe>
+  </drc>
+  <drc>
+    <status>D:\Microchip\Libero_SoC_v2024.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin lfsr_random_generator_0:random_value[1:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/stm32/pins/lfsr_random_generator_0:random_value</crossprobe>
+  </drc>
+</drcreport>

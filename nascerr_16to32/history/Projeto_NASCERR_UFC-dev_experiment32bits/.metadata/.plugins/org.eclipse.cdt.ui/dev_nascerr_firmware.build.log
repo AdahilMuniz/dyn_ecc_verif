@@ -1,0 +1,17 @@
+17:49:03 **** Incremental Build of configuration Debug for project dev_nascerr_firmware ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dev_nascerr_firmware.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Jmano\Desktop\NASCERR_ux\Projeto_CubeSat\Firmware_CubeSat\dev_nascerr_firmware\STM32L4S5QIIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dev_nascerr_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dev_nascerr_firmware.elf
+ 
+arm-none-eabi-size  dev_nascerr_firmware.elf 
+arm-none-eabi-objdump -h -S dev_nascerr_firmware.elf  > "dev_nascerr_firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+  42732	    220	  23556	  66508	  103cc	dev_nascerr_firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: dev_nascerr_firmware.list
+ 
+
+17:49:05 Build Finished. 0 errors, 0 warnings. (took 1s.926ms)
+

@@ -1,0 +1,12 @@
+
+########			REPORT FOR HIGH FANOUT NETS			########
+
+CLOCK GLOBAL THRESHOLD - 2
+ASYNC GLOBAL THRESHOLD - 12
+GLOBAL THRESHOLD - 5000
+
+NET NAME                                            CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+---------------------------------------------------------------------------------------------------------------------------------------------
+fpga_top_design_0.modulo.data_out_right_up8_i_0     16              0                   0              16               YES                  
+fpga_top_design_0.modulo.data_out_right_up7_i_0     16              0                   0              16               YES                  
+=============================================================================================================================================

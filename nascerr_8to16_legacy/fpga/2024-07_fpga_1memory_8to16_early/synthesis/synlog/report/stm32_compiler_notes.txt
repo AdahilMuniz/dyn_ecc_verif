@@ -1,0 +1,16 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_encoder.sv":1:7:1:21|Synthesizing module hamming_encoder in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":1:7:1:21|Synthesizing module hamming_decoder in library work.
+@N: CG793 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":20:10:20:17|Ignoring system task $display
+@N: CG793 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_decoder.sv":22:10:22:17|Ignoring system task $display
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:8:3:20|Synthesizing module Encoder16bits in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:7:4:19|Synthesizing module Decoder16bits in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:7:1:17|Synthesizing module EDACencoder in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\EDACdecoder.sv":1:7:1:17|Synthesizing module EDACdecoder in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\hamming_top_design.sv":8:7:8:24|Synthesizing module hamming_top_design in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\hdl\fpga_top_design.sv":3:7:3:21|Synthesizing module fpga_top_design in library work.
+@N: CG364 :"C:\Users\Lesc\Desktop\ECC\Libero\stm32_test_memory - Copy\component\work\stm32\stm32.v":9:7:9:11|Synthesizing module stm32 in library work.
+@N|Running in 64-bit mode
+

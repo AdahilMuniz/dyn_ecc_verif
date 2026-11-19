@@ -1,0 +1,108 @@
+
+                               Synplify Pro (R) 
+
+                  Version V-2023.09M for win64 - Jan 04, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    C:\Microchip\Libero_SoC_v2024.1\SynplifyPro\bin64\mbin\synbatch.exe
+Install:     C:\Microchip\Libero_SoC_v2024.1\SynplifyPro
+Hostname:    DESKTOP-OUF4AF5
+Date:        Tue Oct 15 17:23:31 2024
+Version:     V-2023.09M
+
+Arguments:   -product synplify_base -licensetype synplifypro_actel -batch -log synplify.log prj_2_memory_sb_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+Running in Vendor Mode
+
+
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_decoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\MRSC_encoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_decoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\TBEC_RSC_encoder.sv"
+@W: UI147 |File already exists in project: "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\hdl\ecc_design.sv"
+scm2hydra_preserve_rtl_sig is not supported in current product.
+add_dut_hierarchy is not supported in current product.
+prepare_readback is not supported in current product.
+auto_infer_blackbox is not supported in current product.
+log file: "C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb.srr"
+Running: synthesis in foreground
+
+Running prj_2_memory_sb_syn|synthesis
+
+Running Flow: compile (Compile) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:31 2024
+
+Running Flow: compile_flow (Compile Process) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:31 2024
+
+Running: compiler (Compile Input) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:31 2024
+Copied C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\synwork\prj_2_memory_sb_comp.srs to C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb.srs
+
+compiler completed
+# Tue Oct 15 17:23:35 2024
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+Running: multi_srs_gen (Multi-srs Generator) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:35 2024
+
+multi_srs_gen completed
+# Tue Oct 15 17:23:36 2024
+
+Return Code: 0
+Run Time:00h:00m:01s
+Copied C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\synwork\prj_2_memory_sb_mult.srs to C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb.srs
+Complete: Compile Process on prj_2_memory_sb_syn|synthesis
+
+Running: premap (Premap) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:36 2024
+
+premap completed with warnings
+# Tue Oct 15 17:23:38 2024
+
+Return Code: 1
+Run Time:00h:00m:02s
+Complete: Compile on prj_2_memory_sb_syn|synthesis
+
+Running Flow: map (Map) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:38 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on prj_2_memory_sb_syn|synthesis
+# Tue Oct 15 17:23:38 2024
+Copied C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\synwork\prj_2_memory_sb_m.srm to C:\Users\Lesc\Documents\LiberoProjects\prj_FPGA_2memory\FPGA2memory\synthesis\prj_2_memory_sb.srm
+
+fpga_mapper completed with warnings
+# Tue Oct 15 17:23:51 2024
+
+Return Code: 1
+Run Time:00h:00m:13s
+Complete: Map on prj_2_memory_sb_syn|synthesis
+Complete: Logic Synthesis on prj_2_memory_sb_syn|synthesis
+TCL script complete: "prj_2_memory_sb_syn.tcl"
+exit status=0
+exit status=0
+License checkin: synplifypro_actel

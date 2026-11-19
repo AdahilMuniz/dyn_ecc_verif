@@ -1,0 +1,212 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-AM6N5UD
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp202309synp1, Build 146R, Built Jan  4 2024 08:15:03, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-AM6N5UD
+
+Implementation : synthesis
+Synopsys Verilog Compiler, Version comp202309synp1, Build 146R, Built Jan  4 2024 08:15:03, @
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@I::"C:\SynplifyPro\lib\generic\smartfusion2.v" (library work)
+@I::"C:\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v" (library work)
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":4:13:4:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":14:13:14:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":27:13:27:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":43:13:43:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":55:13:55:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":67:13:67:25|User defined pragma syn_black_box detected
+
+@I::"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v" (library work)
+@I::"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0.v" (library work)
+@I::"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\fpga_top_design.sv" (library work)
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\fpga_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv" (library work)
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_encoder.sv" (library work)
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv" (library work)
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Encoder16bits.sv" (library work)
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Decoder16bits.sv" (library work)
+@W: CG1337 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Decoder16bits.sv":113:9:113:11|Net sig is not declared.
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\EDACencoder.sv" (library work)
+@I:"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\EDACdecoder.sv" (library work)
+@I::"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\stm32\stm32.v" (library work)
+Verilog syntax check successful!
+File C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\fpga_top_design.sv changed - recompiling
+File C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv changed - recompiling
+File C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\stm32\stm32.v changed - recompiling
+Selecting top level module stm32
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_encoder.sv":1:7:1:21|Synthesizing module hamming_encoder in library work.
+@W: CG133 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_encoder.sv":7:16:7:21|Object parity is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on hamming_encoder .......
+Finished optimization stage 1 on hamming_encoder (CPU Time 0h:00m:00s, Memory Used current: 90MB peak: 91MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":1:7:1:21|Synthesizing module hamming_decoder in library work.
+@N: CG793 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":20:10:20:17|Ignoring system task $display
+@W: CG1340 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":21:55:21:67|Index into variable received_data could be out of range ; a simulation mismatch is possible.
+@N: CG793 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":22:10:22:17|Ignoring system task $display
+Running optimization stage 1 on hamming_decoder .......
+Finished optimization stage 1 on hamming_decoder (CPU Time 0h:00m:00s, Memory Used current: 91MB peak: 92MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:8:3:20|Synthesizing module Encoder16bits in library work.
+@W: CG133 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Encoder16bits.sv":14:10:14:10|Object b is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on Encoder16bits .......
+Finished optimization stage 1 on Encoder16bits (CPU Time 0h:00m:00s, Memory Used current: 91MB peak: 92MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:7:4:19|Synthesizing module Decoder16bits in library work.
+Running optimization stage 1 on Decoder16bits .......
+Finished optimization stage 1 on Decoder16bits (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:7:1:17|Synthesizing module EDACencoder in library work.
+Running optimization stage 1 on EDACencoder .......
+Finished optimization stage 1 on EDACencoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\EDACdecoder.sv":1:7:1:17|Synthesizing module EDACdecoder in library work.
+Running optimization stage 1 on EDACdecoder .......
+Finished optimization stage 1 on EDACdecoder (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":8:7:8:24|Synthesizing module hamming_top_design in library work.
+Running optimization stage 1 on hamming_top_design .......
+Finished optimization stage 1 on hamming_top_design (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\fpga_top_design.sv":3:7:3:21|Synthesizing module fpga_top_design in library work.
+Running optimization stage 1 on fpga_top_design .......
+Finished optimization stage 1 on fpga_top_design (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":51:7:51:24|Synthesizing module RCOSC_25_50MHZ_FAB in library work.
+Running optimization stage 1 on RCOSC_25_50MHZ_FAB .......
+Finished optimization stage 1 on RCOSC_25_50MHZ_FAB (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\Actel\SgCore\OSC\2.0.101\osc_comps.v":11:7:11:20|Synthesizing module RCOSC_25_50MHZ in library work.
+Running optimization stage 1 on RCOSC_25_50MHZ .......
+Finished optimization stage 1 on RCOSC_25_50MHZ (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\SynplifyPro\lib\generic\smartfusion2.v":362:7:362:12|Synthesizing module CLKINT in library work.
+Running optimization stage 1 on CLKINT .......
+Finished optimization stage 1 on CLKINT (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":5:7:5:25|Synthesizing module OSC_C0_OSC_C0_0_OSC in library work.
+Running optimization stage 1 on OSC_C0_OSC_C0_0_OSC .......
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":15:7:15:24|*Output RCOSC_25_50MHZ_CCC has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":17:7:17:20|*Output RCOSC_1MHZ_CCC has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":18:7:18:20|*Output RCOSC_1MHZ_O2F has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":19:7:19:16|*Output XTLOSC_CCC has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":20:7:20:16|*Output XTLOSC_O2F has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+Finished optimization stage 1 on OSC_C0_OSC_C0_0_OSC (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0.v":33:7:33:12|Synthesizing module OSC_C0 in library work.
+Running optimization stage 1 on OSC_C0 .......
+Finished optimization stage 1 on OSC_C0 (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\stm32\stm32.v":9:7:9:11|Synthesizing module stm32 in library work.
+Running optimization stage 1 on stm32 .......
+Finished optimization stage 1 on stm32 (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+Running optimization stage 2 on stm32 .......
+Finished optimization stage 2 on stm32 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on OSC_C0 .......
+Finished optimization stage 2 on OSC_C0 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on OSC_C0_OSC_C0_0_OSC .......
+@N: CL159 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\component\work\OSC_C0\OSC_C0_0\OSC_C0_OSC_C0_0_OSC.v":14:7:14:9|Input XTL is unused.
+Finished optimization stage 2 on OSC_C0_OSC_C0_0_OSC (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on CLKINT .......
+Finished optimization stage 2 on CLKINT (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on RCOSC_25_50MHZ .......
+Finished optimization stage 2 on RCOSC_25_50MHZ (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on RCOSC_25_50MHZ_FAB .......
+Finished optimization stage 2 on RCOSC_25_50MHZ_FAB (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on fpga_top_design .......
+Finished optimization stage 2 on fpga_top_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on hamming_top_design .......
+@N: CL159 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_top_design.sv":13:38:13:45|Input chip_sel is unused.
+Finished optimization stage 2 on hamming_top_design (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on EDACdecoder .......
+Finished optimization stage 2 on EDACdecoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on EDACencoder .......
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\EDACencoder.sv":1:39:1:45|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on EDACencoder (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on Decoder16bits .......
+@W: CL247 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Decoder16bits.sv":4:39:4:45|Input port bit 0 of data_in[15:0] is unused
+
+Finished optimization stage 2 on Decoder16bits (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+Running optimization stage 2 on Encoder16bits .......
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\Encoder16bits.sv":3:42:3:48|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on Encoder16bits (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+Running optimization stage 2 on hamming_decoder .......
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_decoder.sv":2:21:2:32|Input port bits 15 to 12 of encoded_data[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on hamming_decoder (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 95MB)
+Running optimization stage 2 on hamming_encoder .......
+@W: CL246 :"C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\hdl\hamming_encoder.sv":2:21:2:27|Input port bits 15 to 8 of data_in[15:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on hamming_encoder (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 95MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 95MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Aug  1 17:08:11 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M
+Install: C:\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-AM6N5UD
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp202309synp1, Build 146R, Built Jan  4 2024 08:15:03, @
+
+@N|Running in 64-bit mode
+File C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Aug  1 17:08:11 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\Elena\Documents\Elena\stm32_test_memory - Copy\synthesis\synwork\stm32_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 23MB peak: 23MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Aug  1 17:08:11 2024
+
+###########################################################]
