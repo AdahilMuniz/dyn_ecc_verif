@@ -7,10 +7,18 @@
 //   cs_n, we_n, oe_n  FMC NE, NWE, NOE (also wired straight to the SRAM)
 //   ecc_sel[1:0]    mode select (dyn_ecc_pkg::ecc_sel_t)
 //   clk             only clocks `erro`
-//   erro            Hamming-syndrome error flag (2024-08 behavior, kept until
-//                   the unified error report, D4/D11): cleared while we_n is
-//                   low, set on a clock edge when the Hamming decoder of the
-//                   memory bus sees a nonzero syndrome, in any mode. No reset (D5).
+//   erro            Sticky Hamming error flag (interim, until the unified error
+//                   report, D4/D11). Sampled on clk:
+//                     - cleared by a write to this SRAM (cs_n=0, we_n=0)
+//                     - set by a read (cs_n=0, we_n=1, oe_n=0) in Hamming mode
+//                       whose codeword has a nonzero syndrome
+//                   No reset (D5): X until the first write.
+//                   The 2024-08 FPGA set it on any nonzero syndrome of the
+//                   memory bus, in every mode and also with the bus idle
+//                   (floating), and cleared it on any NWE low, including
+//                   writes to other FMC devices. In TBEC/EDAC/bypass the Hamming
+//                   syndrome of the stored word is meaningless, so the flag was
+//                   only valid in Hamming mode.
 module dyn_ecc_top
   import dyn_ecc_pkg::*;
 (
@@ -48,8 +56,9 @@ module dyn_ecc_top
   assign mcu_data = mcu_data_oe ? mcu_data_o : 'z;
   assign mem_data = mem_data_oe ? mem_data_o : 'z;
 
+  // mem_data_oe = write to this SRAM, mcu_data_oe = read from it (dyn_ecc_ctrl).
   always_ff @(posedge clk) begin
-    if (!we_n) erro <= 1'b0;
-    else if (hamming_syndrome != 4'd0) erro <= 1'b1;
+    if (mem_data_oe) erro <= 1'b0;
+    else if (mcu_data_oe && ecc_sel == ECC_HAMMING && hamming_syndrome != 4'd0) erro <= 1'b1;
   end
 endmodule
