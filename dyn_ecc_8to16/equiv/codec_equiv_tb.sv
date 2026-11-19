@@ -8,8 +8,13 @@
 //                                         the signal[0] typo fixed
 //   firmware/.../NASCERR_ECCs.c (DPI-C)  : nascerr_eccs_{hamming,tbec,edac}_encoder
 //
-// Encoders: all 256 data values. Decoders: all 65536 16-bit inputs (every
-// codeword and every error pattern). Run with
+// Encoders: all 256 data values. Hamming and EDAC decoders: all 65536 16-bit
+// inputs (every codeword and every error pattern) vs. the legacy RTL.
+// TBEC decoder: since 2026-11-19 it uses the improved logic of
+// IagodFarias/NASCERR fix/tbec-decoder and differs from the legacy
+// Decoder16bits by design, so it's checked by property instead: every 0/1-bit
+// error on every codeword is corrected, and the multi-bit correction counts
+// are pinned (TBEC_COV_* below). The legacy difference is printed as info. Run with
 // dyn_ecc_8to16/equiv/run_equiv.sh; it prints PASS/FAIL. The legacy Hamming
 // decoder's $display calls are filtered out by the script.
 module codec_equiv_tb;
@@ -42,6 +47,12 @@ module codec_equiv_tb;
   EDACdecoder     l5 (.data_in(cw), .data_out(l_edac_d));
 
   int fail;
+  int tbec_legacy_diff;
+
+  // Pinned TBEC multi-bit coverage: data values (out of 256 per pattern)
+  // decoded correctly, summed over every error pattern of that class.
+  localparam int TBEC_COV_2ANY = 11776, TBEC_COV_2ADJ = 2304, TBEC_COV_3ANY = 17408, TBEC_COV_3ADJ = 1792;
+  int cov [4];
 
   task automatic chk(string what, logic [15:0] got, logic [15:0] exp, int v);
     if (got !== exp) begin
@@ -65,10 +76,32 @@ module codec_equiv_tb;
       cw = 16'(v); #1;
       chk("hamming_dec data",     {8'h00, n_ham_d},  l_ham_d,  v);
       chk("hamming_dec syndrome", {12'h0, n_ham_syn}, {12'h0, l_ham_syn}, v);
-      chk("tbec_dec data",        {8'h00, n_tbec_d}, l_tbec_d, v);
+      tbec_legacy_diff += ({8'h00, n_tbec_d} !== l_tbec_d);
       chk("edac_dec data",        {8'h00, n_edac_d}, l_edac_d, v);
     end
-    $display("EQUIV %s: %0d mismatches (3 encoders x 256 vs RTL and C; 3 decoders x 65536)",
+    // TBEC decoder: 0/1-bit correction property and pinned multi-bit coverage.
+    for (int m = 0; m < 65536; m++) begin
+      automatic logic [15:0] e = 16'(m);
+      automatic int w = $countones(e);
+      automatic bit adj = (w > 0) && ((e >> $clog2(e & -e)) == 16'((1 << w) - 1));
+      if (w > 3) continue;
+      for (int v = 0; v < 256; v++) begin
+        d = 8'(v); #1; cw = n_tbec_cw ^ e; #1;
+        if (w <= 1) chk("tbec_dec corrects 0/1-bit", {8'h00, n_tbec_d}, {8'h00, d}, {e[7:0], d});
+        else if (n_tbec_d == d) begin
+          cov[(w - 2) * 2]++;
+          if (adj) cov[(w - 2) * 2 + 1]++;
+        end
+      end
+    end
+    $display("EQUIV INFO tbec_dec coverage: 2-bit any %0d, 2-bit adjacent %0d, 3-bit any %0d, 3-bit adjacent %0d",
+             cov[0], cov[1], cov[2], cov[3]);
+    $display("EQUIV INFO tbec_dec differs from legacy Decoder16bits on %0d/65536 inputs (by design)", tbec_legacy_diff);
+    chk("tbec_dec coverage 2-bit any",      16'(cov[0]), 16'(TBEC_COV_2ANY), 0);
+    chk("tbec_dec coverage 2-bit adjacent", 16'(cov[1]), 16'(TBEC_COV_2ADJ), 0);
+    chk("tbec_dec coverage 3-bit any",      16'(cov[2]), 16'(TBEC_COV_3ANY), 0);
+    chk("tbec_dec coverage 3-bit adjacent", 16'(cov[3]), 16'(TBEC_COV_3ADJ), 0);
+    $display("EQUIV %s: %0d mismatches (3 encoders x 256 vs RTL and C; Hamming/EDAC decoders x 65536; TBEC decoder by property)",
              (fail == 0) ? "PASS" : "FAIL", fail);
     $finish;
   end

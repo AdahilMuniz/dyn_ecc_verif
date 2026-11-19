@@ -1,6 +1,6 @@
 #!/bin/sh
-# Exhaustive equivalence of the dyn_ecc 8->16 codecs with the recovered FPGA RTL
-# and the 8-bit firmware's C encoders (see codec_equiv_tb.sv). Prints EQUIV
+# Exhaustive check of the dyn_ecc 8->16 codecs against the recovered FPGA RTL
+# and the 8-bit firmware's C encoders; TBEC decoder by property (see codec_equiv_tb.sv). Prints EQUIV
 # PASS/FAIL and exits nonzero on FAIL. Needs Synopsys VCS. Build output goes to
 # dyn_ecc_8to16/equiv/build/ (gitignored).
 set -e
