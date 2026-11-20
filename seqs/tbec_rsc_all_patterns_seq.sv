@@ -14,8 +14,14 @@ class tbec_rsc_all_patterns_seq extends dyn_ecc_base_seq;
     bit [SRAM_DATA_WIDTH-1:0]      wdata;
     bit [ENC_WORD_WIDTH-1:0]       original_enc_word;
     bit [ENC_WORD_WIDTH-1:0]       mask;
-    int                            error_cnt;
+    int                            nbits;                               // #bits set in mask
+    int                            error_cnt;                           // overall mismatches
+    int                            error_cnt_by_k [ENC_WORD_WIDTH+1];   // mismatches per #flipped bits
+    int                            total_by_k     [ENC_WORD_WIDTH+1];   // patterns per #flipped bits
     real                           correct_rate;
+
+    error_cnt_by_k = '{default: 0};
+    total_by_k     = '{default: 0};
 
     // ---- Drive the mode onto the sideband interface ----
     // Reach the sideband sequencer through the virtual sequencer. The sideband
@@ -43,7 +49,9 @@ class tbec_rsc_all_patterns_seq extends dyn_ecc_base_seq;
 
     //@NOTE: The number of total patterns is basically 2^(Encoded Word Width)
     for (int i=0; i<(2**ENC_WORD_WIDTH); ++i) begin //Number patterns: i become a mask
-       mask = i;
+       mask  = i;
+       nbits = $countones(mask);     // number of bits this pattern flips
+       total_by_k[nbits]++;
 
        // ---- Insert Error ---
        flip_bits_mask(.mask(mask[ENC_WORD_WIDTH-1:(ENC_WORD_WIDTH/2)]), .up_down(1'b0), .addr(addr));
@@ -59,14 +67,28 @@ class tbec_rsc_all_patterns_seq extends dyn_ecc_base_seq;
                $sformatf("READ  addr=0x%0h -> data=0x%0h", rd.addr, rd.data), UVM_HIGH)
         if(rd.data != wdata) begin
             error_cnt ++;
+            error_cnt_by_k[nbits] ++;
         end
         // ---- Restore Data ----
         p_sequencer.mem_up.poke(addr, original_enc_word[ENC_WORD_WIDTH-1:(ENC_WORD_WIDTH/2)] );
         p_sequencer.mem_down.poke(addr, original_enc_word[(ENC_WORD_WIDTH/2)-1:0] );
     end
 
+    // Per-error-count correction rate (k = number of flipped bits).
+    foreach (total_by_k[k]) begin
+      if (total_by_k[k] > 0) begin
+        correct_rate = 1.0 - (real'(error_cnt_by_k[k]) / real'(total_by_k[k]));
+        `uvm_info(get_type_name(),
+                  $sformatf("errors=%2d : corrected %0d/%0d (rate=%0f)",
+                            k, total_by_k[k]-error_cnt_by_k[k],
+                            total_by_k[k], correct_rate), UVM_LOW)
+      end
+    end
+
+    // Overall correction rate across all patterns.
     correct_rate = 1.0 - (real'(error_cnt)/real'(2**ENC_WORD_WIDTH));
-    `uvm_info(get_type_name(), $sformatf("Correction Rate = %0f", correct_rate), UVM_HIGH)
+    `uvm_info(get_type_name(),
+              $sformatf("Overall Correction Rate = %0f", correct_rate), UVM_LOW)
 
 
   endtask

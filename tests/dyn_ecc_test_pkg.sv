@@ -22,6 +22,7 @@ package dyn_ecc_test_pkg;
   `include "write_read_seq.sv"
   `include "write_error_read_seq.sv"
   `include "tbec_rsc_all_patterns_seq.sv"
+  `include "tbec_rsc_burst_pattern_seq.sv"
   // Environment
   `include "dyn_ecc_scbd.sv"
   `include "dyn_ecc_env.sv"
