@@ -12,12 +12,16 @@ package dyn_ecc_test_pkg;
   import sideband_pkg::*;
   import typedefs::*;
 
+  parameter DEC_WORD_WIDTH = 8;
+  parameter ENC_WORD_WIDTH = 2*DEC_WORD_WIDTH;
+
   // Virtual sequencer (needed by the sequences' p_sequencer declaration).
   `include "dyn_ecc_virtual_sequencer.sv"
   // Sequences
   `include "dyn_ecc_base_seq.sv"
   `include "write_read_seq.sv"
   `include "write_error_read_seq.sv"
+  `include "tbec_rsc_all_patterns_seq.sv"
   // Environment
   `include "dyn_ecc_scbd.sv"
   `include "dyn_ecc_env.sv"

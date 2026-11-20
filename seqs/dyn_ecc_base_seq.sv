@@ -29,4 +29,13 @@ class dyn_ecc_base_seq extends uvm_sequence;
     end
   endtask
 
+  virtual task flip_bits_mask(bit [SRAM_DATA_WIDTH-1:0] mask, bit up_down, bit [SRAM_ADDR_WIDTH-1:0] addr);
+    if (up_down) begin
+      p_sequencer.mem_up.poke(addr, p_sequencer.mem_up.peek(addr) ^ mask);
+    end
+    else begin
+      p_sequencer.mem_down.poke(addr, p_sequencer.mem_down.peek(addr) ^ mask);
+    end
+  endtask
+
 endclass

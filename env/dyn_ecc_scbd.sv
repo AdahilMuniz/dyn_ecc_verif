@@ -298,4 +298,103 @@ class dyn_ecc_scbd extends uvm_scoreboard;
     return signal;
   endfunction
 
+  // Software model of the 8-bit MRSC encoder, from
+  // doc/mrsc-8bit-matrix-architecture.md (sections 2 and 6).
+  //
+  // Data maps to a 2x4 matrix: M[0]={D7,D6,D5,D4}, M[1]={D3,D2,D1,D0}.
+  // 12 redundancy bits are generated: Cb (horizontal, stride 2), Di (diagonal),
+  // P (per-column parity). Returns the 20-bit codeword {data, Cb, Di, P} with
+  // group bit b holding subscript b (cb[0]=Cb_0 .. cb[3]=Cb_3, etc.).
+  function logic [19:0] enc_mrsc(logic [7:0] data_in);
+    logic [3:0] cb, di, p;
+
+    // Check bits: Cb[r,k] = M[r,k] ^ M[r,k+2]
+    cb[0] = data_in[7] ^ data_in[5]; // Cb0 = D7 ^ D5
+    cb[1] = data_in[6] ^ data_in[4]; // Cb1 = D6 ^ D4
+    cb[2] = data_in[3] ^ data_in[1]; // Cb2 = D3 ^ D1
+    cb[3] = data_in[2] ^ data_in[0]; // Cb3 = D2 ^ D0
+
+    // Diagonal bits (two per 2x2 half).
+    di[0] = data_in[7] ^ data_in[2]; // Di0 = D7 ^ D2
+    di[1] = data_in[6] ^ data_in[3]; // Di1 = D6 ^ D3
+    di[2] = data_in[5] ^ data_in[0]; // Di2 = D5 ^ D0
+    di[3] = data_in[4] ^ data_in[1]; // Di3 = D4 ^ D1
+
+    // Column parity: P[c] = M[0,c] ^ M[1,c]
+    p[0]  = data_in[7] ^ data_in[3]; // P0 = D7 ^ D3
+    p[1]  = data_in[6] ^ data_in[2]; // P1 = D6 ^ D2
+    p[2]  = data_in[5] ^ data_in[1]; // P2 = D5 ^ D1
+    p[3]  = data_in[4] ^ data_in[0]; // P3 = D4 ^ D0
+
+    return {data_in, cb, di, p};
+  endfunction
+
+  // Software model of the 8-bit MRSC decoder, from
+  // doc/mrsc-8bit-matrix-architecture.md (sections 3 and 6). Takes the 20-bit
+  // codeword {data, Cb, Di, P} (same layout enc_mrsc produces) and returns the
+  // 8-bit corrected data word.
+  function logic [7:0] dec_mrsc(logic [19:0] code_in);
+    logic [7:0] d, data_out;
+    logic [3:0] cb, di, p;
+    logic       SL00, SL01, SL10, SL11;      // check syndrome matrix (2x2)
+    logic       SDi0, SDi1, SDi2, SDi3;      // diagonal syndromes
+    logic       SP0, SP1, SP2, SP3;          // column-parity syndromes
+    logic [2:0] sl_weight, q1, q2;
+    logic       acionar;
+
+    {d, cb, di, p} = code_in;
+
+    // Check syndromes: SL[r,k] = Cb'[r,k] ^ (M'[r,k] ^ M'[r,k+2])
+    SL00 = cb[0] ^ (d[7] ^ d[5]);
+    SL01 = cb[1] ^ (d[6] ^ d[4]);
+    SL10 = cb[2] ^ (d[3] ^ d[1]);
+    SL11 = cb[3] ^ (d[2] ^ d[0]);
+
+    // Diagonal syndromes.
+    SDi0 = di[0] ^ (d[7] ^ d[2]);
+    SDi1 = di[1] ^ (d[6] ^ d[3]);
+    SDi2 = di[2] ^ (d[5] ^ d[0]);
+    SDi3 = di[3] ^ (d[4] ^ d[1]);
+
+    // Column-parity syndromes.
+    SP0  = p[0] ^ (d[7] ^ d[3]);
+    SP1  = p[1] ^ (d[6] ^ d[2]);
+    SP2  = p[2] ^ (d[5] ^ d[1]);
+    SP3  = p[3] ^ (d[4] ^ d[0]);
+
+    // Activation: (SP != 0 AND SDi != 0) OR weight(SL) > 1.
+    sl_weight = {2'b0, SL00} + {2'b0, SL01} + {2'b0, SL10} + {2'b0, SL11};
+    acionar   = ((SP0 | SP1 | SP2 | SP3) & (SDi0 | SDi1 | SDi2 | SDi3)) |
+                (sl_weight > 1);
+
+    // Regional voting tallies.
+    q1 = {2'b0, SP0} + {2'b0, SP1} + {2'b0, SDi0} + {2'b0, SDi1};
+    q2 = {2'b0, SP2} + {2'b0, SP3} + {2'b0, SDi2} + {2'b0, SDi3};
+
+    data_out = d;
+    if (acionar) begin
+      if (q1 > q2) begin
+        // Region 1: columns 0 & 1 (D7, D6, D3, D2).
+        data_out[7] = d[7] ^ SL00;
+        data_out[6] = d[6] ^ SL01;
+        data_out[3] = d[3] ^ SL10;
+        data_out[2] = d[2] ^ SL11;
+      end else if (q1 < q2) begin
+        // Region 2: columns 2 & 3 (D5, D4, D1, D0).
+        data_out[5] = d[5] ^ SL00;
+        data_out[4] = d[4] ^ SL01;
+        data_out[1] = d[1] ^ SL10;
+        data_out[0] = d[0] ^ SL11;
+      end else if (q1 != 3'b000) begin
+        // Region 3: center boundary, columns 1 & 2 with SL columns swapped.
+        data_out[6] = d[6] ^ SL01;
+        data_out[5] = d[5] ^ SL00;
+        data_out[2] = d[2] ^ SL11;
+        data_out[1] = d[1] ^ SL10;
+      end
+    end
+
+    return data_out;
+  endfunction
+
 endclass
