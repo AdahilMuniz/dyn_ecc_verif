@@ -76,6 +76,8 @@ class tbec_rsc_burst_pattern_seq extends dyn_ecc_base_seq;
             if(rd.data != wdata) begin
                 error_cnt ++;
                 error_cnt_by_k[nbits] ++;
+                `uvm_info(get_type_name(),
+                $sformatf("Error of %d bits with mask=0x%0h", nbits, mask), UVM_HIGH)
             end
             // ---- Restore Data ----
             p_sequencer.mem_up.poke(addr, original_enc_word[ENC_WORD_WIDTH-1:(ENC_WORD_WIDTH/2)] );
